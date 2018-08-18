@@ -1,0 +1,27 @@
+<?php
+    /**
+     * This file is the view file of the application. Used for viewing
+     *  full list of deferred saves.
+     *
+     * InternalPhonebook: Internal phone book based on content of Active Directory.
+     * @copyright Copyright 2017, Andrey Klimov.
+     * @package app.View.Deferred
+     */
+
+    echo $this->AssetCompress->css('CakeTheme.fileupload', ['block' => 'css']);
+    echo $this->AssetCompress->script('CakeTheme.fileupload-image-min', ['block' => 'script']);
+    echo $this->AssetCompress->script('CakeTheme.fileupload', ['block' => 'script']);
+    echo $this->AssetCompress->script('CakeTheme.fileupload-image', ['block' => 'script']);
+    echo $this->AssetCompress->script('CakeTheme.fileupload-i18n-' . $uiLcid2, ['block' => 'script']);
+
+    $this->assign('title', __('Deferred saves'));
+
+    $this->Html->addCrumb(__('Deferred saves'), ['controller' => 'deferred', 'action' => 'index']);
+    $this->Html->addCrumb(__('Index'));
+?>
+<div class="container">
+<?php
+    echo $this->ViewExtension->headerPage($pageHeader);
+    echo $this->element('tableDeferredSave', compact('deferredSaves', 'fieldsLabel', 'fieldsConfig'));
+?>
+</div>

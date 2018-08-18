@@ -1,0 +1,703 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: InternalPhonebook\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2018-04-24 10:16+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 1.8.7\n"
+
+#: Model/Tour.php:83;92
+#: Test/Case/Model/TourTest.php:107;345;637;955;963;1402;1410
+msgid "Start using"
+msgstr "Начало использования"
+
+#: Model/Tour.php:84 Test/Case/Model/TourTest.php:956;1403
+msgid ""
+"To start using the directory, synchronize the information with LDAP server."
+msgstr ""
+"Для начала использования справочника выполните синхронизацию информации с "
+"сервером LDAP."
+
+#: Model/Tour.php:93 Test/Case/Model/TourTest.php:108;346;638;964;1411
+msgid ""
+"To search for information, enter your request in this field and click the "
+"button \"%s\"."
+msgstr ""
+"Для поиска информации введите свой запрос в данное поле и нажмите кнопку \"%s"
+"\"."
+
+#: Model/Tour.php:117 Test/Case/Model/TourTest.php:114;352;644;970;1417
+msgid "Refinement of the search result"
+msgstr "Уточнение результата поиска"
+
+#: Model/Tour.php:118 Test/Case/Model/TourTest.php:115;353;645;971;1418
+msgid "To refine the search result, use the \"%s\" button."
+msgstr "Для уточнения результата поиска используйте кнопку \"%s\"."
+
+#: Model/Tour.php:124 Test/Case/Model/TourTest.php:121;359;651;977;1424
+msgid "Changes to the sorting order of table data"
+msgstr "Изменения порядка сортировки табличных данных"
+
+#: Model/Tour.php:125 Test/Case/Model/TourTest.php:122;360;652;978;1425
+msgid ""
+"To change the sort order of tabular data, click the corresponding column "
+"heading in the table. Clicking again will change the sort direction on the "
+"opposite.<br />To display the current sort directions use symbols \"%s\" and "
+"\"%s\" next to the name of the corresponding column."
+msgstr ""
+"Для изменения порядка сортировки табличных данных щёлкните по заголовку "
+"соответствующего столбца таблицы. Повторный щелчок приведёт к изменению "
+"направления сортировки на противоположное.<br />Для отображения текущего "
+"направления сортировки используются симолы \"%s\" и \"%s\" рядом с "
+"наименованием соответстующего столбца."
+
+#: Model/Tour.php:131 Test/Case/Model/TourTest.php:128;366;658;984;1431
+msgid "View information about the employee"
+msgstr "Просмотр информации о сотруднике"
+
+#: Model/Tour.php:132 Test/Case/Model/TourTest.php:129;367;659;985;1432
+msgid ""
+"To view brief information about an employee, hover this link. Clicking will "
+"open the details window for the employee."
+msgstr ""
+"Для просмотра краткой информации о сотруднике, наведите указатель данную "
+"ссылку. По щелчку откроется окно подробной информации о сотруднике."
+
+#: Model/Tour.php:138 Test/Case/Model/TourTest.php:135;373;665;991;1438
+msgid "Subordinate tree"
+msgstr "Дерево подчинённых"
+
+#: Model/Tour.php:139 Test/Case/Model/TourTest.php:136;374;666;992;1439
+msgid "Use this button to view the subordinate employee tree."
+msgstr "Используйте данную кнопку для просмотра дерева подчинённых сотрудника."
+
+#: Model/Tour.php:145;490;515
+#: Test/Case/Model/TourTest.php:142;380;672;998;1230;1244;1445;1684;1698
+msgid "Editing of information"
+msgstr "Редактирование информации"
+
+#: Model/Tour.php:146 Test/Case/Model/TourTest.php:143;381;673;999;1446
+msgid "To change information about the employee use this button."
+msgstr "Для изменения информации о сотруднике воспользуйтесь данной кнопкой."
+
+#: Model/Tour.php:152 Test/Case/Model/TourTest.php:149;387;679;1005;1452
+msgid "Synchronizing information"
+msgstr "Синхронизация информации"
+
+#: Model/Tour.php:153 Test/Case/Model/TourTest.php:150;388;680;1006;1453
+msgid ""
+"Use this button to synchronize the information of this employee with LDAP "
+"server."
+msgstr ""
+"Используйте данную кнопку для синхронизации информации данного сотрудника с "
+"сервером LDAP."
+
+#: Model/Tour.php:173;279;300;437;469
+#: Test/Case/Model/TourTest.php:163;242;394;447;526;686;739;818;1012;1079;1086;1188;1209;1459;1533;1540;1642;1663
+msgid "Operation menu"
+msgstr "Меню операций"
+
+#: Model/Tour.php:174 Test/Case/Model/TourTest.php:395;687;1013;1460
+msgid ""
+"Use the operations menu for the following actions:<ul class=\"fa-ul"
+"\"><li><span class=\"fa-li\"><i class=\"fas fa-check\"></i></span>Editing "
+"information;</li><li><span class=\"fa-li\"><i class=\"fas fa-check\"></i></"
+"span>Synchronize information;</li><li><span class=\"fa-li\"><i class=\"fas "
+"fa-check\"></i></span>Viewing the subordinate employee tree.</li></ul>"
+msgstr ""
+"Используйте меню операций для следующих действий:<ul class=\"fa-ul"
+"\"><li><span class=\"fa-li\"><i class=\"fas fa-check\"></i></"
+"span>Редактирование информации;</li><li><span class=\"fa-li\"><i class=\"fas "
+"fa-check\"></i></span>Синхронизация информации;</li><li><span class=\"fa-li"
+"\"><i class=\"fas fa-check\"></i></span>Просмотр дерева подчинённых "
+"сотрудников.</li></ul>"
+
+#: Model/Tour.php:194;202
+#: Test/Case/Model/TourTest.php:401;409;693;701;1019;1027;1466;1474
+msgid "Tabs for information input forms"
+msgstr "Вкладки форм ввода информации"
+
+#: Model/Tour.php:195 Test/Case/Model/TourTest.php:402;694;1020;1467
+msgid "This tab contains employee information fields."
+msgstr "Данная вкладка содержит поля информации о сотруднике."
+
+#: Model/Tour.php:203 Test/Case/Model/TourTest.php:410;702;1028;1475
+msgid "This tab contains information about the employee's photo."
+msgstr "Данная вкладка содержит информацию о фотографии сотрудника."
+
+#: Model/Tour.php:211;218;226
+#: Test/Case/Model/TourTest.php:418;425;433;710;717;725;1036;1043;1051;1483;1490;1498
+msgid "Elements of the information input form"
+msgstr "Элементы формы ввода информации"
+
+#: Model/Tour.php:212 Test/Case/Model/TourTest.php:419;711;1037;1484
+msgid ""
+"This progress bar shows the degree of filling of the data. Can accept from "
+"several colors: <ul class=\"fa-ul\"><li><span class=\"fa-li\"><i class=\"fas "
+"fa-check\"></i></span><span class=\"bg-danger\"><strong>Red</strong></span> "
+"- means that are not filled all required fields.</li><li><span class=\"fa-li"
+"\"><i class=\"fas fa-check\"></i></span><span class=\"bg-warning"
+"\"><strong>Orange</strong></span> - is not filled in the required fields "
+"(allowed retention of information);</li><li><span class=\"fa-li\"><i class="
+"\"fas fa-check\"></i></span><span class=\"bg-success\"><strong>Green</"
+"strong></span> - filled in all the fields.</li></ul>"
+msgstr ""
+"Данная полоса прогресса показывает степень заполнения данных. Может "
+"принимать один из нескольких цветов: <ul class=\"fa-ul\"><li><span class="
+"\"fa-li\"><i class=\"fas fa-check\"></i></span><span class=\"bg-danger"
+"\"><strong>Красный цвет</strong></span> - означает, что заполнены не все "
+"обязательные поля;</li><li><span class=\"fa-li\"><i class=\"fas fa-check\"></"
+"i></span><span class=\"bg-warning\"><strong>Оранжевый цвет</strong></span> - "
+"не заполнены не обязательные поля (допускается сохранение информации);</"
+"li><li><span class=\"fa-li\"><i class=\"fas fa-check\"></i></span><span "
+"class=\"bg-success\"><strong>Зелёный цвет</strong></span> - заполнены все "
+"поля.</li></ul>"
+
+#: Model/Tour.php:219 Test/Case/Model/TourTest.php:426;718;1044;1491
+msgid ""
+"To select a group of fields for entering employee information, use the "
+"appropriate tab."
+msgstr ""
+"Для выбора группы полей ввода информации о сотруднике используйте "
+"соответствующую вкладку."
+
+#: Model/Tour.php:227 Test/Case/Model/TourTest.php:434;726;1052;1499
+msgid "To save the information entered in the form fields, use this button."
+msgstr ""
+"Для сохранения внесённой в поля формы информации воспользуйтесь данной "
+"кнопкой."
+
+#: Model/Tour.php:235;244;251;260
+#: Test/Case/Model/TourTest.php:156;440;732;1058;1065;1072;1505;1512;1519;1526
+msgid "Elements of the main menu"
+msgstr "Элементы главного меню"
+
+#: Model/Tour.php:236 Test/Case/Model/TourTest.php:157;441;733;1059;1506
+msgid ""
+"Use this menu item for the following:<ul class=\"fa-ul\"><li><span class="
+"\"fa-li\"><i class=\"fas fa-check\"></i></span>Search for employee "
+"information</li><li><span class=\"fa-li\"><i class=\"fas fa-check\"></i></"
+"span>View employee submission tree</li><li><span class=\"fa-li\"><i class="
+"\"fas fa-check\"></i></span>View employee gallery</li><li><span class=\"fa-li"
+"\"><i class=\"fas fa-check\"></i></span>Save a local copy of the directory.</"
+"li></ul>"
+msgstr ""
+"Используйте данный элемент меню для следующих действий:<ul class=\"fa-ul"
+"\"><li><span class=\"fa-li\"><i class=\"fas fa-check\"></i></span>Поиска "
+"информации о сотрудниках;</li><li><span class=\"fa-li\"><i class=\"fas fa-"
+"check\"></i></span>Просмотра дерева подчинения сотрудников;</li><li><span "
+"class=\"fa-li\"><i class=\"fas fa-check\"></i></span>Просмотра галереи "
+"сотрудников;</li><li><span class=\"fa-li\"><i class=\"fas fa-check\"></i></"
+"span>Сохранения локальной копии справочника.</li></ul>"
+
+#: Model/Tour.php:245 Test/Case/Model/TourTest.php:1066;1513
+msgid "Use this menu item to service a list of the full department names."
+msgstr ""
+"Используйте данный элемент меню для обслуживания списка полных наименований "
+"отделов."
+
+#: Model/Tour.php:252 Test/Case/Model/TourTest.php:1073;1520
+msgid ""
+"Use this menu item to service the deferred saves of employee information."
+msgstr ""
+"Используйте данный элемент меню для обслуживания отложенных сохранений "
+"информации о сотрудниках."
+
+#: Model/Tour.php:261 Test/Case/Model/TourTest.php:1527
+msgid "Use this menu item to change application settings."
+msgstr "Используйте данный элемент меню для изменения настроек приложения."
+
+#: Model/Tour.php:280 Test/Case/Model/TourTest.php:164;448;740;1080;1534
+msgid ""
+"Use the operations menu for the following actions:<ul class=\"fa-ul"
+"\"><li><span class=\"fa-li\"><i class=\"fas fa-check\"></i></span>Editing "
+"information;</li><li><span class=\"fa-li\"><i class=\"fas fa-check\"></i></"
+"span>Synchronize information;</li><li><span class=\"fa-li\"><i class=\"fas "
+"fa-check\"></i></span>Checking the status of the subordinate employee tree.</"
+"li></ul>"
+msgstr ""
+"Используйте меню операций для следующих действий:<ul class=\"fa-ul"
+"\"><li><span class=\"fa-li\"><i class=\"fas fa-check\"></i></"
+"span>Редактирование информации;</li><li><span class=\"fa-li\"><i class=\"fas "
+"fa-check\"></i></span>Синхронизация информации;</li><li><span class=\"fa-li"
+"\"><i class=\"fas fa-check\"></i></span>Проверка состояния дерева "
+"подчинённых сотрудников.</li></ul>"
+
+#: Model/Tour.php:301 Test/Case/Model/TourTest.php:1087;1541
+msgid ""
+"Use the operation menu for the following actions:<ul class=\"fa-ul"
+"\"><li><span class=\"fa-li\"><i class=\"fas fa-check\"></i></"
+"span>Synchronizing information;</li><li><span class=\"fa-li\"><i class=\"fas "
+"fa-check\"></i></span>Checks the status of the subordinate employee tree.</"
+"li></ul>"
+msgstr ""
+"Используйте меню операций для следующих действий:<ul class=\"fa-ul"
+"\"><li><span class=\"fa-li\"><i class=\"fas fa-check\"></i></"
+"span>Синхронизации информации;</li><li><span class=\"fa-li\"><i class=\"fas "
+"fa-check\"></i></span>Проверки состояния дерева подчинённых сотрудников.</"
+"li></ul>"
+
+#: Model/Tour.php:307 Test/Case/Model/TourTest.php:1093;1547
+msgid "Controls of moving employee"
+msgstr "Управление перемещением сотрудника"
+
+#: Model/Tour.php:308 Test/Case/Model/TourTest.php:1094;1548
+msgid "Use this button to display or hide the controls of moving employee."
+msgstr ""
+"Воспользуйтесь данной кнопкой для отображения или скрытия элементов "
+"управления перемещением сотрудника."
+
+#: Model/Tour.php:315;323 Test/Case/Model/TourTest.php:1101;1109;1555;1563
+msgid "Change employee position"
+msgstr "Изменение позиции сотрудника"
+
+#: Model/Tour.php:316 Test/Case/Model/TourTest.php:1102;1556
+msgid ""
+"To change the position of an employee by dragging, use this button. The "
+"employee's position is used to determine the order of employees in the "
+"exported files of the directory."
+msgstr ""
+"Для изменения позиции сотрудника путём перетаскивания воспользуйтесь данной "
+"кнопкой. Позиция сотрудника используется для определения порядка сотрудников "
+"в экспортируемых файлах справочника."
+
+#: Model/Tour.php:324 Test/Case/Model/TourTest.php:1110;1564
+msgid ""
+"Use the buttons \"%s\", \"%s\", \"%s\" and \"%s\" for an exact change "
+"position of the employee."
+msgstr ""
+"Используйте кнопки \"%s\", \"%s\", \"%s\" и \"%s\" для точного изменения "
+"позиции сотрудника."
+
+#: Model/Tour.php:354;361
+#: Test/Case/Model/TourTest.php:170;177;454;461;746;753;1116;1123;1570;1577
+msgid "Table data filter"
+msgstr "Фильтр табличных данных"
+
+#: Model/Tour.php:355 Test/Case/Model/TourTest.php:171;455;747;1117;1571
+msgid "To select tabular data, use the filter."
+msgstr "Для выборки табличных данных воспользуйтесь фильтром."
+
+#: Model/Tour.php:362 Test/Case/Model/TourTest.php:178;462;754;1124;1578
+msgid "Current filter condition."
+msgstr "Текущее условие фильтра."
+
+#: Model/Tour.php:368;405;412;419
+#: Test/Case/Model/TourTest.php:184;221;228;235;468;505;512;519;760;797;804;811;1130;1167;1174;1181;1584;1621;1628;1635
+msgid "Table data filter controls"
+msgstr "Элементы управления фильтром табличных данных"
+
+#: Model/Tour.php:369 Test/Case/Model/TourTest.php:185;469;761;1131;1585
+msgid "Use this button to display or hide the filter controls."
+msgstr ""
+"Воспользуйтесь данной кнопкой для отображения или скрытия элементов "
+"управления фильтром."
+
+#: Model/Tour.php:376;384;391;398
+#: Test/Case/Model/TourTest.php:192;200;207;214;476;484;491;498;768;776;783;790;1138;1146;1153;1160;1592;1600;1607;1614
+msgid "Elements of formation of filter conditions"
+msgstr "Элементы формирования условий фильтра"
+
+#: Model/Tour.php:377 Test/Case/Model/TourTest.php:193;477;769;1139;1593
+msgid ""
+"To create a filter condition, enter the required data in the input field of "
+"the corresponding column in the table."
+msgstr ""
+"Для создания условия фильтра внесите требуемые данные в поле ввода "
+"соответствующего столбца таблицы."
+
+#: Model/Tour.php:385 Test/Case/Model/TourTest.php:201;485;777;1147;1601
+msgid ""
+"Use this button to select one of the following logical conditions:<ul class="
+"\"fa-ul\"><li><span class=\"fa-li\"><i class=\"fas fa-check\"></i></"
+"span><i>=</i> - is equal to;</li><li><span class=\"fa-li\"><i class=\"fas fa-"
+"check\"></i></span><i>&gt;</i> - more;</li><li><span class=\"fa-li\"><i "
+"class=\"fas fa-check\"></i></span><i>&ge;</i> - is greater than or equal to;"
+"</li><li><span class=\"fa-li\"><i class=\"fas fa-check\"></i></span>&lt;<i></"
+"i> - less;</li><li><span class=\"fa-li\"><i class=\"fas fa-check\"></i></"
+"span><i>&le;</i> - is less than or equal;</li><li><span class=\"fa-li\"><i "
+"class=\"fas fa-check\"></i></span>&ne;<i></i> - is not equal.</li></ul>"
+msgstr ""
+"Используйте данную кнопку для выбора одного из следующих логических условий:"
+"<ul class=\"fa-ul\"><li><span class=\"fa-li\"><i class=\"fas fa-check\"></"
+"i></span><i>=</i> - равно;</li><li><span class=\"fa-li\"><i class=\"fas fa-"
+"check\"></i></span><i>&gt;</i> - больше;</li><li><span class=\"fa-li\"><i "
+"class=\"fas fa-check\"></i></span>&ge;<i></i> - больше или равно;</"
+"li><li><span class=\"fa-li\"><i class=\"fas fa-check\"></i></span>&lt<i></i> "
+"- меньше;</li><li><span class=\"fa-li\"><i class=\"fas fa-check\"></i></"
+"span>&le;<i></i> - меньше или равно;</li><li><span class=\"fa-li\"><i class="
+"\"fas fa-check\"></i></span>&ne;<i></i> - не равно.</li></ul>"
+
+#: Model/Tour.php:392 Test/Case/Model/TourTest.php:208;492;784;1154;1608
+msgid "If you want to add or delete filter lines, use these buttons."
+msgstr ""
+"При необходимости добавления или удаления строк фильтра используйте данные "
+"кнопки."
+
+#: Model/Tour.php:399 Test/Case/Model/TourTest.php:215;499;791;1161;1615
+msgid ""
+"Using this button, you can combine several filter lines with one of the "
+"following logical conditions:<ul class=\"fa-ul\"><li><span class=\"fa-li"
+"\"><i class=\"fas fa-check\"></i></span><i>&amp;&amp;</i> - AND;</"
+"li><li><span class=\"fa-li\"><i class=\"fas fa-check\"></i></span><i>&nbsp;||"
+"&nbsp;</i> - OR;</li><li><span class=\"fa-li\"><i class=\"fas fa-check\"></"
+"i></span><i>&nbsp;!&nbsp;</i> - NOT.</li></ul>"
+msgstr ""
+"Используя данную кнопку можно объединить несколько строк фильтра одним из "
+"следующих логических условий:<ul class=\"fa-ul\"><li><span class=\"fa-li"
+"\"><i class=\"fas fa-check\"></i></span><i>&amp;&amp;</i> - И;</li><li><span "
+"class=\"fa-li\"><i class=\"fas fa-check\"></i></span><i>&nbsp;||&nbsp;</i> - "
+"ИЛИ;</li><li><span class=\"fa-li\"><i class=\"fas fa-check\"></i></"
+"span><i>&nbsp;!&nbsp;</i> - НЕ.</li></ul>"
+
+#: Model/Tour.php:406 Test/Case/Model/TourTest.php:222;506;798;1168;1622
+msgid "To apply the current filter, use this button."
+msgstr "Для применения текущего фильтра используйте данную кнопку."
+
+#: Model/Tour.php:413 Test/Case/Model/TourTest.php:229;513;805;1175;1629
+msgid "To clean the filter, use this button."
+msgstr "Для очистки фильтра воспользуйтесь данной кнопкой."
+
+#: Model/Tour.php:420 Test/Case/Model/TourTest.php:236;520;812;1182;1636
+msgid "Use this button to print current tabular data."
+msgstr ""
+"Используйте данную кнопку для вывода на печать текущих табличных данных."
+
+#: Model/Tour.php:438 Test/Case/Model/TourTest.php:243;527;819;1189;1643
+msgid "Use the operations menu to update all the files in the directory."
+msgstr "Используйте меню операций для обновления всех файлов справочника."
+
+#: Model/Tour.php:444 Test/Case/Model/TourTest.php:249;533;825;1195;1649
+msgid "Updating the directory file"
+msgstr "Обновление файла справочника"
+
+#: Model/Tour.php:445 Test/Case/Model/TourTest.php:250;534;826;1196;1650
+msgid "Use this button to update the directory file."
+msgstr "Используйте данную кнопку для обновления файла справочника."
+
+#: Model/Tour.php:451 Test/Case/Model/TourTest.php:256;540;832;1202;1656
+msgid "Saving a directory file"
+msgstr "Сохранение файла справочника"
+
+#: Model/Tour.php:452 Test/Case/Model/TourTest.php:257;541;833;1203;1657
+msgid "To save a local copy of the directory, use this button."
+msgstr ""
+"Для сохранения локальной копии справочника воспользуйтесь данной кнопкой."
+
+#: Model/Tour.php:470 Test/Case/Model/TourTest.php:1210;1664
+msgid ""
+"Use the operations menu for the following actions:<ul class=\"fa-ul"
+"\"><li><span class=\"fa-li\"><i class=\"fas fa-check\"></i></span>Adding new "
+"department;</li><li><span class=\"fa-li\"><i class=\"fas fa-check\"></i></"
+"span>Arranging the list of departments alphabetically.</li></ul>"
+msgstr ""
+"Используйте меню операций для следующих действий:<ul class=\"fa-ul"
+"\"><li><span class=\"fa-li\"><i class=\"fas fa-check\"></i></span>Добавление "
+"нового отдела;</li><li><span class=\"fa-li\"><i class=\"fas fa-check\"></i></"
+"span>Упорядочивание списка отделов в алфавитном порядке.</li></ul>"
+
+#: Model/Tour.php:476;483 Test/Case/Model/TourTest.php:1216;1223;1670;1677
+msgid "Change the position of the department"
+msgstr "Изменение позиции отдела"
+
+#: Model/Tour.php:477 Test/Case/Model/TourTest.php:1217;1671
+msgid ""
+"To change the position of the department by dragging, use this button. The "
+"position of the department is used to determine the order of departments in "
+"the exported directory files alphabetically."
+msgstr ""
+"Для изменения позиции отдела путём перетаскивания воспользуйтесь данной "
+"кнопкой. Позиция отдела используется для определения порядка отделов в "
+"экспортируемых файлах справочника по алфавиту."
+
+#: Model/Tour.php:484 Test/Case/Model/TourTest.php:1224;1678
+msgid ""
+"Use the buttons \"%s\", \"%s\", \"%s\" and \"%s\" for an exact change "
+"positions of the department."
+msgstr ""
+"Используйте кнопки \"%s\", \"%s\", \"%s\" и \"%s\" для точного изменения "
+"позиции отдела."
+
+#: Model/Tour.php:491 Test/Case/Model/TourTest.php:1231;1685
+msgid ""
+"To change the full name of the department or rename department, use this "
+"button."
+msgstr ""
+"Чтобы изменить полное название отдела или переименовать отдел, используйте "
+"эту кнопку."
+
+#: Model/Tour.php:497;522 Test/Case/Model/TourTest.php:1237;1251;1691;1705
+msgid "Deleting information"
+msgstr "Удаление информации"
+
+#: Model/Tour.php:498 Test/Case/Model/TourTest.php:1238;1692
+msgid "Use this button to delete department."
+msgstr "Используйте эту кнопку для удаления отдела."
+
+#: Model/Tour.php:516 Test/Case/Model/TourTest.php:1245;1699
+msgid "To change the deferred save information, use this button."
+msgstr ""
+"Для изменения информации отложенного сохранения воспользуйтесь данной "
+"кнопкой."
+
+#: Model/Tour.php:523 Test/Case/Model/TourTest.php:1252;1706
+msgid "Use this button to delete information about deferred save."
+msgstr ""
+"Используйте данную кнопку для удаления информации об отложенном сохранении."
+
+#: Model/Tour.php:529 Test/Case/Model/TourTest.php:1258;1712
+msgid "Approval of change of information"
+msgstr "Утверждение изменения информации"
+
+#: Model/Tour.php:530 Test/Case/Model/TourTest.php:1259;1713
+msgid ""
+"To approve the change of information, use this button. The creator of this "
+"deferred save will receive a notification about the approval of the "
+"information being changed."
+msgstr ""
+"Для утверждения изменения информации воспользуйтесь данной кнопкой. "
+"Создатель данного отложенного сохранения получит уведомление об утверждении "
+"изменяемой информации."
+
+#: Model/Tour.php:536 Test/Case/Model/TourTest.php:1265;1719
+msgid "Rejection of change of information"
+msgstr "Отклонение изменения информации"
+
+#: Model/Tour.php:537 Test/Case/Model/TourTest.php:1266;1720
+msgid ""
+"To reject the change of information, use this button. The creator of this "
+"deferred save will receive a notification of rejection of the changed "
+"information."
+msgstr ""
+"Для отклонения изменения информации воспользуйтесь данной кнопкой. Создатель "
+"данного отложенного сохранения получит уведомление об отклонении изменяемой "
+"информации."
+
+#: Model/Tour.php:543 Test/Case/Model/TourTest.php:1272;1726
+msgid "Select / deselect all records"
+msgstr "Выбор / снятие выделения со всех записей"
+
+#: Model/Tour.php:544 Test/Case/Model/TourTest.php:1273;1727
+msgid "To select or deselect all records, use this button."
+msgstr ""
+"Для выбора или снятия выделения со всех записей используйте данную кнопку."
+
+#: Model/Tour.php:550 Test/Case/Model/TourTest.php:1279;1733
+msgid "Performing an action for a record group"
+msgstr "Выполнение действия для группы записей"
+
+#: Model/Tour.php:551 Test/Case/Model/TourTest.php:1280;1734
+msgid ""
+"To perform an action on the group of records selected in the filter, use "
+"this button."
+msgstr ""
+"Для выполнения действия над выбранной в фильтре группы записей "
+"воспользуйтесь данной кнопкой."
+
+#~ msgid "To start using the directory, synchronize the information with AD."
+#~ msgstr ""
+#~ "Для начала использования справочника выполните синхронизацию информации с "
+#~ "AD."
+
+#~ msgid ""
+#~ "Use this button to synchronize the information of this employee with AD."
+#~ msgstr ""
+#~ "Используйте данную кнопку для синхронизации информации данного сотрудника "
+#~ "с AD."
+
+#~ msgid ""
+#~ "Use the operations menu for the following actions:<ul class=\"fa-ul"
+#~ "\"><li><span class=\"fa-li\"><i class=\"fas fa-check\"></i></span>Adding "
+#~ "new department;</li><li><span class=\"fa-li\"><i class=\"fas fa-check\"></"
+#~ "i></span>Arranging the list of departments alphabetically.</li><ul class="
+#~ "\"fa-ul\">"
+#~ msgstr ""
+#~ "Используйте меню операций для следующих действий:<ul class=\"fa-ul"
+#~ "\"><li><span class=\"fa-li\"><i class=\"fas fa-check\"></i></"
+#~ "span>Добавление нового отдела;</li><li><span class=\"fa-li\"><i class="
+#~ "\"fas fa-check\"></i></span>Упорядочивание списка отделов в алфавитном "
+#~ "порядке.</li><ul class=\"fa-ul\">"
+
+#~ msgid ""
+#~ "Use the operations menu for the following actions:<ul><li>Editing "
+#~ "information;</li><li>Synchronize information;</li><li>Viewing the "
+#~ "subordinate employee tree.</li></ul>"
+#~ msgstr ""
+#~ "Используйте меню операций для следующих действий:<ul><li>Редактирование "
+#~ "информации;</li><li>Синхронизация информации;</li><li>Просмотр дерева "
+#~ "подчинённых сотрудников.</li></ul>"
+
+#~ msgid ""
+#~ "This progress bar shows the degree of filling of the data. Can accept "
+#~ "from several colors: <ul><li><span class=\"bg-danger\"><strong>Red</"
+#~ "strong></span> - means that are not filled all required fields.</"
+#~ "li><li><span class=\"bg-warning\"><strong>Orange</strong></span> - is not "
+#~ "filled in the required fields (allowed retention of information);</"
+#~ "li><li><span class=\"bg-success\"><strong>Green</strong></span> - filled "
+#~ "in all the fields.</li></ul>"
+#~ msgstr ""
+#~ "Данная полоса прогресса показывает степень заполнения данных. Может "
+#~ "принимать один из нескольких цветов: <ul><li><span class=\"bg-danger"
+#~ "\"><strong>Красный цвет</strong></span> - означает, что заполнены не все "
+#~ "обязательные поля;</li><li><span class=\"bg-warning\"><strong>Оранжевый "
+#~ "цвет</strong></span> - не заполнены не обязательные поля (допускается "
+#~ "сохранение информации);</li><li><span class=\"bg-success"
+#~ "\"><strong>Зелёный цвет</strong></span> - заполнены все поля.</li></ul>"
+
+#~ msgid ""
+#~ "Use this menu item for the following:<ul><li>Search for employee "
+#~ "information</li><li>View employee submission tree</li><li>View employee "
+#~ "gallery</li><li>Save a local copy of the directory.</li></ul>"
+#~ msgstr ""
+#~ "Используйте данный элемент меню для следующих действий:<ul><li>Поиска "
+#~ "информации о сотрудниках;</li><li>Просмотра дерева подчинения сотрудников;"
+#~ "</li><li>Просмотра галереи сотрудников;</li><li>Сохранения локальной "
+#~ "копии справочника.</li></ul>"
+
+#~ msgid ""
+#~ "Use the operations menu for the following actions:<ul><li>Editing "
+#~ "information;</li><li>Synchronize information;</li><li>Checking the status "
+#~ "of the subordinate employee tree.</li></ul>"
+#~ msgstr ""
+#~ "Используйте меню операций для следующих действий:<ul><li>Редактирование "
+#~ "информации;</li><li>Синхронизация информации;</li><li>Проверка состояния "
+#~ "дерева подчинённых сотрудников.</li></ul>"
+
+#~ msgid ""
+#~ "Use the operation menu for the following actions:<ul><li>Synchronizing "
+#~ "information;</li><li>Checks the status of the subordinate employee tree.</"
+#~ "li></ul>"
+#~ msgstr ""
+#~ "Используйте меню операций для следующих действий:<ul><li>Синхронизации "
+#~ "информации;</li><li>Проверки состояния дерева подчинённых сотрудников.</"
+#~ "li></ul>"
+
+#~ msgid ""
+#~ "Use this button to select one of the following logical conditions:"
+#~ "<ul><li><i>=</i> - is equal to;</li><li><i>&gt;</i> - more;</"
+#~ "li><li><i>&ge;</i> - is greater than or equal to;</li><li>&lt;<i></i> - "
+#~ "less;</li><li><i>&le;</i> - is less than or equal;</li><li>&ne;<i></i> - "
+#~ "is not equal.</li></ul>"
+#~ msgstr ""
+#~ "Используйте данную кнопку для выбора одного из следующих логических "
+#~ "условий:<ul><li><i>=</i> - равно;</li><li><i>&gt;</i> - больше;</"
+#~ "li><li>&ge;<i></i> - больше или равно;</li><li>&lt<i></i> - меньше;</"
+#~ "li><li>&le;<i></i> - меньше или равно;</li><li>&ne;<i></i> - не равно.</"
+#~ "li></ul>"
+
+#~ msgid ""
+#~ "Using this button, you can combine several filter lines with one of the "
+#~ "following logical conditions:<ul><li><i>&amp;&amp;</i> - AND;</"
+#~ "li><li><i>&nbsp;||&nbsp;</i> - OR;</li><li><i>&nbsp;!&nbsp;</i> - NOT.</"
+#~ "li></ul>"
+#~ msgstr ""
+#~ "Используя данную кнопку можно объединить несколько строк фильтра одним из "
+#~ "следующих логических условий:<ul><li><i>&amp;&amp;</i> - И;</"
+#~ "li><li><i>&nbsp;||&nbsp;</i> - ИЛИ;</li><li><i>&nbsp;!&nbsp;</i> - НЕ.</"
+#~ "li></ul>"
+
+#~ msgid ""
+#~ "Use the operations menu for the following actions:<ul><li>Adding new "
+#~ "department;</li><li>Arranging the list of departments alphabetically.</"
+#~ "li><ul>"
+#~ msgstr ""
+#~ "Используйте меню операций для следующих действий:<ul><li>Добавление "
+#~ "нового отдела;</li><li>Упорядочивание списка отделов в алфавитном порядке."
+#~ "</li><ul>"
+
+#~ msgid ""
+#~ "Use the operations menu for the following:<ul><li>Edit information;</"
+#~ "li><li>Synchronize information;</li><li>Checks the status of the "
+#~ "subordinate employee tree.</li></ul>"
+#~ msgstr ""
+#~ "Используйте меню операций для следующих действий:<ul><li>Редактирования "
+#~ "информации;</li><li>Синхронизации информации;</li><li>Проверки состояния "
+#~ "дерева подчинённых сотрудников.</li></ul>"
+
+#~ msgid ""
+#~ "Use the operations menu for the following:<ul><li>Edit information;</"
+#~ "li><li>Synchronize information;</li><li>View the subordinate employee "
+#~ "tree.</li></ul>"
+#~ msgstr ""
+#~ "Используйте меню операций для следующих действий:<ul><li>Редактирования "
+#~ "информации;</li><li>Синхронизации информации;</li><li>Просмотра дерева "
+#~ "подчинённых сотрудников.</li></ul>"
+
+#~ msgid ""
+#~ "Use the operations menu to arrange the list of departments alphabetically."
+#~ msgstr ""
+#~ "Используйте меню операций для упорядочивания списка отделов по алфавиту."
+
+#~ msgid "To change the full name of the department, use this button."
+#~ msgstr ""
+#~ "Для изменения полного наименования отдела воспользуйтесь данной кнопкой."
+
+#~ msgid ""
+#~ "Use the operations menu for the following actions:<ul><li>Edit "
+#~ "information;</li><li>Synchronize information;</li><li>Checking the status "
+#~ "of the subordinate employee tree.</li></ul>"
+#~ msgstr ""
+#~ "Используйте меню операций для следующих действий:<ul><li>Редактирование "
+#~ "информации;</li><li>Синхронизации информации;</li><li>Проверка состояния "
+#~ "дерева подчинённых сотрудников.</li></ul>"
+
+#~ msgid ""
+#~ "To search for information, enter your request in this field and click the "
+#~ "button \"<span class=\"fa fa-search fa-lg\"></span>\"."
+#~ msgstr ""
+#~ "Для поиска информации введите свой запрос в данное поле и нажмите кнопку "
+#~ "\"<span class=\"fa fa-search fa-lg\"></span>\"."
+
+#~ msgid ""
+#~ "To refine the search result, use the \"<span class=\"fa fa-filter fa-lg"
+#~ "\"></span>\" button."
+#~ msgstr ""
+#~ "Для уточнения результата поиска используйте кнопку \"<span class=\"fa fa-"
+#~ "filter fa-lg\"></span>\"."
+
+#~ msgid ""
+#~ "To change the sort order of tabular data, click the corresponding column "
+#~ "heading in the table. Clicking again will change the sort direction on "
+#~ "the opposite.<br />To display the current sort directions use symbols "
+#~ "\"<span class=\"fa fa-long-arrow-up fa-lg\"></span>\" and \"<span class="
+#~ "\"fa fa-long-arrow-down fa-lg\"></span>\" next to the name of the "
+#~ "corresponding column."
+#~ msgstr ""
+#~ "Для изменения порядка сортировки табличных данных щёлкните по заголовку "
+#~ "соответствующего столбца таблицы. Повторный щелчок приведёт к изменению "
+#~ "направления сортировки на противоположное.<br />Для отображения текущего "
+#~ "направления сортировки используются симолы \"<span class=\"fa fa-long-"
+#~ "arrow-up fa-lg\"></span>\" и \"<span class=\"fa fa-long-arrow-down fa-lg"
+#~ "\"></span>\" рядом с наименованием соответстующего столбца."
+
+#~ msgid ""
+#~ "Use the buttons \"<span class=\"fa fa-angle-double-up fa-lg\"></span>\", "
+#~ "\"<span class=\"fa fa-angle-up fa-lg\"></span>\", \"<span class=\"fa fa-"
+#~ "angle-down fa-lg\"></span>\" and \"<span class=\"fa fa-angle-double-down "
+#~ "fa-lg\"></span>\" for an exact change position of the employee."
+#~ msgstr ""
+#~ "Используйте кнопки \"<span class=\"fa fa-angle-double-up fa-lg\"></span>"
+#~ "\", \"<span class=\"fa fa-angle-up fa-lg\"></span>\", \"<span class=\"fa "
+#~ "fa-angle-down fa-lg\"></span>\" и \"<span class=\"fa fa-angle-double-down "
+#~ "fa-lg\"></span>\" для точного изменения позиции сотрудника."
+
+#~ msgid ""
+#~ "Use the buttons \"<span class=\"fa fa-angle-double-up fa-lg\"></span>\", "
+#~ "\"<span class=\"fa fa-angle-up fa-lg\"></span>\", \"<span class=\"fa fa-"
+#~ "angle-down fa-lg\"></span>\" and \"<span class=\"fa fa-angle-double-down "
+#~ "fa-lg\"></span>\" for an exact change positions of the department."
+#~ msgstr ""
+#~ "Используйте кнопки \"<span class=\"fa fa-angle-double-up fa-lg\"></span>"
+#~ "\", \"<span class=\"fa fa-angle-up fa-lg\"></span>\", \"<span class=\"fa "
+#~ "fa-angle-down fa-lg\"></span>\" и \"<span class=\"fa fa-angle-double-down "
+#~ "fa-lg\"></span>\" для точного изменения позиции отдела."

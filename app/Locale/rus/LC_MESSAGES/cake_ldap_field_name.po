@@ -1,0 +1,264 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: CakePHP Plugin CakeLdap\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2018-04-14 15:42+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 1.8.7\n"
+
+#: Config/cakeldap.php:19;21
+#: Test/Case/Controller/DeferredControllerTest.php:235;705
+#: Test/Case/Controller/LogsControllerTest.php:247;644
+msgid "GUID"
+msgstr "GUID"
+
+#: Config/cakeldap.php:50
+#: Test/Case/Controller/DeferredControllerTest.php:236;706
+#: Test/Case/Controller/LogsControllerTest.php:248;645
+msgid "Distinguished name"
+msgstr "Отличительное имя"
+
+#: Config/cakeldap.php:51
+msgid "Disting. name"
+msgstr "Отлич. имя"
+
+#: Config/cakeldap.php:99
+#: Test/Case/Controller/DeferredControllerTest.php:239;709
+#: Test/Case/Controller/LogsControllerTest.php:251;648
+msgid "Initials"
+msgstr "Инициалы"
+
+#: Config/cakeldap.php:100
+msgid "Init."
+msgstr "Иниц."
+
+#: Config/cakeldap.php:108
+#: Test/Case/Controller/DeferredControllerTest.php:218;688
+#: Test/Case/Controller/LogsControllerTest.php:230;627
+msgid "Surname"
+msgstr "Фамилия"
+
+#: Config/cakeldap.php:109
+msgid "Surn."
+msgstr "Фам."
+
+#: Config/cakeldap.php:125
+#: Test/Case/Controller/DeferredControllerTest.php:219;689
+#: Test/Case/Controller/LogsControllerTest.php:231;628
+msgid "Given name"
+msgstr "Имя"
+
+#: Config/cakeldap.php:126
+msgid "Giv. name"
+msgstr "Имя"
+
+#: Config/cakeldap.php:142
+#: Test/Case/Controller/DeferredControllerTest.php:220;690
+#: Test/Case/Controller/LogsControllerTest.php:232;629
+msgid "Middle name"
+msgstr "Отчество"
+
+#: Config/cakeldap.php:143
+msgid "Mid. name"
+msgstr "Отчество"
+
+#: Config/cakeldap.php:159
+#: Test/Case/Controller/DeferredControllerTest.php:230;700
+#: Test/Case/Controller/LogsControllerTest.php:242;639
+msgid "Position"
+msgstr "Должность"
+
+#: Config/cakeldap.php:160
+msgid "Pos."
+msgstr "Долж."
+
+#: Config/cakeldap.php:176
+#: Test/Case/Controller/DeferredControllerTest.php:229;699
+#: Test/Case/Controller/LogsControllerTest.php:241;638
+msgid "Subdivision"
+msgstr "Подразделение"
+
+#: Config/cakeldap.php:177
+msgid "Subdiv."
+msgstr "Подразд."
+
+#: Config/cakeldap.php:185
+#: Test/Case/Controller/DeferredControllerTest.php:228;698
+#: Test/Case/Controller/LogsControllerTest.php:240;637
+msgid "Department"
+msgstr "Отдел"
+
+#: Config/cakeldap.php:186
+msgid "Depart."
+msgstr "Отдел"
+
+#: Config/cakeldap.php:194
+msgid "Internal telephone"
+msgstr "Внутренний телефон"
+
+#: Config/cakeldap.php:195
+msgid "Int. tel."
+msgstr "Вн. тел."
+
+#: Config/cakeldap.php:203
+msgid "Landline telephone"
+msgstr "Стационарный телефон"
+
+#: Config/cakeldap.php:204
+msgid "Land. tel."
+msgstr "Стацион. тел."
+
+#: Config/cakeldap.php:212
+#: Test/Case/Controller/DeferredControllerTest.php:225;695
+#: Test/Case/Controller/LogsControllerTest.php:237;634
+msgid "Mobile telephone"
+msgstr "Мобильный телефон"
+
+#: Config/cakeldap.php:213
+msgid "Mob. tel."
+msgstr "Моб. тел."
+
+#: Config/cakeldap.php:221
+msgid "Personal mobile telephone"
+msgstr "Личный мобильный телефон"
+
+#: Config/cakeldap.php:222
+msgid "Person. mob. tel."
+msgstr "Личный моб. тел."
+
+#: Config/cakeldap.php:230
+#: Test/Case/Controller/DeferredControllerTest.php:227;697
+#: Test/Case/Controller/LogsControllerTest.php:239;636
+msgid "Office room"
+msgstr "Комната"
+
+#: Config/cakeldap.php:231
+msgid "Office"
+msgstr "Комната"
+
+#: Config/cakeldap.php:242;243
+#: Test/Case/Controller/DeferredControllerTest.php:221;691
+#: Test/Case/Controller/LogsControllerTest.php:233;630
+msgid "E-mail"
+msgstr "E-mail"
+
+#: Config/cakeldap.php:259
+#: Test/Case/Controller/DeferredControllerTest.php:231;701
+#: Test/Case/Controller/LogsControllerTest.php:243;640
+msgid "Manager"
+msgstr "Руководитель"
+
+#: Config/cakeldap.php:260
+msgid "Manag."
+msgstr "Руковод."
+
+#: Config/cakeldap.php:267;268
+#: Test/Case/Controller/DeferredControllerTest.php:237;707
+#: Test/Case/Controller/LogsControllerTest.php:249;646
+msgid "Photo"
+msgstr "Фото"
+
+#: Config/cakeldap.php:275
+#: Test/Case/Controller/DeferredControllerTest.php:233;703
+#: Test/Case/Controller/LogsControllerTest.php:245;642
+msgid "Computer"
+msgstr "Компьютер"
+
+#: Config/cakeldap.php:276
+msgid "Comp."
+msgstr "Комп."
+
+#: Config/cakeldap.php:283
+#: Test/Case/Controller/DeferredControllerTest.php:234;704
+#: Test/Case/Controller/LogsControllerTest.php:246;643
+msgid "Employee ID"
+msgstr "Табельный номер"
+
+#: Config/cakeldap.php:284
+msgid "Empl. ID"
+msgstr "Таб. ном."
+
+#: Config/cakeldap.php:292
+#: Test/Case/Controller/DeferredControllerTest.php:238;708
+#: Test/Case/Controller/LogsControllerTest.php:250;647
+msgid "Company name"
+msgstr "Название организации"
+
+#: Config/cakeldap.php:293
+msgid "Comp. name"
+msgstr "Назв. организ."
+
+#: Config/cakeldap.php:300
+#: Test/Case/Controller/DeferredControllerTest.php:232;702
+#: Test/Case/Controller/LogsControllerTest.php:244;641
+msgid "Birthday"
+msgstr "День рождения"
+
+#: Config/cakeldap.php:301
+msgid "Birthd."
+msgstr "День рожд."
+
+#: Config/cakeldap.php:309
+#: Test/Case/Controller/DeferredControllerTest.php:222;692
+#: Test/Case/Controller/LogsControllerTest.php:234;631
+msgid "SIP telephone"
+msgstr "SIP телефон"
+
+#: Config/cakeldap.php:310
+msgid "SIP tel."
+msgstr "SIP тел."
+
+#: Config/cakeldap.php:73;74;90;91
+msgctxt "employee"
+msgid "Name"
+msgstr "ФИО"
+
+#: Test/Case/Controller/DeferredControllerTest.php:240;710
+#: Test/Case/Controller/LogsControllerTest.php:252;649
+#: Test/Case/Model/DeferredTest.php:1278;1483
+msgid "Block"
+msgstr "Заблокирован"
+
+#: Test/Case/Controller/EmployeesControllerTest.php:1399
+msgid "Subordinate"
+msgstr "Подчинённые"
+
+#~ msgid "Full name"
+#~ msgstr "Полное имя"
+
+#~ msgid "Display name"
+#~ msgstr "Отображаемое имя"
+
+#~ msgid "Displ. name"
+#~ msgstr "Отобр. имя"
+
+#~ msgid "Telephone"
+#~ msgstr "Телефон"
+
+#~ msgid "Tel."
+#~ msgstr "Тел."
+
+#~ msgid "Other telephone"
+#~ msgstr "Другой телефон"
+
+#~ msgid "Other tel."
+#~ msgstr "Другой тел."
+
+#~ msgid "Other mobile telephone"
+#~ msgstr "Другой мобильный телефон"
+
+#~ msgid "Other mob. tel."
+#~ msgstr "Другой моб. тел."
+
+#~ msgid "Subord."
+#~ msgstr "Подчин."

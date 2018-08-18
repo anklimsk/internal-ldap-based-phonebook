@@ -1,0 +1,20 @@
+{
+    "name": "packagelist/yuicompressor-bin",
+    "description": "YUI Compressor packaged for composer. JavaScript and CSS minification.",
+    "license": "BSD-3-Clause",
+    "homepage": "http://yui.github.io/yuicompressor",
+    "keywords": ["yui", "compressor", "javascript", "css", "minification" ],
+    "authors": [
+        {
+            "name": "Yahoo! Inc.",
+            "homepage": "http://yuilibrary.com"
+        },
+        {
+            "name":     "Krusty Kode",
+            "email":    "kaiwa@20minutemail.com",
+            "role":     "maintainer"
+        }
+    ],
+    "require": { },
+    "bin": [ "bin/yuicompressor.jar" ]
+}

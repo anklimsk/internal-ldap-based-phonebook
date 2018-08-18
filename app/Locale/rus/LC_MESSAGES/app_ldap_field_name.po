@@ -1,0 +1,470 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: InternalPhonebook\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2018-04-28 11:35+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 1.8.7\n"
+
+#: Config/cakeldap.php:19;21 Test/TestConfig.php:54;55
+#: Test/Case/Controller/DeferredControllerTest.php:995;1021
+#: Test/Case/Controller/EmployeesControllerTest.php:1684;1704;1858;1884;2048;2074
+#: Test/Case/Model/DeferredTest.php:1273;1478
+#: Test/Case/Model/EmployeeEditTest.php:675;695;715;741
+#: Test/Case/Model/EmployeeTest.php:560;561;815;816
+msgid "GUID"
+msgstr "GUID"
+
+#: Config/cakeldap.php:52 Test/TestConfig.php:77
+#: Test/Case/Controller/DeferredControllerTest.php:996
+#: Test/Case/Controller/EmployeesControllerTest.php:1685;1859;2049
+#: Test/Case/Model/DeferredTest.php:1274;1479
+#: Test/Case/Model/EmployeeEditTest.php:676;716
+#: Test/Case/Model/EmployeeTest.php:583;838
+msgid "Distinguished name"
+msgstr "Отличительное имя"
+
+#: Config/cakeldap.php:53 Test/TestConfig.php:78
+#: Test/Case/Controller/DeferredControllerTest.php:1022
+#: Test/Case/Controller/EmployeesControllerTest.php:1705;1885;2075
+#: Test/Case/Model/EmployeeEditTest.php:696;742
+#: Test/Case/Model/EmployeeTest.php:584;839
+msgid "Disting. name"
+msgstr "Отлич. имя"
+
+#: Config/cakeldap.php:102 Test/TestConfig.php:126
+#: Test/Case/Controller/DeferredControllerTest.php:999
+#: Test/Case/Controller/EmployeesControllerTest.php:1688;1862;2052
+#: Test/Case/Model/DeferredTest.php:1277;1482
+#: Test/Case/Model/EmployeeEditTest.php:679;719
+#: Test/Case/Model/EmployeeTest.php:632;887
+#: Test/Case/Model/SettingExtTest.php:76;98
+msgid "Initials"
+msgstr "Инициалы"
+
+#: Config/cakeldap.php:103 Test/TestConfig.php:127
+#: Test/Case/Controller/DeferredControllerTest.php:1025
+#: Test/Case/Controller/EmployeesControllerTest.php:1708;1888;2078
+#: Test/Case/Model/EmployeeEditTest.php:699;745
+#: Test/Case/Model/EmployeeTest.php:633;888
+msgid "Init."
+msgstr "Иниц."
+
+#: Config/cakeldap.php:112 Test/TestConfig.php:136
+#: Test/Case/Controller/AppControllerTest.php:150;240
+#: Test/Case/Controller/DeferredControllerTest.php:1000
+#: Test/Case/Controller/EmployeesControllerTest.php:300;557;1145;1380;1689;1863;2053
+#: Test/Case/Model/DeferredTest.php:1256;1461
+#: Test/Case/Model/EmployeeEditTest.php:680;720
+#: Test/Case/Model/EmployeeTest.php:237;267;642;897
+#: Test/Case/Model/SettingExtTest.php:88;110
+msgid "Surname"
+msgstr "Фамилия"
+
+#: Config/cakeldap.php:113 Test/TestConfig.php:137
+#: Test/Case/Controller/DeferredControllerTest.php:1026
+#: Test/Case/Controller/EmployeesControllerTest.php:1709;1889;2079
+#: Test/Case/Model/EmployeeEditTest.php:700;746
+#: Test/Case/Model/EmployeeTest.php:643;898
+msgid "Surn."
+msgstr "Фам."
+
+#: Config/cakeldap.php:132 Test/TestConfig.php:154
+#: Test/Case/Controller/AppControllerTest.php:151;241
+#: Test/Case/Controller/DeferredControllerTest.php:1001
+#: Test/Case/Controller/EmployeesControllerTest.php:301;558;1146;1381;1690;1864;2054
+#: Test/Case/Model/DeferredTest.php:1257;1462
+#: Test/Case/Model/EmployeeEditTest.php:681;721
+#: Test/Case/Model/EmployeeTest.php:238;268;660;915
+#: Test/Case/Model/SettingExtTest.php:74;96
+msgid "Given name"
+msgstr "Имя"
+
+#: Config/cakeldap.php:133 Test/TestConfig.php:155
+#: Test/Case/Controller/DeferredControllerTest.php:1027
+#: Test/Case/Controller/EmployeesControllerTest.php:1710;1890;2080
+#: Test/Case/Model/EmployeeEditTest.php:701;747
+#: Test/Case/Model/EmployeeTest.php:661;916
+msgid "Giv. name"
+msgstr "Имя"
+
+#: Config/cakeldap.php:152 Test/TestConfig.php:172
+#: Test/Case/Controller/AppControllerTest.php:152;242
+#: Test/Case/Controller/DeferredControllerTest.php:1002
+#: Test/Case/Controller/EmployeesControllerTest.php:302;559;1147;1382;1691;1865;2055
+#: Test/Case/Model/DeferredTest.php:1258;1463
+#: Test/Case/Model/EmployeeEditTest.php:682;722
+#: Test/Case/Model/EmployeeTest.php:239;269;678;933
+#: Test/Case/Model/SettingExtTest.php:79;101
+msgid "Middle name"
+msgstr "Отчество"
+
+#: Config/cakeldap.php:153 Test/TestConfig.php:173
+#: Test/Case/Controller/DeferredControllerTest.php:1028
+#: Test/Case/Controller/EmployeesControllerTest.php:1711;1891;2081
+#: Test/Case/Model/EmployeeEditTest.php:702;748
+#: Test/Case/Model/EmployeeTest.php:679;934
+msgid "Mid. name"
+msgstr "Отчество"
+
+#: Config/cakeldap.php:172 Test/TestConfig.php:190
+#: Test/Case/Controller/AppControllerTest.php:160;252
+#: Test/Case/Controller/DeferredControllerTest.php:1003
+#: Test/Case/Controller/EmployeesControllerTest.php:310;569;1155;1392;1692;1866;2056
+#: Test/Case/Model/DeferredTest.php:1268;1473
+#: Test/Case/Model/EmployeeEditTest.php:683;723
+#: Test/Case/Model/EmployeeTest.php:247;279;696;951;1633;1677;1721;1765
+#: Test/Case/Model/SettingExtTest.php:85;107
+#: Test/Case/View/Helper/DeferredHelperTest.php:125
+msgid "Position"
+msgstr "Должность"
+
+#: Config/cakeldap.php:173 Test/TestConfig.php:191
+#: Test/Case/Controller/DeferredControllerTest.php:1029
+#: Test/Case/Controller/EmployeesControllerTest.php:171;416;1712;1892;2082
+#: Test/Case/Model/EmployeeEditTest.php:703;749
+#: Test/Case/Model/EmployeeTest.php:697;952;1184;1221
+msgid "Pos."
+msgstr "Долж."
+
+#: Config/cakeldap.php:192 Test/TestConfig.php:208
+#: Test/Case/Controller/AppControllerTest.php:251
+#: Test/Case/Controller/DeferredControllerTest.php:1004
+#: Test/Case/Controller/EmployeesControllerTest.php:568;1391;1867;2057
+#: Test/Case/Model/DeferredTest.php:1267;1472
+#: Test/Case/Model/EmployeeEditTest.php:724
+#: Test/Case/Model/EmployeeTest.php:278;969
+#: Test/Case/Model/SettingExtTest.php:87;109
+#: Test/Case/View/Helper/DeferredHelperTest.php:125
+msgid "Subdivision"
+msgstr "Подразделение"
+
+#: Config/cakeldap.php:193 Test/TestConfig.php:209
+#: Test/Case/Controller/DeferredControllerTest.php:1030
+#: Test/Case/Controller/EmployeesControllerTest.php:413;1893;2083
+#: Test/Case/Model/EmployeeEditTest.php:750
+#: Test/Case/Model/EmployeeTest.php:970;1218;1677
+msgid "Subdiv."
+msgstr "Подразд."
+
+#: Config/cakeldap.php:202 Test/TestConfig.php:218
+#: Test/Case/Controller/AppControllerTest.php:159;250
+#: Test/Case/Controller/DeferredControllerTest.php:1005
+#: Test/Case/Controller/EmployeesControllerTest.php:309;567;1154;1390;1693;1868;2058
+#: Test/Case/Model/DeferredTest.php:1266;1471
+#: Test/Case/Model/EmployeeEditTest.php:684;725
+#: Test/Case/Model/EmployeeTest.php:246;277;714;979;1633;1677
+#: Test/Case/Model/SettingExtTest.php:71;93
+#: Test/Case/View/Helper/DeferredHelperTest.php:155
+msgid "Department"
+msgstr "Отдел"
+
+#: Config/cakeldap.php:203 Test/TestConfig.php:219
+#: Test/Case/Controller/DeferredControllerTest.php:1031
+#: Test/Case/Controller/EmployeesControllerTest.php:168;410;1713;1894;2084
+#: Test/Case/Model/EmployeeEditTest.php:704;751
+#: Test/Case/Model/EmployeeTest.php:715;980;1181;1215
+msgid "Depart."
+msgstr "Отдел"
+
+#: Config/cakeldap.php:212
+msgid "Group telephone"
+msgstr "Групповой телефон"
+
+#: Config/cakeldap.php:213
+msgid "Group. tel."
+msgstr "Групп. тел."
+
+#: Config/cakeldap.php:222 Test/TestConfig.php:238
+#: Test/Case/Controller/AppControllerTest.php:156;246
+#: Test/Case/Controller/DeferredControllerTest.php:224;694;1007
+#: Test/Case/Controller/EmployeesControllerTest.php:306;563;1151;1386;1695;1870;2060
+#: Test/Case/Controller/LogsControllerTest.php:237;634
+#: Test/Case/Model/DeferredTest.php:1262;1467
+#: Test/Case/Model/EmployeeEditTest.php:686;727
+#: Test/Case/Model/EmployeeTest.php:243;273;734;999
+#: Test/Case/Model/SettingExtTest.php:77;99
+#: Test/Case/View/Helper/DeferredHelperTest.php:155
+msgid "Landline telephone"
+msgstr "Стационарный телефон"
+
+#: Config/cakeldap.php:223 Test/TestConfig.php:239
+#: Test/Case/Controller/DeferredControllerTest.php:1033
+#: Test/Case/Controller/EmployeesControllerTest.php:158;396;1715;1896;2086
+#: Test/Case/Model/EmployeeEditTest.php:706;753
+#: Test/Case/Model/EmployeeTest.php:735;1000;1171;1201;1635;1679;1723;1767
+msgid "Land. tel."
+msgstr "Стацион. тел."
+
+#: Config/cakeldap.php:232 Test/TestConfig.php:248
+#: Test/Case/Controller/AppControllerTest.php:157;247
+#: Test/Case/Controller/DeferredControllerTest.php:1008
+#: Test/Case/Controller/EmployeesControllerTest.php:307;564;1152;1387;1696;1871;2061
+#: Test/Case/Model/DeferredTest.php:1263;1468
+#: Test/Case/Model/EmployeeEditTest.php:687;728
+#: Test/Case/Model/EmployeeTest.php:244;274;744;1009
+#: Test/Case/Model/SettingExtTest.php:80;102
+msgid "Mobile telephone"
+msgstr "Мобильный телефон"
+
+#: Config/cakeldap.php:233 Test/TestConfig.php:249
+#: Test/Case/Controller/DeferredControllerTest.php:1034
+#: Test/Case/Controller/EmployeesControllerTest.php:162;400;1716;1897;2087
+#: Test/Case/Model/EmployeeEditTest.php:707;754
+#: Test/Case/Model/EmployeeTest.php:745;1010;1175;1205;1635;1679;1723;1767
+msgid "Mob. tel."
+msgstr "Моб. тел."
+
+#: Config/cakeldap.php:242 Test/TestConfig.php:258
+#: Test/Case/Controller/AppControllerTest.php:248
+#: Test/Case/Controller/DeferredControllerTest.php:226;696;1009
+#: Test/Case/Controller/EmployeesControllerTest.php:565;1388;1872;2062
+#: Test/Case/Controller/LogsControllerTest.php:239;636
+#: Test/Case/Model/DeferredTest.php:1264;1469
+#: Test/Case/Model/EmployeeEditTest.php:729
+#: Test/Case/Model/EmployeeTest.php:275;1019
+#: Test/Case/Model/SettingExtTest.php:83;105
+#: Test/Case/View/Helper/DeferredHelperTest.php:155
+msgid "Personal mobile telephone"
+msgstr "Личный мобильный телефон"
+
+#: Config/cakeldap.php:243 Test/TestConfig.php:259
+#: Test/Case/Controller/DeferredControllerTest.php:1035
+#: Test/Case/Controller/EmployeesControllerTest.php:403;1898;2088
+#: Test/Case/Model/EmployeeEditTest.php:755
+#: Test/Case/Model/EmployeeTest.php:1020;1208
+msgid "Person. mob. tel."
+msgstr "Личный моб. тел."
+
+#: Config/cakeldap.php:252 Test/TestConfig.php:268
+#: Test/Case/Controller/AppControllerTest.php:158;249
+#: Test/Case/Controller/DeferredControllerTest.php:1010
+#: Test/Case/Controller/EmployeesControllerTest.php:308;566;1153;1389;1697;1873;2063
+#: Test/Case/Model/DeferredTest.php:1265;1470
+#: Test/Case/Model/EmployeeEditTest.php:688;730
+#: Test/Case/Model/EmployeeTest.php:245;276;754;1029;1636;1680;1724;1768
+#: Test/Case/Model/SettingExtTest.php:82;104
+#: Test/Case/View/Helper/DeferredHelperTest.php:140
+msgid "Office room"
+msgstr "Комната"
+
+#: Config/cakeldap.php:253 Test/TestConfig.php:269
+#: Test/Case/Controller/DeferredControllerTest.php:1036
+#: Test/Case/Controller/EmployeesControllerTest.php:165;407;1717;1899;2089
+#: Test/Case/Model/EmployeeEditTest.php:708;756
+#: Test/Case/Model/EmployeeTest.php:755;1030;1178;1212
+msgid "Office"
+msgstr "Комната"
+
+#: Config/cakeldap.php:265;266 Test/TestConfig.php:281;282
+#: Test/Case/Controller/AppControllerTest.php:153;243
+#: Test/Case/Controller/DeferredControllerTest.php:1011;1037
+#: Test/Case/Controller/EmployeesControllerTest.php:149;303;387;560;1148;1383;1698;1718;1874;1900;2064;2090
+#: Test/Case/Model/DeferredTest.php:1259;1464
+#: Test/Case/Model/EmployeeEditTest.php:689;709;731;757
+#: Test/Case/Model/EmployeeTest.php:240;270;767;768;1042;1043;1162;1192;1632;1676;1720;1764
+#: Test/Case/Model/SettingExtTest.php:72;94
+#: Test/Case/View/Helper/DeferredHelperTest.php:140
+msgid "E-mail"
+msgstr "E-mail"
+
+#: Config/cakeldap.php:283 Test/TestConfig.php:299
+#: Test/Case/Controller/AppControllerTest.php:253
+#: Test/Case/Controller/DeferredControllerTest.php:1012
+#: Test/Case/Controller/EmployeesControllerTest.php:570;1393;1875;2065
+#: Test/Case/Model/DeferredTest.php:1269;1474
+#: Test/Case/Model/EmployeeEditTest.php:732
+#: Test/Case/Model/EmployeeTest.php:280;1060
+#: Test/Case/Model/SettingExtTest.php:78;100
+#: Test/Case/View/Helper/DeferredHelperTest.php:140
+msgid "Manager"
+msgstr "Руководитель"
+
+#: Config/cakeldap.php:284 Test/TestConfig.php:300
+#: Test/Case/Controller/DeferredControllerTest.php:1038
+#: Test/Case/Controller/EmployeesControllerTest.php:419;1901;2091
+#: Test/Case/Model/EmployeeEditTest.php:758
+#: Test/Case/Model/EmployeeTest.php:1061;1224
+msgid "Manag."
+msgstr "Руковод."
+
+#: Config/cakeldap.php:292;293 Test/TestConfig.php:308;309
+#: Test/Case/Controller/DeferredControllerTest.php:1013;1039
+#: Test/Case/Controller/EmployeesControllerTest.php:1156;1397;1699;1719;1876;1902;2066;2092
+#: Test/Case/Model/DeferredTest.php:1275;1480
+#: Test/Case/Model/EmployeeEditTest.php:690;710;733;759
+#: Test/Case/Model/EmployeeTest.php:785;786;1069;1070
+#: Test/Case/Model/SettingExtTest.php:84;106
+#: Test/Case/View/Helper/DeferredHelperTest.php:125
+msgid "Photo"
+msgstr "Фото"
+
+#: Config/cakeldap.php:301 Test/TestConfig.php:317
+#: Test/Case/Controller/AppControllerTest.php:255
+#: Test/Case/Controller/DeferredControllerTest.php:1014
+#: Test/Case/Controller/EmployeesControllerTest.php:572;1395;1877;2067
+#: Test/Case/Model/DeferredTest.php:1271;1476
+#: Test/Case/Model/EmployeeEditTest.php:734
+#: Test/Case/Model/EmployeeTest.php:282;1078
+#: Test/Case/Model/SettingExtTest.php:70;92
+msgid "Computer"
+msgstr "Компьютер"
+
+#: Config/cakeldap.php:302 Test/TestConfig.php:318
+#: Test/Case/Controller/DeferredControllerTest.php:1040
+#: Test/Case/Controller/EmployeesControllerTest.php:425;1903;2093
+#: Test/Case/Model/EmployeeEditTest.php:760
+#: Test/Case/Model/EmployeeTest.php:1079;1230
+msgid "Comp."
+msgstr "Комп."
+
+#: Config/cakeldap.php:310 Test/TestConfig.php:326
+#: Test/Case/Controller/AppControllerTest.php:256
+#: Test/Case/Controller/DeferredControllerTest.php:1015
+#: Test/Case/Controller/EmployeesControllerTest.php:573;1396;1878;2068
+#: Test/Case/Model/DeferredTest.php:1272;1477
+#: Test/Case/Model/EmployeeEditTest.php:735
+#: Test/Case/Model/EmployeeTest.php:283;1087
+#: Test/Case/Model/SettingExtTest.php:73;95
+msgid "Employee ID"
+msgstr "Табельный номер"
+
+#: Config/cakeldap.php:311 Test/TestConfig.php:327
+#: Test/Case/Controller/DeferredControllerTest.php:1041
+#: Test/Case/Controller/EmployeesControllerTest.php:428;1904;2094
+#: Test/Case/Model/EmployeeEditTest.php:761
+#: Test/Case/Model/EmployeeTest.php:1088;1233
+msgid "Empl. ID"
+msgstr "Таб. ном."
+
+#: Config/cakeldap.php:320 Test/TestConfig.php:336
+#: Test/Case/Controller/DeferredControllerTest.php:1016
+#: Test/Case/Controller/EmployeesControllerTest.php:1700;1879;2069
+#: Test/Case/Model/DeferredTest.php:1276;1481
+#: Test/Case/Model/EmployeeEditTest.php:691;736
+#: Test/Case/Model/EmployeeTest.php:794;1097
+msgid "Company name"
+msgstr "Название организации"
+
+#: Config/cakeldap.php:321 Test/TestConfig.php:337
+#: Test/Case/Controller/DeferredControllerTest.php:1042
+#: Test/Case/Controller/EmployeesControllerTest.php:1720;1905;2095
+#: Test/Case/Model/EmployeeEditTest.php:711;762
+#: Test/Case/Model/EmployeeTest.php:795;1098
+msgid "Comp. name"
+msgstr "Назв. организ."
+
+#: Config/cakeldap.php:329 Test/TestConfig.php:345
+#: Test/Case/Controller/AppControllerTest.php:254
+#: Test/Case/Controller/DeferredControllerTest.php:1017
+#: Test/Case/Controller/EmployeesControllerTest.php:571;1394;1880;2070
+#: Test/Case/Model/DeferredTest.php:1270;1475
+#: Test/Case/Model/EmployeeEditTest.php:737
+#: Test/Case/Model/EmployeeTest.php:281;1106
+#: Test/Case/Model/SettingExtTest.php:69;91
+msgid "Birthday"
+msgstr "День рождения"
+
+#: Config/cakeldap.php:330 Test/TestConfig.php:346
+#: Test/Case/Controller/DeferredControllerTest.php:1043
+#: Test/Case/Controller/EmployeesControllerTest.php:422;1906;2096
+#: Test/Case/Model/EmployeeEditTest.php:763
+#: Test/Case/Model/EmployeeTest.php:1107;1227
+msgid "Birthd."
+msgstr "День рожд."
+
+#: Config/cakeldap.php:339 Test/TestConfig.php:355
+#: Test/Case/Controller/AppControllerTest.php:154;244
+#: Test/Case/Controller/DeferredControllerTest.php:1018
+#: Test/Case/Controller/EmployeesControllerTest.php:304;561;1149;1384;1701;1881;2071
+#: Test/Case/Model/DeferredTest.php:1260;1465
+#: Test/Case/Model/EmployeeEditTest.php:692;738
+#: Test/Case/Model/EmployeeTest.php:241;271;803;1116
+#: Test/Case/Model/SettingExtTest.php:86;108
+msgid "SIP telephone"
+msgstr "SIP телефон"
+
+#: Config/cakeldap.php:340 Test/TestConfig.php:356
+#: Test/Case/Controller/DeferredControllerTest.php:1044
+#: Test/Case/Controller/EmployeesControllerTest.php:152;390;1721;1907;2097
+#: Test/Case/Model/EmployeeEditTest.php:712;764
+#: Test/Case/Model/EmployeeTest.php:804;1117;1165;1195;1634;1678;1722;1766
+msgid "SIP tel."
+msgstr "SIP тел."
+
+#: Config/cakeldap.php:75;76;92;93 Test/TestConfig.php:100;101;116;117
+#: Test/Case/Controller/AppControllerTest.php:149;239
+#: Test/Case/Controller/DeferredControllerTest.php:216;217;686;687;997;998;1023;1024
+#: Test/Case/Controller/EmployeesControllerTest.php:146;299;384;556;1143;1144;1378;1379;1686;1687;1706;1707;1860;1861;1886;1887;2050;2051;2076;2077
+#: Test/Case/Controller/LogsControllerTest.php:229;230;626;627
+#: Test/Case/Model/DeferredTest.php:1254;1255;1459;1460
+#: Test/Case/Model/EmployeeEditTest.php:677;678;697;698;717;718;743;744
+#: Test/Case/Model/EmployeeTest.php:236;266;606;607;622;623;861;862;877;878;1159;1189;1632;1676;1720;1764
+#: Test/Case/Model/SettingExtTest.php:81;103
+msgctxt "employee"
+msgid "Name"
+msgstr "ФИО"
+
+#: Test/TestConfig.php:228 Test/Case/Controller/AppControllerTest.php:155;245
+#: Test/Case/Controller/DeferredControllerTest.php:223;693;1006
+#: Test/Case/Controller/EmployeesControllerTest.php:305;562;1150;1385;1694;1869;2059
+#: Test/Case/Controller/LogsControllerTest.php:236;633
+#: Test/Case/Model/DeferredTest.php:1261;1466
+#: Test/Case/Model/EmployeeEditTest.php:685;726
+#: Test/Case/Model/EmployeeTest.php:242;272;724;989
+#: Test/Case/Model/SettingExtTest.php:75;97
+msgid "Internal telephone"
+msgstr "Внутренний телефон"
+
+#: Test/TestConfig.php:229 Test/Case/Controller/DeferredControllerTest.php:1032
+#: Test/Case/Controller/EmployeesControllerTest.php:155;393;1714;1895;2085
+#: Test/Case/Model/EmployeeEditTest.php:705;752
+#: Test/Case/Model/EmployeeTest.php:725;990;1168;1198;1634;1678;1722;1766
+msgid "Int. tel."
+msgstr "Вн. тел."
+
+#~ msgid "Block"
+#~ msgstr "Заблокирован"
+
+#~ msgid "Subordinate"
+#~ msgstr "Подчинённые"
+
+#~ msgid "Full name"
+#~ msgstr "Полное имя"
+
+#~ msgid "Display name"
+#~ msgstr "Отображаемое имя"
+
+#~ msgid "Displ. name"
+#~ msgstr "Отобр. имя"
+
+#~ msgid "Telephone"
+#~ msgstr "Телефон"
+
+#~ msgid "Tel."
+#~ msgstr "Тел."
+
+#~ msgid "Other telephone"
+#~ msgstr "Другой телефон"
+
+#~ msgid "Other tel."
+#~ msgstr "Другой тел."
+
+#~ msgid "Other mobile telephone"
+#~ msgstr "Другой мобильный телефон"
+
+#~ msgid "Other mob. tel."
+#~ msgstr "Другой моб. тел."
+
+#~ msgid "Subord."
+#~ msgstr "Подчин."

@@ -1,0 +1,13 @@
+/*!
+ * File for action Edit of controller Deferred
+ * version 0.1
+ * copyright 2017 Andrey Klimov.
+ */
+
+/**
+ * Highlight photo image
+ */
+.has-warning .img-thumbnail {
+    border-color: #8A6D3B;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+}

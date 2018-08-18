@@ -1,0 +1,143 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: InternalPhonebook\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2018-04-20 10:07+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 1.8.7\n"
+
+#: Config/cakeldap.php:99 Test/TestConfig.php:83
+#: Test/Case/Model/EmployeeEditTest.php:1888
+msgid "Display name of employee"
+msgstr "Отображаемое имя сотрудника"
+
+#: Config/cakeldap.php:109 Test/TestConfig.php:93
+#: Test/Case/Model/EmployeeEditTest.php:1889
+msgid "Initials name of employee"
+msgstr "Инициалы сотрудника"
+
+#: Config/cakeldap.php:127 Test/TestConfig.php:111
+#: Test/Case/Model/EmployeeEditTest.php:1890
+msgid "Surname of employee"
+msgstr "Фамилия сотрудника"
+
+#: Config/cakeldap.php:145 Test/TestConfig.php:129
+#: Test/Case/Model/EmployeeEditTest.php:1891
+msgid "Given name of employee"
+msgstr "Имя сотрудника"
+
+#: Config/cakeldap.php:163 Test/TestConfig.php:147
+#: Test/Case/Model/EmployeeEditTest.php:1892
+msgid "Middle name of employee"
+msgstr "Отчество сотрудника"
+
+#: Config/cakeldap.php:181 Test/TestConfig.php:165
+#: Test/Case/Model/EmployeeEditTest.php:1893
+msgid "Position of employee"
+msgstr "Должность сотрудника"
+
+#: Config/cakeldap.php:191 Test/TestConfig.php:175
+#: Test/Case/Model/EmployeeEditTest.php:1894
+msgid "Subdivision of employee"
+msgstr "Подразделение сотрудника"
+
+#: Config/cakeldap.php:201 Test/TestConfig.php:185
+#: Test/Case/Model/EmployeeEditTest.php:1895
+msgid "Department of employee"
+msgstr "Отдел сотрудника"
+
+#: Config/cakeldap.php:211 Test/TestConfig.php:195
+#: Test/Case/Model/EmployeeEditTest.php:1896
+msgid ""
+"Interoffice telephone of employee. Format: %s, where X - number from 0 to 9"
+msgstr "Внутренний телефон сотрудника. Формат: %s, где X - число от 0 до 9"
+
+#: Config/cakeldap.php:221 Test/TestConfig.php:205
+#: Test/Case/Model/EmployeeEditTest.php:1897
+msgid ""
+"Local telephone of employee. Format: E.164, e.g. %s, where X - number from 0 "
+"to 9"
+msgstr ""
+"Городской телефон сотрудника. Формат: E.164, например, %s, где X - число от "
+"0 до 9"
+
+#: Config/cakeldap.php:231 Test/TestConfig.php:215
+#: Test/Case/Model/EmployeeEditTest.php:1898
+msgid ""
+"Mobile telephone of employee. Format: E.164, e.g. %s, where X - number from "
+"0 to 9"
+msgstr ""
+"Мобильный телефон сотрудника. Формат: E.164, например, %s, где X - число от "
+"0 до 9"
+
+#: Config/cakeldap.php:241 Test/TestConfig.php:225
+#: Test/Case/Model/EmployeeEditTest.php:1899
+msgid ""
+"Other mobile telephone of employee. Format: E.164, e.g. %s, where X - number "
+"from 0 to 9"
+msgstr ""
+"Личный мобильный телефон сотрудника. Формат: E.164, например, %s, где X - "
+"число от 0 до 9"
+
+#: Config/cakeldap.php:254 Test/TestConfig.php:238
+#: Test/Case/Model/EmployeeEditTest.php:1900
+msgid ""
+"Office room of employee. Format: %s, where X - number from 0 to 9, L - letter"
+msgstr "Кабинет сотрудника. Формат: %s, где X - число от 0 до 9, L - буква"
+
+#: Config/cakeldap.php:272 Test/TestConfig.php:256
+#: Test/Case/Model/EmployeeEditTest.php:1901
+msgid "E-mail of employee"
+msgstr "E-mail сотрудника"
+
+#: Config/cakeldap.php:281 Test/TestConfig.php:265
+#: Test/Case/Model/EmployeeEditTest.php:1902
+msgid "Manager of employee"
+msgstr "Руководитель сотрудника"
+
+#: Config/cakeldap.php:290 Test/TestConfig.php:274
+#: Test/Case/Model/EmployeeEditTest.php:1903
+msgid "Photo of employee %dpx X %dpx in JPEG format"
+msgstr "Фото сотрудника %dpx X %dpx в формате JPEG"
+
+#: Config/cakeldap.php:299 Test/TestConfig.php:283
+#: Test/Case/Model/EmployeeEditTest.php:1904
+msgid "Computer of employee"
+msgstr "Компьютер сотрудника"
+
+#: Config/cakeldap.php:309 Test/TestConfig.php:293
+#: Test/Case/Model/EmployeeEditTest.php:1905
+msgid "Employee ID. Format: %s, where X - number from 0 to 9"
+msgstr "Табельный номер сотрудника. Формат: %s, где X - число от 0 до 9"
+
+#: Config/cakeldap.php:318 Test/TestConfig.php:302
+#: Test/Case/Model/EmployeeEditTest.php:1906
+msgid "Company name of employee"
+msgstr "Название организации сотрудника"
+
+#: Config/cakeldap.php:328 Test/TestConfig.php:312
+#: Test/Case/Model/EmployeeEditTest.php:1907
+msgid ""
+"Date of birthday. Format: %s, where YYYY - year, MM - month and DD - day"
+msgstr "Дата рождения. Формат: %s, где YYYY-год, MM-месяц и DD-день"
+
+#: Config/cakeldap.php:338 Test/TestConfig.php:322
+#: Test/Case/Model/EmployeeEditTest.php:1908
+msgid "SIP telephone. Format: %s, where X - number from 0 to 9"
+msgstr "SIP-телефон. Формат: %s, где X-номер от 0 до 9"
+
+#~ msgid "Photo of employee %dpx x %dpx in JPEG format"
+#~ msgstr "Фото сотрудника %dpx x %dpx в формате JPEG"
+
+#~ msgid "Employee ID. Format: X, where X - number from 0 to 9"
+#~ msgstr "Табельный номер сотрудника. Формат: X, где X - число от 0 до 9"

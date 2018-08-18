@@ -1,0 +1,20 @@
+<?php
+/**
+ * This file is the view file of the plugin. Used for rendering
+ *  action buttons in table informations about employees.
+ *
+ * CakeLdap: Authentication of users by member group of Active Directory.
+ * @copyright Copyright 2017, Andrey Klimov.
+ * @package plugin.View.Elements
+ */
+
+if (!isset($employee)) {
+    $employee = [];
+}
+
+if (empty($employee)) {
+    return;
+}
+
+    $action = '';
+    echo $action;
