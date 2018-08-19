@@ -25,7 +25,7 @@ class AllAppTest extends CakeTestSuite
         $suite = new CakeTestSuite('All App tests');
         $path = dirname(__FILE__);
         $suite->addTestFile($path . DS . 'AllConsoleTestsTest.php');
-        $suite->addTestFile($path . DS . 'AllControllerTestsTest.php');
+//        $suite->addTestFile($path . DS . 'AllControllerTestsTest.php');
         $suite->addTestFile($path . DS . 'AllBehaviorTestsTest.php');
         $suite->addTestFile($path . DS . 'AllModelTestsTest.php');
         $suite->addTestFile($path . DS . 'AllHelperTestsTest.php');
