@@ -1,8 +1,5 @@
 language: php
 
-# We require precise here, as 5.3 doesn't exist on trusty.
-dist: precise
-
 php:
   - 5.6
   - 7.1
@@ -21,7 +18,7 @@ matrix:
 
 before_script:
   - composer require "phpunit/phpunit=$PHPUNIT"
-  - echo "require_once 'vendor/autoload.php';" >> app/Config/bootstrap.php
+  - ln -sr vendor/phpunit/phpunit/PHPUnit app/Vendor/PHPUnit
   - sh -c "if [ '$DB' = 'mysql' ]; then mysql -e 'CREATE DATABASE cakephp_test;'; fi"
   - chmod -R 777 ./app/tmp
   - echo "extension = memcached.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
