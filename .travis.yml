@@ -55,7 +55,7 @@ before_script:
   - sed -i -r "s/(Configure::write\('Security\.cipherSeed', ')[0-9]+('\);)/\118424236609940891573169173047\2/i" ./app/Config/core.php
 
 script:
-  - sh -c "if [ '$PHPCS' != '1' ]; then ./app/Console/cake test app AllApp --stderr; if [ \"$?\" -gt 0 ]; then exit 1; fi; fi"
+  - sh -c "if [ '$PHPCS' != '1' ]; then cd ./app; ./Console/cake test app AllApp --stderr; if [ \"$?\" -gt 0 ]; then exit 1; fi; fi"
 
 notifications:
   email: false
