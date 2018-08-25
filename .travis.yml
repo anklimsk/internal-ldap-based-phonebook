@@ -49,6 +49,7 @@ before_script:
   - sed -i -r "s/(Configure::write\('debug', )[0-2]{1}(\);)/\11\2/i" ./app/Config/core.php
   - sed -i -r "s/(Configure::write\('Security\.salt', ')[0-9a-z]+('\);)/\1d1c97797953ed55c54ba6037158d2b0c3bf21471\2/i" ./app/Config/core.php
   - sed -i -r "s/(Configure::write\('Security\.cipherSeed', ')[0-9]+('\);)/\118424236609940891573169173047\2/i" ./app/Config/core.php
+  - echo "Installed" > app/tmp/installer/installed.txt
 
 script:
   - sh -c "if [ '$PHPCS' != '1' ]; then cd ./app; ./Console/cake test app AllApp --stderr; if [ \"$?\" -gt 0 ]; then exit 1; fi; fi"
