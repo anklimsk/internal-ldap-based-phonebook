@@ -13,6 +13,9 @@ env:
 matrix:
   fast_finish: true
 
+before_install:
+  - echo "memory_limit=384M" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
+
 before_script:
   - composer require "phpunit/phpunit=$PHPUNIT"
   - ln -sr vendor/phpunit/phpunit/PHPUnit app/Vendor/PHPUnit
