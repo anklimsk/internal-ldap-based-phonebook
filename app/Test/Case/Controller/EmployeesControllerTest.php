@@ -6197,7 +6197,7 @@ class EmployeesControllerTest extends AppControllerTestCase
     protected function _getUploadTempDir()
     {
         $tmpDir = ini_get('upload_tmp_dir') ? ini_get('upload_tmp_dir') : sys_get_temp_dir();
-        if (!empty($tmpDir) && (mb_substr($tmpDir, -1) !== DS) {
+        if (!empty($tmpDir) && (mb_substr($tmpDir, -1) !== DS)) {
             $tmpDir .= DS;
         }
 
