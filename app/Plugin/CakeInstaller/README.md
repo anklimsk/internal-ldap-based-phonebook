@@ -22,6 +22,7 @@ Console installer for CakePHP
 
 1. Install the Plugin using composer: `composer require anklimsk/cakephp-console-installer`
 2. Add the next line to the end of the file `app/Config/bootstrap.php`:
+
 ```php
 CakePlugin::load('CakeInstaller', ['bootstrap' => true, 'routes' => true]);
 ```

@@ -1,23 +1,26 @@
 # Using this plugin
 
-## Install this plugin
+## Preparing this plugin
 
 1. Copy configuration file from `app/Plugin/CakeInstaller/Config/cakeinstaller.php` to `app/Config`.
-2. Edit config file and configure plugin [See `Example of configuration file`](#example-of-configuration-file)
+2. Edit config file and configure plugin [See "Example of configuration file"](#example-of-configuration-file)
 3. Include component `CakeInstaller.Installer` in your `AppController`:
-```php
-public $components = [
-    'CakeInstaller.Installer' => [
-        'ConfigKey' => 'ProjectCfg'
-    ]
-];
-```
-Where `ProjectCfg` is the application configuration key used in call `Configure::read('ProjectCfg');`.
-Used to fast checking the application is already installed.
-4. Copy i18n files from `app/Plugin/CakeInstaller/Locale/rus/LC_MESSAGES/cake_installer_label.*` to
+
+   ```php
+   public $components = [
+       'CakeInstaller.Installer' => [
+           'ConfigKey' => 'ProjectCfg'
+       ]
+   ];
+   ```
+
+   Where `ProjectCfg` is the application configuration key used in call `Configure::read('ProjectCfg');`.
+   Used to fast checking the application is already installed.
+4. Copy translation files from `app/Plugin/CakeInstaller/Locale/rus/LC_MESSAGES/cake_installer_label.*` to
 `app/Locale/rus/LC_MESSAGES`;
 
 ## Using console
+
 - `Console/cake CakeInstaller -h` - To get help;
 - `Console/cake CakeInstaller` - To start interactive shell of installer;
 - `Console/cake CakeInstaller check` - To start command of installer.
@@ -25,57 +28,62 @@ Used to fast checking the application is already installed.
 ## Initialization of database tables with data
 
 1. Add to the beginning of the schema file `app/Config/Schema/schema.php` of your application:
-```php
-App::uses('InstallerInit', 'CakeInstaller.Model');
-App::uses('ClassRegistry', 'Utility');
-  
-class AppSchema extends CakeSchema
-{
 
-    public function before($event = [])
-    {
-        $ds = ConnectionManager::getDataSource($this->connection);
-                $ds->cacheSources = false; 
+   ```php
+   App::uses('InstallerInit', 'CakeInstaller.Model');
+   App::uses('ClassRegistry', 'Utility');
 
-            return true;
-        }
+   class AppSchema extends CakeSchema
+   {
 
-        public function after($event = [])
-        {
-            if (!empty($event['errors']) || !isset($event['create']))
-                return;
+       public function before($event = [])
+       {
+           $ds = ConnectionManager::getDataSource($this->connection);
+           $ds->cacheSources = false; 
 
-            $installerInitModel = ClassRegistry::init('CakeInstaller.InstallerInit');
-            $installerInitModel->initDbTable($event['create']);
-        }
-        ...
-}
-```
+           return true;
+       }
+
+       public function after($event = [])
+       {
+           if (!empty($event['errors']) || !isset($event['create'])) {
+               return;
+           }
+
+           $installerInitModel = ClassRegistry::init('CakeInstaller.InstallerInit');
+           $installerInitModel->initDbTable($event['create']);
+       }
+       ...
+   }
+   ```
+
 2. In your Model, create the `initDbTable()` method, e.g.:
-```php
-/**
- * Initialization of database table the initial values
- *
- * @return bool Success
- */
-public function initDbTable()
-{
-    $dataToSave = [];
-    $types = constsToWords('DATA_TYPE_');
 
-    foreach ($types as $id => $name) {
-        $dataToSave[][$this->alias] = compact('id', 'name');
-    }
-    
-    if (empty($dataToSave)) {
-        return false;
-    }
+   ```php
+   /**
+    * Initialization of database table the initial values
+    *
+    * @return bool Success
+    */
+   public function initDbTable()
+   {
+       $dataToSave = [];
+       $types = constsToWords('DATA_TYPE_');
 
-    return (bool)$this->saveAll($dataToSave);
-}
-```
+       foreach ($types as $id => $name) {
+           $dataToSave[][$this->alias] = compact('id', 'name');
+       }
+
+       if (empty($dataToSave)) {
+           return false;
+       }
+
+       return (bool)$this->saveAll($dataToSave);
+   }
+   ```
 
 ## Example of configuration file
+
 ```php
 $config['CakeInstaller'] = [
     // Version of PHP for check
@@ -250,11 +258,10 @@ $config['CakeInstaller'] = [
     'cronJobs' => [
         // 'cd ' . APP . ' && Console/cake Queue.Queue runworker -q' => '*/10 * * * *'
     ],
-    // List of languages for installer UI in format: ISO639-2
+    // List of languages for installer UI in format: ISO 639-2
     'UIlangList' => [
         'eng',
         'rus',
     ]
 ];
-
 ```
