@@ -1,23 +1,23 @@
 [
     {
         "name": "tecnickcom/tcpdf",
-        "version": "6.2.13",
-        "version_normalized": "6.2.13.0",
+        "version": "6.2.17",
+        "version_normalized": "6.2.17.0",
         "source": {
             "type": "git",
             "url": "https://github.com/tecnickcom/TCPDF.git",
-            "reference": "95c5938aafe4b20df1454dbddb3e5005c0b26f64"
+            "reference": "64fc19439863e1b1314487a72a74d9bfd0b55a53"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/tecnickcom/TCPDF/zipball/95c5938aafe4b20df1454dbddb3e5005c0b26f64",
-            "reference": "95c5938aafe4b20df1454dbddb3e5005c0b26f64",
+            "url": "https://api.github.com/repos/tecnickcom/TCPDF/zipball/64fc19439863e1b1314487a72a74d9bfd0b55a53",
+            "reference": "64fc19439863e1b1314487a72a74d9bfd0b55a53",
             "shasum": ""
         },
         "require": {
             "php": ">=5.3.0"
         },
-        "time": "2017-04-26 08:14:48",
+        "time": "2018-02-24 11:48:20",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -42,13 +42,13 @@
         },
         "notification-url": "https://packagist.org/downloads/",
         "license": [
-            "LGPLv3"
+            "LGPL-3.0"
         ],
         "authors": [
             {
                 "name": "Nicola Asuni",
                 "email": "info@tecnick.com",
-                "homepage": "http://nicolaasuni.tecnick.com"
+                "role": "lead"
             }
         ],
         "description": "TCPDF is a PHP class for generating PDF documents and barcodes.",
