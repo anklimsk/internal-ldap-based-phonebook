@@ -8,7 +8,7 @@
         "anklimsk/cakephp-search-info": "^0.10.3",
         "anklimsk/cakephp-settings-app": "^0.6.7",
         "anklimsk/cakephp-spreadsheet": "^0.1.3",
-        "anklimsk/cakephp2-tcpdf": "^0.1.2",
+        "anklimsk/cakephp2-tcpdf": "^0.1.3",
         "anklimsk/cakephp2-theme": "^0.7.7"
     },
     "config": {
