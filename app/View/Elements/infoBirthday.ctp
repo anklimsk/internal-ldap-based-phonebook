@@ -17,7 +17,7 @@ if (empty($birthdays)) {
 }
 ?>      
 <div class="alert alert-warning" role="alert">
-    <h4><?php echo __('Today is the birthday of:'); ?></h4>
+    <h4 class="text-center"><?php echo __('Today is the birthday of:'); ?></h4>
 <?php
     $listBirthdays = [];
 foreach ($birthdays as $birthday) {
@@ -35,31 +35,6 @@ foreach ($birthdays as $birthday) {
     }
 }
 
-    $listBirthdaysShown = array_slice($listBirthdays, 0, BIRTHDAY_LIST_SHOW_LINES_LIMIT);
-    $htmlListBirthdays = $this->Html->nestedList($listBirthdaysShown, ['class' => 'fa-ul'], [], 'ul');
-if (count($listBirthdays) > BIRTHDAY_LIST_SHOW_LINES_LIMIT) {
-    $listBirthdaysHidden = array_slice($listBirthdays, BIRTHDAY_LIST_SHOW_LINES_LIMIT);
-    $htmlListBirthdays .= $this->Html->nestedList(
-        $listBirthdaysHidden,
-        [
-            'class' => 'fa-ul collapse',
-            'id' => 'birthdayListEnd'
-        ],
-        [],
-        'ul'
-    );
-    $htmlListBirthdays .= $this->ViewExtension->button(
-        'fas fa-angle-double-down',
-        'btn-warning btn-block',
-        [
-            'class' => 'top-buffer',
-            'title' => __('Show or hide full list'),
-            'data-toggle' => 'collapse', 'data-target' => '#birthdayListEnd',
-            'aria-expanded' => 'false',
-            'data-toggle-icons' => 'fa-angle-double-down,fa-angle-double-up'
-        ]
-    );
-}
-    echo $htmlListBirthdays;
+    echo $this->ViewExtension->collapsibleList($listBirthdays, BIRTHDAY_LIST_SHOW_LINES_LIMIT, 'fa-ul', 'ul');
 ?>
 </div>
