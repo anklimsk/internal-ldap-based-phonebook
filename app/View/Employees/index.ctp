@@ -20,8 +20,8 @@
 ?>
     <div class="container container-table"> 
         <div class="row vertical-center-row">
-<?php if (!empty($birthdays)) : ?>      
-            <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4">
+<?php if (!empty($birthdays)) : ?>
+            <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
 <?php echo $this->element('infoBirthday', compact('birthdays')); ?>
             </div>
 <?php endif; ?>
