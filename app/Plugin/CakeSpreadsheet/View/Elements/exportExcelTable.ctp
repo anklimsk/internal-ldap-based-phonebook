@@ -9,15 +9,15 @@
  */
 
 if (!isset($exportConfig)) {
-    $exportConfig = [];
+	$exportConfig = [];
 }
 
 if (!isset($exportData)) {
-    $exportData = [];
+	$exportData = [];
 }
 
 if (empty($exportConfig) || empty($exportData)) {
-    return;
+	return;
 }
 
 extract($exportConfig);

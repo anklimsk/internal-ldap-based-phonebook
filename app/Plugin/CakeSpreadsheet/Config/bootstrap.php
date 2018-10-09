@@ -14,7 +14,7 @@
  * Used for set file extension. Default value `xlsx`
  */
 if (!defined('CAKE_SPREADSHEET_FILE_EXTENSION')) {
-    define('CAKE_SPREADSHEET_FILE_EXTENSION', 'xlsx');
+	define('CAKE_SPREADSHEET_FILE_EXTENSION', 'xlsx');
 }
 
 /**
@@ -23,5 +23,5 @@ if (!defined('CAKE_SPREADSHEET_FILE_EXTENSION')) {
  * Used for set PhpSpreadsheet writer. Default value `Xlsx`
  */
 if (!defined('CAKE_SPREADSHEET_PHPSPREADSHEET_WRITER')) {
-    define('CAKE_SPREADSHEET_PHPSPREADSHEET_WRITER', 'Xlsx');
+	define('CAKE_SPREADSHEET_PHPSPREADSHEET_WRITER', 'Xlsx');
 }
