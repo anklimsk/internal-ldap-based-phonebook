@@ -16,8 +16,7 @@ if (!class_exists('CakeSettingsAppAppModel')) {
          * Constructor. Binds the model's database table to the object.
          *
          * Actions:
-         * - Set useTable to `employee` if data source is `test`, and table name
-         *  is empty string.
+         * - Set useTable to `ldap` if Model name is `Ldap`.
          *
          * @param bool|int|string|array $id Set this ID for this model on startup,
          * can also be an array of options, see above.
