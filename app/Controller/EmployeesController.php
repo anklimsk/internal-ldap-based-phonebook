@@ -151,12 +151,14 @@ class EmployeesController extends AppController
         $lastUpdate = $this->LastProcessed->getLastUpdate(LAST_PROCESSED_EMPLOYEE);
         $countEmployees = $this->Employee->getNumberOf();
         $birthdays = $this->Employee->getListBirthday(null, BIRTHDAY_LIST_LIMIT);
+        $pageTitle = __('Information retrieval');
         $this->set(compact(
             'showBreadcrumb',
             'search_targetFields',
             'lastUpdate',
             'countEmployees',
-            'birthdays'
+            'birthdays',
+            'pageTitle'
         ));
     }
 
@@ -229,12 +231,14 @@ class EmployeesController extends AppController
             $this->paginate['order'] = $order;
         }
         $this->SearchFilter->search($whitelist);
+        $pageTitle = __('Search information');
         $this->set(compact(
             'showSearchForm',
             'specificJS',
             'showBreadcrumb',
             'paginatorOptions',
-            'fieldsConfig'
+            'fieldsConfig',
+            'pageTitle'
         ));
     }
 
@@ -337,7 +341,9 @@ class EmployeesController extends AppController
                 ['title' => __('Edit tree of subordinate employee')]
             ];
         }
-        $this->set(compact('pageHeader', 'headerMenuActions'));
+        $breadCrumbs = $this->Employee->getBreadcrumbInfo($id);
+        $breadCrumbs[] = __('Viewing');
+        $this->set(compact('pageHeader', 'headerMenuActions', 'breadCrumbs'));
     }
 
     /**
@@ -485,6 +491,9 @@ class EmployeesController extends AppController
         $acceptfiletypes = $this->EmployeeEdit->getAcceptFileTypes();
         $maxLinesMultipleValue = $this->EmployeeEdit->getLimitLinesMultipleValue();
         $pageHeader = __('Editing employee');
+        $breadCrumbs = $this->Employee->getBreadcrumbInfo($guid);
+        $breadCrumbs[] = __('Editing');
+
         $this->set(compact(
             'dn',
             'guid',
@@ -501,7 +510,8 @@ class EmployeesController extends AppController
             'employeePhoto',
             'forceDeferred',
             'changedFields',
-            'pageHeader'
+            'pageHeader',
+            'breadCrumbs'
         ));
     }
 
@@ -617,8 +627,11 @@ class EmployeesController extends AppController
 
         $emptyDepartmentName = $this->Employee->getEmptyDepartmentName();
         $pageHeader = __('Gallery of employees');
+        $breadCrumbs = $this->Employee->getBreadcrumbInfo();
+        $breadCrumbs[] = __('Gallery');
         $this->ViewExtension->setRedirectUrl(true, 'employee');
-        $this->set(compact('employeesGallery', 'emptyDepartmentName', 'pageHeader'));
+
+        $this->set(compact('employeesGallery', 'emptyDepartmentName', 'pageHeader', 'breadCrumbs'));
     }
 
     /**
@@ -735,7 +748,10 @@ class EmployeesController extends AppController
                 ]
             ];
         }
-        $this->set(compact('id', 'isTreeDraggable', 'expandAll', 'pageHeader', 'headerMenuActions'));
+        $breadCrumbs = $this->Employee->getBreadcrumbInfo();
+        $breadCrumbs[] = __('Tree viewing');
+
+        $this->set(compact('id', 'isTreeDraggable', 'expandAll', 'pageHeader', 'headerMenuActions', 'breadCrumbs'));
     }
 
     /**
@@ -879,7 +895,10 @@ class EmployeesController extends AppController
                 ]
             ];
         }
-        $this->set(compact('pageHeader', 'headerMenuActions'));
+        $breadCrumbs = $this->Employee->getBreadcrumbInfo();
+        $breadCrumbs[] = __('Checking tree');
+
+        $this->set(compact('pageHeader', 'headerMenuActions', 'breadCrumbs'));
     }
 
     /**
@@ -1203,7 +1222,10 @@ class EmployeesController extends AppController
                 ]
             ];
         }
-        $this->set(compact('exportInfo', 'pageHeader', 'headerMenuActions'));
+        $breadCrumbs = $this->Employee->getBreadcrumbInfo();
+        $breadCrumbs[] = __('Export phone book');
+
+        $this->set(compact('exportInfo', 'pageHeader', 'headerMenuActions', 'breadCrumbs'));
     }
 
     /**

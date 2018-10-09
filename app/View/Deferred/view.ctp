@@ -8,14 +8,12 @@
      * @package app.View.Deferred
      */
 
-    $this->assign('title', __('Detail information'));
-
-    $this->Html->addCrumb(__('Deferred saves'), ['controller' => 'deferred', 'action' => 'index']);
-    $this->Html->addCrumb(__('Viewing'));
-?>  
+    $this->assign('title', $pageHeader);
+    $this->ViewExtension->addBreadCrumbs($breadCrumbs);
+?>
     <div class="container">
 <?php
         echo $this->ViewExtension->headerPage($pageHeader, $headerMenuActions);
         echo $this->element('infoDeferred', compact('deferredSave', 'fieldsLabel', 'fieldsConfig'));
-?>      
+?>
     </div>

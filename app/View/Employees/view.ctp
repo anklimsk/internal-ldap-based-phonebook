@@ -11,7 +11,8 @@
     echo $this->AssetCompress->css('CakeTheme.tree', ['block' => 'css']);
     echo $this->AssetCompress->script('CakeTheme.tree', ['block' => 'script']);
 
-    $this->assign('title', __('Detail information'));
+    $this->assign('title', $pageHeader);
+    $this->ViewExtension->addBreadCrumbs($breadCrumbs);
 
     $viewurl = $this->Html->url(
         [
@@ -19,17 +20,7 @@
             'action' => 'view'
         ]
     );
-    $this->Html->addCrumb(__('Employees'), ['controller' => 'employees', 'action' => 'search']);
-    if (isset($employee['Employee'][CAKE_LDAP_LDAP_ATTRIBUTE_DISPLAY_NAME]) && !empty($employee['Employee'][CAKE_LDAP_LDAP_ATTRIBUTE_DISPLAY_NAME])) {
-        $this->Html->addCrumb(
-            $this->Text->truncate(h($employee['Employee'][CAKE_LDAP_LDAP_ATTRIBUTE_DISPLAY_NAME]), 20),
-            ['controller' => 'employees', 'action' => 'search', '?' => [
-                'query' => $employee['Employee'][CAKE_LDAP_LDAP_ATTRIBUTE_DISPLAY_NAME], 'target' => ['Employee.Employee.' . CAKE_LDAP_LDAP_ATTRIBUTE_DISPLAY_NAME]
-            ]]
-        );
-    }
-    $this->Html->addCrumb(__('Viewing'));
-?>  
+?>
     <div class="container">
 <?php
         echo $this->ViewExtension->headerPage($pageHeader, $headerMenuActions);
@@ -41,5 +32,5 @@
             'id',
             'viewurl'
         ));
-?>      
+?>
     </div>

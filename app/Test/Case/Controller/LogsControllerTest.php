@@ -383,6 +383,25 @@ class LogsControllerTest extends AppControllerTestCase
                     ]
                 ]
             ],
+            'breadCrumbs' => [
+                [
+                    CakeText::truncate(__('Employees'), CAKE_THEME_BREADCRUMBS_TEXT_LIMIT),
+                    [
+                        'plugin' => null,
+                        'controller' => 'employees',
+                        'action' => 'index'
+                    ]
+                ],
+                [
+                    CakeText::truncate(__('Logs'), CAKE_THEME_BREADCRUMBS_TEXT_LIMIT),
+                    [
+                        'plugin' => null,
+                        'controller' => 'logs',
+                        'action' => 'index'
+                    ]
+                ],
+                __('Index')
+            ]
         ];
         $this->assertData($expected, $result);
     }
@@ -800,6 +819,35 @@ class LogsControllerTest extends AppControllerTestCase
                         'data-confirm-msg' => __('Are you sure you wish to delete this record of log?'),
                     ]
                 ],
+            ],
+            'breadCrumbs' => [
+                [
+                    CakeText::truncate(__('Employees'), CAKE_THEME_BREADCRUMBS_TEXT_LIMIT),
+                    [
+                        'plugin' => null,
+                        'controller' => 'employees',
+                        'action' => 'index'
+                    ]
+                ],
+                [
+                    CakeText::truncate('Миронов В.М.', CAKE_THEME_BREADCRUMBS_TEXT_LIMIT),
+                    [
+                        '1',
+                        'plugin' => null,
+                        'controller' => 'employees',
+                        'action' => 'view'
+                    ]
+                ],
+                [
+                    CakeText::truncate(__('Logs'), CAKE_THEME_BREADCRUMBS_TEXT_LIMIT),
+                    [
+                        '1',
+                        'plugin' => null,
+                        'controller' => 'logs',
+                        'action' => 'view'
+                    ]
+                ],
+                __('Viewing'),
             ]
         ];
         $this->assertData($expected, $result);

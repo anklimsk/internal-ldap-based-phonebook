@@ -20,6 +20,17 @@ class Department extends DepartmentDb
 {
 
     /**
+     * List of behaviors to load when the model object is initialized.
+     *
+     * @var array
+     * @link http://book.cakephp.org/2.0/en/models/behaviors.html#using-behaviors
+     */
+    public $actsAs = [
+        'Containable',
+        'CakeTheme.BreadCrumb'
+    ];
+
+    /**
      * hasOne associations
      *
      * @var array
@@ -258,5 +269,16 @@ class Department extends DepartmentDb
         }
 
         return $result;
+    }
+
+    /**
+     * Return name of group data.
+     *
+     * @return string Return name of group data
+     */
+    public function getGroupName() {
+        $groupName = __('Departments');
+
+        return $groupName;
     }
 }

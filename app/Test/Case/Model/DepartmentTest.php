@@ -365,4 +365,16 @@ class DepartmentTest extends AppCakeTestCase
         $result = $this->_targetObject->renameDepartment('Охрана Труда', 'ОТ', USER_ROLE_USER, 2, true);
         $this->assertTrue($result);
     }
+
+    /**
+     * testGetGroupName method
+     *
+     * @return void
+     */
+    public function testGetGroupName()
+    {
+        $result = $this->_targetObject->getGroupName();
+        $expected = __('Departments');
+        $this->assertData($expected, $result);
+    }
 }

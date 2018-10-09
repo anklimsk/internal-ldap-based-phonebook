@@ -1,6 +1,7 @@
 <?php
 App::uses('AppCakeTestCase', 'Test');
 App::uses('DeferredSaveBehavior', 'Model/Behavior');
+App::uses('CakeText', 'Utility');
 
 /**
  * DeferredSaveBehavior Test Case
@@ -20,7 +21,7 @@ class DeferredSaveBehaviorTest extends AppCakeTestCase
         'plugin.cake_ldap.employee_ldap',
         'plugin.cake_ldap.department',
         'plugin.cake_ldap.othertelephone',
-        'plugin.cake_ldap.othermobile',
+        'plugin.cake_ldap.othermobile'
     ];
 
     /**
@@ -649,6 +650,272 @@ class DeferredSaveBehaviorTest extends AppCakeTestCase
                     CAKE_LDAP_LDAP_ATTRIBUTE_OBJECT_GUID => '0010b7b8-d69a-4365-81ca-5f975584fe5c',
                 ],
             ],
+        ];
+        $this->assertData($expected, $result);
+    }
+
+    /**
+     * testGetNameEmptyParam method
+     *
+     * @return void
+     */
+    public function testGetNameEmptyParam()
+    {
+        $result = $this->_targetObject->getName();
+        $this->assertFalse($result);
+    }
+
+    /**
+     * testGetNameInvalidParamId method
+     *
+     * @return void
+     */
+    public function testGetNameInvalidParamId()
+    {
+        $result = $this->_targetObject->getName('1000');
+        $this->assertFalse($result);
+    }
+
+    /**
+     * testGetNameInvalidParamArray method
+     *
+     * @return void
+     */
+    public function testGetNameInvalidParamArray()
+    {
+        $data = [
+            'BadData' => []
+        ];
+        $result = $this->_targetObject->getName($data);
+        $this->assertFalse($result);
+    }
+
+    /**
+     * testGetNameIdSuccess method
+     *
+     * @return void
+     */
+    public function testGetNameIdSuccess()
+    {
+        $result = $this->_targetObject->getName(2);
+        $expected = 'Суханова Л.Б.';
+        $this->assertData($expected, $result);
+    }
+
+    /**
+     * testGetNameArraySuccess method
+     *
+     * @return void
+     */
+    public function testGetNameArraySuccess()
+    {
+        $data = [
+            'Employee' => [
+                CAKE_LDAP_LDAP_ATTRIBUTE_NAME => 'Егоров Т.Г.'
+            ]
+        ];
+        $result = $this->_targetObject->getName($data);
+        $expected = 'Егоров Т.Г.';
+        $this->assertData($expected, $result);
+    }
+
+    /**
+     * testGetRefIdEmptyParam method
+     *
+     * @return void
+     */
+    public function testGetRefIdEmptyParam()
+    {
+        $result = $this->_targetObject->getRefId();
+        $this->assertFalse($result);
+    }
+
+    /**
+     * testGetRefIdInvalidParamId method
+     *
+     * @return void
+     */
+    public function testGetRefIdInvalidParamId()
+    {
+        $result = $this->_targetObject->getRefId('1000');
+        $this->assertFalse($result);
+    }
+
+    /**
+     * testGetRefIdIdSuccess method
+     *
+     * @return void
+     */
+    public function testGetRefIdIdSuccess()
+    {
+        $result = $this->_targetObject->getRefId(2);
+        $expected = '3';
+        $this->assertData($expected, $result);
+    }
+
+    /**
+     * testGetBreadcrumbInfoEmptyParam method
+     *
+     * @return void
+     */
+    public function testGetBreadcrumbInfoEmptyParam()
+    {
+        $result = $this->_targetObject->getBreadcrumbInfo();
+        $expected = [
+            [
+                CakeText::truncate(__('Employees'), CAKE_THEME_BREADCRUMBS_TEXT_LIMIT),
+                [
+                    'plugin' => null,
+                    'controller' => 'employees',
+                    'action' => 'index'
+                ]
+            ],
+            [
+                CakeText::truncate(__('Deferred saves'), CAKE_THEME_BREADCRUMBS_TEXT_LIMIT),
+                [
+                    'plugin' => null,
+                    'controller' => 'deferred',
+                    'action' => 'index'
+                ]
+            ]
+        ];
+        $this->assertData($expected, $result);
+    }
+
+    /**
+     * testGetBreadcrumbInfoInvalidParam method
+     *
+     * @return void
+     */
+    public function testGetBreadcrumbInfoInvalidParam()
+    {
+        $result = $this->_targetObject->getBreadcrumbInfo('1000', null);
+        $expected = [
+            [
+                CakeText::truncate(__('Employees'), CAKE_THEME_BREADCRUMBS_TEXT_LIMIT),
+                [
+                    'plugin' => null,
+                    'controller' => 'employees',
+                    'action' => 'index'
+                ]
+            ],
+            [
+                CakeText::truncate(__('Deferred saves'), CAKE_THEME_BREADCRUMBS_TEXT_LIMIT),
+                [
+                    'plugin' => null,
+                    'controller' => 'deferred',
+                    'action' => 'index'
+                ]
+            ]
+        ];
+        $this->assertData($expected, $result);
+    }
+
+    /**
+     * testGetBreadcrumbInfoSuccessNotIncludeRoot method
+     *
+     * @return void
+     */
+    public function testGetBreadcrumbInfoSuccessNotIncludeRoot()
+    {
+        $result = $this->_targetObject->getBreadcrumbInfo('2', false);
+        $expected = [
+            [
+                CakeText::truncate('Суханова Л.Б.', CAKE_THEME_BREADCRUMBS_TEXT_LIMIT),
+                [
+                    '3',
+                    'plugin' => null,
+                    'controller' => 'employees',
+                    'action' => 'view'
+                ]
+            ],
+            [
+                CakeText::truncate(__('Deferred saves'), CAKE_THEME_BREADCRUMBS_TEXT_LIMIT),
+                [
+                    '2',
+                    'plugin' => null,
+                    'controller' => 'deferred',
+                    'action' => 'view'
+                ]
+            ]
+        ];
+        $this->assertData($expected, $result);
+    }
+
+    /**
+     * testGetBreadcrumbInfoSuccessDefaultIncludeRoot method
+     *
+     * @return void
+     */
+    public function testGetBreadcrumbInfoSuccessDefaultIncludeRoot()
+    {
+        $result = $this->_targetObject->getBreadcrumbInfo(3, null);
+        $expected = [
+            [
+                CakeText::truncate(__('Employees'), CAKE_THEME_BREADCRUMBS_TEXT_LIMIT),
+                [
+                    'plugin' => null,
+                    'controller' => 'employees',
+                    'action' => 'index'
+                ]
+            ],
+            [
+                CakeText::truncate('Дементьева А.С.', CAKE_THEME_BREADCRUMBS_TEXT_LIMIT),
+                [
+                    '4',
+                    'plugin' => null,
+                    'controller' => 'employees',
+                    'action' => 'view'
+                ]
+            ],
+            [
+                CakeText::truncate(__('Deferred saves'), CAKE_THEME_BREADCRUMBS_TEXT_LIMIT),
+                [
+                    3,
+                    'plugin' => null,
+                    'controller' => 'deferred',
+                    'action' => 'view'
+                ]
+            ]
+        ];
+        $this->assertData($expected, $result);
+    }
+
+    /**
+     * testGetBreadcrumbInfoSuccessIncludeRoot method
+     *
+     * @return void
+     */
+    public function testGetBreadcrumbInfoSuccessIncludeRoot()
+    {
+        $result = $this->_targetObject->getBreadcrumbInfo(4, true);
+        $expected = [
+            [
+                CakeText::truncate(__('Employees'), CAKE_THEME_BREADCRUMBS_TEXT_LIMIT),
+                [
+                    'plugin' => null,
+                    'controller' => 'employees',
+                    'action' => 'index'
+                ]
+            ],
+            [
+                CakeText::truncate('Козловская Е.М.', CAKE_THEME_BREADCRUMBS_TEXT_LIMIT),
+                [
+                    '6',
+                    'plugin' => null,
+                    'controller' => 'employees',
+                    'action' => 'view'
+                ]
+            ],
+            [
+                CakeText::truncate(__('Deferred saves'), CAKE_THEME_BREADCRUMBS_TEXT_LIMIT),
+                [
+                    4,
+                    'plugin' => null,
+                    'controller' => 'deferred',
+                    'action' => 'view'
+                ]
+            ]
         ];
         $this->assertData($expected, $result);
     }

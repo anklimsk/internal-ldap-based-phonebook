@@ -132,8 +132,11 @@ class DeferredController extends AppController
         $fieldsLabel = $this->Deferred->Employee->getListFieldsLabel([], false);
         $fieldsConfig = $this->Deferred->Employee->getFieldsConfig();
         $pageHeader = __('Index of deferred saves');
+        $breadCrumbs = $this->Deferred->getBreadcrumbInfo();
+        $breadCrumbs[] = __('Index');
         $this->ViewExtension->setRedirectUrl(true, 'deferredSave');
-        $this->set(compact('deferredSaves', 'groupActions', 'fieldsLabel', 'fieldsConfig', 'pageHeader'));
+
+        $this->set(compact('deferredSaves', 'groupActions', 'fieldsLabel', 'fieldsConfig', 'pageHeader', 'breadCrumbs'));
     }
 
     /**
@@ -210,8 +213,11 @@ class DeferredController extends AppController
                 ]
             ],
         ];
+        $breadCrumbs = $this->Deferred->getBreadcrumbInfo($id);
+        $breadCrumbs[] = __('Viewing');
         $this->ViewExtension->setRedirectUrl(true, 'deferredSave');
-        $this->set(compact('deferredSave', 'fieldsLabel', 'fieldsConfig', 'pageHeader', 'headerMenuActions'));
+
+        $this->set(compact('deferredSave', 'fieldsLabel', 'fieldsConfig', 'pageHeader', 'headerMenuActions', 'breadCrumbs'));
     }
 
     /**
@@ -315,6 +321,9 @@ class DeferredController extends AppController
         $maxLinesMultipleValue = $this->EmployeeEdit->getLimitLinesMultipleValue();
         $changedFields = $deferredSave['ChangedFields'];
         $pageHeader = __('Editing deferred save');
+        $breadCrumbs = $this->Deferred->getBreadcrumbInfo($id);
+        $breadCrumbs[] = __('Editing');
+
         $this->set(compact(
             'id',
             'dn',
@@ -332,7 +341,8 @@ class DeferredController extends AppController
             'employeePhoto',
             'changedFields',
             'forceDeferred',
-            'pageHeader'
+            'pageHeader',
+            'breadCrumbs'
         ));
     }
 

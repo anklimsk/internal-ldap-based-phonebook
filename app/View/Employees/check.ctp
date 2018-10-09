@@ -8,11 +8,9 @@
      * @package app.View.Employees
      */
 
-    $this->assign('title', __('Checking state tree of employees'));
-
-    $this->Html->addCrumb(__('Employees'), ['controller' => 'employees', 'action' => 'search']);
-    $this->Html->addCrumb(__('Checking tree'));
-?>  
+    $this->assign('title', $pageHeader);
+    $this->ViewExtension->addBreadCrumbs($breadCrumbs);
+?>
     <div class="container">
 <?php
         echo $this->ViewExtension->headerPage($pageHeader, $headerMenuActions);

@@ -30,6 +30,17 @@ class Employee extends EmployeeDb
 {
 
     /**
+     * List of behaviors to load when the model object is initialized.
+     *
+     * @var array
+     * @link http://book.cakephp.org/2.0/en/models/behaviors.html#using-behaviors
+     */
+    public $actsAs = [
+        'Containable',
+        'CakeTheme.BreadCrumb'
+    ];
+
+    /**
      * Array of virtual fields this model has.
      *
      * @var array
@@ -1581,6 +1592,50 @@ class Employee extends EmployeeDb
                 }
             }
         }
+
+        return $result;
+    }
+
+    /**
+     * Return plugin name.
+     *
+     * @return string Return plugin name for breadcrumb.
+     */
+    public function getPluginName() {
+        $pluginName = null;
+
+        return $pluginName;
+    }
+
+    /**
+     * Return name of group data.
+     *
+     * @return string Return name of group data
+     */
+    public function getGroupName() {
+        $groupName = __('Employees');
+
+        return $groupName;
+    }
+
+    /**
+     * Return name of data.
+     *
+     * @param int|string|array $id ID of record, or GUID, or 
+     *   Distinguished Name of employee or array data for
+     *   retrieving name.
+     * @return string|bool Return name of data,
+     *  or False on failure.
+     */
+    public function getName($id = null) {
+        if (is_array($id)) {
+            return parent::getName($id);
+        }
+        $conditions = $this->_getConditionsForEmployee($id);
+        if (empty($conditions)) {
+            return false;
+        }
+        $result = $this->field($this->displayField, $conditions);
 
         return $result;
     }

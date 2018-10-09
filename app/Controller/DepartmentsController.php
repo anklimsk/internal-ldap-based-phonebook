@@ -149,9 +149,11 @@ class DepartmentsController extends AppController
                 ]
             ]
         ];
-
+        $breadCrumbs = $this->Department->getBreadcrumbInfo();
+        $breadCrumbs[] = __('Index');
         $this->ViewExtension->setRedirectUrl(true, 'department');
-        $this->set(compact('departments', 'pageHeader', 'headerMenuActions'));
+
+        $this->set(compact('departments', 'pageHeader', 'headerMenuActions', 'breadCrumbs'));
     }
 
     /**
@@ -211,8 +213,11 @@ class DepartmentsController extends AppController
                 ]
             ];
         }
+        $breadCrumbs = $this->Department->getBreadcrumbInfo($id);
+        $breadCrumbs[] = __('Viewing');
         $this->ViewExtension->setRedirectUrl(true, 'department');
-        $this->set(compact('department', 'pageHeader', 'headerMenuActions'));
+
+        $this->set(compact('department', 'pageHeader', 'headerMenuActions', 'breadCrumbs'));
     }
 
     /**
@@ -270,8 +275,11 @@ class DepartmentsController extends AppController
             $fieldInputMask = (array)$fieldsInputMask['EmployeeEdit.' . CAKE_LDAP_LDAP_ATTRIBUTE_DEPARTMENT];
         }
         $pageHeader = __('Adding department');
+        $breadCrumbs = $this->Department->getBreadcrumbInfo();
+        $breadCrumbs[] = __('Adding');
         $isAddAction = true;
-        $this->set(compact('fieldInputMask', 'pageHeader', 'isAddAction'));
+
+        $this->set(compact('fieldInputMask', 'pageHeader', 'breadCrumbs', 'isAddAction'));
     }
 
     /**
@@ -346,7 +354,10 @@ class DepartmentsController extends AppController
             $fieldInputMask = (array)$fieldsInputMask['EmployeeEdit.' . CAKE_LDAP_LDAP_ATTRIBUTE_DEPARTMENT];
         }
         $pageHeader = __('Editing department');
-        $this->set(compact('fieldInputMask', 'pageHeader'));
+        $breadCrumbs = $this->Department->getBreadcrumbInfo($id);
+        $breadCrumbs[] = __('Editing');
+
+        $this->set(compact('fieldInputMask', 'pageHeader', 'breadCrumbs'));
     }
 
     /**
@@ -512,7 +523,10 @@ class DepartmentsController extends AppController
                 ]
             ];
         }
-        $this->set(compact('treeState', 'pageHeader', 'headerMenuActions'));
+        $breadCrumbs = $this->Department->getBreadcrumbInfo();
+        $breadCrumbs[] = __('Checking the list');
+
+        $this->set(compact('treeState', 'pageHeader', 'headerMenuActions', 'breadCrumbs'));
     }
 
     /**

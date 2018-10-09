@@ -8,7 +8,7 @@
      * @package app.View.Employees
      */
 
-    $this->assign('title', __('Information retrieval'));
+    $this->assign('title', $pageTitle);
 
     echo $this->AssetCompress->css('CakeTheme.tree', ['block' => 'css']);
     echo $this->AssetCompress->script('CakeTheme.tree', ['block' => 'script']);

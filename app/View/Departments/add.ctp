@@ -8,11 +8,8 @@
  * @package app.View.Departments
  */
 
-$this->assign('title', __('Adding department'));
-
-    $this->Html->addCrumb(__('Departments'), ['controller' => 'departments', 'action' => 'index']);
-    $this->Html->addCrumb(__('Adding'));
-
+$this->assign('title', $pageHeader);
+$this->ViewExtension->addBreadCrumbs($breadCrumbs);
 ?>
     <div class="container">
 <?php

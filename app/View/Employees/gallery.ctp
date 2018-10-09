@@ -11,14 +11,12 @@
     echo $this->AssetCompress->css('CakeTheme.tree', ['block' => 'css']);
     echo $this->AssetCompress->script('CakeTheme.tree', ['block' => 'script']);
 
-    $this->assign('title', __('Gallery of employees'));
-
-    $this->Html->addCrumb(__('Employees'), ['controller' => 'employees', 'action' => 'search']);
-    $this->Html->addCrumb(__('Gallery'));
-?>  
+    $this->assign('title', $pageHeader);
+    $this->ViewExtension->addBreadCrumbs($breadCrumbs);
+?>
     <div class="container">
 <?php
         echo $this->ViewExtension->headerPage($pageHeader);
         echo $this->element('tableEmployeeGallery', compact('employeesGallery', 'emptyDepartmentName'));
-?>  
+?>
     </div>

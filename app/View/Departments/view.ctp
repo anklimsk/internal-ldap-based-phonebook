@@ -8,14 +8,12 @@
      * @package app.View.Departments.mod
      */
 
-    $this->assign('title', __('Detail information'));
-
-    $this->Html->addCrumb(__('Departments'), ['controller' => 'departments', 'action' => 'index']);
-    $this->Html->addCrumb(__('Viewing'));
-?>  
+    $this->assign('title', $pageHeader);
+    $this->ViewExtension->addBreadCrumbs($breadCrumbs);
+?>
     <div class="container">
 <?php
         echo $this->ViewExtension->headerPage($pageHeader, $headerMenuActions);
         echo $this->element('infoDepartment', compact('department'));
-?>      
+?>
     </div>

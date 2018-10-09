@@ -8,11 +8,9 @@
      * @package app.View.Departments
      */
 
-    $this->assign('title', __('Checking state list of departments'));
-
-    $this->Html->addCrumb(__('Departments'), ['controller' => 'departments', 'action' => 'index']);
-    $this->Html->addCrumb(__('Checking the list'));
-?>  
+    $this->assign('title', $pageHeader);
+    $this->ViewExtension->addBreadCrumbs($breadCrumbs);
+?>
     <div class="container">
 <?php
         echo $this->ViewExtension->headerPage($pageHeader, $headerMenuActions);

@@ -8,14 +8,12 @@
      * @package app.View.Logs
      */
 
-    $this->assign('title', __('Detail information'));
-
-    $this->Html->addCrumb(__('Logs'), ['controller' => 'logs', 'action' => 'index']);
-    $this->Html->addCrumb(__('Viewing'));
-?>  
+    $this->assign('title', $pageHeader);
+    $this->ViewExtension->addBreadCrumbs($breadCrumbs);
+?>
     <div class="container">
 <?php
         echo $this->ViewExtension->headerPage($pageHeader, $headerMenuActions);
         echo $this->element('infoLog', compact('log', 'fieldsLabel', 'fieldsConfig'));
-?>      
+?>
     </div>

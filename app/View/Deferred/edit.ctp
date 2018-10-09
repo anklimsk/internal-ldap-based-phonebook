@@ -14,17 +14,8 @@
     echo $this->AssetCompress->script('CakeTheme.fileupload-image', ['block' => 'script']);
     echo $this->AssetCompress->script('CakeTheme.fileupload-i18n-' . $uiLcid2, ['block' => 'script']);
 
-    $this->assign('title', __('Editing deferred save'));
-
-    $this->Html->addCrumb(__('Deferred saves'), ['controller' => 'deferred', 'action' => 'index']);
-    $displayName = $this->request->data('EmployeeEdit.' . CAKE_LDAP_LDAP_ATTRIBUTE_DISPLAY_NAME);
-if (!empty($displayName)) {
-    $this->Html->addCrumb(
-        $this->Text->truncate(h($displayName), 20),
-        ['controller' => 'deferred', 'action' => 'view', $id]
-    );
-}
-    $this->Html->addCrumb(__('Editing'));
+    $this->assign('title', $pageHeader);
+    $this->ViewExtension->addBreadCrumbs($breadCrumbs);
 ?>
     <div class="container">
 <?php

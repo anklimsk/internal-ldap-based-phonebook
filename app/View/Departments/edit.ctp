@@ -8,22 +8,13 @@
  * @package app.View.Departments
  */
 
-$this->assign('title', __('Editing department'));
-
-    $this->Html->addCrumb(__('Departments'), ['controller' => 'departments', 'action' => 'index']);
-    $id = $this->request->data('Department.id');
-    $department = $this->request->data('Department.value');
-    $this->Html->addCrumb(
-        $this->Text->truncate(h($department), 20),
-        ['controller' => 'departments', 'action' => 'view', $id]
-    );
-    $this->Html->addCrumb(__('Editing'));
-
+$this->assign('title', $pageHeader);
+$this->ViewExtension->addBreadCrumbs($breadCrumbs);
 ?>
     <div class="container">
 <?php
         echo $this->ViewExtension->headerPage($pageHeader);
-?>  
+?>
         <div class="row">
             <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
 <?php

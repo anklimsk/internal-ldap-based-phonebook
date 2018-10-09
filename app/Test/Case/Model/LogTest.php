@@ -394,4 +394,16 @@ class LogTest extends AppCakeTestCase
         ];
         $this->runClassMethodGroup('restoreData', $params, $expected);
     }
+
+    /**
+     * testGetGroupName method
+     *
+     * @return void
+     */
+    public function testGetGroupName()
+    {
+        $result = $this->_targetObject->getGroupName();
+        $expected = __('Logs');
+        $this->assertData($expected, $result);
+    }
 }

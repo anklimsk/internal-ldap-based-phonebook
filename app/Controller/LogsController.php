@@ -125,8 +125,11 @@ class LogsController extends AppController
                 ]
             ];
         }
+        $breadCrumbs = $this->Log->getBreadcrumbInfo();
+        $breadCrumbs[] = __('Index');
         $this->ViewExtension->setRedirectUrl(true, 'log');
-        $this->set(compact('logs', 'groupActions', 'fieldsLabel', 'fieldsConfig', 'pageHeader', 'headerMenuActions'));
+
+        $this->set(compact('logs', 'groupActions', 'fieldsLabel', 'fieldsConfig', 'pageHeader', 'headerMenuActions', 'breadCrumbs'));
     }
 
     /**
@@ -177,9 +180,11 @@ class LogsController extends AppController
                 ]
             ],
         ];
-
+        $breadCrumbs = $this->Log->getBreadcrumbInfo($id);
+        $breadCrumbs[] = __('Viewing');
         $this->ViewExtension->setRedirectUrl(true, 'log');
-        $this->set(compact('log', 'fieldsLabel', 'fieldsConfig', 'pageHeader', 'headerMenuActions'));
+
+        $this->set(compact('log', 'fieldsLabel', 'fieldsConfig', 'pageHeader', 'headerMenuActions', 'breadCrumbs'));
     }
 
     /**

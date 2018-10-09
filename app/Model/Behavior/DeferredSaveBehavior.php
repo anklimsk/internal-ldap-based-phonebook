@@ -422,4 +422,69 @@ class DeferredSaveBehavior extends ModelBehavior
 
         return $result;
     }
+
+    /**
+     * Return reference employee ID.
+     *
+     * @param Model $model Model using this behavior.
+     * @param int|string $id ID of record for retrieving employee ID.
+     * @return int|bool Return employee ID,
+     *  or False on failure.
+     */
+    public function getRefId(Model $model, $id = null) {
+        if (empty($id) || !$model->hasField('employee_id')) {
+            return false;
+        }
+
+        $model->id = $id;
+        return $model->field('employee_id');
+    }
+
+    /**
+     * Return name of data.
+     *
+     * @param Model $model Model using this behavior.
+     * @param int|string|array $id ID of record or array data
+     *  for retrieving name.
+     * @return string|bool Return name of data,
+     *  or False on failure.
+     */
+    public function getName(Model $model, $id = null) {
+        if (is_array($id)) {
+            $refId = $id;
+        } else {
+            $refId = $model->getRefId($id);
+        }
+
+        return $this->_modelEmployee->getName($refId);
+    }
+
+    /**
+     * Return an array of information for creating a breadcrumbs.
+     *
+     * @param Model $model Model using this behavior.
+     * @param int|string|array $id ID of record or array data
+     *  for retrieving name.
+     * @param bool|null $includeRoot If True, include information of root breadcrumb.
+     *  If Null, include information of root breadcrumb if $ID is not empty.
+     * @return array Return an array of information for creating a breadcrumbs.
+     */
+    public function getBreadcrumbInfo(Model $model, $id = null, $includeRoot = null) {
+        if (is_array($id)) {
+            $refId = $id;
+        } else {
+            $refId = $model->getRefId($id);
+        }
+        $result = $this->_modelEmployee->getBreadcrumbInfo($refId, $includeRoot);
+        $breadcrumbRoot = $model->createBreadcrumb(null);
+        $breadcrumbInfo = $model->createBreadcrumb($id);
+        if (!empty($breadcrumbRoot)&& !empty($breadcrumbInfo)) {
+            $breadcrumbRoot[1] = $breadcrumbInfo[1];
+        }
+        if (!empty($breadcrumbRoot)) {
+            $result[] = $breadcrumbRoot;
+        }
+
+        return $result; 
+    }
 }

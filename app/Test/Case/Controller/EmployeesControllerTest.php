@@ -4,6 +4,7 @@ App::uses('EmployeesController', 'Controller');
 App::uses('Folder', 'Utility');
 App::uses('File', 'Utility');
 App::uses('CakeTime', 'Utility');
+App::uses('CakeText', 'Utility');
 
 /**
  * EmployeesController Test Case
@@ -102,6 +103,7 @@ class EmployeesControllerTest extends AppControllerTestCase
             'showBreadcrumb' => false,
             'lastUpdate' => '2017-11-16 17:03:00',
             'countEmployees' => 9,
+            'pageTitle' =>  __('Information retrieval')
         ];
         foreach ($userRoles as $userRole => $userPrefix) {
             $userInfo = [
@@ -289,6 +291,7 @@ class EmployeesControllerTest extends AppControllerTestCase
                     'truncate' => false,
                 ],
             ],
+            'pageTitle' => __('Search information'),
             'query' => '',
             'queryCorrect' => '',
             'queryConfig' => [
@@ -546,6 +549,7 @@ class EmployeesControllerTest extends AppControllerTestCase
                     'truncate' => false,
                 ],
             ],
+            'pageTitle' => __('Search information'),
             'query' => '',
             'queryCorrect' => '',
             'queryConfig' => [
@@ -1108,6 +1112,26 @@ class EmployeesControllerTest extends AppControllerTestCase
                     ['title' => __('Edit tree of subordinate employee')]
                 ]
             ],
+            'breadCrumbs' => [
+                [
+                    CakeText::truncate(__('Employees'), 20),
+                    [
+                        'plugin' => null,
+                        'controller' => 'employees',
+                        'action' => 'index'
+                    ]
+                ],
+                [
+                    CakeText::truncate('Егоров Т.Г.', 20),
+                    [
+                        '2',
+                        'plugin' => null,
+                        'controller' => 'employees',
+                        'action' => 'view'
+                    ]
+                ],
+                __('Viewing'),
+            ],
             'employee' => [
                 'Employee' => [
                     'id' => '2',
@@ -1329,6 +1353,26 @@ class EmployeesControllerTest extends AppControllerTestCase
                     ['controller' => 'employees', 'action' => 'tree', '7'],
                     ['title' => __('Edit tree of subordinate employee')]
                 ]
+            ],
+            'breadCrumbs' => [
+                [
+                    CakeText::truncate(__('Employees'), 20),
+                    [
+                        'plugin' => null,
+                        'controller' => 'employees',
+                        'action' => 'index'
+                    ]
+                ],
+                [
+                    CakeText::truncate('Хвощинский В.В.', 20),
+                    [
+                        '7',
+                        'plugin' => null,
+                        'controller' => 'employees',
+                        'action' => 'view'
+                    ]
+                ],
+                __('Viewing'),
             ],
             'employee' => [
                 'Employee' => [
@@ -1606,6 +1650,26 @@ class EmployeesControllerTest extends AppControllerTestCase
                     ['controller' => 'employees', 'action' => 'tree', '1'],
                     ['title' => __('Edit tree of subordinate employee')]
                 ]
+            ],
+            'breadCrumbs' => [
+                [
+                    CakeText::truncate(__('Employees'), 20),
+                    [
+                        'plugin' => null,
+                        'controller' => 'employees',
+                        'action' => 'index'
+                    ]
+                ],
+                [
+                    CakeText::truncate('Миронов В.М.', 20),
+                    [
+                        'CN=Миронов В.М.,OU=12-05,OU=УИЗ,OU=Пользователи,DC=fabrikam,DC=com',
+                        'plugin' => null,
+                        'controller' => 'employees',
+                        'action' => 'view'
+                    ]
+                ],
+                __('Viewing'),
             ],
             'employee' => [
                 'Employee' => [
@@ -2106,7 +2170,27 @@ class EmployeesControllerTest extends AppControllerTestCase
             'employeePhoto' => base64_decode('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'),
             'forceDeferred' => false,
             'changedFields' => [],
-            'pageHeader' => __('Editing employee')
+            'pageHeader' => __('Editing employee'),
+            'breadCrumbs' => [
+                [
+                    CakeText::truncate(__('Employees'), 20),
+                    [
+                        'plugin' => null,
+                        'controller' => 'employees',
+                        'action' => 'index'
+                    ]
+                ],
+                [
+                    CakeText::truncate('Хвощинский В.В.', 20),
+                    [
+                        '8c149661-7215-47de-b40e-35320a1ea508',
+                        'plugin' => null,
+                        'controller' => 'employees',
+                        'action' => 'view'
+                    ]
+                ],
+                __('Editing'),
+            ]
         ];
         $userInfo = [
             'role' => USER_ROLE_USER,
@@ -2293,7 +2377,27 @@ class EmployeesControllerTest extends AppControllerTestCase
             'employeePhoto' => base64_decode('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'),
             'forceDeferred' => false,
             'changedFields' => [],
-            'pageHeader' => __('Editing employee')
+            'pageHeader' => __('Editing employee'),
+            'breadCrumbs' => [
+                [
+                    CakeText::truncate(__('Employees'), 20),
+                    [
+                        'plugin' => null,
+                        'controller' => 'employees',
+                        'action' => 'index'
+                    ]
+                ],
+                [
+                    CakeText::truncate('Хвощинский В.В.', 20),
+                    [
+                        '8c149661-7215-47de-b40e-35320a1ea508',
+                        'plugin' => null,
+                        'controller' => 'employees',
+                        'action' => 'view'
+                    ]
+                ],
+                __('Editing'),
+            ]
         ];
         $userInfo = [
             'role' => USER_ROLE_USER | USER_ROLE_SECRETARY,
@@ -2487,7 +2591,27 @@ class EmployeesControllerTest extends AppControllerTestCase
                 'EmployeeEdit.' . CAKE_LDAP_LDAP_ATTRIBUTE_TITLE,
                 'EmployeeEdit.' . CAKE_LDAP_LDAP_ATTRIBUTE_PHOTO,
             ],
-            'pageHeader' => __('Editing employee')
+            'pageHeader' => __('Editing employee'),
+            'breadCrumbs' => [
+                [
+                    CakeText::truncate(__('Employees'), 20),
+                    [
+                        'plugin' => null,
+                        'controller' => 'employees',
+                        'action' => 'index'
+                    ]
+                ],
+                [
+                    CakeText::truncate('Миронов В.М.', 20),
+                    [
+                        '1dde2cdc-5264-4286-9273-4a88b230237c',
+                        'plugin' => null,
+                        'controller' => 'employees',
+                        'action' => 'view'
+                    ]
+                ],
+                __('Editing'),
+            ]
         ];
         foreach ($userRoles as $userRole => $userPrefix) {
             $userInfo = [
@@ -3117,7 +3241,18 @@ class EmployeesControllerTest extends AppControllerTestCase
                 ],
             ],
             'emptyDepartmentName' => __('Non-staff personnel'),
-            'pageHeader' => __('Gallery of employees')
+            'pageHeader' => __('Gallery of employees'),
+            'breadCrumbs' => [
+                [
+                    CakeText::truncate(__('Employees'), 20),
+                    [
+                        'plugin' => null,
+                        'controller' => 'employees',
+                        'action' => 'index'
+                    ]
+                ],
+                __('Gallery'),
+            ]
         ];
         $userInfo = [
             'role' => USER_ROLE_USER,
@@ -3335,7 +3470,18 @@ class EmployeesControllerTest extends AppControllerTestCase
                 ],
             ],
             'emptyDepartmentName' => __('Non-staff personnel'),
-            'pageHeader' => __('Gallery of employees')
+            'pageHeader' => __('Gallery of employees'),
+            'breadCrumbs' => [
+                [
+                    CakeText::truncate(__('Employees'), 20),
+                    [
+                        'plugin' => null,
+                        'controller' => 'employees',
+                        'action' => 'index'
+                    ]
+                ],
+                __('Gallery'),
+            ]
         ];
         foreach ($userRoles as $userRole => $userPrefix) {
             $userInfo = [
@@ -3548,6 +3694,17 @@ class EmployeesControllerTest extends AppControllerTestCase
             'id' => null,
             'expandAll' => false,
             'pageHeader' => __('Tree view information of employees'),
+            'breadCrumbs' => [
+                [
+                    CakeText::truncate(__('Employees'), 20),
+                    [
+                        'plugin' => null,
+                        'controller' => 'employees',
+                        'action' => 'index'
+                    ]
+                ],
+                __('Tree viewing'),
+            ],
             'employees' => [
                 [
                     'SubordinateDb' => [
@@ -3729,6 +3886,17 @@ class EmployeesControllerTest extends AppControllerTestCase
             'id' => $id,
             'expandAll' => false,
             'pageHeader' => __('Tree view information of employees'),
+            'breadCrumbs' => [
+                [
+                    CakeText::truncate(__('Employees'), 20),
+                    [
+                        'plugin' => null,
+                        'controller' => 'employees',
+                        'action' => 'index'
+                    ]
+                ],
+                __('Tree viewing'),
+            ],
             'employees' => [
                 [
                     'SubordinateDb' => [
@@ -3840,6 +4008,17 @@ class EmployeesControllerTest extends AppControllerTestCase
             'expandAll' => false,
             'pageHeader' => __('Tree view information of employees'),
             'headerMenuActions' => [],
+            'breadCrumbs' => [
+                [
+                    CakeText::truncate(__('Employees'), 20),
+                    [
+                        'plugin' => null,
+                        'controller' => 'employees',
+                        'action' => 'index'
+                    ]
+                ],
+                __('Tree viewing'),
+            ],
             'employees' => [
                 [
                     'SubordinateDb' => [
@@ -3950,6 +4129,17 @@ class EmployeesControllerTest extends AppControllerTestCase
             'isTreeDraggable' => true,
             'expandAll' => true,
             'pageHeader' => __('Tree view information of employees'),
+            'breadCrumbs' => [
+                [
+                    CakeText::truncate(__('Employees'), 20),
+                    [
+                        'plugin' => null,
+                        'controller' => 'employees',
+                        'action' => 'index'
+                    ]
+                ],
+                __('Tree viewing'),
+            ],
             'employees' => [
                 [
                     'SubordinateDb' => [
@@ -4504,6 +4694,17 @@ class EmployeesControllerTest extends AppControllerTestCase
                     ]
                 ]
             ],
+            'breadCrumbs' => [
+                [
+                    CakeText::truncate(__('Employees'), 20),
+                    [
+                        'plugin' => null,
+                        'controller' => 'employees',
+                        'action' => 'index'
+                    ]
+                ],
+                __('Checking tree'),
+            ],
             'treeState' => [
                 [
                     'index',
@@ -4544,6 +4745,17 @@ class EmployeesControllerTest extends AppControllerTestCase
         $expected = [
             'pageHeader' => __('Checking state tree of employees'),
             'headerMenuActions' => [],
+            'breadCrumbs' => [
+                [
+                    CakeText::truncate(__('Employees'), 20),
+                    [
+                        'plugin' => null,
+                        'controller' => 'employees',
+                        'action' => 'index'
+                    ]
+                ],
+                __('Checking tree'),
+            ],
             'treeState' => true,
         ];
         $this->assertData($expected, $result);
@@ -5912,7 +6124,18 @@ class EmployeesControllerTest extends AppControllerTestCase
                     'fileType' => 'Excel',
                 ],
             ],
-            'pageHeader' => __('Index of phone book files')
+            'pageHeader' => __('Index of phone book files'),
+            'breadCrumbs' => [
+                [
+                    CakeText::truncate(__('Employees'), 20),
+                    [
+                        'plugin' => null,
+                        'controller' => 'employees',
+                        'action' => 'index'
+                    ]
+                ],
+                __('Export phone book'),
+            ]
         ];
         foreach ($userRoles as $userRole => $userPrefix) {
             $userInfo = [

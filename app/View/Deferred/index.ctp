@@ -14,10 +14,8 @@
     echo $this->AssetCompress->script('CakeTheme.fileupload-image', ['block' => 'script']);
     echo $this->AssetCompress->script('CakeTheme.fileupload-i18n-' . $uiLcid2, ['block' => 'script']);
 
-    $this->assign('title', __('Deferred saves'));
-
-    $this->Html->addCrumb(__('Deferred saves'), ['controller' => 'deferred', 'action' => 'index']);
-    $this->Html->addCrumb(__('Index'));
+    $this->assign('title', $pageHeader);
+    $this->ViewExtension->addBreadCrumbs($breadCrumbs);
 ?>
 <div class="container">
 <?php

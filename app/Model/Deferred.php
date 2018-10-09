@@ -55,7 +55,9 @@ class Deferred extends AppModel
      * @link http://book.cakephp.org/2.0/en/models/behaviors.html#using-behaviors
      */
     public $actsAs = [
-        'DeferredSave'
+        'Containable',
+        'DeferredSave',
+        'CakeTheme.BreadCrumb'
     ];
 
     /**
@@ -710,5 +712,27 @@ class Deferred extends AppModel
         }
 
         return $result;
+    }
+
+    /**
+     * Return controller name.
+     *
+     * @return string Return controller name for breadcrumb.
+     */
+    public function getControllerName() {
+        $controllerName = 'deferred';
+
+        return $controllerName;
+    }
+
+    /**
+     * Return name of group data.
+     *
+     * @return string Return name of group data
+     */
+    public function getGroupName() {
+        $groupName = __('Deferred saves');
+
+        return $groupName;
     }
 }

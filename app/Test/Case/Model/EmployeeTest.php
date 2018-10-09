@@ -2564,4 +2564,65 @@ class EmployeeTest extends AppCakeTestCase
         ];
         $this->assertData($expected, $result);
     }
+
+    /**
+     * testGetPluginName method
+     *
+     * @return void
+     */
+    public function testGetPluginName()
+    {
+        $result = $this->_targetObject->getPluginName();
+        $this->assertNull($result);
+    }
+
+    /**
+     * testGetGroupName method
+     *
+     * @return void
+     */
+    public function testGetGroupName()
+    {
+        $result = $this->_targetObject->getGroupName();
+        $expected = __('Employees');
+        $this->assertData($expected, $result);
+    }
+
+    /**
+     * testGetName method
+     *
+     * @return void
+     */
+    public function testGetName()
+    {
+        $params = [
+            [
+                null, // $id
+            ], // Params for step 1
+            [
+                '4', // $id
+            ], // Params for step 2
+            [
+                'CN=Матвеев Р.М.,OU=Пользователи,DC=fabrikam,DC=com', // $id
+            ], // Params for step 3
+            [
+                '81817f32-44a7-4b4a-8eff-b837ba387077', // $id
+            ], // Params for step 4
+            [
+                [
+                    'Employee' => [
+                        CAKE_LDAP_LDAP_ATTRIBUTE_NAME => 'Хвощинский В.В.'
+                    ]
+                ], // $id
+            ], // Params for step 5
+        ];
+        $expected = [
+            false, // Result of step 1
+            'Дементьева А.С.', // Result of step 2
+            'Матвеев Р.М.', // Result of step 3
+            'Козловская Е.М.', // Result of step 4
+            'Хвощинский В.В.', // Result of step 5
+        ];
+        $this->runClassMethodGroup('getName', $params, $expected);
+    }
 }

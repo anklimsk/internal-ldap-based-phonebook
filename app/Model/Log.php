@@ -48,7 +48,9 @@ class Log extends AppModel
      * @link http://book.cakephp.org/2.0/en/models/behaviors.html#using-behaviors
      */
     public $actsAs = [
-        'DeferredSave'
+        'Containable',
+        'DeferredSave',
+        'CakeTheme.BreadCrumb'
     ];
 
     /**
@@ -277,5 +279,16 @@ class Log extends AppModel
         $modelDeferred = ClassRegistry::init('Deferred');
 
         return $modelDeferred->createDeferredSave($dataToRestore, $userRole, false, false);
+    }
+
+    /**
+     * Return name of group data.
+     *
+     * @return string Return name of group data
+     */
+    public function getGroupName() {
+        $groupName = __('Logs');
+
+        return $groupName;
     }
 }

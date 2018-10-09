@@ -1,6 +1,7 @@
 <?php
 App::uses('AppControllerTestCase', 'Test');
 App::uses('DepartmentsController', 'Controller');
+App::uses('CakeText', 'Utility');
 
 /**
  * DepartmentsController Test Case
@@ -215,6 +216,17 @@ class DepartmentsControllerTest extends AppControllerTestCase
                         'data-toggle' => 'modal'
                     ]
                 ]
+            ],
+            'breadCrumbs' => [
+                [
+                    CakeText::truncate(__('Departments'), CAKE_THEME_BREADCRUMBS_TEXT_LIMIT),
+                    [
+                        'plugin' => null,
+                        'controller' => 'departments',
+                        'action' => 'index'
+                    ]
+                ],
+                __('Index'),
             ]
         ];
         foreach ($userRoles as $userRole => $userPrefix) {
@@ -389,6 +401,26 @@ class DepartmentsControllerTest extends AppControllerTestCase
                     ['controller' => 'departments', 'action' => 'edit', '2'],
                     ['title' => __('Editing information of this department')]
                 ],
+            ],
+            'breadCrumbs' => [
+                [
+                    CakeText::truncate(__('Departments'), CAKE_THEME_BREADCRUMBS_TEXT_LIMIT),
+                    [
+                        'plugin' => null,
+                        'controller' => 'departments',
+                        'action' => 'index'
+                    ]
+                ],
+                [
+                    CakeText::truncate('ОС', CAKE_THEME_BREADCRUMBS_TEXT_LIMIT),
+                    [
+                        '2',
+                        'plugin' => null,
+                        'controller' => 'departments',
+                        'action' => 'view'
+                    ]
+                ],
+                __('Viewing'),
             ]
         ];
         foreach ($userRoles as $userRole => $userPrefix) {
@@ -471,7 +503,18 @@ class DepartmentsControllerTest extends AppControllerTestCase
                 'data-inputmask-regex' => '[0-9A-Za-z\u0410-\u044f\u0401\u0451\xc0-\xff\xb5\-\.\s\(\)]{2,}'
             ],
             'pageHeader' => __('Adding department'),
-            'isAddAction' => true
+            'breadCrumbs' => [
+                [
+                    CakeText::truncate(__('Departments'), CAKE_THEME_BREADCRUMBS_TEXT_LIMIT),
+                    [
+                        'plugin' => null,
+                        'controller' => 'departments',
+                        'action' => 'index'
+                    ]
+                ],
+                __('Adding'),
+            ],
+            'isAddAction' => true,
         ];
         foreach ($userRoles as $userRole => $userPrefix) {
             $userInfo = [
@@ -830,7 +873,27 @@ class DepartmentsControllerTest extends AppControllerTestCase
             'fieldInputMask' => [
                 'data-inputmask-regex' => '[0-9A-Za-z\u0410-\u044f\u0401\u0451\xc0-\xff\xb5\-\.\s\(\)]{2,}'
             ],
-            'pageHeader' => __('Editing department')
+            'pageHeader' => __('Editing department'),
+            'breadCrumbs' => [
+                [
+                    CakeText::truncate(__('Departments'), CAKE_THEME_BREADCRUMBS_TEXT_LIMIT),
+                    [
+                        'plugin' => null,
+                        'controller' => 'departments',
+                        'action' => 'index'
+                    ]
+                ],
+                [
+                    CakeText::truncate('ОС', CAKE_THEME_BREADCRUMBS_TEXT_LIMIT),
+                    [
+                        '2',
+                        'plugin' => null,
+                        'controller' => 'departments',
+                        'action' => 'view'
+                    ]
+                ],
+                __('Editing'),
+            ]
         ];
         foreach ($userRoles as $userRole => $userPrefix) {
             $userInfo = [
@@ -1807,6 +1870,17 @@ class DepartmentsControllerTest extends AppControllerTestCase
                         'data-toggle' => 'pjax',
                     ]
                 ]
+            ],
+            'breadCrumbs' => [
+                [
+                    CakeText::truncate(__('Departments'), CAKE_THEME_BREADCRUMBS_TEXT_LIMIT),
+                    [
+                        'plugin' => null,
+                        'controller' => 'departments',
+                        'action' => 'index'
+                    ]
+                ],
+                __('Checking the list'),
             ]
         ];
         $this->assertData($expected, $result);
@@ -1837,6 +1911,17 @@ class DepartmentsControllerTest extends AppControllerTestCase
             'treeState' => true,
             'pageHeader' => __('Checking state list of departments'),
             'headerMenuActions' => [],
+            'breadCrumbs' => [
+                [
+                    CakeText::truncate(__('Departments'), CAKE_THEME_BREADCRUMBS_TEXT_LIMIT),
+                    [
+                        'plugin' => null,
+                        'controller' => 'departments',
+                        'action' => 'index'
+                    ]
+                ],
+                __('Checking the list'),
+            ]
         ];
         $this->assertData($expected, $result);
     }

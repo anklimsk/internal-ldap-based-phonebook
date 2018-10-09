@@ -11,10 +11,8 @@
     echo $this->AssetCompress->css('CakeTheme.tree', ['block' => 'css']);
     echo $this->AssetCompress->script('CakeTheme.tree', ['block' => 'script']);
 
-    $this->assign('title', __('Departments'));
-
-    $this->Html->addCrumb(__('Departments'), ['controller' => 'departments', 'action' => 'index']);
-    $this->Html->addCrumb(__('Index'));
+    $this->assign('title', $pageHeader);
+    $this->ViewExtension->addBreadCrumbs($breadCrumbs);
 ?>
 <div class="container">
 <?php

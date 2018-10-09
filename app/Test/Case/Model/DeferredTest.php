@@ -1469,4 +1469,28 @@ class DeferredTest extends AppCakeTestCase
         $result = $this->_targetObject->checkNewDeferredSave();
         $this->assertTrue($result);
     }
+
+    /**
+     * testGetControllerName method
+     *
+     * @return void
+     */
+    public function testGetControllerName()
+    {
+        $result = $this->_targetObject->getControllerName();
+        $expected = 'deferred';
+        $this->assertData($expected, $result);
+    }
+
+    /**
+     * testGetGroupName method
+     *
+     * @return void
+     */
+    public function testGetGroupName()
+    {
+        $result = $this->_targetObject->getGroupName();
+        $expected = __('Deferred saves');
+        $this->assertData($expected, $result);
+    }
 }

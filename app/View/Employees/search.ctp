@@ -25,7 +25,7 @@
     echo $this->AssetCompress->script('CakeTheme.fileupload-image', ['block' => 'script']);
     echo $this->AssetCompress->script('CakeTheme.fileupload-i18n-' . $uiLcid2, ['block' => 'script']);
 
-    $this->assign('title', __('Search information'));
+    $this->assign('title', $pageTitle);
 
     $this->Html->addCrumb(__('Search information'), [
         'plugin' => 'cake_search_info',

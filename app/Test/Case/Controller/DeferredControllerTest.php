@@ -1,6 +1,7 @@
 <?php
 App::uses('AppControllerTestCase', 'Test');
 App::uses('DeferredController', 'Controller');
+App::uses('CakeText', 'Utility');
 
 /**
  * DeferredController Test Case
@@ -358,6 +359,25 @@ class DeferredControllerTest extends AppControllerTestCase
                 ],
             ],
             'pageHeader' => __('Index of deferred saves'),
+            'breadCrumbs' => [
+                [
+                    CakeText::truncate(__('Employees'), CAKE_THEME_BREADCRUMBS_TEXT_LIMIT),
+                    [
+                        'plugin' => null,
+                        'controller' => 'employees',
+                        'action' => 'index'
+                    ]
+                ],
+                [
+                    CakeText::truncate(__('Deferred saves'), CAKE_THEME_BREADCRUMBS_TEXT_LIMIT),
+                    [
+                        'plugin' => null,
+                        'controller' => 'deferred',
+                        'action' => 'index'
+                    ]
+                ],
+                __('Index'),
+            ]
         ];
         foreach ($userRoles as $userRole => $userPrefix) {
             $userInfo = [
@@ -863,6 +883,35 @@ class DeferredControllerTest extends AppControllerTestCase
                         'data-confirm-msg' => __('Are you sure you wish to reject this deferred save?'),
                     ]
                 ],
+            ],
+            'breadCrumbs' => [
+                [
+                    CakeText::truncate(__('Employees'), CAKE_THEME_BREADCRUMBS_TEXT_LIMIT),
+                    [
+                        'plugin' => null,
+                        'controller' => 'employees',
+                        'action' => 'index'
+                    ]
+                ],
+                [
+                    CakeText::truncate('Суханова Л.Б.', CAKE_THEME_BREADCRUMBS_TEXT_LIMIT),
+                    [
+                        '3',
+                        'plugin' => null,
+                        'controller' => 'employees',
+                        'action' => 'view'
+                    ]
+                ],
+                [
+                    CakeText::truncate(__('Deferred saves'), CAKE_THEME_BREADCRUMBS_TEXT_LIMIT),
+                    [
+                        '2',
+                        'plugin' => null,
+                        'controller' => 'deferred',
+                        'action' => 'view'
+                    ]
+                ],
+                __('Viewing'),
             ]
         ];
         foreach ($userRoles as $userRole => $userPrefix) {
@@ -1175,6 +1224,35 @@ class DeferredControllerTest extends AppControllerTestCase
             ],
             'forceDeferred' => true,
             'pageHeader' => __('Editing deferred save'),
+            'breadCrumbs' => [
+                [
+                    CakeText::truncate(__('Employees'), CAKE_THEME_BREADCRUMBS_TEXT_LIMIT),
+                    [
+                        'plugin' => null,
+                        'controller' => 'employees',
+                        'action' => 'index'
+                    ]
+                ],
+                [
+                    CakeText::truncate('Суханова Л.Б.', CAKE_THEME_BREADCRUMBS_TEXT_LIMIT),
+                    [
+                        '3',
+                        'plugin' => null,
+                        'controller' => 'employees',
+                        'action' => 'view'
+                    ]
+                ],
+                [
+                    CakeText::truncate(__('Deferred saves'), CAKE_THEME_BREADCRUMBS_TEXT_LIMIT),
+                    [
+                        '2',
+                        'plugin' => null,
+                        'controller' => 'deferred',
+                        'action' => 'view'
+                    ]
+                ],
+                __('Editing'),
+            ]
         ];
         foreach ($userRoles as $userRole => $userPrefix) {
             $userInfo = [

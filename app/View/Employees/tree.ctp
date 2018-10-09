@@ -16,11 +16,9 @@
     echo $this->AssetCompress->script('CakeTheme.fileupload-image', ['block' => 'script']);
     echo $this->AssetCompress->script('CakeTheme.fileupload-i18n-' . $uiLcid2, ['block' => 'script']);
 
-    $this->assign('title', __('Tree view information of employees'));
-
-    $this->Html->addCrumb(__('Employees'), ['controller' => 'employees', 'action' => 'search']);
-    $this->Html->addCrumb(__('Tree viewing'));
-?>  
+    $this->assign('title', $pageHeader);
+    $this->ViewExtension->addBreadCrumbs($breadCrumbs);
+?>
     <div class="container">
 <?php
         echo $this->ViewExtension->headerPage($pageHeader, $headerMenuActions);
@@ -39,7 +37,7 @@
             'expandAll' => $expandAll,
             'dropUrl' => $dropUrl
         ]);
-?>          
+?>
             </div>
         </div>
     </div>
