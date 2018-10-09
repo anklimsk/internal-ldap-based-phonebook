@@ -14,7 +14,7 @@
  * Used for fast checking application is installed. Default value `/tmp/installer/installed.txt`
  */
 if (!defined('CAKE_INSTALLER_MARKER_FILE_INSTALLED')) {
-    define('CAKE_INSTALLER_MARKER_FILE_INSTALLED', TMP . 'installer' . DS . 'installed.txt');
+	define('CAKE_INSTALLER_MARKER_FILE_INSTALLED', TMP . 'installer' . DS . 'installed.txt');
 }
 
 /**
@@ -24,7 +24,7 @@ if (!defined('CAKE_INSTALLER_MARKER_FILE_INSTALLED')) {
  *  Default value `/tmp/installer/restart.txt`
  */
 if (!defined('CAKE_INSTALLER_MARKER_FILE_RESTART')) {
-    define('CAKE_INSTALLER_MARKER_FILE_RESTART', TMP . 'installer' . DS . 'restart.txt');
+	define('CAKE_INSTALLER_MARKER_FILE_RESTART', TMP . 'installer' . DS . 'restart.txt');
 }
 
 /**
@@ -33,7 +33,7 @@ if (!defined('CAKE_INSTALLER_MARKER_FILE_RESTART')) {
  * Used for set name of command. Default value `setuilang`
  */
 if (!defined('CAKE_INSTALLER_SHELL_INSTALLER_TASK_SETUILANG')) {
-    define('CAKE_INSTALLER_SHELL_INSTALLER_TASK_SETUILANG', 'setuilang');
+	define('CAKE_INSTALLER_SHELL_INSTALLER_TASK_SETUILANG', 'setuilang');
 }
 
 /**
@@ -43,7 +43,7 @@ if (!defined('CAKE_INSTALLER_SHELL_INSTALLER_TASK_SETUILANG')) {
  * Used for set name of command. Default value `check`
  */
 if (!defined('CAKE_INSTALLER_SHELL_INSTALLER_TASK_CHECK')) {
-    define('CAKE_INSTALLER_SHELL_INSTALLER_TASK_CHECK', 'check');
+	define('CAKE_INSTALLER_SHELL_INSTALLER_TASK_CHECK', 'check');
 }
 
 /**
@@ -53,7 +53,7 @@ if (!defined('CAKE_INSTALLER_SHELL_INSTALLER_TASK_CHECK')) {
  * Used for set name of command. Default value `setdirpermiss`
  */
 if (!defined('CAKE_INSTALLER_SHELL_INSTALLER_TASK_SETDIRPERMISS')) {
-    define('CAKE_INSTALLER_SHELL_INSTALLER_TASK_SETDIRPERMISS', 'setdirpermiss');
+	define('CAKE_INSTALLER_SHELL_INSTALLER_TASK_SETDIRPERMISS', 'setdirpermiss');
 }
 
 /**
@@ -63,7 +63,7 @@ if (!defined('CAKE_INSTALLER_SHELL_INSTALLER_TASK_SETDIRPERMISS')) {
  * Used for set name of command. Default value `setsecurkey`
  */
 if (!defined('CAKE_INSTALLER_SHELL_INSTALLER_TASK_SETSECURKEY')) {
-    define('CAKE_INSTALLER_SHELL_INSTALLER_TASK_SETSECURKEY', 'setsecurkey');
+	define('CAKE_INSTALLER_SHELL_INSTALLER_TASK_SETSECURKEY', 'setsecurkey');
 }
 
 /**
@@ -73,7 +73,7 @@ if (!defined('CAKE_INSTALLER_SHELL_INSTALLER_TASK_SETSECURKEY')) {
  * Used for set name of command. Default value `settimezone`
  */
 if (!defined('CAKE_INSTALLER_SHELL_INSTALLER_TASK_SETTIMEZONE')) {
-    define('CAKE_INSTALLER_SHELL_INSTALLER_TASK_SETTIMEZONE', 'settimezone');
+	define('CAKE_INSTALLER_SHELL_INSTALLER_TASK_SETTIMEZONE', 'settimezone');
 }
 
 /**
@@ -83,7 +83,7 @@ if (!defined('CAKE_INSTALLER_SHELL_INSTALLER_TASK_SETTIMEZONE')) {
  * Used for set name of command. Default value `setbaseurl`
  */
 if (!defined('CAKE_INSTALLER_SHELL_INSTALLER_TASK_SETBASEURL')) {
-    define('CAKE_INSTALLER_SHELL_INSTALLER_TASK_SETBASEURL', 'setbaseurl');
+	define('CAKE_INSTALLER_SHELL_INSTALLER_TASK_SETBASEURL', 'setbaseurl');
 }
 
 /**
@@ -93,7 +93,7 @@ if (!defined('CAKE_INSTALLER_SHELL_INSTALLER_TASK_SETBASEURL')) {
  * Used for set name of command. Default value `connectdb`
  */
 if (!defined('CAKE_INSTALLER_SHELL_INSTALLER_TASK_CONNECT_DB')) {
-    define('CAKE_INSTALLER_SHELL_INSTALLER_TASK_CONNECT_DB', 'connectdb');
+	define('CAKE_INSTALLER_SHELL_INSTALLER_TASK_CONNECT_DB', 'connectdb');
 }
 
 /**
@@ -103,7 +103,7 @@ if (!defined('CAKE_INSTALLER_SHELL_INSTALLER_TASK_CONNECT_DB')) {
  * Used for set name of command. Default value `configdb`
  */
 if (!defined('CAKE_INSTALLER_SHELL_INSTALLER_TASK_CONFIG_DB')) {
-    define('CAKE_INSTALLER_SHELL_INSTALLER_TASK_CONFIG_DB', 'configdb');
+	define('CAKE_INSTALLER_SHELL_INSTALLER_TASK_CONFIG_DB', 'configdb');
 }
 
 /**
@@ -112,7 +112,7 @@ if (!defined('CAKE_INSTALLER_SHELL_INSTALLER_TASK_CONFIG_DB')) {
  * Used for set name of command. Default value `createdb`
  */
 if (!defined('CAKE_INSTALLER_SHELL_INSTALLER_TASK_CREATE_DB')) {
-    define('CAKE_INSTALLER_SHELL_INSTALLER_TASK_CREATE_DB', 'createdb');
+	define('CAKE_INSTALLER_SHELL_INSTALLER_TASK_CREATE_DB', 'createdb');
 }
 
 /**
@@ -121,7 +121,7 @@ if (!defined('CAKE_INSTALLER_SHELL_INSTALLER_TASK_CREATE_DB')) {
  * Used for set name of command. Default value `createsymlinks`
  */
 if (!defined('CAKE_INSTALLER_SHELL_INSTALLER_TASK_CREATE_SYMLINKS')) {
-    define('CAKE_INSTALLER_SHELL_INSTALLER_TASK_CREATE_SYMLINKS', 'createsymlinks');
+	define('CAKE_INSTALLER_SHELL_INSTALLER_TASK_CREATE_SYMLINKS', 'createsymlinks');
 }
 
 /**
@@ -130,7 +130,7 @@ if (!defined('CAKE_INSTALLER_SHELL_INSTALLER_TASK_CREATE_SYMLINKS')) {
  * Used for set name of command. Default value `createcronjobs`
  */
 if (!defined('CAKE_INSTALLER_SHELL_INSTALLER_TASK_CREATE_CRONJOBS')) {
-    define('CAKE_INSTALLER_SHELL_INSTALLER_TASK_CREATE_CRONJOBS', 'createcronjobs');
+	define('CAKE_INSTALLER_SHELL_INSTALLER_TASK_CREATE_CRONJOBS', 'createcronjobs');
 }
 
 /**
@@ -140,5 +140,5 @@ if (!defined('CAKE_INSTALLER_SHELL_INSTALLER_TASK_CREATE_CRONJOBS')) {
  * Used for set name of command. Default value `install`
  */
 if (!defined('CAKE_INSTALLER_SHELL_INSTALLER_TASK_INSTALL')) {
-    define('CAKE_INSTALLER_SHELL_INSTALLER_TASK_INSTALL', 'install');
+	define('CAKE_INSTALLER_SHELL_INSTALLER_TASK_INSTALL', 'install');
 }

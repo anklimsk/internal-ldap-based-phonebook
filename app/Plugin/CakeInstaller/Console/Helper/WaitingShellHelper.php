@@ -17,109 +17,103 @@ App::uses('BaseShellHelper', 'Console/Helper');
  *
  * @package plugin.Console.Helper
  */
-class WaitingShellHelper extends BaseShellHelper
-{
+class WaitingShellHelper extends BaseShellHelper {
 
-    /**
-     * Array of chars for animate.
-     *
-     * @var array
-     */
-    protected $_animateChars = [
-        '|',
-        '/',
-        '-',
-        '\\',
-        '|',
-        '/',
-        '-',
-        '\\',
-    ];
+/**
+ * Array of chars for animate.
+ *
+ * @var array
+ */
+	protected $_animateChars = [
+		'|',
+		'/',
+		'-',
+		'\\',
+		'|',
+		'/',
+		'-',
+		'\\',
+	];
 
-    /**
-     * Number of current animate char.
-     *
-     * @var int
-     */
-    protected $_animateCharNum = 0;
+/**
+ * Number of current animate char.
+ *
+ * @var int
+ */
+	protected $_animateCharNum = 0;
 
-    /**
-     * Flag of state showing message
-     *
-     * @var bool
-     */
-    protected $_showMessage = false;
+/**
+ * Flag of state showing message
+ *
+ * @var bool
+ */
+	protected $_showMessage = false;
 
-    /**
-     * Get char for animate
-     *
-     * @return string
-     */
-    protected function _getAnimateChar()
-    {
-        if ($this->_animateCharNum >= count($this->_animateChars)) {
-            $this->_animateCharNum = 0;
-        }
+/**
+ * Get char for animate
+ *
+ * @return string
+ */
+	protected function _getAnimateChar() {
+		if ($this->_animateCharNum >= count($this->_animateChars)) {
+			$this->_animateCharNum = 0;
+		}
 
-        return $this->_animateChars[$this->_animateCharNum++];
-    }
+		return $this->_animateChars[$this->_animateCharNum++];
+	}
 
-    /**
-     * Get text of message waiting
-     *
-     * @return string
-     */
-    protected function _getWaitMsg()
-    {
-        $msg = __d('cake_installer', 'Please wait...');
+/**
+ * Get text of message waiting
+ *
+ * @return string
+ */
+	protected function _getWaitMsg() {
+		$msg = __d('cake_installer', 'Please wait...');
 
-        return $msg;
-    }
+		return $msg;
+	}
 
-    /**
-     * Print message 'Please wait...' and animate char on console
-     *
-     * @return void
-     */
-    public function animateMessage()
-    {
-        if (!$this->_showMessage) {
-            $this->_showMessage = true;
-            $this->_animateCharNum = 0;
-            $msg = $this->_getWaitMsg();
-            $msg .= ' ' . $this->_getAnimateChar();
-            $this->_consoleOutput->write($msg, 0);
-        } else {
-            $msg = $this->_getAnimateChar();
-            $this->_consoleOutput->overwrite($msg, 0, mb_strlen($msg));
-        }
-    }
+/**
+ * Print message 'Please wait...' and animate char on console
+ *
+ * @return void
+ */
+	public function animateMessage() {
+		if (!$this->_showMessage) {
+			$this->_showMessage = true;
+			$this->_animateCharNum = 0;
+			$msg = $this->_getWaitMsg();
+			$msg .= ' ' . $this->_getAnimateChar();
+			$this->_consoleOutput->write($msg, 0);
+		} else {
+			$msg = $this->_getAnimateChar();
+			$this->_consoleOutput->overwrite($msg, 0, mb_strlen($msg));
+		}
+	}
 
-    /**
-     * Hide message 'Please wait...' on console
-     *
-     * @return void
-     */
-    public function hideMessage()
-    {
-        if (!$this->_showMessage) {
-            return;
-        }
+/**
+ * Hide message 'Please wait...' on console
+ *
+ * @return void
+ */
+	public function hideMessage() {
+		if (!$this->_showMessage) {
+			return;
+		}
 
-        $msg = $this->_getWaitMsg();
-        $msg .= ' x';
-        $this->_consoleOutput->write(str_repeat("\x08", mb_strlen($msg)), 0);
-        $this->_showMessage = false;
-    }
+		$msg = $this->_getWaitMsg();
+		$msg .= ' x';
+		$this->_consoleOutput->write(str_repeat("\x08", mb_strlen($msg)), 0);
+		$this->_showMessage = false;
+	}
 
-    /**
-     * Print message 'Please wait...' on console
-     *
-     * @param array $args The arguments.
-     * @return void
-     */
-    public function output($args)
-    {
-        $this->_consoleOutput->write($this->_getWaitMsg(), 0);
-    }
+/**
+ * Print message 'Please wait...' on console
+ *
+ * @param array $args The arguments.
+ * @return void
+ */
+	public function output($args) {
+		$this->_consoleOutput->write($this->_getWaitMsg(), 0);
+	}
 }

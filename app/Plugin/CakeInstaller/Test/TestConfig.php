@@ -9,50 +9,50 @@
  */
 
 $config['CakeInstaller'] = [
-    'PHPversion' => [
-        [
-            PHP_VERSION,
-            '>='
-        ],
-    ],
-    'PHPextensions' => [
-        [
-            'PDO',
-            true
-        ],
-    ],
-    'installerCommands' => [
-        'setuilang',
-        'check',
-        'setdirpermiss',
-        'setsecurkey',
-        'settimezone',
-        'setbaseurl',
-        'configdb',
-        'createdb',
-        'createsymlinks',
-        'install',
-    ],
-    'installTasks' => [
-        'setuilang',
-        'check',
-        'setdirpermiss',
-        'setsecurkey',
-        'settimezone',
-        'setbaseurl',
-        'configdb',
-    ],
-    'configDBconn' => [
-        'default',
-        'test',
-    ],
-    'symlinksCreationList' => [
-        TMP . 'tests' . DS . 'link.php' => TMP . 'tests' . DS . 'Config' . DS . 'core.php'
-    ],
-    'cronJobs' => [
-    ],
-    'UIlangList' => [
-        'eng',
-        'rus',
-    ]
+	'PHPversion' => [
+		[
+			PHP_VERSION,
+			'>='
+		],
+	],
+	'PHPextensions' => [
+		[
+			'PDO',
+			true
+		],
+	],
+	'installerCommands' => [
+		'setuilang',
+		'check',
+		'setdirpermiss',
+		'setsecurkey',
+		'settimezone',
+		'setbaseurl',
+		'configdb',
+		'createdb',
+		'createsymlinks',
+		'install',
+	],
+	'installTasks' => [
+		'setuilang',
+		'check',
+		'setdirpermiss',
+		'setsecurkey',
+		'settimezone',
+		'setbaseurl',
+		'configdb',
+	],
+	'configDBconn' => [
+		'default',
+		'test',
+	],
+	'symlinksCreationList' => [
+		TMP . 'tests' . DS . 'link.php' => TMP . 'tests' . DS . 'Config' . DS . 'core.php'
+	],
+	'cronJobs' => [
+	],
+	'UIlangList' => [
+		'eng',
+		'rus',
+	]
 ];
