@@ -11,13 +11,12 @@
  * AppTestTrait trait
  *
  */
-trait AppTestTrait
-{
+trait AppTestTrait {
 
-    /**
-     * Information about the logged in user.
-     *
-     * @var array
-     */
-    protected $userInfo = [];
+/**
+ * Information about the logged in user.
+ *
+ * @var array
+ */
+	public $userInfo = [];
 }

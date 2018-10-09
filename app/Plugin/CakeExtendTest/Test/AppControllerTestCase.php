@@ -17,35 +17,34 @@ App::uses('AppTestTrait', 'CakeExtendTest.Test');
  * @package     app.Controller
  * @link        http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
-class AppController extends Controller
-{
+class AppController extends Controller {
 
-    /**
-     * helpers property
-     *
-     * @var array
-     */
-    public $helpers = ['Html'];
+/**
+ * helpers property
+ *
+ * @var array
+ */
+	public $helpers = ['Html'];
 
-    /**
-     * uses property
-     *
-     * @var array
-     */
-    public $uses = [];
+/**
+ * uses property
+ *
+ * @var array
+ */
+	public $uses = [];
 
-    /**
-     * components property
-     *
-     * @var array
-     */
-    public $components = [
-        'Auth',
-        'Session',
-        'Security',
-        'Flash',
-        'RequestHandler',
-    ];
+/**
+ * components property
+ *
+ * @var array
+ */
+	public $components = [
+		'Auth',
+		'Session',
+		'Security',
+		'Flash',
+		'RequestHandler',
+	];
 }
 
 /**
@@ -53,36 +52,33 @@ class AppController extends Controller
  *
  * @package app.Test
  */
-class AppControllerTestCase extends ExtendControllerTestCase
-{
+class AppControllerTestCase extends ExtendControllerTestCase {
 
-    use AppTestTrait;
+	use AppTestTrait;
 
-    /**
-     * Setup the test case, backup the static object values so they can be restored.
-     * Specifically backs up the contents of Configure and paths in App if they have
-     * not already been backed up.
-     *
-     * Actions:
-     * - Write test configuration.
-     *
-     * @return void
-     */
-    public function setUp()
-    {
-        parent::setUp();
+/**
+ * Setup the test case, backup the static object values so they can be restored.
+ * Specifically backs up the contents of Configure and paths in App if they have
+ * not already been backed up.
+ *
+ * Actions:
+ * - Write test configuration.
+ *
+ * @return void
+ */
+	public function setUp() {
+		parent::setUp();
 
-        $path = __DIR__ . DS;
-        $this->applyTestConfig($path);
-    }
+		$path = __DIR__ . DS;
+		$this->applyTestConfig($path);
+	}
 
-    /**
-     * teardown any static object changes and restore them.
-     *
-     * @return void
-     */
-    public function tearDown()
-    {
-        parent::tearDown();
-    }
+/**
+ * teardown any static object changes and restore them.
+ *
+ * @return void
+ */
+	public function tearDown() {
+		parent::tearDown();
+	}
 }

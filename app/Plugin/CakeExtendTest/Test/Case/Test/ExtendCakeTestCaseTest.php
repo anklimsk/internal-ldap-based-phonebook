@@ -1,9 +1,9 @@
 <?php
 App::uses('ExtendCakeTestCase', 'CakeExtendTest.Test');
 App::import(
-    'Vendor',
-    'CakeExtendTest.PeekAndPoke',
-    ['file' => 'PeekAndPoke' . DS . 'autoload.php']
+	'Vendor',
+	'CakeExtendTest.PeekAndPoke',
+	['file' => 'PeekAndPoke' . DS . 'autoload.php']
 );
 
 /**
@@ -14,15 +14,14 @@ App::import(
  * @param string $param Data for return.
  * @return string Value of param with label.
  */
-function test_some_func($param = null)
-{
-    if (empty($param)) {
-        $param = 'test';
-    }
+function test_some_func($param = null) {
+	if (empty($param)) {
+		$param = 'test';
+	}
 
-    $result = 'Param value: ' . $param;
+	$result = 'Param value: ' . $param;
 
-    return $result;
+	return $result;
 }
 
 /**
@@ -30,147 +29,143 @@ function test_some_func($param = null)
  *
  * @package     plugin.Test.Case.TestCase
  */
-class Test_Some_Class
-{
+class Test_Some_Class {
 
-    /**
-     * Method `some_method`.
-     * Used for testing getting information about
-     * method of class with default value.
-     *
-     * @param int $i Data for increment.
-     * @return int Increment value
-     */
-    public function some_method($i = 0)
-    {
-        $result = ++$i;
+/**
+ * Method `some_method`.
+ * Used for testing getting information about
+ * method of class with default value.
+ *
+ * @param int $i Data for increment.
+ * @return int Increment value
+ */
+// @codingStandardsIgnoreStart
+	public function some_method($i = 0) {
+	// @codingStandardsIgnoreEnd
+		$result = ++$i;
 
-        return $result;
-    }
+		return $result;
+	}
 
-    /**
-     * Method `some_wo_def_val`.
-     * Used for testing getting information about
-     * method of class without default value.
-     *
-     * @param mixed $data Data for checking is empty.
-     * @return bool True, if data is not empty.
-     *  False otherwise.
-     */
-    public function some_wo_def_val($data)
-    {
-        $result = empty($data);
+/**
+ * Method `some_wo_def_val`.
+ * Used for testing getting information about
+ * method of class without default value.
+ *
+ * @param mixed $data Data for checking is empty.
+ * @return bool True, if data is not empty.
+ *  False otherwise.
+ */
+// @codingStandardsIgnoreStart
+	public function some_wo_def_val($data) {
+	// @codingStandardsIgnoreEnd
+		$result = empty($data);
 
-        return $result;
-    }
+		return $result;
+	}
+
 }
 
 /**
  * ExtendCakeTestCaseTest Test Case
  */
-class ExtendCakeTestCaseTest extends CakeTestCase
-{
+class ExtendCakeTestCaseTest extends CakeTestCase {
 
-    /**
-     * Fixtures
-     *
-     * @var array
-     */
-    public $fixtures = [
-        'core.cake_session',
-    ];
+/**
+ * Fixtures
+ *
+ * @var array
+ */
+	public $fixtures = [
+		'core.cake_session',
+	];
 
-    /**
-     * setUp method
-     *
-     * @return void
-     */
-    public function setUp()
-    {
-        parent::setUp();
+/**
+ * setUp method
+ *
+ * @return void
+ */
+	public function setUp() {
+		parent::setUp();
 
-        $this->_targetObject = new ExtendCakeTestCase();
-    }
+		$this->_targetObject = new ExtendCakeTestCase();
+	}
 
-    /**
-     * tearDown method
-     *
-     * @return void
-     */
-    public function tearDown()
-    {
-        parent::tearDown();
-    }
+/**
+ * tearDown method
+ *
+ * @return void
+ */
+	public function tearDown() {
+		parent::tearDown();
+	}
 
-    /**
-     * testSetUpTearDown method
-     *
-     * @return void
-     */
-    public function testSetUpTearDown()
-    {
-        Configure::write('Config.language', 'tst');
-        $this->_targetObject->setUp();
+/**
+ * testSetUpTearDown method
+ *
+ * @return void
+ */
+	public function testSetUpTearDown() {
+		Configure::write('Config.language', 'tst');
+		$this->_targetObject->setUp();
 
-        Configure::write('Config.language', 'rus');
-        $this->_targetObject->tearDown();
+		Configure::write('Config.language', 'rus');
+		$this->_targetObject->tearDown();
 
-        $result = Configure::read('Config.language');
-        $expected = 'tst';
-        $this->assertSame($expected, $result);
-    }
+		$result = Configure::read('Config.language');
+		$expected = 'tst';
+		$this->assertSame($expected, $result);
+	}
 
-    /**
-     * testRunClassMethodGroup method
-     *
-     * @return void
-     */
-    public function testRunClassMethodGroup()
-    {
-        $params = [
-            '',
-            'some value',
-            [
-                'Test text value'
-            ]
-        ];
-        $expected = [
-            'Param value: test',
-            [
-                'assertRegExp' => '/Param\svalue\:\s.+/'
-            ],
-            [
-                'expecteds' => [
-                    'assertSame' => 'Param value: Test text value',
-                    'assertRegExp' => '/Param\svalue\:\s.+/',
-                    'Param value: Test text value'
-                ]
-            ]
-        ];
+/**
+ * testRunClassMethodGroup method
+ *
+ * @return void
+ */
+	public function testRunClassMethodGroup() {
+		$params = [
+			'',
+			'some value',
+			[
+				'Test text value'
+			]
+		];
+		$expected = [
+			'Param value: test',
+			[
+				'assertRegExp' => '/Param\svalue\:\s.+/'
+			],
+			[
+				'expecteds' => [
+					'assertSame' => 'Param value: Test text value',
+					'assertRegExp' => '/Param\svalue\:\s.+/',
+					'Param value: Test text value'
+				]
+			]
+		];
 
-        $this->_targetObject->runClassMethodGroup('test_some_func', $params, $expected);
-    }
+		$this->_targetObject->runClassMethodGroup('test_some_func', $params, $expected);
+	}
 
-    /**
-     * testGetClassInfo method
-     *
-     * @return void
-     */
-    public function testGetClassInfo()
-    {
-        $target = new ExtendCakeTestCase();
-        $proxy = new SebastianBergmann\PeekAndPoke\Proxy($target);
-        $result = $proxy->_getClassInfo(null, 'test_some_func', 'test');
-        $expected = "test_some_func(\$param = null),\r\n" . __d('cake_extend_test', 'where') . ":\r\n\$param = 'test'";
-        $this->assertSame($expected, $result);
+/**
+ * testGetClassInfo method
+ *
+ * @return void
+ */
+	public function testGetClassInfo() {
+		$target = new ExtendCakeTestCase();
+		$proxy = new SebastianBergmann\PeekAndPoke\Proxy($target);
+		$result = $proxy->_getClassInfo(null, 'test_some_func', 'test');
+		$expected = "test_some_func(\$param = null),\r\n" . __d('cake_extend_test', 'where') . ":\r\n\$param = 'test'";
+		$this->assertSame($expected, $result);
 
-        $testSomeClass = new Test_Some_Class();
-        $result = $proxy->_getClassInfo($testSomeClass, 'some_method', 5);
-        $expected = "Test_Some_Class::some_method(\$i = 0),\r\n" . __d('cake_extend_test', 'where') . ":\r\n\$i = (int) 5";
-        $this->assertSame($expected, $result);
+		$testSomeClass = new Test_Some_Class();
+		$result = $proxy->_getClassInfo($testSomeClass, 'some_method', 5);
+		$expected = "Test_Some_Class::some_method(\$i = 0),\r\n" . __d('cake_extend_test', 'where') . ":\r\n\$i = (int) 5";
+		$this->assertSame($expected, $result);
 
-        $result = $proxy->_getClassInfo($testSomeClass, 'some_wo_def_val');
-        $expected = "Test_Some_Class::some_wo_def_val(\$data),\r\n" . __d('cake_extend_test', 'where') . ":\r\n\$data = null";
-        $this->assertSame($expected, $result);
-    }
+		$result = $proxy->_getClassInfo($testSomeClass, 'some_wo_def_val');
+		$expected = "Test_Some_Class::some_wo_def_val(\$data),\r\n" . __d('cake_extend_test', 'where') . ":\r\n\$data = null";
+		$this->assertSame($expected, $result);
+	}
 }

@@ -19,43 +19,40 @@ App::uses('CakeSchema', 'Model');
  *
  * @package plugin.Console.Command
  */
-class BakeShell extends AppShell
-{
+class BakeShell extends AppShell {
 
-    /**
-     * Contains tasks to load and instantiate
-     *
-     * @var array
-     * @link http://book.cakephp.org/2.0/en/console-and-shells.html#Shell::$tasks
-     */
-    public $tasks = [
-        'CakeExtendTest.ExtendTest'
-    ];
+/**
+ * Contains tasks to load and instantiate
+ *
+ * @var array
+ * @link http://book.cakephp.org/2.0/en/console-and-shells.html#Shell::$tasks
+ */
+	public $tasks = [
+		'CakeExtendTest.ExtendTest'
+	];
 
-    /**
-     * Gets the option parser instance and configures it.
-     *
-     * By overriding this method you can configure the ConsoleOptionParser before returning it.
-     *
-     * @return ConsoleOptionParser
-     * @link http://book.cakephp.org/2.0/en/console-and-shells.html#Shell::getOptionParser
-     */
-    public function getOptionParser()
-    {
-        return $this->ExtendTest->getOptionParser();
-    }
+/**
+ * Gets the option parser instance and configures it.
+ *
+ * By overriding this method you can configure the ConsoleOptionParser before returning it.
+ *
+ * @return ConsoleOptionParser
+ * @link http://book.cakephp.org/2.0/en/console-and-shells.html#Shell::getOptionParser
+ */
+	public function getOptionParser() {
+		return $this->ExtendTest->getOptionParser();
+	}
 
-    /**
-     * Main method for this task (call default).
-     *
-     * @return void
-     */
-    public function main()
-    {
-        $this->out(__d('cake_extend_test', 'Extended bake task Shell'));
-        $this->hr();
-        $this->out(__d('cake_extend_test', 'This shell is used to bake extended test case.'));
-        $this->ExtendTest->params['theme'] = 'cake_extend_test';
-        $this->ExtendTest->execute();
-    }
+/**
+ * Main method for this task (call default).
+ *
+ * @return void
+ */
+	public function main() {
+		$this->out(__d('cake_extend_test', 'Extended bake task Shell'));
+		$this->hr();
+		$this->out(__d('cake_extend_test', 'This shell is used to bake extended test case.'));
+		$this->ExtendTest->params['theme'] = 'cake_extend_test';
+		$this->ExtendTest->execute();
+	}
 }

@@ -12,12 +12,15 @@
     "require": {
         "php": ">=5.4",
         "composer/installers": "^1.5.0",
-        "anklimsk/cakephp-basic-functions": "*"
+        "anklimsk/cakephp-basic-functions": "^1.0.0"
     },
     "support": {
         "source": "https://github.com/anklimsk/cakephp-extended-test"
     },
     "extra": {
-        "installer-name": "CakeExtendTest"
+        "installer-name": "CakeExtendTest",
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
     }
 }

@@ -9,5 +9,5 @@
  */
 
 $config['TestKey'] = [
-    'SomeKey' => 'Some data...'
+	'SomeKey' => 'Some data...'
 ];

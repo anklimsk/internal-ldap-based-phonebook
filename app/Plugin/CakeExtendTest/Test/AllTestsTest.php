@@ -13,20 +13,18 @@
  *
  * @package app.Test.Case
  */
-class AllTestsTest extends CakeTestSuite
-{
+class AllTestsTest extends CakeTestSuite {
 
-    /**
-     * Create test suite for running test recursively from all sub folders.
-     *
-     * @return object An object of `CakeTestSuite`.
-     */
-    public static function suite()
-    {
-        $suite = new CakeTestSuite(__d('cake_extend_test', 'All tests'));
-        $path = __DIR__;
-        $suite->addTestDirectoryRecursive($path);
+/**
+ * Create test suite for running test recursively from all sub folders.
+ *
+ * @return object An object of `CakeTestSuite`.
+ */
+	public static function suite() {
+		$suite = new CakeTestSuite(__d('cake_extend_test', 'All tests'));
+		$path = __DIR__;
+		$suite->addTestDirectoryRecursive($path);
 
-        return $suite;
-    }
+		return $suite;
+	}
 }
