@@ -9,6 +9,6 @@
  */
 
 $config['CakeConfigPlugin'] = [
-    'param' => 'someValue',
-    'boolParam' => true
+	'param' => 'someValue',
+	'boolParam' => true
 ];

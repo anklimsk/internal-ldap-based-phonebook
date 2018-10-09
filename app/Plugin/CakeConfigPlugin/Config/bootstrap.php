@@ -15,7 +15,7 @@
  *  Default value `cake_config_plugin`
  */
 if (!defined('CAKE_CONFIG_PLUGIN_CACHE_CFG')) {
-    define('CAKE_CONFIG_PLUGIN_CACHE_CFG', 'cake_config_plugin');
+	define('CAKE_CONFIG_PLUGIN_CACHE_CFG', 'cake_config_plugin');
 }
 
 /**
@@ -23,9 +23,9 @@ if (!defined('CAKE_CONFIG_PLUGIN_CACHE_CFG')) {
 *
 */
 Cache::config(CAKE_CONFIG_PLUGIN_CACHE_CFG, [
-    'engine' => 'File',
-    'prefix' => Inflector::slug(App::pluginPath('CakeConfigPlugin')),
-    'duration' => '+1 week',
-    'probability' => 100,
-    'path' => CACHE . CAKE_CONFIG_PLUGIN_CACHE_CFG . DS,
+	'engine' => 'File',
+	'prefix' => Inflector::slug(App::pluginPath('CakeConfigPlugin')),
+	'duration' => '+1 week',
+	'probability' => 100,
+	'path' => CACHE . CAKE_CONFIG_PLUGIN_CACHE_CFG . DS,
 ]);

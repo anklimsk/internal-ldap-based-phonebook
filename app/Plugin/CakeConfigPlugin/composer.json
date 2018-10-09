@@ -12,12 +12,15 @@
     "require": {
         "php": ">=5.4",
         "composer/installers": "^1.5.0",
-        "anklimsk/cakephp-extended-test": "*"
+        "anklimsk/cakephp-extended-test": "^1.0.0"
     },
     "support": {
         "source": "https://github.com/anklimsk/cakephp-config-plugin"
     },
     "extra": {
-        "installer-name": "CakeConfigPlugin"
+        "installer-name": "CakeConfigPlugin",
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
     }
 }

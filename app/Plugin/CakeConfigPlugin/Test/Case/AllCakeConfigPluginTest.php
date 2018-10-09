@@ -12,21 +12,19 @@
  *
  * @package plugin.Test.Case
  */
-class AllCakeConfigPluginTest extends CakeTestSuite
-{
+class AllCakeConfigPluginTest extends CakeTestSuite {
 
-    /**
-     * Create test suite.
-     *
-     * @return object An object of `CakeTestSuite`.
-     */
-    public static function suite()
-    {
-        $suite = new CakeTestSuite('All CakeConfigPlugin tests');
-        $path = dirname(__FILE__);
-        $suite->addTestDirectory($path . DS . 'Lib' . DS . 'Utility');
-        $suite->addTestDirectory($path . DS . 'Model' . DS . 'Behavior');
+/**
+ * Create test suite.
+ *
+ * @return object An object of `CakeTestSuite`.
+ */
+	public static function suite() {
+		$suite = new CakeTestSuite('All CakeConfigPlugin tests');
+		$path = dirname(__FILE__);
+		$suite->addTestDirectory($path . DS . 'Lib' . DS . 'Utility');
+		$suite->addTestDirectory($path . DS . 'Model' . DS . 'Behavior');
 
-        return $suite;
-    }
+		return $suite;
+	}
 }
