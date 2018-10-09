@@ -14,7 +14,7 @@
  * Used for store specific CSS files for View. Default value `specific`
  */
 if (!defined('CAKE_THEME_SPECIFIC_CSS_DIR')) {
-    define('CAKE_THEME_SPECIFIC_CSS_DIR', 'specific');
+	define('CAKE_THEME_SPECIFIC_CSS_DIR', 'specific');
 }
 
 /**
@@ -23,7 +23,7 @@ if (!defined('CAKE_THEME_SPECIFIC_CSS_DIR')) {
  * Used for store specific JavaScript files for View. Default value `specific`
  */
 if (!defined('CAKE_THEME_SPECIFIC_JS_DIR')) {
-    define('CAKE_THEME_SPECIFIC_JS_DIR', 'specific');
+	define('CAKE_THEME_SPECIFIC_JS_DIR', 'specific');
 }
 
 /**
@@ -33,7 +33,7 @@ if (!defined('CAKE_THEME_SPECIFIC_JS_DIR')) {
  *  Default value `cake_theme_specific_files`
  */
 if (!defined('CAKE_THEME_CACHE_KEY_SPECIFIC_FILES')) {
-    define('CAKE_THEME_CACHE_KEY_SPECIFIC_FILES', 'cake_theme_specific_files');
+	define('CAKE_THEME_CACHE_KEY_SPECIFIC_FILES', 'cake_theme_specific_files');
 }
 
 /**
@@ -42,7 +42,16 @@ if (!defined('CAKE_THEME_CACHE_KEY_SPECIFIC_FILES')) {
  * Used for set autocomplete limit, if needed. Default value `10`
  */
 if (!defined('CAKE_THEME_AUTOCOMPLETE_LIMIT')) {
-    define('CAKE_THEME_AUTOCOMPLETE_LIMIT', 10);
+	define('CAKE_THEME_AUTOCOMPLETE_LIMIT', 10);
+}
+
+/**
+ * Breadcrumbs text limit
+ *
+ * Used for set breadcrumbs text limit, if needed. Default value `20`
+ */
+if (!defined('CAKE_THEME_BREADCRUMBS_TEXT_LIMIT')) {
+	define('CAKE_THEME_BREADCRUMBS_TEXT_LIMIT', 30);
 }
 
 /**
@@ -51,7 +60,7 @@ if (!defined('CAKE_THEME_AUTOCOMPLETE_LIMIT')) {
  * Used for set limit for amount row of filter, if needed. Default value `8`
  */
 if (!defined('CAKE_THEME_FILTER_ROW_LIMIT')) {
-    define('CAKE_THEME_FILTER_ROW_LIMIT', 8);
+	define('CAKE_THEME_FILTER_ROW_LIMIT', 8);
 }
 
 /**
@@ -60,7 +69,7 @@ if (!defined('CAKE_THEME_FILTER_ROW_LIMIT')) {
  * Used for set print data limit on pagination, if needed. Default value `1000`
  */
 if (!defined('CAKE_THEME_PRINT_DATA_LIMIT')) {
-    define('CAKE_THEME_PRINT_DATA_LIMIT', 1000);
+	define('CAKE_THEME_PRINT_DATA_LIMIT', 1000);
 }
 
 /**
@@ -70,7 +79,7 @@ if (!defined('CAKE_THEME_PRINT_DATA_LIMIT')) {
  *  Default value `cake_theme_helper`
  */
 if (!defined('CAKE_THEME_CACHE_KEY_HELPERS')) {
-    define('CAKE_THEME_CACHE_KEY_HELPERS', 'cake_theme_helper');
+	define('CAKE_THEME_CACHE_KEY_HELPERS', 'cake_theme_helper');
 }
 
 /**
@@ -80,7 +89,7 @@ if (!defined('CAKE_THEME_CACHE_KEY_HELPERS')) {
  *  Default value `cake_theme_btn_cond_label`
  */
 if (!defined('CAKE_THEME_CACHE_KEY_BTN_COND_LABEL')) {
-    define('CAKE_THEME_CACHE_KEY_BTN_COND_LABEL', 'cake_theme_btn_cond_label');
+	define('CAKE_THEME_CACHE_KEY_BTN_COND_LABEL', 'cake_theme_btn_cond_label');
 }
 
 /**
@@ -90,7 +99,7 @@ if (!defined('CAKE_THEME_CACHE_KEY_BTN_COND_LABEL')) {
  *  Default value `cake_theme_lang_code`
  */
 if (!defined('CAKE_THEME_CACHE_KEY_LANG_CODE')) {
-    define('CAKE_THEME_CACHE_KEY_LANG_CODE', 'cake_theme_lang_code');
+	define('CAKE_THEME_CACHE_KEY_LANG_CODE', 'cake_theme_lang_code');
 }
 
 /**
@@ -99,7 +108,7 @@ if (!defined('CAKE_THEME_CACHE_KEY_LANG_CODE')) {
  * Used for store exported files
  */
 if (!defined('CAKE_THEME_EXPORT_DIR')) {
-    define('CAKE_THEME_EXPORT_DIR', TMP . 'export' . DS);
+	define('CAKE_THEME_EXPORT_DIR', TMP . 'export' . DS);
 }
 
 /**
@@ -108,7 +117,7 @@ if (!defined('CAKE_THEME_EXPORT_DIR')) {
  * Used for store upload files
  */
 if (!defined('CAKE_THEME_UPLOAD_DIR')) {
-    define('CAKE_THEME_UPLOAD_DIR', TMP . 'import' . DS);
+	define('CAKE_THEME_UPLOAD_DIR', TMP . 'import' . DS);
 }
 
 /**
@@ -117,7 +126,7 @@ if (!defined('CAKE_THEME_UPLOAD_DIR')) {
  * Used for store preview image files
  */
 if (!defined('CAKE_THEME_PREVIEW_DIR')) {
-    define('CAKE_THEME_PREVIEW_DIR', 'img' . DS . 'preview' . DS);
+	define('CAKE_THEME_PREVIEW_DIR', 'img' . DS . 'preview' . DS);
 }
 
 $prefix = Inflector::slug(App::pluginPath('CakeTheme'));
@@ -126,11 +135,11 @@ $prefix = Inflector::slug(App::pluginPath('CakeTheme'));
 *
 */
 Cache::config(CAKE_THEME_CACHE_KEY_SPECIFIC_FILES, [
-    'engine' => 'File',
-    'prefix' => $prefix,
-    'duration' => '+1 week',
-    'probability' => 100,
-    'path' => CACHE . CAKE_THEME_CACHE_KEY_SPECIFIC_FILES . DS,
+	'engine' => 'File',
+	'prefix' => $prefix,
+	'duration' => '+1 week',
+	'probability' => 100,
+	'path' => CACHE . CAKE_THEME_CACHE_KEY_SPECIFIC_FILES . DS,
 ]);
 
 /**
@@ -138,11 +147,11 @@ Cache::config(CAKE_THEME_CACHE_KEY_SPECIFIC_FILES, [
 *
 */
 Cache::config(CAKE_THEME_CACHE_KEY_HELPERS, [
-    'engine' => 'File',
-    'prefix' => $prefix,
-    'duration' => '+1 week',
-    'probability' => 100,
-    'path' => CACHE . CAKE_THEME_CACHE_KEY_HELPERS . DS,
+	'engine' => 'File',
+	'prefix' => $prefix,
+	'duration' => '+1 week',
+	'probability' => 100,
+	'path' => CACHE . CAKE_THEME_CACHE_KEY_HELPERS . DS,
 ]);
 
 /**
@@ -150,11 +159,11 @@ Cache::config(CAKE_THEME_CACHE_KEY_HELPERS, [
 *
 */
 Cache::config(CAKE_THEME_CACHE_KEY_BTN_COND_LABEL, [
-    'engine' => 'File',
-    'prefix' => $prefix,
-    'duration' => '+1 week',
-    'probability' => 100,
-    'path' => CACHE . CAKE_THEME_CACHE_KEY_BTN_COND_LABEL . DS,
+	'engine' => 'File',
+	'prefix' => $prefix,
+	'duration' => '+1 week',
+	'probability' => 100,
+	'path' => CACHE . CAKE_THEME_CACHE_KEY_BTN_COND_LABEL . DS,
 ]);
 
 /**
@@ -162,9 +171,9 @@ Cache::config(CAKE_THEME_CACHE_KEY_BTN_COND_LABEL, [
 *
 */
 Cache::config(CAKE_THEME_CACHE_KEY_LANG_CODE, [
-    'engine' => 'File',
-    'prefix' => $prefix,
-    'duration' => '+1 week',
-    'probability' => 100,
-    'path' => CACHE . CAKE_THEME_CACHE_KEY_LANG_CODE . DS,
+	'engine' => 'File',
+	'prefix' => $prefix,
+	'duration' => '+1 week',
+	'probability' => 100,
+	'path' => CACHE . CAKE_THEME_CACHE_KEY_LANG_CODE . DS,
 ]);

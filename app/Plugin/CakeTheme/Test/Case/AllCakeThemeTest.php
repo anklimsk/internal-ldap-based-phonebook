@@ -12,25 +12,23 @@
  *
  * @package plugin.Test.Case
  */
-class AllCakeThemeTest extends CakeTestSuite
-{
+class AllCakeThemeTest extends CakeTestSuite {
 
-    /**
-     * Create test suite.
-     *
-     * @return object An object of `CakeTestSuite`.
-     */
-    public static function suite()
-    {
-        $suite = new CakeTestSuite('All CakeTheme tests');
-        $path = dirname(__FILE__);
-        $suite->addTestDirectory($path . DS . 'Controller' . DS . 'Component');
-        $suite->addTestDirectory($path . DS . 'Controller');
-        $suite->addTestDirectory($path . DS . 'Lib' . DS . 'Utility');
-        $suite->addTestDirectory($path . DS . 'Model' . DS . 'Behavior');
-        $suite->addTestDirectory($path . DS . 'Model');
-        $suite->addTestDirectory($path . DS . 'View' . DS . 'Helper');
+/**
+ * Create test suite.
+ *
+ * @return object An object of `CakeTestSuite`.
+ */
+	public static function suite() {
+		$suite = new CakeTestSuite('All CakeTheme tests');
+		$path = dirname(__FILE__);
+		$suite->addTestDirectory($path . DS . 'Controller' . DS . 'Component');
+		$suite->addTestDirectory($path . DS . 'Controller');
+		$suite->addTestDirectory($path . DS . 'Lib' . DS . 'Utility');
+		$suite->addTestDirectory($path . DS . 'Model' . DS . 'Behavior');
+		$suite->addTestDirectory($path . DS . 'Model');
+		$suite->addTestDirectory($path . DS . 'View' . DS . 'Helper');
 
-        return $suite;
-    }
+		return $suite;
+	}
 }

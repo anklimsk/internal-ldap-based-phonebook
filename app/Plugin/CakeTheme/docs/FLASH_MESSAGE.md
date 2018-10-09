@@ -3,22 +3,26 @@
 1. Copy configuration file from `app/Plugin/CakeTheme/Config/caketheme.php` to `app/Config`
 2. Edit configuration file and configure plugin [See `Example of configuration file`](#example-of-configuration-file)
 3. Add JavaScript files in your layout file:
-```php
-echo $this->Html->script('CakeTheme.AjaxFlash.min.js');
 
-// If need use store configuration of plugin in storages, include file:
-echo $this->Html->script('CakeTheme.js.storage.min.js');
-```
+   ```php
+   echo $this->Html->script('CakeTheme.AjaxFlash.min.js');
+
+   // If need use store configuration of plugin in storages, include file:
+   echo $this->Html->script('CakeTheme.js.storage.min.js');
+   ```
+
 4. Set flash message in your `Controller`:
-```php
-$this->Flash->information($message, ['params' => ['hideMsgIcon' => true]]);
-```
-Type of messages:
-- notification;
-- information;
-- success;
-- warning;
-- error.
+
+   ```php
+   $this->Flash->information($message, ['params' => ['hideMsgIcon' => true]]);
+   ```
+
+   Type of messages:
+   - notification;
+   - information;
+   - success;
+   - warning;
+   - error.
 
 ## List of supported design
 
@@ -28,6 +32,7 @@ This plugin supported the following design (in order):
 - `Internal style`.
 
 ## Example of configuration file
+
 ```php
 <?php
 /**

@@ -10,64 +10,64 @@
  */
 
 if (!isset($treeState)) {
-    $treeState = true;
+	$treeState = true;
 }
 
 if (!isset($urlNode)) {
-    $urlNode = null;
+	$urlNode = null;
 }
 
 if ($treeState === true) {
-    echo $this->Html->div(
-        'alert alert-success alert-dismissible',
-        $this->Html->tag(
-            'button',
-            $this->Html->tag('span', '&times;', ['aria-hidden' => 'true']),
-            ['type' => 'button', 'class' => 'close', 'data-dismiss' => 'alert', 'aria-label' => 'Close']
-        ) .
-        __d('view_extension', 'Errors of state tree is not found'),
-        ['role' => 'alert']
-    );
+	echo $this->Html->div(
+		'alert alert-success alert-dismissible',
+		$this->Html->tag(
+			'button',
+			$this->Html->tag('span', '&times;', ['aria-hidden' => 'true']),
+			['type' => 'button', 'class' => 'close', 'data-dismiss' => 'alert', 'aria-label' => 'Close']
+		) .
+		__d('view_extension', 'Errors of state tree is not found'),
+		['role' => 'alert']
+	);
 
-    return;
+	return;
 } elseif (!is_array($treeState)) {
-    return;
+	return;
 }
 ?>
-    <div class="table-responsive">
-        <table class="table table-hover table-striped table-condensed">
-            <thead>
+	<div class="table-responsive">
+		<table class="table table-hover table-striped table-condensed">
+			<thead>
 <?php
-    $tableHeader = [];
-    $tableHeader[] = __d('view_extension', 'Type');
-    $tableHeader[] = __d('view_extension', 'Value');
-    $tableHeader[] = __d('view_extension', 'Message');
-    echo $this->Html->tableHeaders($tableHeader);
+	$tableHeader = [];
+	$tableHeader[] = __d('view_extension', 'Type');
+	$tableHeader[] = __d('view_extension', 'Value');
+	$tableHeader[] = __d('view_extension', 'Message');
+	echo $this->Html->tableHeaders($tableHeader);
 ?>
-            </thead>
-            <tbody> 
+			</thead>
+			<tbody>
 <?php
 foreach ($treeState as $treeStateItem) {
-    $urlNodeItem = [];
-    if (!empty($urlNode) && ($treeStateItem[0] === 'node') &&
-        ctype_digit($treeStateItem[1])) {
-        $urlNodeItem = $urlNode + [$treeStateItem[1]];
-    }
-    $tableRow = [];
-    foreach ($treeStateItem as $i => $treeStateItemText) {
-        $treeStateItemTextDispl = h($treeStateItemText);
-        if (($i == 1) && (!empty($urlNodeItem))) {
-            $treeStateItemTextDispl = $this->Html->link(
-                $treeStateItemTextDispl,
-                $urlNodeItem,
-                ['target' => '_blank']
-            );
-        }
-        $tableRow[] = $treeStateItemTextDispl;
-    }
-    echo $this->Html->tableCells($tableRow);
+	$urlNodeItem = [];
+	if (!empty($urlNode) && ($treeStateItem[0] === 'node') &&
+		ctype_digit($treeStateItem[1])) {
+		$urlNodeItem = $urlNode + [$treeStateItem[1]];
+	}
+	$tableRow = [];
+	foreach ($treeStateItem as $i => $treeStateItemText) {
+		$treeStateItemTextDispl = h($treeStateItemText);
+		if (($i == 1) && (!empty($urlNodeItem))) {
+			$treeStateItemTextDispl = $this->Html->link(
+				$treeStateItemTextDispl,
+				$urlNodeItem,
+				['target' => '_blank']
+			);
+		}
+		$tableRow[] = $treeStateItemTextDispl;
+	}
+	echo $this->Html->tableCells($tableRow);
 }
 ?>
-            </tbody>
-        </table>
-    </div>
+			</tbody>
+		</table>
+	</div>

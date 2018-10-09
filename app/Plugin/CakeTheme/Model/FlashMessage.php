@@ -17,73 +17,70 @@ App::uses('CakeSession', 'Model/Datasource');
  *
  * @package plugin.Model
  */
-class FlashMessage extends CakeThemeAppModel
-{
+class FlashMessage extends CakeThemeAppModel {
 
-    /**
-     * Use table
-     *
-     * @var mixed False or table name
-     */
-    public $useTable = false;
+/**
+ * Use table
+ *
+ * @var mixed False or table name
+ */
+	public $useTable = false;
 
-    /**
-     * Session key for store Flash message information
-     *
-     * @var array
-     */
-    protected $_sessionKey = 'Message';
+/**
+ * Session key for store Flash message information
+ *
+ * @var array
+ */
+	protected $_sessionKey = 'Message';
 
-    /**
-     * Get list of Flash messages.
-     *
-     * @param string $key Key of Flash messages
-     *  to obtain list of messages
-     * @return array List of Flash messages.
-     */
-    public function getMessage($key = null)
-    {
-        $result = [];
-        if (empty($key)) {
-            return $result;
-        }
+/**
+ * Get list of Flash messages.
+ *
+ * @param string $key Key of Flash messages
+ *  to obtain list of messages
+ * @return array List of Flash messages.
+ */
+	public function getMessage($key = null) {
+		$result = [];
+		if (empty($key)) {
+			return $result;
+		}
 
-        $sessionKey = $this->_sessionKey . '.' . $key;
-        if (!CakeSession::check($sessionKey)) {
-            return $result;
-        }
+		$sessionKey = $this->_sessionKey . '.' . $key;
+		if (!CakeSession::check($sessionKey)) {
+			return $result;
+		}
 
-        $data = CakeSession::read($sessionKey);
-        if (empty($data)) {
-            return $result;
-        }
+		$data = CakeSession::read($sessionKey);
+		if (empty($data)) {
+			return $result;
+		}
 
-        $result = (array)$data;
-        if (isAssoc($result)) {
-            $result = [$result];
-        }
+		$result = (array)$data;
+		if (isAssoc($result)) {
+			$result = [$result];
+		}
 
-        return $result;
-    }
+		return $result;
+	}
 
-    /**
-     * Delete Flash messages.
-     *
-     * @param string $key Key of Flash messages
-     *  to delete
-     * @return bool Success.
-     */
-    public function deleteMessage($key = null)
-    {
-        if (empty($key)) {
-            return false;
-        }
+/**
+ * Delete Flash messages.
+ *
+ * @param string $key Key of Flash messages
+ *  to delete
+ * @return bool Success.
+ */
+	public function deleteMessage($key = null) {
+		if (empty($key)) {
+			return false;
+		}
 
-        $sessionKey = $this->_sessionKey . '.' . $key;
-        if (!CakeSession::check($sessionKey)) {
-            return false;
-        }
+		$sessionKey = $this->_sessionKey . '.' . $key;
+		if (!CakeSession::check($sessionKey)) {
+			return false;
+		}
 
-        return CakeSession::delete($sessionKey);
-    }
+		return CakeSession::delete($sessionKey);
+	}
 }

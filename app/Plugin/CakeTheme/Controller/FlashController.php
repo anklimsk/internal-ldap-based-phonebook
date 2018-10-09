@@ -15,129 +15,114 @@ App::uses('CakeThemeAppController', 'CakeTheme.Controller');
  *
  * @package plugin.Controller
  */
-class FlashController extends CakeThemeAppController
-{
+class FlashController extends CakeThemeAppController {
 
-    /**
-     * The name of this controller. Controller names are plural, named after the model they manipulate.
-     *
-     * @var string
-     * @link http://book.cakephp.org/2.0/en/controllers.html#controller-attributes
-     */
-    public $name = 'Flash';
+/**
+ * The name of this controller. Controller names are plural, named after the model they manipulate.
+ *
+ * @var string
+ * @link http://book.cakephp.org/2.0/en/controllers.html#controller-attributes
+ */
+	public $name = 'Flash';
 
-    /**
-     * An array containing the class names of models this controller uses.
-     *
-     * Example: `public $uses = array('Product', 'Post', 'Comment');`
-     *
-     * Can be set to several values to express different options:
-     *
-     * - `true` Use the default inflected model name.
-     * - `array()` Use only models defined in the parent class.
-     * - `false` Use no models at all, do not merge with parent class either.
-     * - `array('Post', 'Comment')` Use only the Post and Comment models. Models
-     *   Will also be merged with the parent class.
-     *
-     * The default value is `true`.
-     *
-     * @var mixed
-     * @link http://book.cakephp.org/2.0/en/controllers.html#components-helpers-and-uses
-     */
-    public $uses = [
-        'CakeTheme.FlashMessage'
-    ];
+/**
+ * An array containing the class names of models this controller uses.
+ *
+ * @var mixed
+ * @link http://book.cakephp.org/2.0/en/controllers.html#components-helpers-and-uses
+ */
+	public $uses = [
+		'CakeTheme.FlashMessage'
+	];
 
-    /**
-     * Called before the controller action. You can use this method to configure and customize components
-     * or perform logic that needs to happen before each controller action.
-     *
-     * Actions:
-     *  - Configure components;
-     *
-     * @return void
-     * @link http://book.cakephp.org/2.0/en/controllers.html#request-life-cycle-callbacks
-     */
-    public function beforeFilter()
-    {
-        $this->Auth->allow('flashcfg', 'flashmsg');
-        $this->Security->unlockedActions = ['flashcfg', 'flashmsg'];
+/**
+ * Called before the controller action. You can use this method to configure and customize components
+ * or perform logic that needs to happen before each controller action.
+ *
+ * Actions:
+ *  - Configure components;
+ *
+ * @return void
+ * @link http://book.cakephp.org/2.0/en/controllers.html#request-life-cycle-callbacks
+ */
+	public function beforeFilter() {
+		$this->Auth->allow('flashcfg', 'flashmsg');
+		$this->Security->unlockedActions = ['flashcfg', 'flashmsg'];
 
-        parent::beforeFilter();
-    }
+		parent::beforeFilter();
+	}
 
-    /**
-     * Action `flashcfg`. Is used to get configuration for plugin
-     *
-     * @throws BadRequestException if request is not `AJAX`, or not `POST`
-     *  or not `JSON`
-     * @return void
-     */
-    public function flashcfg()
-    {
-        Configure::write('debug', 0);
-        if (!$this->request->is('ajax') || !$this->request->is('post') ||
-            !$this->RequestHandler->prefers('json')) {
-            throw new BadRequestException();
-        }
+/**
+ * Action `flashcfg`. Is used to get configuration for plugin
+ *
+ * @throws BadRequestException if request is not `AJAX`, or not `POST`
+ *  or not `JSON`
+ * @return void
+ */
+	public function flashcfg() {
+		Configure::write('debug', 0);
+		if (!$this->request->is('ajax') || !$this->request->is('post') ||
+			!$this->RequestHandler->prefers('json')) {
+			throw new BadRequestException();
+		}
 
-        $data = $this->ConfigTheme->getConfigAjaxFlash();
-        $this->set(compact('data'));
-        $this->set('_serialize', 'data');
-    }
+		$data = $this->ConfigTheme->getConfigAjaxFlash();
+		$this->set(compact('data'));
+		$this->set('_serialize', 'data');
+	}
 
-    /**
-     * Action `flashmsg`. Is used to get message from session data
-     *
-     * POST Data array:
-     *  - `keys` The name of the session key for reading messages.
-     *  - `delete` If True, delete message from session.
-     * @throws BadRequestException if request is not `AJAX`, or not `POST`
-     *  or not `JSON`
-     * @return void
-     */
-    public function flashmsg()
-    {
-        Configure::write('debug', 0);
-        if (!$this->request->is('ajax') || !$this->request->is('post') ||
-            !$this->RequestHandler->prefers('json')) {
-            throw new BadRequestException();
-        }
+/**
+ * Action `flashmsg`. Is used to get message from session data
+ *
+ * POST Data array:
+ *  - `keys` The name of the session key for reading messages.
+ *  - `delete` If True, delete message from session.
+ *
+ * @throws BadRequestException if request is not `AJAX`, or not `POST`
+ *  or not `JSON`
+ * @return void
+ */
+	public function flashmsg() {
+		Configure::write('debug', 0);
+		if (!$this->request->is('ajax') || !$this->request->is('post') ||
+			!$this->RequestHandler->prefers('json')) {
+			throw new BadRequestException();
+		}
 
-        $data = [];
-        $dataDefault = [
-            'result' => false,
-            'key' => null,
-            'messages' => [],
-        ];
-        $keys = $this->request->data('keys');
-        $delete = (bool)$this->request->data('delete');
-        if (empty($keys)) {
-            $data[] = $dataDefault;
-            $this->set(compact('data'));
-            $this->set('_serialize', 'data');
+		$data = [];
+		$dataDefault = [
+			'result' => false,
+			'key' => null,
+			'messages' => [],
+		];
+		$keys = $this->request->data('keys');
+		$delete = (bool)$this->request->data('delete');
+		if (empty($keys)) {
+			$data[] = $dataDefault;
+			$this->set(compact('data'));
+			$this->set('_serialize', 'data');
 
-            return;
-        }
-        $keys = (array)$keys;
-        foreach ($keys as $key) {
-            if (empty($key)) {
-                $key = 'flash';
-            }
+			return;
+		}
+		$keys = (array)$keys;
+		foreach ($keys as $key) {
+			if (empty($key)) {
+				$key = 'flash';
+			}
 
-            $dataItem = $dataDefault;
-            $dataItem['key'] = $key;
-            if ($delete) {
-                $dataItem['result'] = $this->FlashMessage->deleteMessage($key);
-            } else {
-                $messages = $this->FlashMessage->getMessage($key);
-                $dataItem['messages'] = $messages;
-                $dataItem['result'] = !empty($messages);
-            }
-            $data[] = $dataItem;
-        }
+			$dataItem = $dataDefault;
+			$dataItem['key'] = $key;
+			if ($delete) {
+				$dataItem['result'] = $this->FlashMessage->deleteMessage($key);
+			} else {
+				$messages = $this->FlashMessage->getMessage($key);
+				$dataItem['messages'] = $messages;
+				$dataItem['result'] = !empty($messages);
+			}
+			$data[] = $dataItem;
+		}
 
-        $this->set(compact('data'));
-        $this->set('_serialize', 'data');
-    }
+		$this->set(compact('data'));
+		$this->set('_serialize', 'data');
+	}
 }

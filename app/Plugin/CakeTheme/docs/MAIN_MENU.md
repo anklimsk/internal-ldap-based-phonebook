@@ -3,60 +3,63 @@
 1. Copy `View` element file from `app/Plugin/CakeTheme/View/Elements/barNav.ctp.default` to `app/View/Elements/barNav.ctp`.
 2. Edit element file [See `Example of navigation bar`](#example-of-navigation-bar)
 3. Define next valiable in method `beforeFilter` your `AppController`, e.g.:
-```php
-/**
- * Called before the controller action. You can use this method to configure and customize components
- * or perform logic that needs to happen before each controller action.
- *
- * Actions:
- *  - Set global variables for View.
- *
- * @return void
- * @link http://book.cakephp.org/2.0/en/controllers.html#request-life-cycle-callbacks
- */
-public function beforeFilter()
-{
-    // If `false`, show the `Logout` menu item in the main menu in the navigation bar
-    (require plugin `cake-ldap-sync`)
-    $isExternalAuth = false;
 
-    // E-mail address and subject of letter for communication with the administrator
-    $emailContact = '';
-    $emailSubject = '';
+   ```php
+   /**
+    * Called before the controller action. You can use this method to configure and customize components
+    * or perform logic that needs to happen before each controller action.
+    *
+    * Actions:
+    *  - Set global variables for View.
+    *
+    * @return void
+    * @link http://book.cakephp.org/2.0/en/controllers.html#request-life-cycle-callbacks
+    */
+   public function beforeFilter() {
+       // If `false`, show the `Logout` menu item in the main menu in the navigation bar
+       // (require plugin `anklimsk/cakephp-ldap-sync`)
+       $isExternalAuth = false;
 
-    // If `true`, show search form in navigation bar (require plugin `cake-search-info`)
-    $showSearchForm = true;
+       // E-mail address and subject of letter for communication with the administrator
+       $emailContact = '';
+       $emailSubject = '';
 
-    // If `true`, show main menu in navigation bar
-    $showMainMenu = true;
+       // If `true`, show search form in navigation bar (require plugin `cake-search-info`)
+       $showSearchForm = true;
 
-    // Name of project displayed in navigation bar
-    $projectName = null;
+       // If `true`, show main menu in navigation bar
+       $showMainMenu = true;
 
-    // The path to the project logo file is displayed in the navigation bar
-    $projectLogo
+       // Name of project displayed in navigation bar
+       $projectName = null;
 
-    $this->set(compact(
-        'isExternalAuth',
-        'emailContact',
-        'emailSubject',
-        'showSearchForm',
-        'showMainMenu',
-        'projectName',
-        'projectLogo'
-    ));
-}
-```
+       // The path to the project logo file is displayed in the navigation bar
+       $projectLogo
+
+       $this->set(compact(
+           'isExternalAuth',
+           'emailContact',
+           'emailSubject',
+           'showSearchForm',
+           'showMainMenu',
+           'projectName',
+           'projectLogo'
+       ));
+   }
+   ```
+
 ## Creating menu items
 
 ### Creating top-level menu items
 
 Example of creating top-level menu items:
+
 ```php
 $iconList[] = [];
 $iconList[] = $this->ViewExtension->menuItemLink($icon, $title, $url, $options, $badgeNumber);
 $iconList[] = [$this->ViewExtension->menuItemLink($icon, $title, $url, $options, $badgeNumber) => $menuItems];
 ```
+
 Where:
 - `$icon` - class of icon
 - `$title` - Title of menu label
@@ -68,23 +71,26 @@ Where:
 ### Creating submenu items
 
 Example of creating submenu items:
+
 ```php
 $menuItems = [
     $this->ViewExtension->menuActionLink($icon, $titleText, $url, $options),
     'divider'
 ];
 ```
+
 Where:
 - `$icon` - Class of icon
 - `$titleText` - Title of menu label
 - `$url` - Cake-relative URL or array of URL parameters, or external URL (starts with http://)
 - `$options` HTML options for button element. List of values option `action-type`:
-  * `confirm`: create link with confirmation action;
-  * `confirm-post`: create link with confirmation action and `POST` request;
-  * `post`: create link with POST request;
-  * `modal`: create link with opening result in modal window.
+   * `confirm`: create link with confirmation action;
+   * `confirm-post`: create link with confirmation action and `POST` request;
+   * `post`: create link with POST request;
+   * `modal`: create link with opening result in modal window.
 
 ## Example of navigation bar
+
 ```php
 <?php
 /**
@@ -188,7 +194,7 @@ if ($useUserInfo && $this->UserInfo->checkUserRole(USER_ROLE_ADMIN) && CakePlugi
         $menuItems[] = $this->ViewExtension->menuActionLink(
             'fas fa-tasks',
             __('Queue of tasks'),
-            ['controller' => 'settings', 'action' => 'queue', 'plugin' => 'cake_settings_app', 'prefix' => false],
+            ['controller' => 'queues', 'action' => 'index', 'plugin' => 'cake_settings_app', 'prefix' => false],
             ['title' => __('Task queue list')]
         );
     }

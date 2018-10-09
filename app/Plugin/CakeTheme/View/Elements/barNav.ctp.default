@@ -9,133 +9,132 @@
  */
 
 if (!isset($isExternalAuth)) {
-    $isExternalAuth = false;
+	$isExternalAuth = false;
 }
 
 if (!isset($emailContact)) {
-    $emailContact = '';
+	$emailContact = '';
 }
 
 if (!isset($emailSubject)) {
-    $emailSubject = '';
+	$emailSubject = '';
 }
 
 if (!isset($showSearchForm)) {
-    $showSearchForm = true;
+	$showSearchForm = true;
 }
 
 if (!isset($showMainMenu)) {
-    $showMainMenu = true;
+	$showMainMenu = true;
 }
 
 if (!isset($projectName)) {
-    $projectName = null;
-    if (defined('PROJECT_NAME')) {
-        $projectName = __d('project', PROJECT_NAME);
-    }
+	$projectName = null;
+	if (defined('PROJECT_NAME')) {
+		$projectName = __d('project', PROJECT_NAME);
+	}
 }
 
 $useUserInfo = false;
 if (CakePlugin::loaded('CakeLdap')) {
-    $useUserInfo = true;
+	$useUserInfo = true;
 }
 
 $useNavbarContainerFluid = false;
 
 if (!isset($projectLogo)) {
-    $projectLogo = null;
-    if (defined('PROJECT_LOGO_IMAGE_SMALL')) {
-        $projectLogo = PROJECT_LOGO_IMAGE_SMALL;
-    }
+	$projectLogo = null;
+	if (defined('PROJECT_LOGO_IMAGE_SMALL')) {
+		$projectLogo = PROJECT_LOGO_IMAGE_SMALL;
+	}
 }
 
 $iconList = [];
 
 if (!$showMainMenu) {
-    echo $this->element('CakeTheme.barNavBase', compact('showSearchForm', 'useNavbarContainerFluid', 'projectName', 'projectLogo', 'iconList'));
+	echo $this->element('CakeTheme.barNavBase', compact('showSearchForm', 'useNavbarContainerFluid', 'projectName', 'projectLogo', 'iconList'));
 
-    return;
+	return;
 }
 
 if (CakePlugin::loaded('CakeLdap')) {
-    $menuItems = [
-        $this->ViewExtension->menuActionLink(
-            'fas fa-users fa-lg',
-            __('Employees'),
-            ['controller' => 'employees', 'action' => 'index', 'plugin' => 'cake_ldap', 'prefix' => false],
-            ['title' => __('Manage information about employees')]
-        ),
-    ];
+	$menuItems = [
+		$this->ViewExtension->menuActionLink(
+			'fas fa-users fa-lg',
+			__('Employees'),
+			['controller' => 'employees', 'action' => 'index', 'plugin' => 'cake_ldap', 'prefix' => false],
+			['title' => __('Manage information about employees')]
+		),
+	];
 
-    if ($useUserInfo && $this->UserInfo->checkUserRole(USER_ROLE_ADMIN)) {
-        $menuItems[] = 'divider';
-        $menuItems[] = $this->ViewExtension->menuActionLink(
-            'fas fa-sync-alt',
-            __('Synchronizing information with AD'),
-            ['controller' => 'employees', 'action' => 'sync', 'plugin' => 'cake_ldap', 'prefix' => false],
-            ['title' => __('Synchronize information of employees with AD'),
-                'data-toggle' => 'progress-sse',
-                'data-task-type' => 'SyncEmployee']
-        );
-    }
+	if ($useUserInfo && $this->UserInfo->checkUserRole(USER_ROLE_ADMIN)) {
+		$menuItems[] = 'divider';
+		$menuItems[] = $this->ViewExtension->menuActionLink(
+			'fas fa-sync-alt',
+			__('Synchronizing information with AD'),
+			['controller' => 'employees', 'action' => 'sync', 'plugin' => 'cake_ldap', 'prefix' => false],
+			['title' => __('Synchronize information of employees with AD'),
+				'data-toggle' => 'progress-sse',
+				'data-task-type' => 'SyncEmployee']
+		);
+	}
 
-    $iconList[] = [$this->ViewExtension->menuItemLink(
-        'far fa-address-book fa-lg',
-        __('Informations of employees'),
-        null,
-        ['class' => 'app-tour-main-menu-employees']
-    ) => $menuItems];
+	$iconList[] = [$this->ViewExtension->menuItemLink(
+		'far fa-address-book fa-lg',
+		__('Informations of employees'),
+		null,
+		['class' => 'app-tour-main-menu-employees']
+	) => $menuItems];
 }
 
 if ($useUserInfo && $this->UserInfo->checkUserRole(USER_ROLE_ADMIN) && CakePlugin::loaded('CakeSettingsApp')) {
-    $menuItems = [
-        $this->ViewExtension->menuActionLink(
-            'fas fa-cog',
-            __('Application settings'),
-            ['controller' => 'settings', 'action' => 'index', 'plugin' => 'cake_settings_app', 'prefix' => false],
-            ['title' => __('Application settings')]
-        )
-    ];
-    if (CakePlugin::loaded('Queue')) {
-        $menuItems[] = $this->ViewExtension->menuActionLink(
-            'fas fa-tasks',
-            __('Queue of tasks'),
-            ['controller' => 'settings', 'action' => 'queue', 'plugin' => 'cake_settings_app', 'prefix' => false],
-            ['title' => __('Task queue list')]
-        );
-    }
-    $iconList[] = [$this->ViewExtension->menuItemLink(
-        'fas fa-cogs fa-lg',
-        __('Application settings'),
-        null,
-        ['class' => 'app-tour-main-menu-settings']
-    ) => $menuItems];
-
+	$menuItems = [
+		$this->ViewExtension->menuActionLink(
+			'fas fa-cog',
+			__('Application settings'),
+			['controller' => 'settings', 'action' => 'index', 'plugin' => 'cake_settings_app', 'prefix' => false],
+			['title' => __('Application settings')]
+		)
+	];
+	if (CakePlugin::loaded('Queue')) {
+		$menuItems[] = $this->ViewExtension->menuActionLink(
+			'fas fa-tasks',
+			__('Queue of tasks'),
+			['controller' => 'queues', 'action' => 'index', 'plugin' => 'cake_settings_app', 'prefix' => false],
+			['title' => __('Task queue list')]
+		);
+	}
+	$iconList[] = [$this->ViewExtension->menuItemLink(
+		'fas fa-cogs fa-lg',
+		__('Application settings'),
+		null,
+		['class' => 'app-tour-main-menu-settings']
+	) => $menuItems];
 }
 
 if (!$isExternalAuth && CakePlugin::loaded('CakeLdap')) {
-    $iconList[] = $this->ViewExtension->menuItemLink(
-        'fas fa-sign-out-alt fa-lg',
-        __('Logout'),
-        ['controller' => 'users', 'action' => 'logout', 'plugin' => 'cake_ldap', 'prefix' => false]
-    );
+	$iconList[] = $this->ViewExtension->menuItemLink(
+		'fas fa-sign-out-alt fa-lg',
+		__('Logout'),
+		['controller' => 'users', 'action' => 'logout', 'plugin' => 'cake_ldap', 'prefix' => false]
+	);
 }
 
 if ($this->request->here() === '/') {
-    if (!empty($emailContact)) {
-        $iconList[] = $this->ViewExtension->menuItemLink(
-            'far fa-envelope fa-lg',
-            __('Contact administrator'),
-            sprintf('mailto:%s?subject=%s', h($emailContact), rawurlencode(h($emailSubject)))
-        );
-    }
+	if (!empty($emailContact)) {
+		$iconList[] = $this->ViewExtension->menuItemLink(
+			'far fa-envelope fa-lg',
+			__('Contact administrator'),
+			sprintf('mailto:%s?subject=%s', h($emailContact), rawurlencode(h($emailSubject)))
+		);
+	}
 
-    $iconList[] = $this->ViewExtension->menuItemLink(
-        'fas fa-question fa-lg',
-        __d('tour_app', 'Start the tour of the application'),
-        '#',
-        ['data-toggle' => 'start-app-tour']
-    );
+	$iconList[] = $this->ViewExtension->menuItemLink(
+		'fas fa-question fa-lg',
+		__d('tour_app', 'Start the tour of the application'),
+		'#',
+		['data-toggle' => 'start-app-tour']
+	);
 }
 
 echo $this->element('CakeTheme.barNavBase', compact('showSearchForm', 'useNavbarContainerFluid', 'projectName', 'projectLogo', 'iconList'));

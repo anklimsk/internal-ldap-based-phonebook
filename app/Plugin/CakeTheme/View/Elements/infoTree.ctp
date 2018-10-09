@@ -10,34 +10,34 @@
  */
 
 if (!isset($url)) {
-    $url = '';
+	$url = '';
 }
 
 if (!isset($viewurl)) {
-    $viewurl = null;
+	$viewurl = null;
 }
 
 if (!isset($enablelinks)) {
-    $enablelinks = false;
+	$enablelinks = false;
 }
 
 if (!isset($showtags)) {
-    $showtags = false;
+	$showtags = false;
 }
 
 if (!isset($levels)) {
-    $levels = 1;
+	$levels = 1;
 }
 
 if (empty($url)) {
-    return;
+	return;
 }
 
-    echo $this->Html->div('treeview-sm', '', [
-        'data-toggle' => 'treeview',
-        'data-treeview-url' => $url,
-        'data-treeview-viewurl' => $viewurl,
-        'data-treeview-enablelinks' => $enablelinks,
-        'data-treeview-showtags' => $showtags,
-        'data-treeview-levels' => $levels,
-    ]);
+	echo $this->Html->div('treeview-sm', '', [
+		'data-toggle' => 'treeview',
+		'data-treeview-url' => $url,
+		'data-treeview-viewurl' => $viewurl,
+		'data-treeview-enablelinks' => $enablelinks,
+		'data-treeview-showtags' => $showtags,
+		'data-treeview-levels' => $levels,
+	]);

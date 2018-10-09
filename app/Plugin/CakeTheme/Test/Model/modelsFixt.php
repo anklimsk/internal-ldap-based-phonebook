@@ -23,38 +23,35 @@
  *
  * @package       Cake.Test.Case.Model
  */
-class EmployeeTest extends CakeTestModel
-{
+class EmployeeTest extends CakeTestModel {
 
-    /**
-     * Name of the model.
-     *
-     * @var string
-     */
-    public $name = 'EmployeeTest';
+/**
+ * Name of the model.
+ *
+ * @var string
+ */
+	public $name = 'EmployeeTest';
 
-    /**
-     * Custom database table name, or null/false if no table association is desired.
-     *
-     * @var string
-     */
-    public $useTable = 'employees';
+/**
+ * Custom database table name, or null/false if no table association is desired.
+ *
+ * @var string
+ */
+	public $useTable = 'employees';
 
-    /**
-     * Array of virtual fields this model has. Virtual fields are aliased
-     * SQL expressions. Fields added to this property will be read as other fields in a model
-     * but will not be saveable.
-     *
-     * `public $virtualFields = array('two' => '1 + 1');`
-     *
-     * Is a simplistic example of how to set virtualFields
-     *
-     * @var array
-     * @link http://book.cakephp.org/2.0/en/models/model-attributes.html#virtualfields
-     */
-    public $virtualFields = [
-        'name' => 'CONCAT_WS(" ", EmployeeTest.last_name, EmployeeTest.first_name, EmployeeTest.middle_name)'
-    ];
+/**
+ * Array of virtual fields this model has. Virtual fields are aliased
+ * SQL expressions. Fields added to this property will be read as other fields in a model
+ * but will not be saveable.
+ *
+ * Is a simplistic example of how to set virtualFields
+ *
+ * @var array
+ * @link http://book.cakephp.org/2.0/en/models/model-attributes.html#virtualfields
+ */
+	public $virtualFields = [
+		'name' => 'CONCAT_WS(" ", EmployeeTest.last_name, EmployeeTest.first_name, EmployeeTest.middle_name)'
+	];
 }
 
 /**
@@ -62,84 +59,123 @@ class EmployeeTest extends CakeTestModel
  *
  * @package       Cake.Test.Case.Model
  */
-class TreeDataTest extends CakeTestModel
-{
+class TreeDataTest extends CakeTestModel {
 
-    /**
-     * Name of the model.
-     *
-     * @var string
-     */
-    public $name = 'TreeDataTest';
+/**
+ * Name of the model.
+ *
+ * @var string
+ */
+	public $name = 'TreeDataTest';
 
-    /**
-     * Custom database table name, or null/false if no table association is desired.
-     *
-     * @var string
-     */
-    public $useTable = 'trees';
+/**
+ * Custom database table name, or null/false if no table association is desired.
+ *
+ * @var string
+ */
+	public $useTable = 'trees';
 
-    /**
-     * List of behaviors to load when the model object is initialized. Settings can be
-     * passed to behaviors by using the behavior name as index. Eg:
-     *
-     * public $actsAs = array('Translate', 'MyBehavior' => array('setting1' => 'value1'))
-     *
-     * @var array
-     * @link http://book.cakephp.org/2.0/en/models/behaviors.html#using-behaviors
-     */
-    public $actsAs = [
-        'Tree',
-        'CakeTheme.Move'
-    ];
+/**
+ * List of behaviors to load when the model object is initialized. Settings can be
+ * passed to behaviors by using the behavior name as index. Eg:
+ *
+ * @var array
+ * @link http://book.cakephp.org/2.0/en/models/behaviors.html#using-behaviors
+ */
+	public $actsAs = [
+		'Tree',
+		'CakeTheme.Move'
+	];
 
-    /**
-     * List of callback actions
-     *
-     * @var array
-     */
-    public $callbackActions = [];
+/**
+ * List of callback actions
+ *
+ * @var array
+ */
+	public $callbackActions = [];
 
-    /**
-     * Returns a list of all events that will fire in the model during it's lifecycle.
-     * Add listener callbacks for events `Model.beforeUpdateTree` and `Model.afterUpdateTree`.
-     *
-     * @return array
-     */
-    public function implementedEvents()
-    {
-        $events = parent::implementedEvents();
-        $events['Model.beforeUpdateTree'] = ['callable' => 'beforeUpdateTree', 'passParams' => true];
-        $events['Model.afterUpdateTree'] = ['callable' => 'afterUpdateTree'];
+/**
+ * Returns a list of all events that will fire in the model during it's lifecycle.
+ * Add listener callbacks for events `Model.beforeUpdateTree` and `Model.afterUpdateTree`.
+ *
+ * @return array
+ */
+	public function implementedEvents() {
+		$events = parent::implementedEvents();
+		$events['Model.beforeUpdateTree'] = ['callable' => 'beforeUpdateTree', 'passParams' => true];
+		$events['Model.afterUpdateTree'] = ['callable' => 'afterUpdateTree'];
 
-        return $events;
-    }
+		return $events;
+	}
 
-    /**
-     * Called before each update tree. Return a non-true result
-     * to halt the update tree.
-     *
-     * @param array $options Options:
-     *  - `id`: ID of moved record,
-     *  - `newParentId`: ID of new parent for moved record,
-     *  - `method`: method of move - moveUp or moveDown,
-     *  - `delta`: delta for moving.
-     * @return bool True if the operation should continue, false if it should abort
-     */
-    public function beforeUpdateTree($options = [])
-    {
-        $this->callbackActions['beforeUpdateTree'] = $options;
+/**
+ * Called before each update tree. Return a non-true result
+ * to halt the update tree.
+ *
+ * @param array $options Options:
+ *  - `id`: ID of moved record,
+ *  - `newParentId`: ID of new parent for moved record,
+ *  - `method`: method of move - moveUp or moveDown,
+ *  - `delta`: delta for moving.
+ *
+ * @return bool True if the operation should continue, false if it should abort
+ */
+	public function beforeUpdateTree($options = []) {
+		$this->callbackActions['beforeUpdateTree'] = $options;
 
-        return true;
-    }
+		return true;
+	}
 
-    /**
-     * Called after each successful update tree operation.
-     *
-     * @return void
-     */
-    public function afterUpdateTree()
-    {
-        $this->callbackActions['afterUpdateTree'] = null;
-    }
+/**
+ * Called after each successful update tree operation.
+ *
+ * @return void
+ */
+	public function afterUpdateTree() {
+		$this->callbackActions['afterUpdateTree'] = null;
+	}
+
+}
+
+/**
+ * BreadCrumbTest class
+ *
+ * @package       Cake.Test.Case.Model
+ */
+class BreadCrumbTest extends CakeTestModel {
+
+/**
+ * Name of the model.
+ *
+ * @var string
+ */
+	public $name = 'BreadCrumbTest';
+
+/**
+ * Custom database table name, or null/false if no table association is desired.
+ *
+ * @var string
+ */
+	public $useTable = 'employees';
+
+/**
+ * Custom display field name. Display fields are used by Scaffold, in SELECT boxes' OPTION elements.
+ *
+ * This field is also used in `find('list')` when called with no extra parameters in the fields list
+ *
+ * @var string
+ */
+	public $displayField = 'full_name';
+
+/**
+ * List of behaviors to load when the model object is initialized. Settings can be
+ * passed to behaviors by using the behavior name as index. Eg:
+ *
+ * @var array
+ * @link http://book.cakephp.org/2.0/en/models/behaviors.html#using-behaviors
+ */
+	public $actsAs = [
+		'CakeTheme.BreadCrumb'
+	];
+
 }

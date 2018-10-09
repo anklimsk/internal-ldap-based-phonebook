@@ -9,72 +9,72 @@
  */
 
 if (!isset($isExternalAuth)) {
-    $isExternalAuth = false;
+	$isExternalAuth = false;
 }
 
-    $showSearchForm = false;
-    $showMainMenu = false;
+	$showSearchForm = false;
+	$showMainMenu = false;
 
 if (!isset($uiLcid2) || empty($uiLcid2)) {
-    $uiLcid2 = 'en';
+	$uiLcid2 = 'en';
 }
 
 if (isset($pageTitlePrefix) && !empty($pageTitlePrefix)) {
-    $this->prepend('title', $pageTitlePrefix);
+	$this->prepend('title', $pageTitlePrefix);
 }
 
 if (isset($pageTitlePostfix) && !empty($pageTitlePostfix)) {
-    $this->append('title', $pageTitlePostfix);
+	$this->append('title', $pageTitlePostfix);
 }
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo $uiLcid2; ?>">
-<head>    
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <?php echo $this->Html->charset(); ?>
-    <title><?php echo $this->fetch('title'); ?></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="ak">
+	<title><?php echo $this->fetch('title'); ?></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="ak">
 <?php
-    echo $this->Html->meta('icon');
+	echo $this->Html->meta('icon');
 
-    echo $this->AssetCompress->css('CakeTheme.libs');
-    echo $this->AssetCompress->css('CakeTheme.login');
+	echo $this->AssetCompress->css('CakeTheme.libs');
+	echo $this->AssetCompress->css('CakeTheme.login');
 
-    echo $this->AssetCompress->script('CakeTheme.libs');
-    echo $this->AssetCompress->script('CakeTheme.libs-min');
-    echo $this->AssetCompress->script('CakeTheme.login');
+	echo $this->AssetCompress->script('CakeTheme.libs');
+	echo $this->AssetCompress->script('CakeTheme.libs-min');
+	echo $this->AssetCompress->script('CakeTheme.login');
 ?>
 <!--[if gt IE 9]><!-->
 <?php
-    echo $this->AssetCompress->css('CakeTheme.noty');
-    echo $this->AssetCompress->script('CakeTheme.noty');
+	echo $this->AssetCompress->css('CakeTheme.noty');
+	echo $this->AssetCompress->script('CakeTheme.noty');
 ?>
 <!--<![endif]-->
 <?php
-    echo $this->fetch('css');
-    echo $this->AssetCompress->css('CakeTheme.login-plugins');
-    echo $this->fetch('script');
-    echo $this->AssetCompress->script('CakeTheme.login-plugins');
+	echo $this->fetch('css');
+	echo $this->AssetCompress->css('CakeTheme.login-plugins');
+	echo $this->fetch('script');
+	echo $this->AssetCompress->script('CakeTheme.login-plugins');
 ?>
 <!--[if (gte IE 6)&(lte IE 8)]>
 <?php
-    echo $this->AssetCompress->css('CakeTheme.ie8supp');
-    echo $this->AssetCompress->script('CakeTheme.ie8supp');
-    echo $this->AssetCompress->script('CakeTheme.ie8supp-min');
+	echo $this->AssetCompress->css('CakeTheme.ie8supp');
+	echo $this->AssetCompress->script('CakeTheme.ie8supp');
+	echo $this->AssetCompress->script('CakeTheme.ie8supp-min');
 ?>
-<![endif]--> 
+<![endif]-->
 </head>
 <body>
-    <div id="container">
-        <div id="header">   
+	<div id="container">
+		<div id="header">
 <?php
-    echo $this->element('barNav', compact('isExternalAuth', 'emailContact', 'emailSubject', 'showSearchForm', 'showMainMenu'));
+	echo $this->element('barNav', compact('isExternalAuth', 'emailContact', 'emailSubject', 'showSearchForm', 'showMainMenu'));
 ?>
-        </div>
-        <div id="content">
+		</div>
+		<div id="content">
 <?php echo $this->fetch('content'); ?>
-        </div>
-    </div>  
+		</div>
+	</div>
 </body>
 </html>

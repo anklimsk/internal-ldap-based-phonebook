@@ -10,25 +10,25 @@
  */
 
 if (!isset($data)) {
-    $data = null;
+	$data = null;
 }
 
 if (!isset($event)) {
-    $event = null;
+	$event = null;
 }
 
 if (!isset($retry)) {
-    $retry = null;
+	$retry = null;
 }
 
 if (empty($data)) {
-    return;
+	return;
 }
 
 if (!empty($event)) {
-    echo "event: " . $event . "\n";
+	echo "event: " . $event . "\n";
 }
 if (!empty($retry)) {
-    echo "retry: " . (int)$retry . "\n";
+	echo "retry: " . (int)$retry . "\n";
 }
 echo "data: " . $data . "\n\n";

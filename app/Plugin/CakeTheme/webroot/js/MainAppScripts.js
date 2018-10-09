@@ -1425,7 +1425,7 @@
          * @function _prepareModalContent
          * @memberof MainAppScripts
          *
-         * @returns {string} Prepared contenet1615
+         * @returns {string} Prepared contenet
          */
         function _prepareModalContent(content, modalWindow)
         {
@@ -1444,7 +1444,7 @@
                 }
             }
 
-            objModalContent.find('form').attr('data-toggle', 'ajax-form');
+            objModalContent.find('form:not([skip-modal])').attr('data-toggle', 'ajax-form');
             var result = $('<div />').append(objModalContent).html();
             return result;
         }
@@ -1671,7 +1671,7 @@
             var method          = el.data('modal-method');
             var disableUseStack = false;
             if ((el.attr('data-toggle') === 'modal')
-                || el.attr('link-use-modal')
+                || (el.attr('data-toggle') === 'modal-popover')
             ) {
                 disableUseStack = el.data('disable-use-stack');
             } else {
@@ -2789,12 +2789,25 @@
             }
 
             target.tab();
+            target.off('show.bs.tab').on(
+                'show.bs.tab',
+                function (e) {
+                    var href = $(e.target).attr('href');
+                    if (href) {
+                        $('html').data('active-tab', href);
+                    }
+                }
+            );
             target.off('shown.bs.tab').on(
                 'shown.bs.tab',
                 function (e) {
                     MainAppScripts.setInputFocus();
                 }
             );
+            var activeTab = $('html').data('active-tab');
+            if (activeTab) {
+                $('a[data-toggle="tab"][href="' + activeTab + '"]').tab('show');
+            }
 
             return true;
         };
@@ -2938,10 +2951,6 @@
                     }
 
                     placeholder = targetItem.data('placeholder');
-                    if (placeholder) {
-                        targetItem.removeAttr('data-placeholder');
-                    }
-
                     targetItem.selectpicker('destroy').selectpicker(
                         {
                             title: placeholder,
@@ -3081,7 +3090,7 @@
 
         /**
          * This function used for bind Twitter Bootstrap Popovers.
-         * Selector: `[data-toggle="popover"]`.
+         * Selector: `[data-toggle="popover"],[data-toggle="modal-popover"]`.
          * Attributes:
          *  `data-popover-url` - URL for loading content;
          *  `data-popover-placement` - position of popover;
@@ -3099,7 +3108,7 @@
                 return false;
             }
 
-            $('[data-toggle="popover"]').popover(
+            $('[data-toggle="popover"],[data-toggle="modal-popover"]').popover(
                 {
                     content: _getPopoverContent,
                     delay: {
@@ -3125,13 +3134,12 @@
 
         /**
          * This function used for bind Twitter Bootstrap Modals.
-         * Selector: `a[data-toggle="modal"], a[link-use-modal], [data-toggle="modal"] a`.
+         * Selector: `a[data-toggle="modal"], a[data-toggle="modal-popover"], [data-toggle="modal"] a`.
          * Attributes:
          *  `data-modal-title` - title of modal window;
          *  `data-modal-size` - `sm`|`lg` - size of modal window;
          *  `data-modal-method` - `get`|`post` - method for request: GET or POST;
-         *  `data-disable-use-stack` - disabling use stack of madal window;
-         *  `link-use-modal` - open link in modal window.
+         *  `data-disable-use-stack` - disabling use stack of madal window.
          *
          * @function updateModalLinks
          * @memberof MainAppScripts
@@ -3145,7 +3153,7 @@
                 return false;
             }
 
-            $('a[data-toggle="modal"], a[link-use-modal], [data-toggle="modal"] a').off('click.MainAppScripts.modal').on('click.MainAppScripts.modal', _showModalWindowClick);
+            $('a[data-toggle="modal"], a[data-toggle="modal-popover"], [data-toggle="modal"] a').off('click.MainAppScripts.modal').on('click.MainAppScripts.modal', _showModalWindowClick);
 
             return true;
         };

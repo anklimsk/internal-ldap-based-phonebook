@@ -15,44 +15,41 @@ App::uses('CakeThemeAppController', 'CakeTheme.Controller');
  *
  * @package plugin.Controller
  */
-class ToursController extends CakeThemeAppController
-{
+class ToursController extends CakeThemeAppController {
 
-    /**
-     * Called before the controller action. You can use this method to configure and customize components
-     * or perform logic that needs to happen before each controller action.
-     *
-     * Actions:
-     *  - Configure components;
-     *
-     * @return void
-     * @link http://book.cakephp.org/2.0/en/controllers.html#request-life-cycle-callbacks
-     */
-    public function beforeFilter()
-    {
-        $this->Auth->allow('steps');
-        $this->Security->unlockedActions = ['steps'];
+/**
+ * Called before the controller action. You can use this method to configure and customize components
+ * or perform logic that needs to happen before each controller action.
+ *
+ * Actions:
+ *  - Configure components;
+ *
+ * @return void
+ * @link http://book.cakephp.org/2.0/en/controllers.html#request-life-cycle-callbacks
+ */
+	public function beforeFilter() {
+		$this->Auth->allow('steps');
+		$this->Security->unlockedActions = ['steps'];
 
-        parent::beforeFilter();
-    }
+		parent::beforeFilter();
+	}
 
-    /**
-     * Action `steps`. Is used to get data of tour steps
-     *
-     * @throws BadRequestException if request is not `AJAX`, or not `POST`
-     *  or not `JSON`
-     * @return void
-     */
-    public function steps()
-    {
-        Configure::write('debug', 0);
-        if (!$this->request->is('ajax') || !$this->request->is('post') ||
-            !$this->RequestHandler->prefers('json')) {
-            throw new BadRequestException();
-        }
+/**
+ * Action `steps`. Is used to get data of tour steps
+ *
+ * @throws BadRequestException if request is not `AJAX`, or not `POST`
+ *  or not `JSON`
+ * @return void
+ */
+	public function steps() {
+		Configure::write('debug', 0);
+		if (!$this->request->is('ajax') || !$this->request->is('post') ||
+			!$this->RequestHandler->prefers('json')) {
+			throw new BadRequestException();
+		}
 
-        $data = $this->ConfigTheme->getStepsConfigTourApp();
-        $this->set(compact('data'));
-        $this->set('_serialize', 'data');
-    }
+		$data = $this->ConfigTheme->getStepsConfigTourApp();
+		$this->set(compact('data'));
+		$this->set('_serialize', 'data');
+	}
 }

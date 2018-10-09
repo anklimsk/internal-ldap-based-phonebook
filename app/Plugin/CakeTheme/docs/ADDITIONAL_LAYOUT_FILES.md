@@ -2,21 +2,25 @@
 
 1. Copy configuration file from `app/Plugin/CakeTheme/Config/caketheme.php` to `app/Config`
 2. Add build configuration in file `app/Config/asset_compress.ini`, e.g.:
-```ini
-; List of additional JS files for Main layout
-[additional-files.js]
-filters[] = YuiJs
-files[] = plugin:SearchInfo:js/SearchInfo.js
-```
+
+   ```ini
+   ; List of additional JS files for Main layout
+   [additional-files.js]
+   filters[] = YuiJs
+   files[] = plugin:SearchInfo:js/SearchInfo.js
+   ```
+
 3. Add list of additional files in file `app/Config/caketheme.php`, e.g.:
-```php
-$config['CakeTheme'] = [
-    'AdditionalFiles' => [
-        // List of additional JS files
-        'js' => ['search-info'],
-    ],
-];
-```
+
+   ```php
+   $config['CakeTheme'] = [
+       'AdditionalFiles' => [
+           // List of additional JS files
+           'js' => ['search-info'],
+       ],
+   ];
+   ```
+
 4. Clears all builds defined in the ini file use CakePHP console:
 `Console/cake asset_compress clear`
 5. Generate only build files defined in the ini file:
@@ -24,6 +28,7 @@ $config['CakeTheme'] = [
 6. Clear cache `cake_config_plugin`.
 
 ## Example of configuration file
+
 ```php
 /**
  * This file configures main theme

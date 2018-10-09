@@ -14,29 +14,26 @@ App::uses('AppModel', 'Model');
  *
  * @package plugin.Model
  */
-class CakeThemeAppModel extends AppModel
-{
+class CakeThemeAppModel extends AppModel {
 
-    /**
-     * Name of the validation string domain to use when translating validation errors.
-     *
-     * @var string
-     */
-    public $validationDomain = 'cake_theme_validation_errors';
+/**
+ * Name of the validation string domain to use when translating validation errors.
+ *
+ * @var string
+ */
+	public $validationDomain = 'cake_theme_validation_errors';
 
-    /**
-     * List of behaviors to load when the model object is initialized. Settings can be
-     * passed to behaviors by using the behavior name as index. Eg:
-     *
-     * public $actsAs = array('Translate', 'MyBehavior' => array('setting1' => 'value1'))
-     *
-     * @var array
-     * @link http://book.cakephp.org/2.0/en/models/behaviors.html#using-behaviors
-     */
-    public $actsAs = [
-        'CakeConfigPlugin.InitConfig' => [
-            'pluginName' => 'CakeTheme',
-            'checkPath' => 'CakeTheme.AjaxFlash',
-        ]
-    ];
+/**
+ * List of behaviors to load when the model object is initialized. Settings can be
+ * passed to behaviors by using the behavior name as index. Eg:
+ *
+ * @var array
+ * @link http://book.cakephp.org/2.0/en/models/behaviors.html#using-behaviors
+ */
+	public $actsAs = [
+		'CakeConfigPlugin.InitConfig' => [
+			'pluginName' => 'CakeTheme',
+			'checkPath' => 'CakeTheme.AjaxFlash',
+		]
+	];
 }

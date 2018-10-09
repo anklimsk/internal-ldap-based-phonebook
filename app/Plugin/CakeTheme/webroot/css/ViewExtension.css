@@ -90,6 +90,17 @@ th.filter-action, td.filter-action {
     margin-top: 1px;
 }
 
+/* Buttons action */
+.action .btn, .action .btn-group {
+    margin: 0 2px;
+}
+
+dd .action .btn,
+li .action .btn {
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+
 /* Pagination block */
 .pagination {
     margin-top: 0;
@@ -130,10 +141,6 @@ th a {
 
 th a.asc, th a.desc {
     color: #5BC0DE;
-}
-
-.action .btn, .action .btn-group {
-    margin: 0 2px;
 }
 
 th.action, td.action {
@@ -291,4 +298,10 @@ dl.dl-wt-bottom-margin {
 
 .display-block {
     display: block !important;
+}
+
+/* Collapsible list */
+ul.list-collapsible-compact, ol.list-collapsible-compact {
+    margin-top: 0;
+    margin-bottom: 0;
 }

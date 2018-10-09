@@ -17,26 +17,24 @@ App::uses('CakeThemeConsoleOutput', 'CakeTheme.Console');
  * console input and output.
  * @package plugin.Console.Command
  */
-class CakeThemeAppShell extends Shell
-{
+class CakeThemeAppShell extends Shell {
 
-    /**
-     *  Constructs this Shell instance.
-     *
-     * Actions:
-     * - Set wrapper for outputting information from a shell application
-     *  with conversion to another encoding system depending on OS.
-     *
-     * @param ConsoleOutput $stdout A ConsoleOutput object for stdout.
-     * @param ConsoleOutput $stderr A ConsoleOutput object for stderr.
-     * @param ConsoleInput $stdin A ConsoleInput object for stdin.
-     * @link http://book.cakephp.org/2.0/en/console-and-shells.html#Shell
-     */
-    public function __construct($stdout = null, $stderr = null, $stdin = null)
-    {
-        parent::__construct($stdout, $stderr, $stdin);
+/**
+ *  Constructs this Shell instance.
+ *
+ * Actions:
+ * - Set wrapper for outputting information from a shell application
+ *  with conversion to another encoding system depending on OS.
+ *
+ * @param ConsoleOutput $stdout A ConsoleOutput object for stdout.
+ * @param ConsoleOutput $stderr A ConsoleOutput object for stderr.
+ * @param ConsoleInput $stdin A ConsoleInput object for stdin.
+ * @link http://book.cakephp.org/2.0/en/console-and-shells.html#Shell
+ */
+	public function __construct($stdout = null, $stderr = null, $stdin = null) {
+		parent::__construct($stdout, $stderr, $stdin);
 
-        $this->stdout = $stdout ? $stdout : new CakeThemeConsoleOutput('php://stdout');
-        $this->stderr = $stderr ? $stderr : new CakeThemeConsoleOutput('php://stderr');
-    }
+		$this->stdout = $stdout ? $stdout : new CakeThemeConsoleOutput('php://stdout');
+		$this->stderr = $stderr ? $stderr : new CakeThemeConsoleOutput('php://stderr');
+	}
 }

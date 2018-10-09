@@ -1,18 +1,23 @@
 # Pagination controls elements:
 
 1. To use all pagination controls add next line after table:
-```php
-echo $this->ViewExtension->buttonsPaging($targetSelector, $showCounterInfo, $useShowList, $useGoToPage, $useChangeNumLines);
-```
-To hide information about pages and records set `$showCounterInfo` to `false`
+
+   ```php
+   echo $this->ViewExtension->buttonsPaging($targetSelector, $showCounterInfo, $useShowList, $useGoToPage, $useChangeNumLines);
+   ```
+
+   To hide information about pages and records set `$showCounterInfo` to `false`
 2. To use only load more button:
-```php
-echo $this->buttonLoadMore($targetSelector);
-```
+
+   ```php
+   echo $this->buttonLoadMore($targetSelector);
+   ```
+
 3. To use only bar of page controls:
-```php
-echo $this->barPaging($showCounterInfo, $useShowList, $useGoToPage, $useChangeNumLines);
-```
+
+   ```php
+   echo $this->barPaging($showCounterInfo, $useShowList, $useGoToPage, $useChangeNumLines);
+   ```
 
 ## Change the limit of entries on the page
 

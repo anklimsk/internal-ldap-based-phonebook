@@ -4,19 +4,23 @@
 2. Edit configuration file and configure plugin [See `Example of configuration file`](#example-of-configuration-file)
 3. Copy translation files from `app/Plugin/CakeTheme/Locale/rus/LC_MESSAGES/tour_app.*' to 'app/Locale/rus/LC_MESSAGES/'
 4. Add JavaScript files in your layout file:
-```php
-echo $this->Html->script('CakeTheme.TourApp.min.js');
 
-// If need use store configuration of plugin in storages, include file:
-echo $this->Html->script('CakeTheme.js.storage.min.js');
-```
+   ```php
+   echo $this->Html->script('CakeTheme.TourApp.min.js');
+
+   // If need use store configuration of plugin in storages, include file:
+   echo $this->Html->script('CakeTheme.js.storage.min.js');
+   ```
+
 5. Add item to main menu, e.g.:
-```php
-echo $this->ViewExtension->menuItemLink('fa-question', __d('tour_app', 'Start the tour of the application'),
-	'#', ['data-toggle' => 'start-app-tour']);
-```
+
+   ```php
+   echo $this->ViewExtension->menuItemLink('fa-question', __d('tour_app', 'Start the tour of the application'),
+       '#', ['data-toggle' => 'start-app-tour']);
+   ```
 
 ## Example of configuration file
+
 ```php
 <?php
 /**
