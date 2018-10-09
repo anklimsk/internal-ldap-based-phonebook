@@ -466,7 +466,7 @@ class Deferred extends AppModel
                 if ($objDataModel->save($data['changed'], false)) {
                     $successCount++;
                     if (!empty($id)) {
-                        $dataToDelete[$this->alias . '.id'] = $id;
+                        $dataToDelete[] = $id;
                     }
                 } else {
                     $result = false;
@@ -480,7 +480,7 @@ class Deferred extends AppModel
                     }
                 }
             } elseif (!empty($id)) {
-                $dataToDelete[$this->alias . '.id'] = $id;
+                $dataToDelete[] = $id;
             }
 
             if (empty($mail) || $internal) {
@@ -491,7 +491,7 @@ class Deferred extends AppModel
             $maxStep++;
         }
         if (!empty($dataToDelete)) {
-            if ($this->deleteAll($dataToDelete, false, true)) {
+            if ($this->deleteAll([$this->alias . '.id' => $dataToDelete], false, true)) {
                 $successCount++;
             } else {
                 $result = false;
