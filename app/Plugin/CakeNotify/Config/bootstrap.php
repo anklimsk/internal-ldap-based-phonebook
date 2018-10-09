@@ -14,7 +14,7 @@
  * Used for delay next request Server-Sent Events. Default value `30000`
  */
 if (!defined('CAKE_NOTIFY_SSE_RETRY')) {
-    define('CAKE_NOTIFY_SSE_RETRY', 30000);
+	define('CAKE_NOTIFY_SSE_RETRY', 30000);
 }
 
 /**
@@ -23,7 +23,7 @@ if (!defined('CAKE_NOTIFY_SSE_RETRY')) {
  * Used to clearing expired notifications. Default value `6`
  */
 if (!defined('CAKE_NOTIFY_EXPIRES_HOUR')) {
-    define('CAKE_NOTIFY_EXPIRES_HOUR', 6);
+	define('CAKE_NOTIFY_EXPIRES_HOUR', 6);
 }
 
 /**
@@ -32,5 +32,5 @@ if (!defined('CAKE_NOTIFY_EXPIRES_HOUR')) {
  * Used for set name of command. Default value `clear`
  */
 if (!defined('CAKE_NOTIFY_CRON_TASK_CLEAR_NOTIFICATIONS')) {
-    define('CAKE_NOTIFY_CRON_TASK_CLEAR_NOTIFICATIONS', 'clear');
+	define('CAKE_NOTIFY_CRON_TASK_CLEAR_NOTIFICATIONS', 'clear');
 }

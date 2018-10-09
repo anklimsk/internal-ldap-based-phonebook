@@ -14,22 +14,21 @@ App::uses('AppController', 'Controller');
  *
  * @package plugin.Controller
  */
-class CakeNotifyAppController extends AppController
-{
+class CakeNotifyAppController extends AppController {
 
-    /**
-     * Array containing the names of components this controller uses. Component names
-     * should not contain the "Component" portion of the class name.
-     *
-     * Example: `public $components = array('Session', 'RequestHandler', 'Acl');`
-     *
-     * @var array
-     * @link http://book.cakephp.org/2.0/en/controllers/components.html
-     */
-    public $components = [
-            'Auth',
-            'Session',
-            'Security',
-            'RequestHandler'
-        ];
+/**
+ * Array containing the names of components this controller uses. Component names
+ * should not contain the "Component" portion of the class name.
+ *
+ * Example: `public $components = array('Session', 'RequestHandler', 'Acl');`
+ *
+ * @var array
+ * @link http://book.cakephp.org/2.0/en/controllers/components.html
+ */
+	public $components = [
+		'Auth',
+		'Session',
+		'Security',
+		'RequestHandler'
+	];
 }

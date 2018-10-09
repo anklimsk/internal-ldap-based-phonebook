@@ -7,22 +7,22 @@
  */
 
 if (!isset($projectName)) {
-    $projectName = '';
+	$projectName = '';
 }
 
-    $homeUrl = $this->Html->url('/', true);
+$homeUrl = $this->Html->url('/', true);
 if (empty($projectName)) {
-    $projectName = $homeUrl;
+	$projectName = $homeUrl;
 }
 ?>
 <p class="text-right">
-    <small>
+	<small>
 <?php
-    echo nl2br(__d('cake_notify', 'This email was sent %s automatically,
+	echo nl2br(__d('cake_notify', 'This email was sent %s automatically,
 please do not reply to it.', $this->Html->tag(
-        'strong',
-        $this->Html->link(h($projectName), $homeUrl)
-    )));
+		'strong',
+		$this->Html->link(h($projectName), $homeUrl)
+	)));
 ?>
-    </small>
+	</small>
 </p>

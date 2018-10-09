@@ -9,8 +9,8 @@
  */
 
 $config['Config'] = [
-    'adminEmail' => 'some_mail@fabrikam.com'
+	'adminEmail' => 'some_mail@fabrikam.com'
 ];
 $config['Email'] = [
-    'live' => false
+	'live' => false
 ];

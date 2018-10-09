@@ -14,6 +14,5 @@ App::uses('AppHelper', 'View/Helper');
  *
  * @package plugin.View.Helper
  */
-class CakeNotifyAppHelper extends AppHelper
-{
+class CakeNotifyAppHelper extends AppHelper {
 }

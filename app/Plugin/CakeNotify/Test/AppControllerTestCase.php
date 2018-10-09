@@ -15,11 +15,11 @@ App::uses('ExtendControllerTestCase', 'CakeExtendTest.Test');
  * Bit mask for user roles
  */
 if (!defined('LDAP_AUTH_TEST_USER_ROLE_USER')) {
-    define('LDAP_AUTH_TEST_USER_ROLE_USER', 1);
+	define('LDAP_AUTH_TEST_USER_ROLE_USER', 1);
 }
 
 if (!defined('LDAP_AUTH_TEST_USER_ROLE_ADMIN')) {
-    define('LDAP_AUTH_TEST_USER_ROLE_ADMIN', 4);
+	define('LDAP_AUTH_TEST_USER_ROLE_ADMIN', 4);
 }
 
 /**
@@ -28,76 +28,72 @@ if (!defined('LDAP_AUTH_TEST_USER_ROLE_ADMIN')) {
  * @package     app.Controller
  * @link        http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
-class AppController extends Controller
-{
+class AppController extends Controller {
 
-    /**
-     * helpers property
-     *
-     * @var array
-     */
-    public $helpers = ['Html'];
+/**
+ * helpers property
+ *
+ * @var array
+ */
+	public $helpers = ['Html'];
 
-    /**
-     * uses property
-     *
-     * @var array
-     */
-    public $uses = [];
+/**
+ * uses property
+ *
+ * @var array
+ */
+	public $uses = [];
 
-    /**
-     * components property
-     *
-     * @var array
-     */
-    public $components = [
-        'Auth',
-        'Session',
-        'Security',
-        'RequestHandler',
-    ];
+/**
+ * components property
+ *
+ * @var array
+ */
+	public $components = [
+		'Auth',
+		'Session',
+		'Security',
+		'RequestHandler',
+	];
 }
 
 /**
  * Application level ControllerTestCase class
  *
  */
-class AppControllerTestCase extends ExtendControllerTestCase
-{
+class AppControllerTestCase extends ExtendControllerTestCase {
 
-    /**
-     * Information about the logged in user.
-     *
-     * @var array
-     */
-    protected $_userInfo = [
-        'user' => 'Миронов Г.Н.',
-        'role' => LDAP_AUTH_TEST_USER_ROLE_USER | LDAP_AUTH_TEST_USER_ROLE_ADMIN,
-        'id' => 1
-    ];
+/**
+ * Information about the logged in user.
+ *
+ * @var array
+ */
+	protected $_userInfo = [
+		'user' => 'Миронов Г.Н.',
+		'role' => LDAP_AUTH_TEST_USER_ROLE_USER | LDAP_AUTH_TEST_USER_ROLE_ADMIN,
+		'id' => 1
+	];
 
-    /**
-     * Setup the test case, backup the static object values so they can be restored.
-     * Specifically backs up the contents of Configure and paths in App if they have
-     * not already been backed up.
-     *
-     * @return void
-     */
-    public function setUp()
-    {
-        $path = __DIR__ . DS;
-        $this->applyTestConfig($path);
+/**
+ * Setup the test case, backup the static object values so they can be restored.
+ * Specifically backs up the contents of Configure and paths in App if they have
+ * not already been backed up.
+ *
+ * @return void
+ */
+	public function setUp() {
+		$path = __DIR__ . DS;
+		$this->applyTestConfig($path);
 
-        parent::setUp();
-    }
+		parent::setUp();
+	}
 
-    /**
-     * teardown any static object changes and restore them.
-     *
-     * @return void
-     */
-    public function tearDown()
-    {
-        parent::tearDown();
-    }
+/**
+ * teardown any static object changes and restore them.
+ *
+ * @return void
+ */
+	public function tearDown() {
+		parent::tearDown();
+	}
 }

@@ -17,134 +17,117 @@ App::uses('Language', 'CakeBasicFunctions.Utility');
  *
  * @package plugin.Controller
  */
-class NotificationsController extends CakeNotifyAppController
-{
+class NotificationsController extends CakeNotifyAppController {
 
-    /**
-     * Array containing the names of components this controller uses. Component names
-     * should not contain the "Component" portion of the class name.
-     *
-     * Example: `public $components = array('Session', 'RequestHandler', 'Acl');`
-     *
-     * @var array
-     * @link http://book.cakephp.org/2.0/en/controllers/components.html
-     */
-    public $components = [
-            'CakeTheme.ViewExtension'
-        ];
+/**
+ * Array containing the names of components this controller uses. Component names
+ * should not contain the "Component" portion of the class name.
+ *
+ * @var array
+ * @link http://book.cakephp.org/2.0/en/controllers/components.html
+ */
+	public $components = [
+		'CakeTheme.ViewExtension'
+	];
 
-    /**
-     * An array containing the class names of models this controller uses.
-     *
-     * Example: `public $uses = array('Product', 'Post', 'Comment');`
-     *
-     * Can be set to several values to express different options:
-     *
-     * - `true` Use the default inflected model name.
-     * - `array()` Use only models defined in the parent class.
-     * - `false` Use no models at all, do not merge with parent class either.
-     * - `array('Post', 'Comment')` Use only the Post and Comment models. Models
-     *   Will also be merged with the parent class.
-     *
-     * The default value is `true`.
-     *
-     * @var mixed
-     * @link http://book.cakephp.org/2.0/en/controllers.html#components-helpers-and-uses
-     */
-    public $uses = ['CakeNotify.Notification'];
+/**
+ * An array containing the class names of models this controller uses.
+ *
+ * @var mixed
+ * @link http://book.cakephp.org/2.0/en/controllers.html#components-helpers-and-uses
+ */
+	public $uses = ['CakeNotify.Notification'];
 
-    /**
-     * Called before the controller action. You can use this method to configure and customize components
-     * or perform logic that needs to happen before each controller action.
-     *
-     * Actions:
-     *  - Configure components;
-     *
-     * @return void
-     * @link http://book.cakephp.org/2.0/en/controllers.html#request-life-cycle-callbacks
-     */
-    public function beforeFilter()
-    {
-        $this->Auth->allow('message');
+/**
+ * Called before the controller action. You can use this method to configure and customize components
+ * or perform logic that needs to happen before each controller action.
+ *
+ * Actions:
+ *  - Configure components;
+ *
+ * @return void
+ * @link http://book.cakephp.org/2.0/en/controllers.html#request-life-cycle-callbacks
+ */
+	public function beforeFilter() {
+		$this->Auth->allow('message');
 
-        parent::beforeFilter();
-    }
+		parent::beforeFilter();
+	}
 
-    /**
-     * Action `message`. Is used to get data of notifications
-     *
-     * @throws BadRequestException if request is not `SSE`
-     * @return void
-     */
-    public function message()
-    {
-        $this->response->disableCache();
-        Configure::write('debug', 0);
-        if (!$this->RequestHandler->prefers('sse')) {
-            throw new BadRequestException();
-        }
+/**
+ * Action `message`. Is used to get data of notifications
+ *
+ * @throws BadRequestException if request is not `SSE`
+ * @return void
+ */
+	public function message() {
+		$this->response->disableCache();
+		Configure::write('debug', 0);
+		if (!$this->RequestHandler->prefers('sse')) {
+			throw new BadRequestException();
+		}
 
-        $retry = CAKE_NOTIFY_SSE_RETRY;
-        $event = 'webNotification';
-        $result = [
-            'result' => false,
-            'messages' => [],
-            'retry' => $retry
-        ];
-        if (!$this->Session->started()) {
-            $this->Session->renew();
-        }
+		$retry = CAKE_NOTIFY_SSE_RETRY;
+		$event = 'webNotification';
+		$result = [
+			'result' => false,
+			'messages' => [],
+			'retry' => $retry
+		];
+		if (!$this->Session->started()) {
+			$this->Session->renew();
+		}
 
-        $userInfo = $this->Auth->user();
-        if (empty($userInfo)) {
-            $userInfo = [];
-        }
-        $userId = Hash::get($userInfo, 'id');
-        $userRole = Hash::get($userInfo, 'role');
-        $prefix = Hash::get($userInfo, 'prefix');
+		$userInfo = $this->Auth->user();
+		if (empty($userInfo)) {
+			$userInfo = [];
+		}
+		$userId = Hash::get($userInfo, 'id');
+		$userRole = Hash::get($userInfo, 'role');
+		$prefix = Hash::get($userInfo, 'prefix');
 
-        $lastId = 0;
-        if ($this->Session->check('Notifications.lastId')) {
-            $lastId = (int)$this->Session->read('Notifications.lastId');
-        }
+		$lastId = 0;
+		if ($this->Session->check('Notifications.lastId')) {
+			$lastId = (int)$this->Session->read('Notifications.lastId');
+		}
 
-        $notifications = $this->Notification->getNotifications($lastId, $userId, $userRole);
-        if (empty($notifications)) {
-            $data = json_encode($result);
-            $this->set(compact('retry', 'data', 'event'));
+		$notifications = $this->Notification->getNotifications($lastId, $userId, $userRole);
+		if (empty($notifications)) {
+			$data = json_encode($result);
+			$this->set(compact('retry', 'data', 'event'));
 
-            return;
-        }
+			return;
+		}
 
-        $iconDefault = '/favicon.ico';
-/*
-        $language = new Language();
-        $lang = mb_strtoupper($language->getCurrentUiLang(true));
-*/
-        foreach ($notifications as $notificationItem) {
-            extract($notificationItem['Notification']);
-            $lastId = $id;
-            $icon = $iconDefault;
-            if (isset($data['url']) && is_array($data['url'])) {
-                if (!empty($prefix)) {
-                    $data['url'][$prefix] = true;
-                }
-                $data['url'] = Router::url($data['url']);
-            }
-            if (isset($data['icon'])) {
-                if (!empty($data['icon'])) {
-                    $icon = $data['icon'];
-                }
-                unset($data['icon']);
-            }
-            $result['messages'][] = compact('tag', 'title', 'body', 'icon', 'data'/*, 'lang'*/);
-        }
-        if (!empty($result['messages'])) {
-            $result['result'] = true;
-            $this->Session->write('Notifications.lastId', $lastId);
-        }
+		$iconDefault = '/favicon.ico';
+		/*
+		$language = new Language();
+		$lang = mb_strtoupper($language->getCurrentUiLang(true));
+		*/
+		foreach ($notifications as $notificationItem) {
+			extract($notificationItem['Notification']);
+			$lastId = $id;
+			$icon = $iconDefault;
+			if (isset($data['url']) && is_array($data['url'])) {
+				if (!empty($prefix)) {
+					$data['url'][$prefix] = true;
+				}
+				$data['url'] = Router::url($data['url']);
+			}
+			if (isset($data['icon'])) {
+				if (!empty($data['icon'])) {
+					$icon = $data['icon'];
+				}
+				unset($data['icon']);
+			}
+			$result['messages'][] = compact('tag', 'title', 'body', 'icon', 'data'/*, 'lang'*/);
+		}
+		if (!empty($result['messages'])) {
+			$result['result'] = true;
+			$this->Session->write('Notifications.lastId', $lastId);
+		}
 
-        $data = json_encode($result);
-        $this->set(compact('retry', 'data', 'event'));
-    }
+		$data = json_encode($result);
+		$this->set(compact('retry', 'data', 'event'));
+	}
 }
