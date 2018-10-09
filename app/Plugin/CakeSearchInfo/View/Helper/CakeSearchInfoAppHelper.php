@@ -14,6 +14,5 @@ App::uses('AppHelper', 'View/Helper');
  *
  * @package plugin.View.Helper
  */
-class CakeSearchInfoAppHelper extends AppHelper
-{
+class CakeSearchInfoAppHelper extends AppHelper {
 }

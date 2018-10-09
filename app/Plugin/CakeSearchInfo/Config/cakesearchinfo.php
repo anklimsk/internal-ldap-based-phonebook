@@ -9,37 +9,37 @@
  */
 
 $config['CakeSearchInfo'] = [
-    'QuerySearchMinLength' => 0,
-    'AutocompleteLimit' => 10,
-    'TargetDeep' => 0,
-    'DefaultSearchAnyPart' => true,
-    'TargetModels' => [
+	'QuerySearchMinLength' => 0,
+	'AutocompleteLimit' => 10,
+	'TargetDeep' => 0,
+	'DefaultSearchAnyPart' => true,
+	'TargetModels' => [
 /*
-        'ModelName' => [
-            'fields' => [
-                'ModelName.FieldName' => __('Field name'),
-                'ModelName.FieldName2' => __('Field name 2'),
-            ],
-            'order' => ['ModelName.FieldName' => 'direction'],
-            'name' => __('Scope name'),
-            'recursive' => 0, // not necessary - default: -1
-            'contain' => null, // not necessary - default: null
-            'conditions' => ['ModelName.FieldName' => 'SomeValue'], // not necessary - used as global conditions
-            'url' => [
-                'controller' => 'modelnames',
-                'action' => 'view',
-                'plugin' => 'pluginname',
-            ],  // not necessary - used in link to result
-            'id' => 'ModelName.id', // not necessary - used in link to result
-        ],
+		'ModelName' => [
+			'fields' => [
+				'ModelName.FieldName' => __('Field name'),
+				'ModelName.FieldName2' => __('Field name 2'),
+			],
+			'order' => ['ModelName.FieldName' => 'direction'],
+			'name' => __('Scope name'),
+			'recursive' => 0, // not necessary - default: -1
+			'contain' => null, // not necessary - default: null
+			'conditions' => ['ModelName.FieldName' => 'SomeValue'], // not necessary - used as global conditions
+			'url' => [
+				'controller' => 'modelnames',
+				'action' => 'view',
+				'plugin' => 'pluginname',
+			],  // not necessary - used in link to result
+			'id' => 'ModelName.id', // not necessary - used in link to result
+		],
 */
-    ],
-    'IncludeFields' => [
+	],
+	'IncludeFields' => [
 /*
-        'ModelName' => [
-            'ModelName.FieldName',
-            'ModelName.FieldName2',
-        ]
+		'ModelName' => [
+			'ModelName.FieldName',
+			'ModelName.FieldName2',
+		]
 */
-    ],
+	],
 ];

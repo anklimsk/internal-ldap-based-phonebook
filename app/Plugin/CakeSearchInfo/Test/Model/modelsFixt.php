@@ -23,54 +23,28 @@
  *
  * @package       Cake.Test.Case.Model
  */
-class City extends CakeTestModel
-{
+class City extends CakeTestModel {
 
-    /**
-     * name property
-     *
-     * @var string
-     */
-    public $name = 'City';
+/**
+ * name property
+ *
+ * @var string
+ */
+	public $name = 'City';
 
-    /**
-     * Constructor. Binds the model's database table to the object.
-     *
-     * If `$id` is an array it can be used to pass several options into the model.
-     *
-     * - `id`: The id to start the model on.
-     * - `table`: The table to use for this model.
-     * - `ds`: The connection name this model is connected to.
-     * - `name`: The name of the model eg. Post.
-     * - `alias`: The alias of the model, this is used for registering the instance in the `ClassRegistry`.
-     *   eg. `ParentThread`
-     *
-     * ### Overriding Model's __construct method.
-     *
-     * When overriding Model::__construct() be careful to include and pass in all 3 of the
-     * arguments to `parent::__construct($id, $table, $ds);`
-     *
-     * ### Dynamically creating models
-     *
-     * You can dynamically create model instances using the $id array syntax.
-     *
-     * ```
-     * $Post = new Model(array('table' => 'posts', 'name' => 'Post', 'ds' => 'connection2'));
-     * ```
-     *
-     * Would create a model attached to the posts table on connection2. Dynamic model creation is useful
-     * when you want a model object that contains no associations or attached behaviors.
-     *
-     * @param bool|int|string|array $id Set this ID for this model on startup,
-     * can also be an array of options, see above.
-     * @param string $table Name of database table to use.
-     * @param string $ds DataSource connection name.
-     */
-    public function __construct($id = false, $table = null, $ds = null)
-    {
-        parent::__construct($id, $table, $ds);
-        $this->virtualFields['virt_zip_name'] = sprintf('CONCAT(%s.zip, " ", %s.name)', $this->alias, $this->alias);
-    }
+/**
+ * Constructor. Binds the model's database table to the object.
+ *
+ * @param bool|int|string|array $id Set this ID for this model on startup,
+ * can also be an array of options, see above.
+ * @param string $table Name of database table to use.
+ * @param string $ds DataSource connection name.
+ */
+	public function __construct($id = false, $table = null, $ds = null) {
+		parent::__construct($id, $table, $ds);
+		$this->virtualFields['virt_zip_name'] = sprintf('CONCAT(%s.zip, " ", %s.name)', $this->alias, $this->alias);
+	}
+
 }
 
 /**
@@ -78,15 +52,14 @@ class City extends CakeTestModel
  *
  * @package       Cake.Test.Case.Model
  */
-class Pcode extends CakeTestModel
-{
+class Pcode extends CakeTestModel {
 
-    /**
-     * name property
-     *
-     * @var string
-     */
-    public $name = 'Pcode';
+/**
+ * name property
+ *
+ * @var string
+ */
+	public $name = 'Pcode';
 }
 
 /**
@@ -94,45 +67,42 @@ class Pcode extends CakeTestModel
  *
  * @package       Cake.Test.Case.Model
  */
-class CityPcode extends City
-{
+class CityPcode extends City {
 
-    /**
-     * name property
-     *
-     * @var string
-     */
-    public $name = 'CityPcode';
+/**
+ * name property
+ *
+ * @var string
+ */
+	public $name = 'CityPcode';
 
-    /**
-     * Custom database table name, or null/false if no table association is desired.
-     *
-     * @var string
-     * @link http://book.cakephp.org/2.0/en/models/model-attributes.html#usetable
-     */
-    public $useTable = 'cities';
+/**
+ * Custom database table name, or null/false if no table association is desired.
+ *
+ * @var string
+ * @link http://book.cakephp.org/2.0/en/models/model-attributes.html#usetable
+ */
+	public $useTable = 'cities';
 
-    /**
-     * List of behaviors to load when the model object is initialized. Settings can be
-     * passed to behaviors by using the behavior name as index. Eg:
-     *
-     * public $actsAs = array('Translate', 'MyBehavior' => array('setting1' => 'value1'))
-     *
-     * @var array
-     * @link http://book.cakephp.org/2.0/en/models/behaviors.html#using-behaviors
-     */
-    public $actsAs = ['Containable'];
+/**
+ * List of behaviors to load when the model object is initialized. Settings can be
+ * passed to behaviors by using the behavior name as index. Eg:
+ *
+ * @var array
+ * @link http://book.cakephp.org/2.0/en/models/behaviors.html#using-behaviors
+ */
+	public $actsAs = ['Containable'];
 
-    /**
-     * belongsTo associations
-     *
-     * @var array
-     */
-    public $belongsTo = [
-        'Pcode' => [
-            'className' => 'Pcode',
-            'foreignKey' => 'pcode_id',
-            'dependent' => false,
-        ]
-    ];
+/**
+ * belongsTo associations
+ *
+ * @var array
+ */
+	public $belongsTo = [
+		'Pcode' => [
+			'className' => 'Pcode',
+			'foreignKey' => 'pcode_id',
+			'dependent' => false,
+		]
+	];
 }

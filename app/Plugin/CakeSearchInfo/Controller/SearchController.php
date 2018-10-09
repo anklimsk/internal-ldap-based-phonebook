@@ -16,105 +16,113 @@ App::uses('CakeSearchInfoAppController', 'CakeSearchInfo.Controller');
  *
  * @package plugin.Controller
  */
-class SearchController extends CakeSearchInfoAppController
-{
+class SearchController extends CakeSearchInfoAppController {
 
-    /**
-     * The name of this controller. Controller names are plural, named after the model they manipulate.
-     *
-     * @var string
-     * @link http://book.cakephp.org/2.0/en/controllers.html#controller-attributes
-     */
-    public $name = 'Search';
+/**
+ * The name of this controller. Controller names are plural, named after the model they manipulate.
+ *
+ * @var string
+ * @link http://book.cakephp.org/2.0/en/controllers.html#controller-attributes
+ */
+	public $name = 'Search';
 
-    /**
-     * Array containing the names of components this controller uses. Component names
-     * should not contain the "Component" portion of the class name.
-     *
-     * Example: `public $components = array('Session', 'RequestHandler', 'Acl');`
-     *
-     * @var array
-     * @link http://book.cakephp.org/2.0/en/controllers/components.html
-     */
-    public $components = [
-        'Paginator',
-        'CakeSearchInfo.SearchFilter'
-    ];
+/**
+ * An array containing the class names of models this controller uses.
+ *
+ * @var mixed
+ * @link http://book.cakephp.org/2.0/en/controllers.html#components-helpers-and-uses
+ */
+	public $uses = [
+		'CakeSearchInfo.Search'
+	];
 
-    /**
-     * An array containing the names of helpers this controller uses. The array elements should
-     * not contain the "Helper" part of the class name.
-     *
-     * Example: `public $helpers = array('Html', 'Js', 'Time', 'Ajax');`
-     *
-     * @var mixed
-     * @link http://book.cakephp.org/2.0/en/controllers.html#components-helpers-and-uses
-     */
-    public $helpers = [
-        'Text',
-        'Number',
-        'Paginator',
-        'CakeSearchInfo.Search',
-        'CakeTheme.ViewExtension',
-    ];
+/**
+ * Array containing the names of components this controller uses. Component names
+ * should not contain the "Component" portion of the class name.
+ *
+ * @var array
+ * @link http://book.cakephp.org/2.0/en/controllers/components.html
+ */
+	public $components = [
+		'Paginator',
+		'CakeSearchInfo.SearchFilter'
+	];
 
-    /**
-     * Settings for component 'Paginator'
-     *
-     * @var array
-     */
-    public $paginate = [
-        'page' => 1,
-        'limit' => 10,
-        'maxLimit' => 250,
-    ];
+/**
+ * An array containing the names of helpers this controller uses. The array elements should
+ * not contain the "Helper" part of the class name.
+ *
+ * @var mixed
+ * @link http://book.cakephp.org/2.0/en/controllers.html#components-helpers-and-uses
+ */
+	public $helpers = [
+		'Text',
+		'Number',
+		'Paginator',
+		'CakeSearchInfo.Search',
+		'CakeTheme.ViewExtension',
+	];
 
-    /**
-     * Called before the controller action. You can use this method to configure and customize components
-     * or perform logic that needs to happen before each controller action.
-     *
-     * Actions:
-     *  - Configure components;
-     *
-     * @return void
-     * @link http://book.cakephp.org/2.0/en/controllers.html#request-life-cycle-callbacks
-     */
-    public function beforeFilter()
-    {
-        $this->Auth->allow('autocomplete');
-        $this->Security->unlockedActions = ['autocomplete'];
+/**
+ * Settings for component 'Paginator'
+ *
+ * @var array
+ */
+	public $paginate = [
+		'page' => 1,
+		'limit' => 10,
+		'maxLimit' => 250,
+	];
 
-        parent::beforeFilter();
-    }
+/**
+ * Called before the controller action. You can use this method to configure and customize components
+ * or perform logic that needs to happen before each controller action.
+ *
+ * Actions:
+ *  - Configure components;
+ *
+ * @return void
+ * @link http://book.cakephp.org/2.0/en/controllers.html#request-life-cycle-callbacks
+ */
+	public function beforeFilter() {
+		$this->Auth->allow('autocomplete');
+		$this->Security->unlockedActions = ['autocomplete'];
 
-    /**
-     * Action `index`. Used to begin search.
-     *
-     * @return void
-     */
-    public function index()
-    {
-        $search_urlActionSearch = null;
-        $this->set(compact('search_urlActionSearch'));
-    }
+		parent::beforeFilter();
+	}
 
-    /**
-     * Action `search`. Used to view a result of search.
-     *
-     * @return void
-     */
-    public function search()
-    {
-        $this->SearchFilter->search();
-    }
+/**
+ * Action `index`. Used to begin search.
+ *
+ * @return void
+ */
+	public function index() {
+		$pageTitle = __d('cake_search_info', 'Search information');
+		$breadCrumbs = $this->Search->getBreadcrumbInfo();
+		$breadCrumbs[] = __d('cake_search_info', 'New search');
+		$this->set(compact('pageTitle', 'breadCrumbs'));
+		$this->set('search_urlActionSearch', null);
+	}
 
-    /**
-     * Action `autocomplete`. Is used to autocomplte input fields.
-     *
-     * @return void
-     */
-    public function autocomplete()
-    {
-        $this->SearchFilter->autocomplete();
-    }
+/**
+ * Action `search`. Used to view a result of search.
+ *
+ * @return void
+ */
+	public function search() {
+		$this->SearchFilter->search();
+		$pageTitle = __d('cake_search_info', 'Search information');
+		$breadCrumbs = $this->Search->getBreadcrumbInfo();
+		$breadCrumbs[] = __d('cake_search_info', 'Results of search');
+		$this->set(compact('pageTitle', 'breadCrumbs'));
+	}
+
+/**
+ * Action `autocomplete`. Is used to autocomplte input fields.
+ *
+ * @return void
+ */
+	public function autocomplete() {
+		$this->SearchFilter->autocomplete();
+	}
 }

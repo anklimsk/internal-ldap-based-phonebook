@@ -14,7 +14,7 @@
  * Used for set minimal leingt of query employee search. Default value `2`
  */
 if (!defined('CAKE_SEARCH_INFO_QUERY_SEARCH_MIN_LENGTH')) {
-    define('CAKE_SEARCH_INFO_QUERY_SEARCH_MIN_LENGTH', 2);
+	define('CAKE_SEARCH_INFO_QUERY_SEARCH_MIN_LENGTH', 2);
 }
 
 /**
@@ -23,7 +23,7 @@ if (!defined('CAKE_SEARCH_INFO_QUERY_SEARCH_MIN_LENGTH')) {
  * Used for set autocomplete limit, if needed. Default value `20`
  */
 if (!defined('CAKE_SEARCH_INFO_AUTOCOMPLETE_LIMIT')) {
-    define('CAKE_SEARCH_INFO_AUTOCOMPLETE_LIMIT', 20);
+	define('CAKE_SEARCH_INFO_AUTOCOMPLETE_LIMIT', 20);
 }
 
 /**
@@ -33,7 +33,7 @@ if (!defined('CAKE_SEARCH_INFO_AUTOCOMPLETE_LIMIT')) {
  *  Default value `40`
  */
 if (!defined('CAKE_SEARCH_INFO_AUTOCOMPLETE_RESULT_TRUNCATE_LIMIT')) {
-    define('CAKE_SEARCH_INFO_AUTOCOMPLETE_RESULT_TRUNCATE_LIMIT', 40);
+	define('CAKE_SEARCH_INFO_AUTOCOMPLETE_RESULT_TRUNCATE_LIMIT', 40);
 }
 
 /**
@@ -44,7 +44,7 @@ if (!defined('CAKE_SEARCH_INFO_AUTOCOMPLETE_RESULT_TRUNCATE_LIMIT')) {
  *  Default value `False`
  */
 if (!defined('CAKE_SEARCH_INFO_TARGET_FIELD_ANY_PART')) {
-    define('CAKE_SEARCH_INFO_TARGET_FIELD_ANY_PART', 'anyPart');
+	define('CAKE_SEARCH_INFO_TARGET_FIELD_ANY_PART', 'anyPart');
 }
 
 /**
@@ -54,7 +54,7 @@ if (!defined('CAKE_SEARCH_INFO_TARGET_FIELD_ANY_PART')) {
  *  Default value `cake_search_info_query_cfg`
  */
 if (!defined('CAKE_SEARCH_INFO_CACHE_KEY_QUERY_CFG')) {
-    define('CAKE_SEARCH_INFO_CACHE_KEY_QUERY_CFG', 'cake_search_info_query_cfg');
+	define('CAKE_SEARCH_INFO_CACHE_KEY_QUERY_CFG', 'cake_search_info_query_cfg');
 }
 
 /**
@@ -64,7 +64,7 @@ if (!defined('CAKE_SEARCH_INFO_CACHE_KEY_QUERY_CFG')) {
  *  Default value `cake_search_info_query_cfg`
  */
 if (!defined('CAKE_SEARCH_INFO_CACHE_KEY_QUERY_RESULT')) {
-    define('CAKE_SEARCH_INFO_CACHE_KEY_QUERY_RESULT', 'cake_search_info_query_res');
+	define('CAKE_SEARCH_INFO_CACHE_KEY_QUERY_RESULT', 'cake_search_info_query_res');
 }
 
 $prefix = Inflector::slug(App::pluginPath('CakeSearchInfo'));
@@ -73,11 +73,11 @@ $prefix = Inflector::slug(App::pluginPath('CakeSearchInfo'));
 *
 */
 Cache::config(CAKE_SEARCH_INFO_CACHE_KEY_QUERY_CFG, [
-    'engine' => 'File',
-    'prefix' => $prefix,
-    'duration' => '+1 week',
-    'probability' => 100,
-    'path' => CACHE . CAKE_SEARCH_INFO_CACHE_KEY_QUERY_CFG . DS,
+	'engine' => 'File',
+	'prefix' => $prefix,
+	'duration' => '+1 week',
+	'probability' => 100,
+	'path' => CACHE . CAKE_SEARCH_INFO_CACHE_KEY_QUERY_CFG . DS,
 ]);
 
 /**
@@ -85,9 +85,9 @@ Cache::config(CAKE_SEARCH_INFO_CACHE_KEY_QUERY_CFG, [
 *
 */
 Cache::config(CAKE_SEARCH_INFO_CACHE_KEY_QUERY_RESULT, [
-    'engine' => 'File',
-    'prefix' => $prefix,
-    'duration' => '+1 day',
-    'probability' => 100,
-    'path' => CACHE . CAKE_SEARCH_INFO_CACHE_KEY_QUERY_RESULT . DS,
+	'engine' => 'File',
+	'prefix' => $prefix,
+	'duration' => '+1 day',
+	'probability' => 100,
+	'path' => CACHE . CAKE_SEARCH_INFO_CACHE_KEY_QUERY_RESULT . DS,
 ]);
