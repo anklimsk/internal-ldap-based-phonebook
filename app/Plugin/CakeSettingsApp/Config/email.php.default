@@ -33,46 +33,44 @@ App::uses('ClassRegistry', 'Utility');
  * from =>
  * The origin email. See CakeEmail::from() about the valid values
  */
-class EmailConfig
-{
+class EmailConfig {
 
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $modelSetting = ClassRegistry::init('CakeSettingsApp.Setting');
-        $username = $modelSetting->getConfig('EmailSmtpuser');
-        $password = $modelSetting->getConfig('EmailSmtppassword');
-        $host = $modelSetting->getConfig('EmailSmtphost');
-        $port = (int)$modelSetting->getConfig('EmailSmtpport');
-        if (empty($username)) {
-            $username = null;
-        }
-        if (empty($password)) {
-            $password = null;
-        }
-        if (empty($host)) {
-            $host = 'localhost';
-        }
-        if (empty($port)) {
-            $port = 25;
-        }
-        $this->smtp += compact('username', 'password', 'host', 'port');
-    }
+/**
+ * Constructor
+ */
+	public function __construct() {
+		$modelSetting = ClassRegistry::init('CakeSettingsApp.Setting');
+		$username = $modelSetting->getConfig('EmailSmtpuser');
+		$password = $modelSetting->getConfig('EmailSmtppassword');
+		$host = $modelSetting->getConfig('EmailSmtphost');
+		$port = (int)$modelSetting->getConfig('EmailSmtpport');
+		if (empty($username)) {
+			$username = null;
+		}
+		if (empty($password)) {
+			$password = null;
+		}
+		if (empty($host)) {
+			$host = 'localhost';
+		}
+		if (empty($port)) {
+			$port = 25;
+		}
+		$this->smtp += compact('username', 'password', 'host', 'port');
+	}
 
-    /**
-     * SMTP transport configuration
-     *
-     * @var array
-     */
-    public $smtp = [
-        'transport' => 'Smtp',
-        'timeout' => 30,
-        'client' => null,
-        'log' => false,
-        'charset' => 'utf-8',
-        'headerCharset' => 'utf-8',
-        'emailFormat' => 'both'
-    ];
+/**
+ * SMTP transport configuration
+ *
+ * @var array
+ */
+	public $smtp = [
+		'transport' => 'Smtp',
+		'timeout' => 30,
+		'client' => null,
+		'log' => false,
+		'charset' => 'utf-8',
+		'headerCharset' => 'utf-8',
+		'emailFormat' => 'both'
+	];
 }

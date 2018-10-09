@@ -19,96 +19,92 @@ require_once App::pluginPath('CakeSettingsApp') . 'Test' . DS . 'Model' . DS . '
  * @package     app.Controller
  * @link        http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
-class AppController extends Controller
-{
+class AppController extends Controller {
 
-    /**
-     * helpers property
-     *
-     * @var array
-     */
-    public $helpers = ['Html'];
+/**
+ * helpers property
+ *
+ * @var array
+ */
+	public $helpers = ['Html'];
 
-    /**
-     * uses property
-     *
-     * @var array
-     */
-    public $uses = [];
+/**
+ * uses property
+ *
+ * @var array
+ */
+	public $uses = [];
 
-    /**
-     * components property
-     *
-     * @var array
-     */
-    public $components = [
-        'Auth',
-        'Session',
-        'Security',
-        'Flash',
-        'RequestHandler',
-    ];
+/**
+ * components property
+ *
+ * @var array
+ */
+	public $components = [
+		'Auth',
+		'Session',
+		'Security',
+		'Flash',
+		'RequestHandler',
+	];
 
-    /**
-     * Called before the controller action. You can use this method to configure and customize components
-     * or perform logic that needs to happen before each controller action.
-     *
-     * Actions:
-     *  - Configure components;
-     *
-     * @return void
-     * @link http://book.cakephp.org/2.0/en/controllers.html#request-life-cycle-callbacks
-     */
-    public function beforeFilter()
-    {
-        $this->Auth->allow();
+/**
+ * Called before the controller action. You can use this method to configure and customize components
+ * or perform logic that needs to happen before each controller action.
+ *
+ * Actions:
+ *  - Configure components;
+ *
+ * @return void
+ * @link http://book.cakephp.org/2.0/en/controllers.html#request-life-cycle-callbacks
+ */
+	public function beforeFilter() {
+		$this->Auth->allow();
 
-        parent::beforeFilter();
-    }
+		parent::beforeFilter();
+	}
+
 }
 
 /**
  * Application level ControllerTestCase class
  *
  */
-class AppControllerTestCase extends ExtendControllerTestCase
-{
+class AppControllerTestCase extends ExtendControllerTestCase {
 
-    /**
-     * Setup the test case, backup the static object values so they can be restored.
-     * Specifically backs up the contents of Configure and paths in App if they have
-     * not already been backed up.
-     *
-     * Actions:
-     * - Write test configuration.
-     *
-     * @return void
-     */
-    public function setUp()
-    {
-        $pathPlugin = CakePlugin::path('CakeSettingsApp');
-        $pathModel = $pathPlugin . 'Test' . DS . 'test_app' . DS . 'Model' . DS;
-        $pathView = $pathPlugin . 'Test' . DS . 'test_app' . DS . 'View' . DS;
-        App::build(
-            [
-                'Model' => $pathModel,
-                'View' => $pathView,
-            ],
-            App::RESET
-        );
-        parent::setUp();
+/**
+ * Setup the test case, backup the static object values so they can be restored.
+ * Specifically backs up the contents of Configure and paths in App if they have
+ * not already been backed up.
+ *
+ * Actions:
+ * - Write test configuration.
+ *
+ * @return void
+ */
+	public function setUp() {
+		$pathPlugin = CakePlugin::path('CakeSettingsApp');
+		$pathModel = $pathPlugin . 'Test' . DS . 'test_app' . DS . 'Model' . DS;
+		$pathView = $pathPlugin . 'Test' . DS . 'test_app' . DS . 'View' . DS;
+		App::build(
+			[
+				'Model' => $pathModel,
+				'View' => $pathView,
+			],
+			App::RESET
+		);
+		parent::setUp();
 
-        $path = __DIR__ . DS;
-        $this->applyTestConfig($path);
-    }
+		$path = __DIR__ . DS;
+		$this->applyTestConfig($path);
+	}
 
-    /**
-     * teardown any static object changes and restore them.
-     *
-     * @return void
-     */
-    public function tearDown()
-    {
-        parent::tearDown();
-    }
+/**
+ * teardown any static object changes and restore them.
+ *
+ * @return void
+ */
+	public function tearDown() {
+		parent::tearDown();
+	}
 }

@@ -15,36 +15,34 @@ App::uses('SettingBase', 'CakeSettingsApp.Model');
  *
  * @package plugin.Model
  */
-class Setting extends SettingBase
-{
+class Setting extends SettingBase {
 
-    /**
-     * Name of the model.
-     *
-     * @var string
-     * @link http://book.cakephp.org/2.0/en/models/model-attributes.html#name
-     */
-    public $name = 'Setting';
+/**
+ * Name of the model.
+ *
+ * @var string
+ * @link http://book.cakephp.org/2.0/en/models/model-attributes.html#name
+ */
+	public $name = 'Setting';
 
-    /**
-     * List of validation rules. It must be an array with the field name as key and using
-     * as value one of the following possibilities
-     *
-     * @var array
-     * @link http://book.cakephp.org/2.0/en/models/model-attributes.html#validate
-     * @link http://book.cakephp.org/2.0/en/models/data-validation.html
-     */
-    public $validate = [];
+/**
+ * List of validation rules. It must be an array with the field name as key and using
+ * as value one of the following possibilities
+ *
+ * @var array
+ * @link http://book.cakephp.org/2.0/en/models/model-attributes.html#validate
+ * @link http://book.cakephp.org/2.0/en/models/data-validation.html
+ */
+	public $validate = [];
 
-    /**
-     * Return extended variables for form of application settings
-     *
-     * @return array Extended variables
-     */
-    public function getVars()
-    {
-        $variables = [];
+/**
+ * Return extended variables for form of application settings
+ *
+ * @return array Extended variables
+ */
+	public function getVars() {
+		$variables = [];
 
-        return $variables;
-    }
+		return $variables;
+	}
 }

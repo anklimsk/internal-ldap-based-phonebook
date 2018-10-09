@@ -4,10 +4,14 @@ php:
   - 5.6
   - 7.1
 
+cache:
+  directories:
+    - $HOME/.composer/cache/files
+
 env:
   global:
     - PLUGIN_NAME=CakeSettingsApp
-    - REQUIRE="dereuromark/cakephp-queue:^2.3.0"
+    - REQUIRE="anklimsk/cakephp-console-installer dereuromark/cakephp-queue:^2.3.0"
     - DB=mysql
     - CAKE_REF=2.x
 
@@ -18,14 +22,16 @@ matrix:
         - CODECOVERAGE=1
     - php: 7.1
       env:
+        - PHPCS=1
+        - PHPCS_IGNORE=CakeInstaller,CakeBasicFunctions,CakeExtendTest,CakeConfigPlugin,CakeTheme,AssetCompress,Bs3Helpers,Queue,Shim,Tools
+    - php: 7.1
+      env:
         - FOC_VALIDATE=1
 
 before_script:
   - git clone -b master https://github.com/FriendsOfCake/travis.git --depth 1 ../travis
   - travis_wait ../travis/before_script.sh
-  - if [ -f "../cakephp/app/Config/core.php" ]; then sed -i -r "s/(Configure::write\('Security\.salt', ')[0-9a-z]+('\);)/\1d1c97797953ed55c54ba6037158d2b0c3bf21471\2/i" ../cakephp/app/Config/core.php; fi
-  - if [ -f "../cakephp/app/Config/core.php" ]; then sed -i -r "s/(Configure::write\('Security\.cipherSeed', ')[0-9]+('\);)/\118424236609940891573169173047\2/i" ../cakephp/app/Config/core.php; fi
-  - if [ -f "../cakephp/app/Config/core.php" ]; then echo "Configure::write('Security.key', '9b8964f94127f5b843c67e8c89479e4f2cfac2b182c72dc0691cc384c438f9ca');" >> ../cakephp/app/Config/core.php; fi
+  - if [ -f "../cakephp/app/Console/cake" ]; then ../cakephp/app/Console/cake CakeInstaller setsecurkey --yes --app $(cd ../cakephp/app; pwd); fi
   - if [ -f "../cakephp/app/Config/database.php" ]; then sed -i -r "/$test = array\(/a 'encoding' => 'utf8'," ../cakephp/app/Config/database.php; fi
   - if [ -f "../cakephp/app/Plugin/CakeTheme/Config/asset_compress.local.ini" ]; then cp "../cakephp/app/Plugin/CakeTheme/Config/asset_compress.local.ini" "../cakephp/app/Config/asset_compress.ini"; fi
 
@@ -33,7 +39,9 @@ script:
   - ../travis/script.sh
 
 after_success:
-  - ../travis/after_success.sh
+  - if [ -f "../cakephp/app/clover.xml" ]; then cp ../cakephp/app/clover.xml ../cakephp/app/Plugin/$PLUGIN_NAME; fi
+  - if [ -d "../cakephp/app/Plugin/$PLUGIN_NAME" ]; then cd ../cakephp/app/Plugin/$PLUGIN_NAME; fi
+  - if [ "$CODECOVERAGE" == '1' ]; then wget -O codecov.sh https://codecov.io/bash; bash codecov.sh; fi
 
 notifications:
   email: false

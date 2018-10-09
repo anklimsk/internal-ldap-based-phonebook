@@ -8,9 +8,9 @@
  */
 
 if (!isset($varsExt) || !is_array($varsExt)) {
-    $varsExt = [];
+	$varsExt = [];
 }
 
 if (!empty($varsExt)) {
-    extract($varsExt);
+	extract($varsExt);
 }

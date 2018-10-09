@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: CakePHP Plugin CakeSettingsApp\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2018-05-18 12:34+0300\n"
+"PO-Revision-Date: 2018-10-01 15:17+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -16,100 +16,127 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Poedit 1.8.7\n"
 
-#: Console/Command/Task/QueueClearCacheTask.php:80
+#: Console/Command/Task/QueueClearCacheTask.php:78
 msgid "CakePHP Queue clearing cache task."
 msgstr "Очередь CakePHP задача очистки кэша."
 
-#: Console/Command/Task/QueueClearCacheTask.php:83
+#: Console/Command/Task/QueueClearCacheTask.php:81
 msgid "Found clearing cache task in queue: %d. Skipped."
 msgstr "Найдено задач очистки кэша в очереди: %d. Пропущено."
 
-#: Controller/SettingsController.php:168
-#: Test/Case/Controller/SettingsControllerTest.php:124
-msgid "Application settings has been saved."
-msgstr "Настройки приложения были сохранены."
-
-#: Controller/SettingsController.php:170
-msgid "Reload the page to apply the settings."
-msgstr "Перезагрузите страницу, чтобы применить настройки."
-
-#: Controller/SettingsController.php:178
-#: Test/Case/Controller/SettingsControllerTest.php:162
-msgid "Unable to save application settings."
-msgstr "Не удается сохранить настройки приложения."
-
-#: Controller/SettingsController.php:227
-#: Test/Case/Controller/SettingsControllerTest.php:211;303;425
+#: Controller/QueuesController.php:117
+#: Test/Case/Controller/QueuesControllerTest.php:86;202;348
 msgid "Delete selected tasks"
 msgstr "Удаление выбранных задач"
 
-#: Controller/SettingsController.php:237
-#: Test/Case/Controller/SettingsControllerTest.php:347;377
+#: Controller/QueuesController.php:127
+#: Test/Case/Controller/QueuesControllerTest.php:270;300
 msgid "Selected tasks has been deleted."
 msgstr "Выбранные задачи удалены."
 
-#: Controller/SettingsController.php:239
-#: Test/Case/Controller/SettingsControllerTest.php:348
+#: Controller/QueuesController.php:129
+#: Test/Case/Controller/QueuesControllerTest.php:271
 msgid "Selected tasks could not be deleted. Please, try again."
 msgstr ""
 "Выбранные задачи не могут быть удалены. Пожалуйста, попробуйте еще раз."
 
-#: Controller/SettingsController.php:272
+#: Controller/QueuesController.php:144;159
+#: Test/Case/Controller/QueuesControllerTest.php:127;149;214;236;375;397
+msgid "Queue of tasks"
+msgstr "Очередь заданий"
+
+#: Controller/QueuesController.php:149;152
+#: Test/Case/Controller/QueuesControllerTest.php:131;134;218;221;379;382
+msgid "Clear queue of tasks"
+msgstr "Очистить очередь задач"
+
+#: Controller/QueuesController.php:154
+#: Test/Case/Controller/QueuesControllerTest.php:136;223;384
+msgid "Are you sure you wish to clear queue of tasks?"
+msgstr "Вы уверены, что хотите очистить очередь задач?"
+
+#: Controller/QueuesController.php:183
 msgid "Invalid task"
 msgstr "Неверное задание"
 
-#: Controller/SettingsController.php:276
-#: Test/Case/Controller/SettingsControllerTest.php:521
+#: Controller/QueuesController.php:187
+#: Test/Case/Controller/QueuesControllerTest.php:468
 msgid "The task has been deleted."
 msgstr "Задание было удалено."
 
-#: Controller/SettingsController.php:278
-#: Test/Case/Controller/SettingsControllerTest.php:496
+#: Controller/QueuesController.php:189
+#: Test/Case/Controller/QueuesControllerTest.php:443
 msgid "The task could not be deleted. Please, try again."
 msgstr "Задание не может быть удалено. Пожалуйста, попробуйте снова."
 
-#: Controller/SettingsController.php:298
-#: Test/Case/Controller/SettingsControllerTest.php:554
+#: Controller/QueuesController.php:205
+#: Test/Case/Controller/QueuesControllerTest.php:501
 msgid "The task queue has been cleared."
 msgstr "Очередь задач была очищена."
 
-#: Controller/SettingsController.php:300
+#: Controller/QueuesController.php:207
 msgid "The task queue could not be cleared. Please, try again."
 msgstr "Очередь задач не может быть очищена. Пожалуйста, попробуйте снова."
 
-#: Model/Setting.php:968
-#: Test/Case/Controller/SettingsControllerTest.php:214;306;428
-#: Test/Case/Model/SettingTest.php:579
+#: Controller/SettingsController.php:131
+#: Test/Case/Controller/SettingsControllerTest.php:133
+msgid "Application settings has been saved."
+msgstr "Настройки приложения были сохранены."
+
+#: Controller/SettingsController.php:133
+msgid "Reload the page to apply the settings."
+msgstr "Перезагрузите страницу, чтобы применить настройки."
+
+#: Controller/SettingsController.php:141
+#: Test/Case/Controller/SettingsControllerTest.php:171
+msgid "Unable to save application settings."
+msgstr "Не удается сохранить настройки приложения."
+
+#: Controller/SettingsController.php:159 Model/SettingBase.php:1072
+#: Test/Case/Controller/QueuesControllerTest.php:142;229;390
+#: Test/Case/Controller/SettingsControllerTest.php:81;84
+#: Test/Case/Model/SettingBaseTest.php:688
+msgid "Application settings"
+msgstr "Настройки приложения"
+
+#: Controller/SettingsController.php:161
+#: Test/Case/Controller/SettingsControllerTest.php:91
+msgid "Settings"
+msgstr "Настройки"
+
+#: Model/QueueInfo.php:58
+#: Test/Case/Controller/QueuesControllerTest.php:89;205;351
+#: Test/Case/Model/QueueInfoTest.php:73
 msgid "Not ready"
 msgstr "Не готов"
 
-#: Model/Setting.php:969
-#: Test/Case/Controller/SettingsControllerTest.php:215;237;307;429
-#: Test/Case/Model/SettingTest.php:580;632
+#: Model/QueueInfo.php:59
+#: Test/Case/Controller/QueuesControllerTest.php:90;112;206;352
+#: Test/Case/Model/QueueInfoTest.php:74;126
 msgid "Not started"
 msgstr "Не начался"
 
-#: Model/Setting.php:970
-#: Test/Case/Controller/SettingsControllerTest.php:216;308;430
-#: Test/Case/Model/SettingTest.php:581
+#: Model/QueueInfo.php:60
+#: Test/Case/Controller/QueuesControllerTest.php:91;207;353
+#: Test/Case/Model/QueueInfoTest.php:75
 msgid "In progress"
 msgstr "В процессе выполнения"
 
-#: Model/Setting.php:971
-#: Test/Case/Controller/SettingsControllerTest.php:217;223;309;431;437
-#: Test/Case/Model/SettingTest.php:582;618 View/Elements/tableQueue.ctp:50
+#: Model/QueueInfo.php:61
+#: Test/Case/Controller/QueuesControllerTest.php:92;98;208;354;360
+#: Test/Case/Model/QueueInfoTest.php:76;112 View/Elements/tableQueue.ctp:50
 msgid "Completed"
 msgstr "Завершён"
 
-#: Model/Setting.php:972
-#: Test/Case/Controller/SettingsControllerTest.php:218;310;432
-#: Test/Case/Model/SettingTest.php:583
+#: Model/QueueInfo.php:62
+#: Test/Case/Controller/QueuesControllerTest.php:93;209;355
+#: Test/Case/Model/QueueInfoTest.php:77
 msgid "Failed"
 msgstr "Неудавшийся"
 
-#: Model/Setting.php:973
-#: Test/Case/Controller/SettingsControllerTest.php:219;311;433
-#: Test/Case/Model/SettingTest.php:584
+#: Model/QueueInfo.php:63
+#: Test/Case/Controller/QueuesControllerTest.php:94;210;356
+#: Test/Case/Model/QueueInfoTest.php:78
 msgid "Unknown"
 msgstr "Неизвестный"
 
@@ -181,87 +208,87 @@ msgstr ""
 "Уникальное имя объекта базы поиска для поиска сотрудника на сервере LDAP "
 "(например, CN=Users,DC=fabrikam,DC=com)"
 
-#: View/Elements/formSettings.ctp:128
+#: View/Elements/formSettings.ctp:127
 msgid "Autocomplete"
 msgstr "Автодополнение"
 
-#: View/Elements/formSettings.ctp:129
+#: View/Elements/formSettings.ctp:128
 msgid "Autocomplete limit"
 msgstr "Ограничение автодополнения"
 
-#: View/Elements/formSettings.ctp:129
+#: View/Elements/formSettings.ctp:128
 msgid "Limit for autocomplete search query"
 msgstr "Предел для поискового запроса автозаполнения "
 
-#: View/Elements/formSettings.ctp:142
+#: View/Elements/formSettings.ctp:141
 msgid "Notification"
 msgstr "Уведомление"
 
-#: View/Elements/formSettings.ctp:143
+#: View/Elements/formSettings.ctp:142
 msgid "Notify user via E-mail"
 msgstr "Уведомлять пользователя по E-mail"
 
-#: View/Elements/formSettings.ctp:144
+#: View/Elements/formSettings.ctp:143
 msgid "Use user notification via E-mail"
 msgstr "Использовать уведомление пользователя по электронной почте"
 
-#: View/Elements/formSettings.ctp:149
+#: View/Elements/formSettings.ctp:148
 msgid "E-mail"
 msgstr "E-mail"
 
-#: View/Elements/formSettings.ctp:150
+#: View/Elements/formSettings.ctp:149
 msgid "E-mail for contact"
 msgstr "Электронная почта для связи"
 
-#: View/Elements/formSettings.ctp:150
+#: View/Elements/formSettings.ctp:149
 msgid "E-mail for the contact with the administrator"
 msgstr "E-mail для связи с администратором"
 
-#: View/Elements/formSettings.ctp:152
+#: View/Elements/formSettings.ctp:151
 msgid "Subject for E-mail"
 msgstr "Тема для E-mail"
 
-#: View/Elements/formSettings.ctp:152
+#: View/Elements/formSettings.ctp:151
 msgid "Subject for e-mail to contact the administrator"
 msgstr "Тема e-mail при обращении к администратору"
 
-#: View/Elements/formSettings.ctp:157;158
+#: View/Elements/formSettings.ctp:156;157
 msgid "SMTP Server"
 msgstr "Сервер SMTP"
 
-#: View/Elements/formSettings.ctp:158
+#: View/Elements/formSettings.ctp:157
 msgid "Address of the SMTP server."
 msgstr "Адрес SMTP-сервера."
 
-#: View/Elements/formSettings.ctp:160
+#: View/Elements/formSettings.ctp:159
 msgid "Port"
 msgstr "Порт"
 
-#: View/Elements/formSettings.ctp:160
+#: View/Elements/formSettings.ctp:159
 msgid "Port of the SMTP server."
 msgstr "Порт SMTP-сервера."
 
-#: View/Elements/formSettings.ctp:162
+#: View/Elements/formSettings.ctp:161
 msgid "Username"
 msgstr "Имя пользователя"
 
-#: View/Elements/formSettings.ctp:162
+#: View/Elements/formSettings.ctp:161
 msgid "Username for authentication on SMTP server."
 msgstr "Имя пользователя для аутентификации на SMTP сервере."
 
-#: View/Elements/formSettings.ctp:164
+#: View/Elements/formSettings.ctp:163
 msgid "Password"
 msgstr "Пароль"
 
-#: View/Elements/formSettings.ctp:164;166
+#: View/Elements/formSettings.ctp:163;165
 msgid "Caps Lock on"
 msgstr "Включен Caps Lock"
 
-#: View/Elements/formSettings.ctp:166
+#: View/Elements/formSettings.ctp:165
 msgid "Confirm password"
 msgstr "Подтверждение пароля"
 
-#: View/Elements/formSettings.ctp:201
+#: View/Elements/formSettings.ctp:200
 msgid "Save"
 msgstr "Сохранить"
 
@@ -309,27 +336,7 @@ msgstr "Удалить задание"
 msgid "Are you sure you wish to delete task '%s' created %s?"
 msgstr "Вы уверены, что хотите удалить задачу '%s' созданную %s?"
 
-#: View/Settings/index.ctp:14;16;21 View/Settings/queue.ctp:11
-msgid "Application settings"
-msgstr "Настройки приложения"
-
-#: View/Settings/index.ctp:17
-msgid "Settings"
-msgstr "Настройки"
-
-#: View/Settings/queue.ctp:9;12;32
-msgid "Queue of tasks"
-msgstr "Очередь заданий"
-
-#: View/Settings/queue.ctp:21;24
-msgid "Clear queue of tasks"
-msgstr "Очистить очередь задач"
-
-#: View/Settings/queue.ctp:26
-msgid "Are you sure you wish to clear queue of tasks?"
-msgstr "Вы уверены, что хотите очистить очередь задач?"
-
-#: View/Settings/queue.ctp:35
+#: View/Queues/index.ctp:16
 msgid "State queue of tasks"
 msgstr "Состояние очереди задач"
 
