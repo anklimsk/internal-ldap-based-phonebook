@@ -1,5 +1,8 @@
 # CakePHP 2.x Basic functions plugin
 [![Build Status](https://travis-ci.com/anklimsk/cakephp-basic-functions.svg?branch=master)](https://travis-ci.com/anklimsk/cakephp-basic-functions)
+[![Coverage Status](https://codecov.io/gh/anklimsk/cakephp-basic-functions/branch/master/graph/badge.svg)](https://codecov.io/gh/anklimsk/cakephp-basic-functions)
+[![Latest Stable Version](https://poser.pugx.org/anklimsk/cakephp-basic-functions/version)](https://packagist.org/packages/anklimsk/cakephp-basic-functions)
+[![License](https://poser.pugx.org/anklimsk/cakephp-basic-functions/license)](https://packagist.org/packages/anklimsk/cakephp-basic-functions)
 
 Global basic utilities for the CakePHP application
 
@@ -23,9 +26,10 @@ Global basic utilities for the CakePHP application
 
 1. Install the Plugin using composer: `composer require anklimsk/cakephp-basic-functions`
 2. Add the next line to the end of the file `app/Config/bootstrap.php`:
-```php
-CakePlugin::load('CakeBasicFunctions', ['bootstrap' => true]);
-```
+
+   ```php
+   CakePlugin::load('CakeBasicFunctions', ['bootstrap' => true]);
+   ```
 
 ## Using
 

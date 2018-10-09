@@ -8,9 +8,9 @@
  */
 
 App::import(
-    'Lib/Utility',
-    'CakeBasicFunctions.BasicFunctions',
-    ['file' => 'BasicFunctions.php']
+	'Lib/Utility',
+	'CakeBasicFunctions.BasicFunctions',
+	['file' => 'BasicFunctions.php']
 );
 
 /**
@@ -20,7 +20,7 @@ App::import(
  *  Default value `cake_basic_func_lang_code`
  */
 if (!defined('CAKE_BASIC_FUNC_CACHE_KEY_LANG_CODE')) {
-    define('CAKE_BASIC_FUNC_CACHE_KEY_LANG_CODE', 'cake_basic_func_lang_code');
+	define('CAKE_BASIC_FUNC_CACHE_KEY_LANG_CODE', 'cake_basic_func_lang_code');
 }
 
 $prefix = Inflector::slug(App::pluginPath('CakeBasicFunctions'));
@@ -29,9 +29,9 @@ $prefix = Inflector::slug(App::pluginPath('CakeBasicFunctions'));
 *
 */
 Cache::config(CAKE_BASIC_FUNC_CACHE_KEY_LANG_CODE, [
-    'engine' => 'File',
-    'prefix' => $prefix,
-    'duration' => '+1 week',
-    'probability' => 100,
-    'path' => CACHE . CAKE_BASIC_FUNC_CACHE_KEY_LANG_CODE . DS,
+	'engine' => 'File',
+	'prefix' => $prefix,
+	'duration' => '+1 week',
+	'probability' => 100,
+	'path' => CACHE . CAKE_BASIC_FUNC_CACHE_KEY_LANG_CODE . DS,
 ]);
