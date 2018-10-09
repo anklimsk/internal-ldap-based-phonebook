@@ -9,28 +9,28 @@
  */
 
 if (!isset($employee)) {
-    $employee = [];
+	$employee = [];
 }
 
 if (!isset($employee['Employee'])) {
-    return;
+	return;
 }
 
-    $this->loadHelper('CakeTheme.ViewExtension');
-    $this->loadHelper('Text');
-    $truncateOpt = [
-        'ellipsis' => '...',
-        'exact' => false,
-        'html' => false
-    ];
-    $employeeInfo = $this->ViewExtension->popupModalLink(
-        h($employee['Employee'][CAKE_LDAP_LDAP_ATTRIBUTE_NAME]),
-        ['controller' => 'employees', 'action' => 'view', $employee['Employee']['id']]
-    );
-    if (isset($employee['Employee'][CAKE_LDAP_LDAP_ATTRIBUTE_TITLE]) && !empty($employee['Employee'][CAKE_LDAP_LDAP_ATTRIBUTE_TITLE])) {
-        $employeeInfo .= ' - ' . $this->Text->truncate(h($employee['Employee'][CAKE_LDAP_LDAP_ATTRIBUTE_TITLE]), CAKE_LDAP_EMPLOYEE_ITEM_TEXT_MAX_LENGTH, $truncateOpt);
-    }
-    if (isset($employee['Employee']['block']) && $employee['Employee']['block']) {
-        $employeeInfo = $this->Html->tag('s', $employeeInfo);
-    }
-    echo $employeeInfo;
+	$this->loadHelper('CakeTheme.ViewExtension');
+	$this->loadHelper('Text');
+	$truncateOpt = [
+		'ellipsis' => '...',
+		'exact' => false,
+		'html' => false
+	];
+	$employeeInfo = $this->ViewExtension->popupModalLink(
+		h($employee['Employee'][CAKE_LDAP_LDAP_ATTRIBUTE_NAME]),
+		['controller' => 'employees', 'action' => 'view', $employee['Employee']['id']]
+	);
+	if (isset($employee['Employee'][CAKE_LDAP_LDAP_ATTRIBUTE_TITLE]) && !empty($employee['Employee'][CAKE_LDAP_LDAP_ATTRIBUTE_TITLE])) {
+		$employeeInfo .= ' - ' . $this->Text->truncate(h($employee['Employee'][CAKE_LDAP_LDAP_ATTRIBUTE_TITLE]), CAKE_LDAP_EMPLOYEE_ITEM_TEXT_MAX_LENGTH, $truncateOpt);
+	}
+	if (isset($employee['Employee']['block']) && $employee['Employee']['block']) {
+		$employeeInfo = $this->Html->tag('s', $employeeInfo);
+	}
+	echo $employeeInfo;

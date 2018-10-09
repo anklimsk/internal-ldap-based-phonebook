@@ -15,12 +15,11 @@ App::uses('EmployeeInfoBaseHelper', 'CakeLdap.View/Helper');
  *
  * @package plugin.View.Helper
  */
-class EmployeeInfoHelper extends EmployeeInfoBaseHelper
-{
+class EmployeeInfoHelper extends EmployeeInfoBaseHelper {
 /*
-    protected function _getValueForTypeName($data = null, $returnTableRow = true) {
-        $result = $this->ViewExtension->showEmpty($data);
-        return $result;
-    }
+	protected function _getValueForTypeName($data = null, $returnTableRow = true) {
+		$result = $this->ViewExtension->showEmpty($data);
+		return $result;
+	}
 */
 }

@@ -14,36 +14,35 @@ App::uses('AppController', 'Controller');
  *
  * @package plugin.Controller
  */
-class CakeLdapAppController extends AppController
-{
+class CakeLdapAppController extends AppController {
 
-    /**
-     * Array containing the names of components this controller uses. Component names
-     * should not contain the "Component" portion of the class name.
-     *
-     * @var array
-     * @link http://book.cakephp.org/2.0/en/controllers/components.html
-     */
-    public $components = [
-        'Auth',
-        'Session',
-        'Security',
-        'Flash',
-    ];
+/**
+ * Array containing the names of components this controller uses. Component names
+ * should not contain the "Component" portion of the class name.
+ *
+ * @var array
+ * @link http://book.cakephp.org/2.0/en/controllers/components.html
+ */
+	public $components = [
+		'Auth',
+		'Session',
+		'Security',
+		'Flash',
+	];
 
-    /**
-     * An array containing the names of helpers this controller uses. The array elements should
-     * not contain the "Helper" part of the class name.
-     *
-     * @var mixed
-     * @link http://book.cakephp.org/2.0/en/controllers.html#components-helpers-and-uses
-     */
-    public $helpers = [
-        'Html',
-        'Form' => [
-            'className' => 'CakeTheme.ExtBs3Form'
-        ],
-        'CakeTheme.ViewExtension',
-        'AssetCompress.AssetCompress',
-    ];
+/**
+ * An array containing the names of helpers this controller uses. The array elements should
+ * not contain the "Helper" part of the class name.
+ *
+ * @var mixed
+ * @link http://book.cakephp.org/2.0/en/controllers.html#components-helpers-and-uses
+ */
+	public $helpers = [
+		'Html',
+		'Form' => [
+			'className' => 'CakeTheme.ExtBs3Form'
+		],
+		'CakeTheme.ViewExtension',
+		'AssetCompress.AssetCompress',
+	];
 }

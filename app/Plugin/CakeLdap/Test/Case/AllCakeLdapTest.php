@@ -12,27 +12,25 @@
  *
  * @package plugin.Test.Case
  */
-class AllCakeLdapTest extends CakeTestSuite
-{
+class AllCakeLdapTest extends CakeTestSuite {
 
-    /**
-     * Create test suite.
-     *
-     * @return object An object of `CakeTestSuite`.
-     */
-    public static function suite()
-    {
-        $suite = new CakeTestSuite('All CakeLdap tests');
-        $path = dirname(__FILE__);
-        $suite->addTestDirectory($path . DS . 'Console' . DS . 'Command' . DS . 'Task');
-        $suite->addTestDirectory($path . DS . 'Console' . DS . 'Command');
-        $suite->addTestDirectory($path . DS . 'Controller' . DS . 'Component' . DS . 'Auth');
-        $suite->addTestDirectory($path . DS . 'Controller' . DS . 'Component');
-        $suite->addTestDirectory($path . DS . 'Controller');
-        $suite->addTestDirectory($path . DS . 'Lib' . DS . 'Utility');
-        $suite->addTestDirectory($path . DS . 'Model');
-        $suite->addTestDirectory($path . DS . 'View' . DS . 'Helper');
+/**
+ * Create test suite.
+ *
+ * @return object An object of `CakeTestSuite`.
+ */
+	public static function suite() {
+		$suite = new CakeTestSuite('All CakeLdap tests');
+		$path = dirname(__FILE__);
+		$suite->addTestDirectory($path . DS . 'Console' . DS . 'Command' . DS . 'Task');
+		$suite->addTestDirectory($path . DS . 'Console' . DS . 'Command');
+		$suite->addTestDirectory($path . DS . 'Controller' . DS . 'Component' . DS . 'Auth');
+		$suite->addTestDirectory($path . DS . 'Controller' . DS . 'Component');
+		$suite->addTestDirectory($path . DS . 'Controller');
+		$suite->addTestDirectory($path . DS . 'Lib' . DS . 'Utility');
+		$suite->addTestDirectory($path . DS . 'Model');
+		$suite->addTestDirectory($path . DS . 'View' . DS . 'Helper');
 
-        return $suite;
-    }
+		return $suite;
+	}
 }

@@ -18,18 +18,16 @@ App::uses('LdapSource', 'Datasources.Model/Datasource');
  * @package datasources
  * @subpackage datasources.models.datasources
  */
-class LdapExtSource extends LdapSource
-{
+class LdapExtSource extends LdapSource {
 
-    /**
-     * The "D" in CRUD
-     *
-     * @param Model $model The model class having record(s) deleted
-     * @param mixed $conditions *unused*
-     * @return bool Success
-     */
-    public function delete(Model $model, $conditions = null)
-    {
-        return false;
-    }
+/**
+ * The "D" in CRUD
+ *
+ * @param Model $model The model class having record(s) deleted
+ * @param mixed $conditions *unused*
+ * @return bool Success
+ */
+	public function delete(Model $model, $conditions = null) {
+		return false;
+	}
 }

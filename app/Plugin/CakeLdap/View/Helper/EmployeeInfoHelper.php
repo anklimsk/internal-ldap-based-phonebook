@@ -15,7 +15,6 @@ App::uses('EmployeeInfoBaseHelper', 'CakeLdap.View/Helper');
  *
  * @package plugin.View.Helper
  */
-class EmployeeInfoHelper extends EmployeeInfoBaseHelper
-{
+class EmployeeInfoHelper extends EmployeeInfoBaseHelper {
 
 }

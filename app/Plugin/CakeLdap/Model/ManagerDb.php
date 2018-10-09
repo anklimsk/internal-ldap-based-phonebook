@@ -15,28 +15,27 @@ App::uses('EmployeeDb', 'CakeLdap.Model');
  *
  * @package plugin.Model
  */
-class ManagerDb extends EmployeeDb
-{
+class ManagerDb extends EmployeeDb {
 
-    /**
-     * Name of the model.
-     *
-     * @var string
-     * @link http://book.cakephp.org/2.0/en/models/model-attributes.html#name
-     */
-    public $name = 'ManagerDb';
+/**
+ * Name of the model.
+ *
+ * @var string
+ * @link http://book.cakephp.org/2.0/en/models/model-attributes.html#name
+ */
+	public $name = 'ManagerDb';
 
-    /**
-     * Custom database table name, or null/false if no table association is desired.
-     *
-     * @var string
-     */
-    public $useTable = 'employees';
+/**
+ * Custom database table name, or null/false if no table association is desired.
+ *
+ * @var string
+ */
+	public $useTable = 'employees';
 
-    /**
-     * Detailed list of associated models, grouped by binded field.
-     *
-     * @var array
-     */
-    protected $_bindModelCfg = [];
+/**
+ * Detailed list of associated models, grouped by binded field.
+ *
+ * @var array
+ */
+	protected $_bindModelCfg = [];
 }

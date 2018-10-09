@@ -15,48 +15,45 @@ App::uses('CakeText', 'Utility');
  *
  * @package plugin.Console.Command
  */
-class CronShell extends AppShell
-{
+class CronShell extends AppShell {
 
-    /**
-     * Contains tasks to load and instantiate
-     *
-     * @var array
-     * @link http://book.cakephp.org/2.0/en/console-and-shells.html#Shell::$tasks
-     */
-    public $tasks = ['CakeLdap.Sync'];
+/**
+ * Contains tasks to load and instantiate
+ *
+ * @var array
+ * @link http://book.cakephp.org/2.0/en/console-and-shells.html#Shell::$tasks
+ */
+	public $tasks = ['CakeLdap.Sync'];
 
-    /**
-     * Gets the option parser instance and configures it.
-     *
-     * By overriding this method you can configure the ConsoleOptionParser before returning it.
-     *
-     * @return ConsoleOptionParser
-     * @link http://book.cakephp.org/2.0/en/console-and-shells.html#Shell::getOptionParser
-     */
-    public function getOptionParser()
-    {
-        $parser = parent::getOptionParser();
+/**
+ * Gets the option parser instance and configures it.
+ *
+ * By overriding this method you can configure the ConsoleOptionParser before returning it.
+ *
+ * @return ConsoleOptionParser
+ * @link http://book.cakephp.org/2.0/en/console-and-shells.html#Shell::getOptionParser
+ */
+	public function getOptionParser() {
+		$parser = parent::getOptionParser();
 
-        $parser->addSubcommands([
-            CAKE_LDAP_SHELL_CRON_TASK_SYNC => [
-                    'help' => __d('cake_ldap', 'Sync information of employees with LDAP server'),
-                    'parser' => $this->Sync->getOptionParser()
-            ]]);
+		$parser->addSubcommands([
+			CAKE_LDAP_SHELL_CRON_TASK_SYNC => [
+					'help' => __d('cake_ldap', 'Sync information of employees with LDAP server'),
+					'parser' => $this->Sync->getOptionParser()
+			]]);
 
-        return $parser;
-    }
+		return $parser;
+	}
 
-    /**
-     * Main method for this task (call default).
-     *
-     * @return void
-     */
-    public function main()
-    {
-        $this->out(__d('cake_ldap', 'Cron task Shell'));
-        $this->hr();
-        $this->out(__d('cake_ldap', 'This shell is used to execute task scheduled.'));
-        $this->out(__d('cake_ldap', 'Available tasks: %s.', CakeText::toList(constsVals('CAKE_LDAP_SHELL_CRON_TASK_'), __d('cake_ldap', 'and'))));
-    }
+/**
+ * Main method for this task (call default).
+ *
+ * @return void
+ */
+	public function main() {
+		$this->out(__d('cake_ldap', 'Cron task Shell'));
+		$this->hr();
+		$this->out(__d('cake_ldap', 'This shell is used to execute task scheduled.'));
+		$this->out(__d('cake_ldap', 'Available tasks: %s.', CakeText::toList(constsVals('CAKE_LDAP_SHELL_CRON_TASK_'), __d('cake_ldap', 'and'))));
+	}
 }

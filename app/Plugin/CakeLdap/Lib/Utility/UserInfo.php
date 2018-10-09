@@ -18,101 +18,97 @@ App::uses('Hash', 'Utility');
  *
  * @package plugin.Lib.Utility
  */
-class UserInfo
-{
+class UserInfo {
 
-    /**
-     * Stores information of the authenticated user
-     *
-     * @var array
-     */
-    protected $_userInfo = null;
+/**
+ * Stores information of the authenticated user
+ *
+ * @var array
+ */
+	protected $_userInfo = null;
 
-    /**
-     * Constructor.
-     *
-     * Return void
-     */
-    public function __construct()
-    {
-        $this->_userInfo = CakeSession::read('Auth.User');
-    }
+/**
+ * Constructor.
+ *
+ * Return void
+ */
+	public function __construct() {
+		$this->_userInfo = CakeSession::read('Auth.User');
+	}
 
-    /**
-     * Return value of field from user auth information
-     *
-     * @param string $field Field to retrieve
-     * @param array $userInfo Array of information about authenticated user
-     * @return mixed|null User info record. Or null if no user is logged in.
-     */
-    public function getUserField($field = null, $userInfo = null)
-    {
-        if (empty($field)) {
-            return null;
-        }
+/**
+ * Return value of field from user auth information
+ *
+ * @param string $field Field to retrieve
+ * @param array $userInfo Array of information about authenticated user
+ * @return mixed|null User info record. Or null if no user is logged in.
+ */
+	public function getUserField($field = null, $userInfo = null) {
+		if (empty($field)) {
+			return null;
+		}
 
-        if (!empty($userInfo) && is_array($userInfo)) {
-            $targetUserInfo = $userInfo;
-        } else {
-            $targetUserInfo = $this->_userInfo;
-        }
+		if (!empty($userInfo) && is_array($userInfo)) {
+			$targetUserInfo = $userInfo;
+		} else {
+			$targetUserInfo = $this->_userInfo;
+		}
 
-        if (empty($targetUserInfo) || !is_array($targetUserInfo)) {
-            return null;
-        }
+		if (empty($targetUserInfo) || !is_array($targetUserInfo)) {
+			return null;
+		}
 
-        $result = Hash::get($targetUserInfo, $field);
+		$result = Hash::get($targetUserInfo, $field);
 
-        return $result;
-    }
+		return $result;
+	}
 
-    /**
-     * Checking user for compliance with roles
-     *
-     * @param int $roles Bit mask of user role for checking or array
-     *  of bit masks.
-     * @param bool $logicalOr If True, used logical OR for checking several bit masks.
-     *  Used logical AND otherwise.
-     * @param array $userInfo Array of information about authenticated user
-     * @return bool True if success.
-     */
-    public function checkUserRole($roles = null, $logicalOr = true, $userInfo = null)
-    {
-        if (empty($roles) || (empty($this->_userInfo) &&
-            (empty($userInfo) || !is_array($userInfo)))) {
-            return false;
-        }
+/**
+ * Checking user for compliance with roles
+ *
+ * @param int $roles Bit mask of user role for checking or array
+ *  of bit masks.
+ * @param bool $logicalOr If True, used logical OR for checking several bit masks.
+ *  Used logical AND otherwise.
+ * @param array $userInfo Array of information about authenticated user
+ * @return bool True if success.
+ */
+	public function checkUserRole($roles = null, $logicalOr = true, $userInfo = null) {
+		if (empty($roles) || (empty($this->_userInfo) &&
+			(empty($userInfo) || !is_array($userInfo)))) {
+			return false;
+		}
 
-        if (!empty($userInfo) && is_array($userInfo)) {
-            $targetUserInfo = $userInfo;
-        } else {
-            $targetUserInfo = $this->_userInfo;
-        }
-        $userRole = (int)Hash::get($targetUserInfo, 'role');
-        if ($userRole === 0) {
-            return false;
-        }
+		if (!empty($userInfo) && is_array($userInfo)) {
+			$targetUserInfo = $userInfo;
+		} else {
+			$targetUserInfo = $this->_userInfo;
+		}
+		$userRole = (int)Hash::get($targetUserInfo, 'role');
+		if ($userRole === 0) {
+			return false;
+		}
 
-        if (!is_array($roles)) {
-            $roles = [$roles];
-        }
+		if (!is_array($roles)) {
+			$roles = [$roles];
+		}
 
-        if ($logicalOr) {
-            $result = false;
-        } else {
-            $result = true;
-        }
+		if ($logicalOr) {
+			$result = false;
+		} else {
+			$result = true;
+		}
 
-        foreach ($roles as $role) {
-            $role = (int)$role;
-            $resultItem = ((($userRole & $role) === $role) ? true : false);
-            if ($logicalOr) {
-                $result |= $resultItem;
-            } else {
-                $result &= $resultItem;
-            }
-        }
+		foreach ($roles as $role) {
+			$role = (int)$role;
+			$resultItem = ((($userRole & $role) === $role) ? true : false);
+			if ($logicalOr) {
+				$result |= $resultItem;
+			} else {
+				$result &= $resultItem;
+			}
+		}
 
-        return (bool)$result;
-    }
+		return (bool)$result;
+	}
 }

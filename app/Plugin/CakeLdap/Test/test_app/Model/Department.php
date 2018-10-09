@@ -16,7 +16,6 @@ App::uses('DepartmentDb', 'CakeLdap.Model');
  *
  * @package app.Model
  */
-class Department extends DepartmentDb
-{
+class Department extends DepartmentDb {
 
 }

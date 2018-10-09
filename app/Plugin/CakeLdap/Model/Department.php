@@ -15,7 +15,13 @@ App::uses('DepartmentDb', 'CakeLdap.Model');
  *
  * @package plugin.Model
  */
-class Department extends DepartmentDb
-{
+class Department extends DepartmentDb {
 
+/**
+ * Name of the model.
+ *
+ * @var string
+ * @link http://book.cakephp.org/2.0/en/models/model-attributes.html#name
+ */
+	public $name = 'Department';
 }

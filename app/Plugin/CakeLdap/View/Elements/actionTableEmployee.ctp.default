@@ -9,12 +9,12 @@
  */
 
 if (!isset($employee)) {
-    $employee = [];
+	$employee = [];
 }
 
 if (empty($employee)) {
-    return;
+	return;
 }
 
-    $action = '';
-    echo $action;
+	$action = '';
+	echo $action;

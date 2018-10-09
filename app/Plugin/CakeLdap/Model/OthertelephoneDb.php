@@ -16,73 +16,72 @@ App::uses('CakeLdapAppModel', 'CakeLdap.Model');
  *
  * @package plugin.Model
  */
-class OthertelephoneDb extends CakeLdapAppModel
-{
+class OthertelephoneDb extends CakeLdapAppModel {
 
-    /**
-     * Name of the model.
-     *
-     * @var string
-     * @link http://book.cakephp.org/2.0/en/models/model-attributes.html#name
-     */
-    public $name = 'OthertelephoneDb';
+/**
+ * Name of the model.
+ *
+ * @var string
+ * @link http://book.cakephp.org/2.0/en/models/model-attributes.html#name
+ */
+	public $name = 'OthertelephoneDb';
 
-    /**
-     * Custom database table name, or null/false if no table association is desired.
-     *
-     * @var string
-     */
-    public $useTable = 'othertelephones';
+/**
+ * Custom database table name, or null/false if no table association is desired.
+ *
+ * @var string
+ */
+	public $useTable = 'othertelephones';
 
-    /**
-     * Custom display field name. Display fields are used by Scaffold, in SELECT boxes' OPTION elements.
-     *
-     * This field is also used in `find('list')` when called with no extra parameters in the fields list
-     *
-     * @var string
-     * @link http://book.cakephp.org/2.0/en/models/model-attributes.html#displayfield
-     */
-    public $displayField = 'value';
+/**
+ * Custom display field name. Display fields are used by Scaffold, in SELECT boxes' OPTION elements.
+ *
+ * This field is also used in `find('list')` when called with no extra parameters in the fields list
+ *
+ * @var string
+ * @link http://book.cakephp.org/2.0/en/models/model-attributes.html#displayfield
+ */
+	public $displayField = 'value';
 
-    /**
-     * List of behaviors to load when the model object is initialized.
-     *
-     * @var array
-     * @link http://book.cakephp.org/2.0/en/models/behaviors.html#using-behaviors
-     */
-    public $actsAs = [
-        'CakeLdap.BindValidation' => [
-            'ldapField' => CAKE_LDAP_LDAP_ATTRIBUTE_OTHER_TELEPHONE_NUMBER
-        ]
-    ];
+/**
+ * List of behaviors to load when the model object is initialized.
+ *
+ * @var array
+ * @link http://book.cakephp.org/2.0/en/models/behaviors.html#using-behaviors
+ */
+	public $actsAs = [
+		'CakeLdap.BindValidation' => [
+			'ldapField' => CAKE_LDAP_LDAP_ATTRIBUTE_OTHER_TELEPHONE_NUMBER
+		]
+	];
 
-    /**
-     * List of validation rules. It must be an array with the field name as key and using
-     * as value one of the following possibilities
-     *
-     * @var array
-     * @link http://book.cakephp.org/2.0/en/models/model-attributes.html#validate
-     * @link http://book.cakephp.org/2.0/en/models/data-validation.html
-     */
-    public $validate = [
-        'id' => [
-            'naturalNumber' => [
-                'rule' => ['naturalNumber'],
-                'message' => 'Incorrect primary key',
-                'allowEmpty' => false,
-                'required' => true,
-                'last' => true,
-                'on' => 'update'
-            ],
-        ],
-        'value' => [
-            'notBlank' => [
-                'rule' => ['notBlank'],
-                'message' => 'Incorrect value',
-                'allowEmpty' => false,
-                'required' => true,
-                'last' => true
-            ],
-        ],
-    ];
+/**
+ * List of validation rules. It must be an array with the field name as key and using
+ * as value one of the following possibilities
+ *
+ * @var array
+ * @link http://book.cakephp.org/2.0/en/models/model-attributes.html#validate
+ * @link http://book.cakephp.org/2.0/en/models/data-validation.html
+ */
+	public $validate = [
+		'id' => [
+			'naturalNumber' => [
+				'rule' => ['naturalNumber'],
+				'message' => 'Incorrect primary key',
+				'allowEmpty' => false,
+				'required' => true,
+				'last' => true,
+				'on' => 'update'
+			],
+		],
+		'value' => [
+			'notBlank' => [
+				'rule' => ['notBlank'],
+				'message' => 'Incorrect value',
+				'allowEmpty' => false,
+				'required' => true,
+				'last' => true
+			],
+		],
+	];
 }

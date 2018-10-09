@@ -14,7 +14,7 @@
  * Used for set global find limit, if needed. Default value `5000`
  */
 if (!defined('CAKE_LDAP_GLOBAL_QUERY_LIMIT')) {
-    define('CAKE_LDAP_GLOBAL_QUERY_LIMIT', 5000);
+	define('CAKE_LDAP_GLOBAL_QUERY_LIMIT', 5000);
 }
 
 /**
@@ -23,7 +23,7 @@ if (!defined('CAKE_LDAP_GLOBAL_QUERY_LIMIT')) {
  * Used for set level of deep tree employee for saveing records on synchronize. Default value `50`
  */
 if (!defined('CAKE_LDAP_TREE_EMPLOYEE_DEEP_LIMIT')) {
-    define('CAKE_LDAP_TREE_EMPLOYEE_DEEP_LIMIT', 50);
+	define('CAKE_LDAP_TREE_EMPLOYEE_DEEP_LIMIT', 50);
 }
 
 /**
@@ -32,7 +32,7 @@ if (!defined('CAKE_LDAP_TREE_EMPLOYEE_DEEP_LIMIT')) {
  * Used for set the number of records to synchronize. Default value `5000`
  */
 if (!defined('CAKE_LDAP_SYNC_AD_LIMIT')) {
-    define('CAKE_LDAP_SYNC_AD_LIMIT', 5000);
+	define('CAKE_LDAP_SYNC_AD_LIMIT', 5000);
 }
 
 /**
@@ -41,7 +41,7 @@ if (!defined('CAKE_LDAP_SYNC_AD_LIMIT')) {
  * Used for set time limit of synchronize records. Default value `60`
  */
 if (!defined('SYNC_EMPLOYEE_TIME_LIMIT')) {
-    define('SYNC_EMPLOYEE_TIME_LIMIT', 180);
+	define('SYNC_EMPLOYEE_TIME_LIMIT', 180);
 }
 
 /**
@@ -50,7 +50,7 @@ if (!defined('SYNC_EMPLOYEE_TIME_LIMIT')) {
  * Used for set time limit of synchronize tree records. Default value `60`
  */
 if (!defined('SYNC_TREE_EMPLOYEE_TIME_LIMIT')) {
-    define('SYNC_TREE_EMPLOYEE_TIME_LIMIT', 180);
+	define('SYNC_TREE_EMPLOYEE_TIME_LIMIT', 180);
 }
 
 /**
@@ -59,7 +59,7 @@ if (!defined('SYNC_TREE_EMPLOYEE_TIME_LIMIT')) {
  * Used for set time limit of reorder tree of employee. Default value `180`
  */
 if (!defined('REORDER_TREE_EMPLOYEE_TIME_LIMIT')) {
-    define('REORDER_TREE_EMPLOYEE_TIME_LIMIT', 180);
+	define('REORDER_TREE_EMPLOYEE_TIME_LIMIT', 180);
 }
 
 /**
@@ -68,7 +68,7 @@ if (!defined('REORDER_TREE_EMPLOYEE_TIME_LIMIT')) {
  * Used for set time limit of recover tree of employee. Default value `180`
  */
 if (!defined('RECOVER_TREE_EMPLOYEE_TIME_LIMIT')) {
-    define('RECOVER_TREE_EMPLOYEE_TIME_LIMIT', 180);
+	define('RECOVER_TREE_EMPLOYEE_TIME_LIMIT', 180);
 }
 
 /**
@@ -77,7 +77,7 @@ if (!defined('RECOVER_TREE_EMPLOYEE_TIME_LIMIT')) {
  * Used for set time limit of check state tree of employee. Default value `60`
  */
 if (!defined('CHECK_TREE_EMPLOYEE_TIME_LIMIT')) {
-    define('CHECK_TREE_EMPLOYEE_TIME_LIMIT', 60);
+	define('CHECK_TREE_EMPLOYEE_TIME_LIMIT', 60);
 }
 
 /**
@@ -87,7 +87,7 @@ if (!defined('CHECK_TREE_EMPLOYEE_TIME_LIMIT')) {
  * Used for set name of command. Default value `sync`
  */
 if (!defined('CAKE_LDAP_SHELL_CRON_TASK_SYNC')) {
-    define('CAKE_LDAP_SHELL_CRON_TASK_SYNC', 'sync');
+	define('CAKE_LDAP_SHELL_CRON_TASK_SYNC', 'sync');
 }
 
 /**
@@ -99,7 +99,7 @@ if (!defined('CAKE_LDAP_SHELL_CRON_TASK_SYNC')) {
  *  Default value `25`
  */
 if (!defined('CAKE_LDAP_EMPLOYEE_TABLE_TEXT_MAX_LENGTH')) {
-    define('CAKE_LDAP_EMPLOYEE_TABLE_TEXT_MAX_LENGTH', 25);
+	define('CAKE_LDAP_EMPLOYEE_TABLE_TEXT_MAX_LENGTH', 25);
 }
 
 /**
@@ -111,7 +111,7 @@ if (!defined('CAKE_LDAP_EMPLOYEE_TABLE_TEXT_MAX_LENGTH')) {
  *  Default value `50`
  */
 if (!defined('CAKE_LDAP_EMPLOYEE_ITEM_TEXT_MAX_LENGTH')) {
-    define('CAKE_LDAP_EMPLOYEE_ITEM_TEXT_MAX_LENGTH', 50);
+	define('CAKE_LDAP_EMPLOYEE_ITEM_TEXT_MAX_LENGTH', 50);
 }
 
 /**
@@ -121,7 +121,7 @@ if (!defined('CAKE_LDAP_EMPLOYEE_ITEM_TEXT_MAX_LENGTH')) {
  *  Default value `64` px
  */
 if (!defined('CAKE_LDAP_PHOTO_SIZE_SMALL')) {
-    define('CAKE_LDAP_PHOTO_SIZE_SMALL', 64);
+	define('CAKE_LDAP_PHOTO_SIZE_SMALL', 64);
 }
 
 /**
@@ -131,7 +131,7 @@ if (!defined('CAKE_LDAP_PHOTO_SIZE_SMALL')) {
  *  Default value `200` px
  */
 if (!defined('CAKE_LDAP_PHOTO_SIZE_LARGE')) {
-    define('CAKE_LDAP_PHOTO_SIZE_LARGE', 200);
+	define('CAKE_LDAP_PHOTO_SIZE_LARGE', 200);
 }
 
 /**
@@ -141,7 +141,7 @@ if (!defined('CAKE_LDAP_PHOTO_SIZE_LARGE')) {
  *  Default value `cake_ldap_config`
  */
 if (!defined('CAKE_LDAP_CACHE_KEY_CONFIG')) {
-    define('CAKE_LDAP_CACHE_KEY_CONFIG', 'cake_ldap_config');
+	define('CAKE_LDAP_CACHE_KEY_CONFIG', 'cake_ldap_config');
 }
 
 /**
@@ -151,7 +151,7 @@ if (!defined('CAKE_LDAP_CACHE_KEY_CONFIG')) {
  *  and fields. Default value `cake_ldap_db`
  */
 if (!defined('CAKE_LDAP_CACHE_KEY_LDAP_SYNC_DB')) {
-    define('CAKE_LDAP_CACHE_KEY_LDAP_SYNC_DB', 'cake_ldap_db');
+	define('CAKE_LDAP_CACHE_KEY_LDAP_SYNC_DB', 'cake_ldap_db');
 }
 
 /**
@@ -161,7 +161,7 @@ if (!defined('CAKE_LDAP_CACHE_KEY_LDAP_SYNC_DB')) {
  *  Default value `cake_ldap_tree`
  */
 if (!defined('CAKE_LDAP_CACHE_KEY_TREE_EMPLOYEES')) {
-    define('CAKE_LDAP_CACHE_KEY_TREE_EMPLOYEES', 'cake_ldap_tree');
+	define('CAKE_LDAP_CACHE_KEY_TREE_EMPLOYEES', 'cake_ldap_tree');
 }
 
 /**
@@ -172,7 +172,7 @@ if (!defined('CAKE_LDAP_CACHE_KEY_TREE_EMPLOYEES')) {
  * @link https://msdn.microsoft.com/en-us/library/windows/desktop/aa366101%28v=vs.85%29.aspx
  */
 if (!defined('CAKE_LDAP_LDAP_DISTINGUISHED_NAME')) {
-    define('CAKE_LDAP_LDAP_DISTINGUISHED_NAME', 'dn');
+	define('CAKE_LDAP_LDAP_DISTINGUISHED_NAME', 'dn');
 }
 
 /**
@@ -184,7 +184,7 @@ if (!defined('CAKE_LDAP_LDAP_DISTINGUISHED_NAME')) {
  * @link https://msdn.microsoft.com/en-us/library/windows/desktop/ms675516%28v=vs.85%29.aspx
  */
 if (!defined('CAKE_LDAP_LDAP_ATTRIBUTE_DISTINGUISHED_NAME')) {
-    define('CAKE_LDAP_LDAP_ATTRIBUTE_DISTINGUISHED_NAME', 'distinguishedname');
+	define('CAKE_LDAP_LDAP_ATTRIBUTE_DISTINGUISHED_NAME', 'distinguishedname');
 }
 
 /**
@@ -197,7 +197,7 @@ if (!defined('CAKE_LDAP_LDAP_ATTRIBUTE_DISTINGUISHED_NAME')) {
  * @link https://msdn.microsoft.com/en-us/library/windows/desktop/ms680857%28v=vs.85%29.aspx
  */
 if (!defined('CAKE_LDAP_LDAP_ATTRIBUTE_USER_PRINCIPAL_NAME')) {
-    define('CAKE_LDAP_LDAP_ATTRIBUTE_USER_PRINCIPAL_NAME', 'userprincipalname');
+	define('CAKE_LDAP_LDAP_ATTRIBUTE_USER_PRINCIPAL_NAME', 'userprincipalname');
 }
 
 /**
@@ -209,7 +209,7 @@ if (!defined('CAKE_LDAP_LDAP_ATTRIBUTE_USER_PRINCIPAL_NAME')) {
  * @link https://msdn.microsoft.com/en-us/library/windows/desktop/ms677099%28v=vs.85%29.aspx
  */
 if (!defined('CAKE_LDAP_LDAP_ATTRIBUTE_MEMBER_OF')) {
-    define('CAKE_LDAP_LDAP_ATTRIBUTE_MEMBER_OF', 'memberof');
+	define('CAKE_LDAP_LDAP_ATTRIBUTE_MEMBER_OF', 'memberof');
 }
 
 /**
@@ -221,7 +221,7 @@ if (!defined('CAKE_LDAP_LDAP_ATTRIBUTE_MEMBER_OF')) {
  * @link https://msdn.microsoft.com/en-us/library/windows/desktop/ms678697%28v=vs.85%29.aspx
  */
 if (!defined('CAKE_LDAP_LDAP_ATTRIBUTE_NAME')) {
-    define('CAKE_LDAP_LDAP_ATTRIBUTE_NAME', 'name');
+	define('CAKE_LDAP_LDAP_ATTRIBUTE_NAME', 'name');
 }
 
 /**
@@ -233,7 +233,7 @@ if (!defined('CAKE_LDAP_LDAP_ATTRIBUTE_NAME')) {
  * @link https://msdn.microsoft.com/en-us/library/windows/desktop/ms675457%28v=vs.85%29.aspx
  */
 if (!defined('CAKE_LDAP_LDAP_ATTRIBUTE_COMPANY')) {
-    define('CAKE_LDAP_LDAP_ATTRIBUTE_COMPANY', 'company');
+	define('CAKE_LDAP_LDAP_ATTRIBUTE_COMPANY', 'company');
 }
 
 /**
@@ -246,7 +246,7 @@ if (!defined('CAKE_LDAP_LDAP_ATTRIBUTE_COMPANY')) {
  * @link https://msdn.microsoft.com/en-us/library/windows/desktop/ms675514%28v=vs.85%29.aspx
  */
 if (!defined('CAKE_LDAP_LDAP_ATTRIBUTE_DISPLAY_NAME')) {
-    define('CAKE_LDAP_LDAP_ATTRIBUTE_DISPLAY_NAME', 'displayname');
+	define('CAKE_LDAP_LDAP_ATTRIBUTE_DISPLAY_NAME', 'displayname');
 }
 
 /**
@@ -258,7 +258,7 @@ if (!defined('CAKE_LDAP_LDAP_ATTRIBUTE_DISPLAY_NAME')) {
  * @link https://msdn.microsoft.com/en-us/library/windows/desktop/ms676202%28v=vs.85%29.aspx
  */
 if (!defined('CAKE_LDAP_LDAP_ATTRIBUTE_INITIALS')) {
-    define('CAKE_LDAP_LDAP_ATTRIBUTE_INITIALS', 'initials');
+	define('CAKE_LDAP_LDAP_ATTRIBUTE_INITIALS', 'initials');
 }
 
 /**
@@ -270,7 +270,7 @@ if (!defined('CAKE_LDAP_LDAP_ATTRIBUTE_INITIALS')) {
  * @link https://msdn.microsoft.com/en-us/library/windows/desktop/ms679872%28v=vs.85%29.aspx
  */
 if (!defined('CAKE_LDAP_LDAP_ATTRIBUTE_SURNAME')) {
-    define('CAKE_LDAP_LDAP_ATTRIBUTE_SURNAME', 'sn');
+	define('CAKE_LDAP_LDAP_ATTRIBUTE_SURNAME', 'sn');
 }
 
 /**
@@ -282,7 +282,7 @@ if (!defined('CAKE_LDAP_LDAP_ATTRIBUTE_SURNAME')) {
  * @link https://msdn.microsoft.com/en-us/library/windows/desktop/ms675719%28v=vs.85%29.aspx
  */
 if (!defined('CAKE_LDAP_LDAP_ATTRIBUTE_GIVEN_NAME')) {
-    define('CAKE_LDAP_LDAP_ATTRIBUTE_GIVEN_NAME', 'givenname');
+	define('CAKE_LDAP_LDAP_ATTRIBUTE_GIVEN_NAME', 'givenname');
 }
 
 /**
@@ -294,7 +294,7 @@ if (!defined('CAKE_LDAP_LDAP_ATTRIBUTE_GIVEN_NAME')) {
  * @link https://msdn.microsoft.com/en-us/library/windows/desktop/ms677108%28v=vs.85%29.aspx
  */
 if (!defined('CAKE_LDAP_LDAP_ATTRIBUTE_MIDDLE_NAME')) {
-    define('CAKE_LDAP_LDAP_ATTRIBUTE_MIDDLE_NAME', 'middlename');
+	define('CAKE_LDAP_LDAP_ATTRIBUTE_MIDDLE_NAME', 'middlename');
 }
 
 /**
@@ -306,7 +306,7 @@ if (!defined('CAKE_LDAP_LDAP_ATTRIBUTE_MIDDLE_NAME')) {
  * @link https://msdn.microsoft.com/en-us/library/windows/desktop/ms680037%28v=vs.85%29.aspx
  */
 if (!defined('CAKE_LDAP_LDAP_ATTRIBUTE_TITLE')) {
-    define('CAKE_LDAP_LDAP_ATTRIBUTE_TITLE', 'title');
+	define('CAKE_LDAP_LDAP_ATTRIBUTE_TITLE', 'title');
 }
 
 /**
@@ -318,7 +318,7 @@ if (!defined('CAKE_LDAP_LDAP_ATTRIBUTE_TITLE')) {
  * @link https://msdn.microsoft.com/en-us/library/windows/desktop/ms675490%28v=vs.85%29.aspx
  */
 if (!defined('CAKE_LDAP_LDAP_ATTRIBUTE_DEPARTMENT')) {
-    define('CAKE_LDAP_LDAP_ATTRIBUTE_DEPARTMENT', 'department');
+	define('CAKE_LDAP_LDAP_ATTRIBUTE_DEPARTMENT', 'department');
 }
 
 /**
@@ -330,7 +330,7 @@ if (!defined('CAKE_LDAP_LDAP_ATTRIBUTE_DEPARTMENT')) {
  * @link https://msdn.microsoft.com/en-us/library/windows/desktop/ms675518%28v=vs.85%29.aspx
  */
 if (!defined('CAKE_LDAP_LDAP_ATTRIBUTE_DIVISION')) {
-    define('CAKE_LDAP_LDAP_ATTRIBUTE_DIVISION', 'division');
+	define('CAKE_LDAP_LDAP_ATTRIBUTE_DIVISION', 'division');
 }
 
 /**
@@ -342,7 +342,7 @@ if (!defined('CAKE_LDAP_LDAP_ATTRIBUTE_DIVISION')) {
  * @link https://msdn.microsoft.com/en-us/library/windows/desktop/ms680027%28v=vs.85%29.aspx
  */
 if (!defined('CAKE_LDAP_LDAP_ATTRIBUTE_TELEPHONE_NUMBER')) {
-    define('CAKE_LDAP_LDAP_ATTRIBUTE_TELEPHONE_NUMBER', 'telephonenumber');
+	define('CAKE_LDAP_LDAP_ATTRIBUTE_TELEPHONE_NUMBER', 'telephonenumber');
 }
 
 /**
@@ -354,7 +354,7 @@ if (!defined('CAKE_LDAP_LDAP_ATTRIBUTE_TELEPHONE_NUMBER')) {
  * @link https://msdn.microsoft.com/en-us/library/windows/desktop/ms679094%28v=vs.85%29.aspx
  */
 if (!defined('CAKE_LDAP_LDAP_ATTRIBUTE_OTHER_TELEPHONE_NUMBER')) {
-    define('CAKE_LDAP_LDAP_ATTRIBUTE_OTHER_TELEPHONE_NUMBER', 'othertelephone');
+	define('CAKE_LDAP_LDAP_ATTRIBUTE_OTHER_TELEPHONE_NUMBER', 'othertelephone');
 }
 
 /**
@@ -366,7 +366,7 @@ if (!defined('CAKE_LDAP_LDAP_ATTRIBUTE_OTHER_TELEPHONE_NUMBER')) {
  * @link https://msdn.microsoft.com/en-us/library/windows/desktop/ms677119%28v=vs.85%29.aspx
  */
 if (!defined('CAKE_LDAP_LDAP_ATTRIBUTE_MOBILE_TELEPHONE_NUMBER')) {
-    define('CAKE_LDAP_LDAP_ATTRIBUTE_MOBILE_TELEPHONE_NUMBER', 'mobile');
+	define('CAKE_LDAP_LDAP_ATTRIBUTE_MOBILE_TELEPHONE_NUMBER', 'mobile');
 }
 
 /**
@@ -378,7 +378,7 @@ if (!defined('CAKE_LDAP_LDAP_ATTRIBUTE_MOBILE_TELEPHONE_NUMBER')) {
  * @link https://msdn.microsoft.com/en-us/library/windows/desktop/ms679092%28v=vs.85%29.aspx
  */
 if (!defined('CAKE_LDAP_LDAP_ATTRIBUTE_OTHER_MOBILE_TELEPHONE_NUMBER')) {
-    define('CAKE_LDAP_LDAP_ATTRIBUTE_OTHER_MOBILE_TELEPHONE_NUMBER', 'othermobile');
+	define('CAKE_LDAP_LDAP_ATTRIBUTE_OTHER_MOBILE_TELEPHONE_NUMBER', 'othermobile');
 }
 
 /**
@@ -390,7 +390,7 @@ if (!defined('CAKE_LDAP_LDAP_ATTRIBUTE_OTHER_MOBILE_TELEPHONE_NUMBER')) {
  * @link https://msdn.microsoft.com/en-us/library/windows/desktop/ms679117%28v=vs.85%29.aspx
  */
 if (!defined('CAKE_LDAP_LDAP_ATTRIBUTE_OFFICE_NAME')) {
-    define('CAKE_LDAP_LDAP_ATTRIBUTE_OFFICE_NAME', 'physicaldeliveryofficename');
+	define('CAKE_LDAP_LDAP_ATTRIBUTE_OFFICE_NAME', 'physicaldeliveryofficename');
 }
 
 /**
@@ -402,7 +402,7 @@ if (!defined('CAKE_LDAP_LDAP_ATTRIBUTE_OFFICE_NAME')) {
  * @link https://msdn.microsoft.com/en-us/library/windows/desktop/ms676855%28v=vs.85%29.aspx
  */
 if (!defined('CAKE_LDAP_LDAP_ATTRIBUTE_MAIL')) {
-    define('CAKE_LDAP_LDAP_ATTRIBUTE_MAIL', 'mail');
+	define('CAKE_LDAP_LDAP_ATTRIBUTE_MAIL', 'mail');
 }
 
 /**
@@ -414,7 +414,7 @@ if (!defined('CAKE_LDAP_LDAP_ATTRIBUTE_MAIL')) {
  * @link https://msdn.microsoft.com/en-us/library/windows/desktop/ms676859%28v=vs.85%29.aspx
  */
 if (!defined('CAKE_LDAP_LDAP_ATTRIBUTE_MANAGER')) {
-    define('CAKE_LDAP_LDAP_ATTRIBUTE_MANAGER', 'manager');
+	define('CAKE_LDAP_LDAP_ATTRIBUTE_MANAGER', 'manager');
 }
 
 /**
@@ -426,7 +426,7 @@ if (!defined('CAKE_LDAP_LDAP_ATTRIBUTE_MANAGER')) {
  * @link https://msdn.microsoft.com/en-us/library/windows/desktop/ms680034%28v=vs.85%29.aspx
  */
 if (!defined('CAKE_LDAP_LDAP_ATTRIBUTE_PHOTO')) {
-    define('CAKE_LDAP_LDAP_ATTRIBUTE_PHOTO', 'thumbnailphoto');
+	define('CAKE_LDAP_LDAP_ATTRIBUTE_PHOTO', 'thumbnailphoto');
 }
 
 /**
@@ -438,7 +438,7 @@ if (!defined('CAKE_LDAP_LDAP_ATTRIBUTE_PHOTO')) {
  * @link https://msdn.microsoft.com/en-us/library/windows/desktop/ms680927%28v=vs.85%29.aspx
  */
 if (!defined('CAKE_LDAP_LDAP_ATTRIBUTE_COMPUTER')) {
-    define('CAKE_LDAP_LDAP_ATTRIBUTE_COMPUTER', 'wwwhomepage');
+	define('CAKE_LDAP_LDAP_ATTRIBUTE_COMPUTER', 'wwwhomepage');
 }
 
 /**
@@ -450,7 +450,7 @@ if (!defined('CAKE_LDAP_LDAP_ATTRIBUTE_COMPUTER')) {
  * @link https://msdn.microsoft.com/en-us/library/windows/desktop/ms675662%28v=vs.85%29.aspx
  */
 if (!defined('CAKE_LDAP_LDAP_ATTRIBUTE_EMPLOYEE_ID')) {
-    define('CAKE_LDAP_LDAP_ATTRIBUTE_EMPLOYEE_ID', 'employeeid');
+	define('CAKE_LDAP_LDAP_ATTRIBUTE_EMPLOYEE_ID', 'employeeid');
 }
 
 /**
@@ -462,7 +462,7 @@ if (!defined('CAKE_LDAP_LDAP_ATTRIBUTE_EMPLOYEE_ID')) {
  * @link https://msdn.microsoft.com/en-us/library/windows/desktop/ms679021%28v=vs.85%29.aspx
  */
 if (!defined('CAKE_LDAP_LDAP_ATTRIBUTE_OBJECT_GUID')) {
-    define('CAKE_LDAP_LDAP_ATTRIBUTE_OBJECT_GUID', 'objectguid');
+	define('CAKE_LDAP_LDAP_ATTRIBUTE_OBJECT_GUID', 'objectguid');
 }
 
 /**
@@ -474,7 +474,7 @@ if (!defined('CAKE_LDAP_LDAP_ATTRIBUTE_OBJECT_GUID')) {
  * @link https://msdn.microsoft.com/en-us/library/windows/desktop/ms679102%28v=vs.85%29.aspx
  */
 if (!defined('CAKE_LDAP_LDAP_ATTRIBUTE_BIRTHDAY')) {
-    define('CAKE_LDAP_LDAP_ATTRIBUTE_BIRTHDAY', 'pager');
+	define('CAKE_LDAP_LDAP_ATTRIBUTE_BIRTHDAY', 'pager');
 }
 
 /**
@@ -486,7 +486,7 @@ if (!defined('CAKE_LDAP_LDAP_ATTRIBUTE_BIRTHDAY')) {
  * @https://msdn.microsoft.com/en-us/library/windows/desktop/ms676213%28v=vs.85%29.aspx
  */
 if (!defined('CAKE_LDAP_LDAP_ATTRIBUTE_SIP_PHONE')) {
-    define('CAKE_LDAP_LDAP_ATTRIBUTE_SIP_PHONE', 'ipphone');
+	define('CAKE_LDAP_LDAP_ATTRIBUTE_SIP_PHONE', 'ipphone');
 }
 
 /**
@@ -496,7 +496,7 @@ if (!defined('CAKE_LDAP_LDAP_ATTRIBUTE_SIP_PHONE')) {
  *  Default value `image/jpeg`
  */
 if (!defined('CAKE_LDAP_PHOTO_DEFAULT_MIME_TYPE')) {
-    define('CAKE_LDAP_PHOTO_DEFAULT_MIME_TYPE', 'image/jpeg');
+	define('CAKE_LDAP_PHOTO_DEFAULT_MIME_TYPE', 'image/jpeg');
 }
 
 $prefix = Inflector::slug(App::pluginPath('CakeLdap'));
@@ -505,11 +505,11 @@ $prefix = Inflector::slug(App::pluginPath('CakeLdap'));
 *
 */
 Cache::config(CAKE_LDAP_CACHE_KEY_CONFIG, [
-    'engine' => 'File',
-    'prefix' => $prefix,
-    'duration' => '+1 week',
-    'probability' => 100,
-    'path' => CACHE . CAKE_LDAP_CACHE_KEY_CONFIG . DS,
+	'engine' => 'File',
+	'prefix' => $prefix,
+	'duration' => '+1 week',
+	'probability' => 100,
+	'path' => CACHE . CAKE_LDAP_CACHE_KEY_CONFIG . DS,
 ]);
 
 /**
@@ -518,11 +518,11 @@ Cache::config(CAKE_LDAP_CACHE_KEY_CONFIG, [
 *
 */
 Cache::config(CAKE_LDAP_CACHE_KEY_LDAP_SYNC_DB, [
-    'engine' => 'File',
-    'prefix' => $prefix,
-    'duration' => '+1 week',
-    'probability' => 100,
-    'path' => CACHE . CAKE_LDAP_CACHE_KEY_LDAP_SYNC_DB . DS,
+	'engine' => 'File',
+	'prefix' => $prefix,
+	'duration' => '+1 week',
+	'probability' => 100,
+	'path' => CACHE . CAKE_LDAP_CACHE_KEY_LDAP_SYNC_DB . DS,
 ]);
 
 /**
@@ -530,9 +530,9 @@ Cache::config(CAKE_LDAP_CACHE_KEY_LDAP_SYNC_DB, [
 *
 */
 Cache::config(CAKE_LDAP_CACHE_KEY_TREE_EMPLOYEES, [
-    'engine' => 'File',
-    'prefix' => $prefix,
-    'duration' => '+1 week',
-    'probability' => 100,
-    'path' => CACHE . CAKE_LDAP_CACHE_KEY_TREE_EMPLOYEES . DS,
+	'engine' => 'File',
+	'prefix' => $prefix,
+	'duration' => '+1 week',
+	'probability' => 100,
+	'path' => CACHE . CAKE_LDAP_CACHE_KEY_TREE_EMPLOYEES . DS,
 ]);

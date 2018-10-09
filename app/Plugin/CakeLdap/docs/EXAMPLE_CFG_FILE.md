@@ -1,4 +1,5 @@
 # Example of configuration file
+
 ```php
 $config['CakeLdap'] = [
     'LdapSync' => [
