@@ -30,6 +30,14 @@ class Employee extends EmployeeDb
 {
 
     /**
+     * Name of the model.
+     *
+     * @var string
+     * @link http://book.cakephp.org/2.0/en/models/model-attributes.html#name
+     */
+    public $name = 'Employee';
+
+    /**
      * List of behaviors to load when the model object is initialized.
      *
      * @var array
