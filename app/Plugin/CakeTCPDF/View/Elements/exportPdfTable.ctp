@@ -9,26 +9,26 @@
  */
 
 if (!isset($exportConfig)) {
-    $exportConfig = [];
+	$exportConfig = [];
 }
 
 if (!isset($exportData)) {
-    $exportData = [];
+	$exportData = [];
 }
 
 if (empty($exportConfig) || empty($exportData)) {
-    return;
+	return;
 }
 
 extract($exportConfig);
 if (!isset($orientation)) {
-    $orientation = PDF_PAGE_ORIENTATION;
+	$orientation = PDF_PAGE_ORIENTATION;
 }
 
-    $this->tcpdf->setPageOrientation($orientation, true, PDF_MARGIN_BOTTOM);
+	$this->tcpdf->setPageOrientation($orientation, true, PDF_MARGIN_BOTTOM);
 
-    $this->tcpdf->SetFont(PDF_FONT_NAME_DATA, 'B', PDF_FONT_SIZE_DATA);
-    $this->tcpdf->setFontSubsetting(true);
-    $this->tcpdf->setPrintFooter(true);
+	$this->tcpdf->SetFont(PDF_FONT_NAME_DATA, 'B', PDF_FONT_SIZE_DATA);
+	$this->tcpdf->setFontSubsetting(true);
+	$this->tcpdf->setPrintFooter(true);
 
-    $this->table($exportData, $width, $align, $header);
+	$this->table($exportData, $width, $align, $header);

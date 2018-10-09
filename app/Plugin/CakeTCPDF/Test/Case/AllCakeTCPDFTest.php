@@ -12,20 +12,18 @@
  *
  * @package plugin.Test.Case
  */
-class AllCakeTCPDFTest extends CakeTestSuite
-{
+class AllCakeTCPDFTest extends CakeTestSuite {
 
-    /**
-     * Create test suite.
-     *
-     * @return object An object of `CakeTestSuite`.
-     */
-    public static function suite()
-    {
-        $suite = new CakeTestSuite('All CakeTCPDF tests');
-        $path = dirname(__FILE__);
-        $suite->addTestDirectory($path . DS . 'View');
+/**
+ * Create test suite.
+ *
+ * @return object An object of `CakeTestSuite`.
+ */
+	public static function suite() {
+		$suite = new CakeTestSuite('All CakeTCPDF tests');
+		$path = dirname(__FILE__);
+		$suite->addTestDirectory($path . DS . 'View');
 
-        return $suite;
-    }
+		return $suite;
+	}
 }

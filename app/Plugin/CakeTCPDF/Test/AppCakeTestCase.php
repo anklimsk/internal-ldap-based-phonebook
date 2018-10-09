@@ -13,28 +13,25 @@ App::uses('ExtendCakeTestCase', 'CakeExtendTest.Test');
  * Application level CakeTestCase class
  *
  */
-class AppCakeTestCase extends ExtendCakeTestCase
-{
+class AppCakeTestCase extends ExtendCakeTestCase {
 
-    /**
-     * Setup the test case, backup the static object values so they can be restored.
-     * Specifically backs up the contents of Configure and paths in App if they have
-     * not already been backed up.
-     *
-     * @return void
-     */
-    public function setUp()
-    {
-        parent::setUp();
-    }
+/**
+ * Setup the test case, backup the static object values so they can be restored.
+ * Specifically backs up the contents of Configure and paths in App if they have
+ * not already been backed up.
+ *
+ * @return void
+ */
+	public function setUp() {
+		parent::setUp();
+	}
 
-    /**
-     * teardown any static object changes and restore them.
-     *
-     * @return void
-     */
-    public function tearDown()
-    {
-        parent::tearDown();
-    }
+/**
+ * teardown any static object changes and restore them.
+ *
+ * @return void
+ */
+	public function tearDown() {
+		parent::tearDown();
+	}
 }

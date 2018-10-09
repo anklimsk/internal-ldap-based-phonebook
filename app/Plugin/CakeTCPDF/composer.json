@@ -12,7 +12,7 @@
     "require": {
         "php": ">=5.4",
         "composer/installers": "^1.5.0",
-        "anklimsk/cakephp-extended-test": "*"
+        "anklimsk/cakephp-extended-test": "^1.0.0"
     },
     "support": {
         "source": "https://github.com/anklimsk/cakephp-tcpdf"
