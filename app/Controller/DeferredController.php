@@ -111,6 +111,7 @@ class DeferredController extends AppController
                     $conditions = null;
                     if (in_array($groupAction, [GROUP_ACTION_DEFERRED_SAVE_APPROVE, GROUP_ACTION_DEFERRED_SAVE_REJECT])) {
                         $this->Flash->success(__('Processing of selected tasks put in queue...'));
+                        $this->ViewExtension->setProgressSseTask('DeferredSave');
                     } else {
                         $this->Flash->success(__('Selected tasks has been processed.'));
                     }
