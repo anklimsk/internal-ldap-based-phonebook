@@ -4,7 +4,7 @@
  *
  * InternalPhonebook: Internal phone book based on content of Active Directory.
  * @copyright Copyright 2017, Andrey Klimov.
- * @package app
+ * @package app.Config
  */
 
 /**
