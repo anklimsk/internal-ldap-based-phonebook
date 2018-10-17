@@ -53,7 +53,7 @@ before_script:
   - echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
     <phpunit>
         <php>
-            <ini name="memory_limit" value="384M" />
+            <ini name=\"memory_limit\" value=\"384M\" />
         </php>
         <filter>
             <whitelist>
