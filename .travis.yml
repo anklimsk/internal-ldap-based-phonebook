@@ -14,7 +14,6 @@ matrix:
   fast_finish: true
 
 before_script:
-  - echo "memory_limit=384M" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
   - composer require "phpunit/phpunit=$PHPUNIT"
   - ln -sr vendor/phpunit/phpunit/PHPUnit app/Vendor/PHPUnit
   - sh -c "if [ '$DB' = 'mysql' ]; then mysql -e 'CREATE DATABASE cakephp_test CHARACTER SET utf8 COLLATE utf8_general_ci;'; fi"
@@ -51,6 +50,20 @@ before_script:
   - sed -i -r "s/(Configure::write\('Security\.salt', ')[0-9a-z]+('\);)/\1d1c97797953ed55c54ba6037158d2b0c3bf21471\2/i" ./app/Config/core.php
   - sed -i -r "s/(Configure::write\('Security\.cipherSeed', ')[0-9]+('\);)/\118424236609940891573169173047\2/i" ./app/Config/core.php
   - echo "Installed" > app/tmp/installer/installed.txt
+  - echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<phpunit>
+<php>
+    <ini name="memory_limit" value="384M" />
+</php>
+<filter>
+    <whitelist>
+        <exclude>
+            <directory suffix=\".php\">Vendor</directory>
+            <directory suffix=\".php\">Plugin</directory>
+        </exclude>
+    </whitelist>
+</filter>
+</phpunit>" > app/phpunit.xml
 
 script:
   - sh -c "if [ '$PHPCS' != '1' ]; then cd ./app; ./Console/cake test app AllApp --stderr; if [ \"$?\" -gt 0 ]; then exit 1; fi; fi"
