@@ -51,19 +51,19 @@ before_script:
   - sed -i -r "s/(Configure::write\('Security\.cipherSeed', ')[0-9]+('\);)/\118424236609940891573169173047\2/i" ./app/Config/core.php
   - echo "Installed" > app/tmp/installer/installed.txt
   - echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
-<phpunit>
-<php>
-    <ini name="memory_limit" value="384M" />
-</php>
-<filter>
-    <whitelist>
-        <exclude>
-            <directory suffix=\".php\">Vendor</directory>
-            <directory suffix=\".php\">Plugin</directory>
-        </exclude>
-    </whitelist>
-</filter>
-</phpunit>" > app/phpunit.xml
+    <phpunit>
+        <php>
+            <ini name="memory_limit" value="384M" />
+        </php>
+        <filter>
+            <whitelist>
+                <exclude>
+                    <directory suffix=\".php\">Vendor</directory>
+                    <directory suffix=\".php\">Plugin</directory>
+                </exclude>
+            </whitelist>
+        </filter>
+    </phpunit>" > app/phpunit.xml
 
 script:
   - sh -c "if [ '$PHPCS' != '1' ]; then cd ./app; ./Console/cake test app AllApp --stderr; if [ \"$?\" -gt 0 ]; then exit 1; fi; fi"
