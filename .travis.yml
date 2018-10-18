@@ -69,7 +69,9 @@ before_script:
             'setsecurkey',
             'createsymlinks',
         ]
-    ];" > app/Config/cakeinstaller.php
+    ];
+    " > app/Config/cakeinstaller.php
+  - cat app/Config/cakeinstaller.php
   - echo "Installed" > app/tmp/installer/installed.txt
   - echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
     <phpunit>
