@@ -4,20 +4,32 @@ php:
   - 5.6
   - 7.1
 
+cache:
+  directories:
+    - $HOME/.composer/cache/files
+
 env:
   matrix:
     - DB=mysql
   global:
+    - TESTARG="app AllApp --stderr --app $(cd ./app; pwd)"
     - PHPUNIT=3.7.38
 
 matrix:
   fast_finish: true
+  include:
+    - php: 7.1
+      env:
+        - CODECOVERAGE=1
 
 before_script:
   - composer require "phpunit/phpunit=$PHPUNIT"
-  - ln -sr vendor/phpunit/phpunit/PHPUnit app/Vendor/PHPUnit
+  - echo "require_once 'vendors/autoload.php';" >> app/Config/bootstrap.php
   - sh -c "if [ '$DB' = 'mysql' ]; then mysql -e 'CREATE DATABASE cakephp_test CHARACTER SET utf8 COLLATE utf8_general_ci;'; fi"
   - chmod -R 777 ./app/tmp
+  - sh -c "if [ '$PHPCS' = '1' ]; then composer require 'cakephp/cakephp-codesniffer:1.*'; fi"
+  - sh -c "if [ '$PHPCS' = '1' ]; then vendors/bin/phpcs --config-set installed_paths vendors/cakephp/cakephp-codesniffer; fi"
+  - sh -c "if [ '$CODECOVERAGE' == '1' ]; then TESTARG="$TESTARG --coverage-clover clover.xml"; fi;"
   - if [[ ${TRAVIS_PHP_VERSION:0:1} == "7" ]] ; then echo "yes" | pecl install apcu-5.1.3 || true; fi
   - if [[ ${TRAVIS_PHP_VERSION:0:1} == "5" ]] ; then echo "yes" | pecl install apcu-4.0.11 || true; fi
   - echo -e "extension = apcu.so\napc.enable_cli=1" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
@@ -46,9 +58,18 @@ before_script:
       'encoding' => 'utf8'
     );
     }" > app/Config/database.php
-  - sed -i -r "s/(Configure::write\('debug', )[0-2]{1}(\);)/\11\2/i" ./app/Config/core.php
-  - sed -i -r "s/(Configure::write\('Security\.salt', ')[0-9a-z]+('\);)/\1d1c97797953ed55c54ba6037158d2b0c3bf21471\2/i" ./app/Config/core.php
-  - sed -i -r "s/(Configure::write\('Security\.cipherSeed', ')[0-9]+('\);)/\118424236609940891573169173047\2/i" ./app/Config/core.php
+  - echo "<?php
+    $config['CakeInstaller'] = [
+        'installerCommands' => [
+            'setsecurkey',
+            'createsymlinks',
+            'install',
+        ],
+        'installTasks' => [
+            'setsecurkey',
+            'createsymlinks',
+        ]
+    ];" > app/Config/cakeinstaller.php
   - echo "Installed" > app/tmp/installer/installed.txt
   - echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
     <phpunit>
@@ -64,9 +85,15 @@ before_script:
             </whitelist>
         </filter>
     </phpunit>" > app/phpunit.xml
+  - if [ -f "./app/Console/cake" ]; then ./app/Console/cake CakeInstaller install --app $(cd ./app; pwd); fi
 
 script:
-  - sh -c "if [ '$PHPCS' != '1' ]; then cd ./app; ./Console/cake test app AllApp --stderr; if [ \"$?\" -gt 0 ]; then exit 1; fi; fi"
+  - sh -c "if [ '$PHPCS' = '1' ]; then vendors/bin/phpcs -p --extensions=php --standard=CakePHP ./app; fi;"
+  - sh -c "if [ '$PHPCS' != '1' ]; then ./app/Console/cake test $TESTARG; if [ \"$?\" -gt 0 ]; then exit 1; fi; fi"
+
+after_success:
+  - if [ -d "./app" ]; then cd ./app; fi
+  - if [ '$CODECOVERAGE' == '1' ]; then wget -O codecov.sh https://codecov.io/bash; bash codecov.sh; fi
 
 notifications:
   email: false
