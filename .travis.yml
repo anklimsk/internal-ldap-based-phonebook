@@ -72,8 +72,8 @@ before_script:
             </whitelist>
         </filter>
     </phpunit>" > app/phpunit.xml
-  - if [ -f "./app/Console/cake" ]; then ./app/Console/cake CakeInstaller setsecurkey --app $(cd ./app; pwd); fi
-  - if [ -f "./app/Console/cake" ]; then ./app/Console/cake CakeInstaller createsymlinks --app $(cd ./app; pwd); fi
+  - if [ -f "./app/Console/cake" ]; then ./app/Console/cake CakeInstaller setsecurkey --yes --app $(cd ./app; pwd); fi
+  - if [ -f "./app/Console/cake" ]; then ./app/Console/cake CakeInstaller createsymlinks --yes --app $(cd ./app; pwd); fi
   - echo "Installed" > app/tmp/installer/installed.txt
 
 script:
