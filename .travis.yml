@@ -58,19 +58,6 @@ before_script:
       'encoding' => 'utf8'
     ];
     }" > app/Config/database.php
-  - echo "<?php
-    \$config['CakeInstaller'] = [
-        'installerCommands' => [
-            'setsecurkey',
-            'createsymlinks',
-            'install',
-        ],
-        'installTasks' => [
-            'setsecurkey',
-            'createsymlinks',
-        ]
-    ];" > app/Config/cakeinstaller.php
-  - echo "Installed" > app/tmp/installer/installed.txt
   - echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
     <phpunit>
         <php>
@@ -85,7 +72,9 @@ before_script:
             </whitelist>
         </filter>
     </phpunit>" > app/phpunit.xml
-  - if [ -f "./app/Console/cake" ]; then ./app/Console/cake CakeInstaller install --app $(cd ./app; pwd); fi
+  - if [ -f "./app/Console/cake" ]; then ./app/Console/cake CakeInstaller setsecurkey --app $(cd ./app; pwd); fi
+  - if [ -f "./app/Console/cake" ]; then ./app/Console/cake CakeInstaller createsymlinks --app $(cd ./app; pwd); fi
+  - echo "Installed" > app/tmp/installer/installed.txt
 
 script:
   - sh -c "if [ '$PHPCS' = '1' ]; then vendors/bin/phpcs -p --extensions=php --standard=CakePHP ./app; fi;"
