@@ -24,8 +24,7 @@ matrix:
 
 before_script:
   - composer require "phpunit/phpunit=$PHPUNIT"
-  - ls -lR
-  - echo "require_once 'vendors/autoload.php';" >> app/Config/bootstrap.php
+  - echo "require_once 'vendor/autoload.php';" >> app/Config/bootstrap.php
   - sh -c "if [ '$DB' = 'mysql' ]; then mysql -e 'CREATE DATABASE cakephp_test CHARACTER SET utf8 COLLATE utf8_general_ci;'; fi"
   - chmod -R 777 ./app/tmp
   - sh -c "if [ '$PHPCS' = '1' ]; then composer require 'cakephp/cakephp-codesniffer:1.*'; fi"
