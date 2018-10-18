@@ -63,6 +63,7 @@ class EmployeesControllerTest extends AppControllerTestCase
 
         $Folder = new Folder($this->_pathImportDir, true);
         $Folder = new Folder($this->_pathExportDir, true);
+        date_default_timezone_set('UTC');
     }
 
     /**
@@ -6049,7 +6050,7 @@ class EmployeesControllerTest extends AppControllerTestCase
                     'extendViewState' => true,
                     'downloadFileName' => __('Directory') . ' ' . __('by alphabet') . ' ' . __('full'),
                     'fileExists' => true,
-                    'fileCreate' => 1483261200,
+                    'fileCreate' => 1483272000,
                     'fileExt' => 'pdf',
                     'fileType' => 'PDF',
                 ],
@@ -6119,7 +6120,7 @@ class EmployeesControllerTest extends AppControllerTestCase
                     'extendViewState' => false,
                     'downloadFileName' => __('Directory') . ' ' . __('by department'),
                     'fileExists' => true,
-                    'fileCreate' => 1483261290,
+                    'fileCreate' => 1483272090,
                     'fileExt' => 'xlsx',
                     'fileType' => 'Excel',
                 ],
