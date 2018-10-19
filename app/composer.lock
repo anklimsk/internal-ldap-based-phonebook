@@ -125,16 +125,16 @@
         },
         {
             "name": "anklimsk/cakephp-extended-test",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/anklimsk/cakephp-extended-test.git",
-                "reference": "eb567ee02d742d61ebe878f5c5fd69c8edfa83f9"
+                "reference": "ba4ac17546045cf30171ed3cd7b609a189cf972c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/anklimsk/cakephp-extended-test/zipball/eb567ee02d742d61ebe878f5c5fd69c8edfa83f9",
-                "reference": "eb567ee02d742d61ebe878f5c5fd69c8edfa83f9",
+                "url": "https://api.github.com/repos/anklimsk/cakephp-extended-test/zipball/ba4ac17546045cf30171ed3cd7b609a189cf972c",
+                "reference": "ba4ac17546045cf30171ed3cd7b609a189cf972c",
                 "shasum": ""
             },
             "require": {
@@ -160,7 +160,7 @@
             ],
             "description": "Extended test tools for CakePHP 2.x",
             "homepage": "https://github.com/anklimsk/cakephp-extended-test",
-            "time": "2018-10-04 12:11:55"
+            "time": "2018-10-19 05:53:23"
         },
         {
             "name": "anklimsk/cakephp-ldap-sync",
@@ -168,12 +168,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/anklimsk/cakephp-ldap-sync.git",
-                "reference": "595c267cfc23ddc033724758dbbb3a62870485c0"
+                "reference": "03ce5ca364c4a870d2cadd482d9c875c4ad46ae6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/anklimsk/cakephp-ldap-sync/zipball/595c267cfc23ddc033724758dbbb3a62870485c0",
-                "reference": "595c267cfc23ddc033724758dbbb3a62870485c0",
+                "url": "https://api.github.com/repos/anklimsk/cakephp-ldap-sync/zipball/03ce5ca364c4a870d2cadd482d9c875c4ad46ae6",
+                "reference": "03ce5ca364c4a870d2cadd482d9c875c4ad46ae6",
                 "shasum": ""
             },
             "require": {
@@ -398,12 +398,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/anklimsk/cakephp-theme.git",
-                "reference": "7d40bee05ba020c67cb5d43ef392d713c829d44e"
+                "reference": "198c8f878ae557a7ae98aeba72fba64a9321f035"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/anklimsk/cakephp-theme/zipball/7d40bee05ba020c67cb5d43ef392d713c829d44e",
-                "reference": "7d40bee05ba020c67cb5d43ef392d713c829d44e",
+                "url": "https://api.github.com/repos/anklimsk/cakephp-theme/zipball/198c8f878ae557a7ae98aeba72fba64a9321f035",
+                "reference": "198c8f878ae557a7ae98aeba72fba64a9321f035",
                 "shasum": ""
             },
             "require": {

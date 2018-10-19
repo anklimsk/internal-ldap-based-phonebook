@@ -62,7 +62,6 @@ class ExtendControllerTestCase extends ControllerTestCase {
 		$this->clearUserInfo();
 		Configure::write('Config.language', 'eng');
 		set_time_limit(0);
-		ini_set('memory_limit', '256M');
 	}
 
 /**
