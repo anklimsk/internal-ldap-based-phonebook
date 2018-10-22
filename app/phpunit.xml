@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit>
+    <php>
+        <ini name="memory_limit" value="384M" />
+    </php>
+    <filter>
+        <whitelist>
+            <exclude>
+                <directory suffix=".php">Config</directory>
+                <directory suffix=".php">Plugin</directory>
+                <directory suffix=".php">Vendor</directory>
+            </exclude>
+        </whitelist>
+    </filter>
+</phpunit>

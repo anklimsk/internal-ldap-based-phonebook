@@ -57,20 +57,6 @@ before_script:
       'encoding' => 'utf8'
     ];
     }" > app/Config/database.php
-  - echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
-    <phpunit>
-        <php>
-            <ini name=\"memory_limit\" value=\"384M\" />
-        </php>
-        <filter>
-            <whitelist>
-                <exclude>
-                    <directory suffix=\".php\">Vendor</directory>
-                    <directory suffix=\".php\">Plugin</directory>
-                </exclude>
-            </whitelist>
-        </filter>
-    </phpunit>" > app/phpunit.xml
   - if [ -f "./app/Console/cake" ]; then ./app/Console/cake CakeInstaller setsecurkey --yes --app $(cd ./app; pwd); fi
   - if [ -f "./app/Console/cake" ]; then ./app/Console/cake CakeInstaller createsymlinks --yes --app $(cd ./app; pwd); fi
   - echo "Installed" > app/tmp/installer/installed.txt
