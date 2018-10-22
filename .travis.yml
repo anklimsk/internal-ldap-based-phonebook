@@ -24,7 +24,6 @@ matrix:
 before_script:
   - composer require "phpunit/phpunit=$PHPUNIT"
   - echo "require_once 'vendor/autoload.php';" >> app/Config/bootstrap.php
-  - sudo locale-gen ru_RU
   - sh -c "if [ '$DB' = 'mysql' ]; then mysql -e 'CREATE DATABASE cakephp_test CHARACTER SET utf8 COLLATE utf8_general_ci;'; fi"
   - chmod -R 777 ./app/tmp
   - sh -c "if [ '$PHPCS' = '1' ]; then composer require 'cakephp/cakephp-codesniffer:1.*'; fi"
@@ -75,6 +74,7 @@ before_script:
   - if [ -f "./app/Console/cake" ]; then ./app/Console/cake CakeInstaller setsecurkey --yes --app $(cd ./app; pwd); fi
   - if [ -f "./app/Console/cake" ]; then ./app/Console/cake CakeInstaller createsymlinks --yes --app $(cd ./app; pwd); fi
   - echo "Installed" > app/tmp/installer/installed.txt
+  - php -r "phpinfo();"
 
 script:
   - sh -c "if [ '$PHPCS' = '1' ]; then vendors/bin/phpcs -p --extensions=php --standard=CakePHP ./app; fi;"
