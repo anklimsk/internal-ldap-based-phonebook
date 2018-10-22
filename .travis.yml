@@ -74,7 +74,6 @@ before_script:
   - if [ -f "./app/Console/cake" ]; then ./app/Console/cake CakeInstaller setsecurkey --yes --app $(cd ./app; pwd); fi
   - if [ -f "./app/Console/cake" ]; then ./app/Console/cake CakeInstaller createsymlinks --yes --app $(cd ./app; pwd); fi
   - echo "Installed" > app/tmp/installer/installed.txt
-  - php -i
 
 script:
   - sh -c "if [ '$PHPCS' = '1' ]; then vendors/bin/phpcs -p --extensions=php --standard=CakePHP ./app; fi;"
