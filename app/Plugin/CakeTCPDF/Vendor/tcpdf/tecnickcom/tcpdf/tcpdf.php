@@ -8782,9 +8782,7 @@ class TCPDF {
 			// search and get font file to embedd
 			$fontfile = TCPDF_FONTS::getFontFullPath($file, $info['fontdir']);
 			if (!TCPDF_STATIC::empty_string($fontfile)) {
-var_dump($fontfile);
 				$font = file_get_contents($fontfile);
-var_dump(is_string($font));
 				$compressed = (substr($file, -2) == '.z');
 				if ((!$compressed) AND (isset($info['length2']))) {
 					$header = (ord($font[0]) == 128);
