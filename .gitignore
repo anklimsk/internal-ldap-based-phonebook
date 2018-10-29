@@ -6,4 +6,3 @@
 /app/Config/database.php
 /app/webroot/cake_installer
 /app/webroot/cake_theme
-/vendors/*
