@@ -63,7 +63,9 @@ before_script:
   - echo "Installed" > app/tmp/installer/installed.txt
 
 script:
-  - if [ -d ./app ]; then cd ./app; fi
+  - if [ -d "./app" ]; then cd ./app; fi
+  - pwd
+  - echo $TESTARG
   - sh -c "if [ '$PHPCS' = '1' ]; then vendors/bin/phpcs -p --extensions=php --standard=CakePHP $CAKEAPP; fi"
   - sh -c "if [ '$PHPCS' != '1' ]; then ./Console/cake test $TESTARG; fi"
 
