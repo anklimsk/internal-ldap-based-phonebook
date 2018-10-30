@@ -12,7 +12,7 @@ env:
   global:
     - DB=mysql
     - CAKEAPP=$(cd ./app; pwd)
-    - TESTARG="app AllApp --stderr --app $CAKEAPP"
+    - TESTARG="app AllApp --stderr"
     - PHPUNIT=3.7.38
 
 matrix:
