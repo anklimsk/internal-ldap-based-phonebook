@@ -67,7 +67,7 @@ script:
 
 after_success:
   - if [ -d "./app" ]; then cd ./app; fi
-  - if [ '$CODECOVERAGE' == '1' ]; then wget -O codecov.sh https://codecov.io/bash; bash codecov.sh; fi
+  - if [ "$CODECOVERAGE" == '1' ]; then wget -O codecov.sh https://codecov.io/bash; bash codecov.sh; fi
 
 notifications:
   email: false
