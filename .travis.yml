@@ -60,11 +60,10 @@ before_script:
   - if [ -f "./app/Console/cake" ]; then ./app/Console/cake CakeInstaller setsecurkey --yes --app $(cd ./app; pwd); fi
   - if [ -f "./app/Console/cake" ]; then ./app/Console/cake CakeInstaller createsymlinks --yes --app $(cd ./app; pwd); fi
   - echo "Installed" > app/tmp/installer/installed.txt
-  - xxd ./app/Plugin/CakeTCPDF/Vendor/tcpdf/tecnickcom/tcpdf/fonts/freesans.z
 
 script:
-  - sh -c "if [ '$PHPCS' = '1' ]; then vendors/bin/phpcs -p --extensions=php --standard=CakePHP ./app; fi;"
-  - sh -c "if [ '$PHPCS' != '1' ]; then ./app/Console/cake test $TESTARG; if [ \"$?\" -gt 0 ]; then exit 1; fi; fi"
+  - sh -c "if [ '$PHPCS' = '1' ]; then vendors/bin/phpcs -p --extensions=php --standard=CakePHP ./app; fi"
+  - sh -c "if [ '$PHPCS' != '1' ]; then ./app/Console/cake test $TESTARG; fi"
 
 after_success:
   - if [ -d "./app" ]; then cd ./app; fi
