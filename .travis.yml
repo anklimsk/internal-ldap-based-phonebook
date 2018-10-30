@@ -63,12 +63,12 @@ before_script:
   - echo "Installed" > app/tmp/installer/installed.txt
 
 script:
+  - if [ -d ./app ]; then cd ./app; fi
   - sh -c "if [ '$PHPCS' = '1' ]; then vendors/bin/phpcs -p --extensions=php --standard=CakePHP $CAKEAPP; fi"
   - sh -c "if [ '$PHPCS' != '1' ]; then ./app/Console/cake test $TESTARG; fi"
 
 after_success:
   - if [ "$CODECOVERAGE" == '1' ]; then wget -O codecov.sh https://codecov.io/bash; bash codecov.sh; fi
-  - ls -lR
 
 notifications:
   email: false
