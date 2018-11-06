@@ -16,11 +16,7 @@ if (!isset($employeesGallery)) {
 if (!isset($emptyDepartmentName)) {
     $emptyDepartmentName = '';
 }
-
-if (empty($employeesGallery)) {
-    return;
-}
-?>      
+?>
     <div class="table-responsive table-filter">
 <?php echo $this->Filter->openFilterForm(); ?>      
         <table class="table table-hover table-striped table-condensed">
