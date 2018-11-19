@@ -77,28 +77,4 @@ class DATABASE_CONFIG {
 		'encoding' => 'utf8',
 	);
 
-	public $ldap = array(
-		'datasource' => 'CakeLdap.LdapExtSource',
-		'persistent' => false,
-		'host' => 'ldap_server',
-		'port' => 389,
-		'login' => 'user',
-		'password' => 'password',
-		'database' => '',
-		'basedn' => 'base_dn',
-		'type' => 'ActiveDirectory',
-		'tls' => false,
-		'version' => 3,
-	);
-
-	public $test = array(
-		'datasource' => 'Database/Mysql',
-		'persistent' => false,
-		'host' => 'localhost',
-		'login' => 'user',
-		'password' => 'password',
-		'database' => 'test_database_name',
-		'prefix' => '',
-		'encoding' => 'utf8',
-	);
 }
