@@ -165,6 +165,7 @@ Cache::config(CACHE_KEY_DEPARTMENTS_LOCAL_INFO, [
     'path' => CACHE . CACHE_KEY_DEPARTMENTS_LOCAL_INFO . DS,
 ]);
 
+CakePlugin::load('CakeBasicFunctions', ['bootstrap' => true]);
 CakePlugin::load('AssetCompress', ['bootstrap' => true]);
 CakePlugin::load('Datasources');
 CakePlugin::load('Bs3Helpers', ['bootstrap' => true]);
@@ -181,7 +182,6 @@ CakePlugin::load('CakeSearchInfo', ['bootstrap' => true, 'routes' => true]);
 CakePlugin::load('CakeSettingsApp', ['bootstrap' => true, 'routes' => true]);
 CakePlugin::load('Shim');
 CakePlugin::load('Tools');
-CakePlugin::load('CakeBasicFunctions', ['bootstrap' => true]);
 
 Configure::write('Bs3.Form.styles', [
     'horizontal' => [
