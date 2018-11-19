@@ -3,6 +3,8 @@
  *
  * @file    File for action Index of controller Employees
  * @version 0.1
+ * @copyright 2017-2018 Andrey Klimov.
+ * @license https://opensource.org/licenses/mit-license.php MIT License
  */
 
 /**

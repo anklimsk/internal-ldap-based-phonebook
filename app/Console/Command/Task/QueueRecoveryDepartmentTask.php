@@ -3,7 +3,7 @@
  * This file is the console shell task file of the application.
  *
  * InternalPhonebook: Internal phone book based on content of Active Directory.
- * @copyright Copyright 2017, Andrey Klimov.
+ * @copyright Copyright 2017-2018, Andrey Klimov.
  * @author Mark Scherer
  * @license http://www.opensource.org/licenses/mit-license.php The MIT License
  * @package app.Console.Command.Task

@@ -3,7 +3,8 @@
  * This file is the console shell file of the application.
  *
  * InternalPhonebook: Internal phone book based on content of Active Directory.
- * @copyright Copyright 2017, Andrey Klimov.
+ * @copyright Copyright 2017-2018, Andrey Klimov.
+ * @license https://opensource.org/licenses/mit-license.php MIT License
  * @package app.Console.Command
  */
 
