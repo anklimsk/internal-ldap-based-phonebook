@@ -11,26 +11,28 @@ $config = array (
     'EmailSubject' => 'Phonebook',
     'Company' => '',
     'AutocompleteLimit' => 30,
-    'ExternalAuth' => false,    
+    'DefaultSearchAnyPart' => true,
+    'ExternalAuth' => false,
     'EmailSmtphost' => 'localhost',
     'EmailSmtpport' => 25,
     'EmailSmtpuser' => '',
     'EmailNotifyUser' => false,
     'EmailSmtppassword' => '',
-	'SecretaryGroupMember' => '',
+    'SecretaryGroupMember' => '',
     'HumanResourcesGroupMember' => '',
-	'AdminGroupMember' => '',
+    'AdminGroupMember' => '',
     'ShowDefaultPhoto' => true,
     'CountryCode' => 'BY',
     'NumberFormat' => 'NATIONAL',
     'ExtendedFields' => 'a:4:{i:0;s:5:"pager";i:1;s:11:"wwwhomepage";i:2;s:11:"othermobile";i:3;s:10:"employeeid";}',
     'ReadOnlyFields' => 'a:1:{i:0;s:11:"displayname";}',
     'MultipleValueLimit' => 4,
-    'BirthdayNotifyPeriod' => 8,    
+    'BirthdayNotifyPeriod' => 8,
   ),
   'CakeSearchInfo' => 
   array (
     'AutocompleteLimit' => 30,
+    'DefaultSearchAnyPart' => true,
   ),
   'CakeTheme' => 
   array (
@@ -48,12 +50,6 @@ $config = array (
   ),
   'Email' => 
   array (
-    'Smtp' => 
-    array (
-      'host' => 'localhost',
-      'port' => 25,
-      'username' => '',
-    ),
     'live' => false,
   ),
 );
