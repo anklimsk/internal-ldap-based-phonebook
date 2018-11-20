@@ -3,7 +3,7 @@
  * This file is the console shell task file of the plugin.
  *
  * CakeSettingsApp: Manage settings of application.
- * @copyright Copyright 2016, Andrey Klimov.
+ * @copyright Copyright 2016-2018, Andrey Klimov.
  * @author Mark Scherer
  * @license http://www.opensource.org/licenses/mit-license.php The MIT License
  * @package plugin.Console.Command.Task

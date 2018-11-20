@@ -283,16 +283,16 @@
         },
         {
             "name": "anklimsk/cakephp-settings-app",
-            "version": "v1.0.0",
+            "version": "v1.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/anklimsk/cakephp-settings-app.git",
-                "reference": "ef83e4421a30c83bf07cb463f2606e13145758b3"
+                "reference": "02e0f551a67cd51ee26877579343135d3ed082b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/anklimsk/cakephp-settings-app/zipball/ef83e4421a30c83bf07cb463f2606e13145758b3",
-                "reference": "ef83e4421a30c83bf07cb463f2606e13145758b3",
+                "url": "https://api.github.com/repos/anklimsk/cakephp-settings-app/zipball/02e0f551a67cd51ee26877579343135d3ed082b5",
+                "reference": "02e0f551a67cd51ee26877579343135d3ed082b5",
                 "shasum": ""
             },
             "require": {
@@ -317,7 +317,7 @@
             ],
             "description": " UI for CakePHP 2.x application settings",
             "homepage": "https://github.com/anklimsk/cakephp-settings-app",
-            "time": "2018-10-04 12:41:22"
+            "time": "2018-11-19 10:55:33"
         },
         {
             "name": "anklimsk/cakephp-spreadsheet",

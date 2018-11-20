@@ -3,7 +3,8 @@
  * This file is the view file of the plugin. Used for render settings form.
  *
  * CakeSettingsApp: Manage settings of application.
- * @copyright Copyright 2016, Andrey Klimov.
+ * @copyright Copyright 2016-2018, Andrey Klimov.
+ * @license https://opensource.org/licenses/mit-license.php MIT License
  * @package plugin.View.Settings
  */
 
@@ -119,7 +120,7 @@ if ($configADsearch) {
 			'data-toggle' => 'tooltip'],
 		'Setting.SearchBase' => ['label' => __d('cake_settings_app', 'Search base') . ':',
 			'title' => __d('cake_settings_app', 'Distinguished name of the search base object for search employee on LDAP server (e.g. CN=Users,DC=fabrikam,DC=com)'), 'type' => 'autocomplete',
-			'local' => json_encode($containerList), 'min-length' => 1],
+			'local' => $containerList, 'min-length' => 1],
 	]);
 }
 if ($configAcLimit) {

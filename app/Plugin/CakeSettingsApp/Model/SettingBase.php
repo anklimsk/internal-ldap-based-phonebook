@@ -4,7 +4,8 @@
  * Methods for management settings of application.
  *
  * CakeSettingsApp: Manage settings of application.
- * @copyright Copyright 2016, Andrey Klimov.
+ * @copyright Copyright 2016-2018, Andrey Klimov.
+ * @license https://opensource.org/licenses/mit-license.php MIT License
  * @package plugin.Model
  */
 
@@ -30,17 +31,6 @@ class SettingBase extends CakeSettingsAppAppModel {
  * @link http://book.cakephp.org/2.0/en/models/model-attributes.html#name
  */
 	public $name = 'Setting';
-
-/**
- * The name of the DataSource connection that this Model uses
- *
- * The value must be an attribute name that you defined in `app/Config/database.php`
- * or created using `ConnectionManager::create()`.
- *
- * @var string
- * @link http://book.cakephp.org/2.0/en/models/model-attributes.html#usedbconfig
- */
-	public $useDbConfig = false;
 
 /**
  * Custom database table name, or null/false if no table association is desired.
@@ -974,7 +964,7 @@ class SettingBase extends CakeSettingsAppAppModel {
 			return $results;
 		}
 
-		$event = new CakeEvent('Model.afterFind', $this, [$results, true]);
+		$event = new CakeEvent('Model.afterFind', $this, [$results, true, $key]);
 		$event->modParams = 0;
 		$this->getEventManager()->dispatch($event);
 

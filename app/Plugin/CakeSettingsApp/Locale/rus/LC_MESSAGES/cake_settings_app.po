@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: CakePHP Plugin CakeSettingsApp\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2018-10-01 15:17+0300\n"
+"PO-Revision-Date: 2018-11-16 15:01+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 1.8.7\n"
+"X-Generator: Poedit 2.2\n"
 
 #: Console/Command/Task/QueueClearCacheTask.php:78
 msgid "CakePHP Queue clearing cache task."
@@ -62,7 +62,7 @@ msgstr "Неверное задание"
 #: Controller/QueuesController.php:187
 #: Test/Case/Controller/QueuesControllerTest.php:468
 msgid "The task has been deleted."
-msgstr "Задание было удалено."
+msgstr "Задание удалено."
 
 #: Controller/QueuesController.php:189
 #: Test/Case/Controller/QueuesControllerTest.php:443
@@ -72,7 +72,7 @@ msgstr "Задание не может быть удалено. Пожалуйс
 #: Controller/QueuesController.php:205
 #: Test/Case/Controller/QueuesControllerTest.php:501
 msgid "The task queue has been cleared."
-msgstr "Очередь задач была очищена."
+msgstr "Очередь задач очищена."
 
 #: Controller/QueuesController.php:207
 msgid "The task queue could not be cleared. Please, try again."
@@ -81,7 +81,7 @@ msgstr "Очередь задач не может быть очищена. По�
 #: Controller/SettingsController.php:131
 #: Test/Case/Controller/SettingsControllerTest.php:133
 msgid "Application settings has been saved."
-msgstr "Настройки приложения были сохранены."
+msgstr "Настройки приложения сохранены."
 
 #: Controller/SettingsController.php:133
 msgid "Reload the page to apply the settings."
@@ -218,7 +218,7 @@ msgstr "Ограничение автодополнения"
 
 #: View/Elements/formSettings.ctp:128
 msgid "Limit for autocomplete search query"
-msgstr "Предел для поискового запроса автозаполнения "
+msgstr "Предел для поискового запроса автозаполнения"
 
 #: View/Elements/formSettings.ctp:141
 msgid "Notification"
@@ -314,11 +314,11 @@ msgstr "Ссылок"
 
 #: View/Elements/tableQueue.ctp:59
 msgid "Failed num."
-msgstr "Кол. ошибок"
+msgstr "Кол. ошибок."
 
 #: View/Elements/tableQueue.ctp:62
 msgid "Failure mess."
-msgstr "Сообщ. ошибки"
+msgstr "Сообщ. ошибки."
 
 #: View/Elements/tableQueue.ctp:65
 msgid "Status"

@@ -4,7 +4,8 @@
  * Retrieving configuration of plugin.
  *
  * CakeSearchInfo: Search information in project database
- * @copyright Copyright 2016, Andrey Klimov.
+ * @copyright Copyright 2016-2018, Andrey Klimov.
+ * @license https://opensource.org/licenses/mit-license.php MIT License
  * @package plugin.Model
  */
 

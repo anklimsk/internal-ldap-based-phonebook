@@ -103,11 +103,11 @@ class SettingsComponentTest extends AppCakeTestCase {
 	}
 
 /**
- * testInitializeNotConfiguredRedirect method
+ * testInitializeNotConfigured method
  *
  * @return void
  */
-	public function testInitializeNotConfiguredRedirect() {
+	public function testInitializeNotConfigured() {
 		$params = [
 			'controller' => 'test',
 			'action' => 'index',
@@ -115,8 +115,7 @@ class SettingsComponentTest extends AppCakeTestCase {
 		$this->_createComponet('/test/index', false, $params);
 		$this->Settings->initialize($this->Controller);
 		$result = $this->Controller->testUrl;
-		$expected = '/settings';
-		$this->assertData($expected, $result);
+		$this->assertEmpty($result);
 	}
 
 /**
@@ -132,16 +131,15 @@ class SettingsComponentTest extends AppCakeTestCase {
 		$this->_createComponet('/test/index', true, $params);
 		$this->Settings->initialize($this->Controller);
 		$result = $this->Controller->testUrl;
-		$expected = null;
-		$this->assertData($expected, $result);
+		$this->assertEmpty($result);
 	}
 
 /**
- * testInitializeNotConfiguredNoRedirectIndex method
+ * testInitializeNotConfiguredNoRedirectIndexLoggedIn method
  *
  * @return void
  */
-	public function testInitializeNotConfiguredNoRedirectIndex() {
+	public function testInitializeNotConfiguredNoRedirectIndexLoggedIn() {
 		$params = [
 			'plugin' => 'cake_settings_app',
 			'controller' => 'settings',
@@ -150,8 +148,28 @@ class SettingsComponentTest extends AppCakeTestCase {
 		$this->_createComponet('/cake_settings_app/settings/index', false, $params);
 		$this->Settings->initialize($this->Controller);
 		$result = $this->Controller->testUrl;
-		$expected = null;
-		$this->assertData($expected, $result);
+		$this->assertEmpty($result);
+
+		$result = CakeSession::read('Settings.FirstLogon');
+		$this->assertEmpty($result);
+	}
+
+/**
+ * testInitializeNotConfiguredNoRedirectIndexNoLoggedIn method
+ *
+ * @return void
+ */
+	public function testInitializeNotConfiguredNoRedirectIndexNoLoggedIn() {
+		$this->clearUserInfo();
+		$params = [
+			'plugin' => 'cake_settings_app',
+			'controller' => 'settings',
+			'action' => 'index',
+		];
+		$this->_createComponet('/cake_settings_app/settings/index', false, $params);
+		$this->Settings->initialize($this->Controller);
+		$result = $this->Controller->testUrl;
+		$this->assertEmpty($result);
 
 		$result = CakeSession::read('Settings.FirstLogon');
 		$this->assertTrue($result);
@@ -171,11 +189,34 @@ class SettingsComponentTest extends AppCakeTestCase {
 		$this->_createComponet('/cake_settings_app/settings/index', true, $params);
 		$this->Settings->initialize($this->Controller);
 		$result = $this->Controller->testUrl;
-		$expected = null;
-		$this->assertData($expected, $result);
+		$this->assertEmpty($result);
 
 		$result = CakeSession::read('Settings.FirstLogon');
 		$this->assertNull($result);
+	}
+
+/**
+ * testInitializeConfiguredRedirectIndexNoLoggedIn method
+ *
+ * @return void
+ */
+	public function testInitializeConfiguredRedirectIndexNoLoggedIn() {
+		$this->clearUserInfo();
+		$result = CakeSession::write('Settings.FirstLogon', true);
+		$this->assertTrue($result);
+
+		$params = [
+			'plugin' => 'cake_settings_app',
+			'controller' => 'settings',
+			'action' => 'index',
+		];
+		$this->_createComponet('/cake_settings_app/settings/index', true, $params);
+		$this->Settings->initialize($this->Controller);
+		$result = $this->Controller->testUrl;
+		$this->assertNotEmpty($result);
+
+		$result = CakeSession::read('Settings.FirstLogon');
+		$this->assertEmpty($result);
 	}
 
 /**
