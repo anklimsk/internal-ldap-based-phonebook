@@ -3,7 +3,8 @@
  * This file is the view file of the plugin. Used for render footer in email.
  *
  * CakeNotify: Sending email from CakePHP using task queues
- * @copyright Copyright 2016, Andrey Klimov.
+ * @copyright Copyright 2016-2018, Andrey Klimov.
+ * @license https://opensource.org/licenses/mit-license.php MIT License
  */
 
 if (!isset($projectName)) {

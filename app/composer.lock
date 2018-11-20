@@ -206,16 +206,16 @@
         },
         {
             "name": "anklimsk/cakephp-notify",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/anklimsk/cakephp-notify.git",
-                "reference": "f3d6a37c7c1c330cf58751697b37cb950c5794f4"
+                "reference": "1cbf1da3bb0d054056b3fe3c3516f120ed3ef2c3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/anklimsk/cakephp-notify/zipball/f3d6a37c7c1c330cf58751697b37cb950c5794f4",
-                "reference": "f3d6a37c7c1c330cf58751697b37cb950c5794f4",
+                "url": "https://api.github.com/repos/anklimsk/cakephp-notify/zipball/1cbf1da3bb0d054056b3fe3c3516f120ed3ef2c3",
+                "reference": "1cbf1da3bb0d054056b3fe3c3516f120ed3ef2c3",
                 "shasum": ""
             },
             "require": {
@@ -241,7 +241,7 @@
             ],
             "description": "Sending E-mail using task queues and sending a notification to the user using WEB Notifications API from CakePHP 2.x",
             "homepage": "https://github.com/anklimsk/cakephp-notify",
-            "time": "2018-10-04 12:00:52"
+            "time": "2018-11-19 10:40:06"
         },
         {
             "name": "anklimsk/cakephp-search-info",

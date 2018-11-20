@@ -4,8 +4,9 @@
  *
  * Use it to configure email transports of CakePHP.
  * CakeNotify: Sending email from CakePHP using task queues
- * @copyright Copyright 2016, Andrey Klimov.
- * @package plugin.Config
+ * @copyright Copyright 2016-2018, Andrey Klimov.
+ * @license https://opensource.org/licenses/mit-license.php MIT License
+ * @package app.Config
  */
 
 App::uses('BaseEmailConfig', 'Tools.Config');
