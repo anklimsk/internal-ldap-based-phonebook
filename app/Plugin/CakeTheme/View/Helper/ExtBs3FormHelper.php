@@ -4,7 +4,8 @@
  * Use for fix radio and checkbox input create by BS3Helper.
  *
  * CakeTheme: Set theme for application.
- * @copyright Copyright 2016, Andrey Klimov.
+ * @copyright Copyright 2016-2018, Andrey Klimov.
+ * @license https://opensource.org/licenses/mit-license.php MIT License
  * @package plugin.View.Helper
  */
 
@@ -808,7 +809,9 @@ class ExtBs3FormHelper extends Bs3FormHelper {
 			['class' => 'fileinput-button btn ' . $btnClass]
 		) .
 			$this->Html->tag('br') .
+			$this->Html->tag('br') .
 			$this->Html->div('progress', $this->Html->div('progress-bar progress-bar-success', ''), ['id' => $progressId]) .
+			$this->Html->tag('hr') .
 			$this->Html->div('files', '', ['id' => $filesId]) .
 			$this->Html->tag('br');
 

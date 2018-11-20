@@ -5,7 +5,8 @@
  *
  * CakeTheme: Set theme for application.
  * @copyright Copyright 2018, Andrey Klimov.
- * @package plugin.Controller.Component
+ * @license https://opensource.org/licenses/mit-license.php MIT License
+ * @package plugin.Model.Behavior
  */
 
 App::uses('ModelBehavior', 'Model');

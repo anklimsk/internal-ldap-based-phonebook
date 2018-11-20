@@ -1,7 +1,8 @@
 /*!
  * Main file for common layout
  * version 0.1
- * copyright 2017 Andrey Klimov.
+ * copyright 2016-2018 Andrey Klimov.
+ * @license https://opensource.org/licenses/mit-license.php MIT License
  */
 
 /* Body with Navbar and Breadcrumb */
@@ -115,7 +116,7 @@ dl.list-compact, ol.list-compact, ul.list-compact {
 }
 
 /* Typeahead */
-.form-default .twitter-typeahead {
+.twitter-typeahead {
     float: none;
     vertical-align: top;
 }

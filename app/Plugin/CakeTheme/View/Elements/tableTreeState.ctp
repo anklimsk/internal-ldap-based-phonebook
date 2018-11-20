@@ -4,7 +4,8 @@
  *  table of errors of state tree.
  *
  * CakeTheme: Set theme for application.
- * @copyright Copyright 2016, Andrey Klimov.
+ * @copyright Copyright 2016-2018, Andrey Klimov.
+ * @license https://opensource.org/licenses/mit-license.php MIT License
  * @see TreeBehavior::verify()
  * @package plugin.View.Elements
  */

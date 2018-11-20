@@ -57,23 +57,51 @@ class MoveBehaviorTest extends AppCakeTestCase {
 	}
 
 /**
- * testMoveItem method
+ * testMoveItemBottomBadDelta method
  *
  * @return void
  */
-	public function testMoveItem() {
+	public function testMoveItemBottomBadDelta() {
 		$result = $this->_targetObject->moveItem('bottom', 3, -1);
 		$this->assertTrue($result);
+	}
 
-		$result = $this->_targetObject->moveItem('up', 4);
+/**
+ * testMoveItemUpForTopItemSuccess method
+ *
+ * @return void
+ */
+	public function testMoveItemUpForTopItemSuccess() {
+		$result = $this->_targetObject->moveItem('up', 3);
 		$this->assertFalse($result);
+	}
 
+/**
+ * testMoveItemUpLargeDeltaSuccess method
+ *
+ * @return void
+ */
+	public function testMoveItemUpLargeDeltaSuccess() {
+		$result = $this->_targetObject->moveItem('up', 5, 3);
+		$this->assertTrue($result);
+	}
+
+/**
+ * testMoveItemDownSuccess method
+ *
+ * @return void
+ */
+	public function testMoveItemDownSuccess() {
 		$result = $this->_targetObject->moveItem('down', 4, 2);
 		$this->assertTrue($result);
+	}
 
-		$result = $this->_targetObject->moveItem('up', 5, 3);
-		$this->assertFalse($result);
-
+/**
+ * testMoveItemTopSuccess method
+ *
+ * @return void
+ */
+	public function testMoveItemTopSuccess() {
 		$result = $this->_targetObject->moveItem('top', 2);
 		$this->assertTrue($result);
 	}
@@ -101,14 +129,21 @@ class MoveBehaviorTest extends AppCakeTestCase {
 	}
 
 /**
- * testMoveDrop method
+ * testMoveDropEmptyData method
  *
  * @return void
  */
-	public function testMoveDrop() {
+	public function testMoveDropEmptyData() {
 		$result = $this->_targetObject->moveDrop(null);
 		$this->assertFalse($result);
+	}
 
+/**
+ * testMoveDropRootSucess method
+ *
+ * @return void
+ */
+	public function testMoveDropRootSucess() {
 		$dropData = [
 			0 => [
 				[
@@ -124,15 +159,22 @@ class MoveBehaviorTest extends AppCakeTestCase {
 
 		$result = $this->_targetObject->generateTreeList(null, '{n}.TreeDataTest.id', '{n}.TreeDataTest.name');
 		$expected = [
-			2 => 'root - 2',
-			3 => '_level - 2.1',
-			4 => '_level - 2.2',
-			5 => '_level - 2.3',
-			6 => '_level - 2.4',
-			1 => 'root - 1'
+			2 => 'root - 2 - 1',
+			3 => '_level - 2.1 - 1',
+			4 => '_level - 2.2 - 1',
+			5 => '_level - 2.3 - 1',
+			6 => '_level - 2.4 - 1',
+			1 => 'root - 1 - 1'
 		];
 		$this->assertData($expected, $result);
+	}
 
+/**
+ * testMoveDropInsideLevelSuccess method
+ *
+ * @return void
+ */
+	public function testMoveDropInsideLevelSuccess() {
 		$dropData = [
 			0 => [
 				[
@@ -154,15 +196,22 @@ class MoveBehaviorTest extends AppCakeTestCase {
 
 		$result = $this->_targetObject->generateTreeList(null, '{n}.TreeDataTest.id', '{n}.TreeDataTest.name');
 		$expected = [
-			2 => 'root - 2',
-			3 => '_level - 2.1',
-			5 => '_level - 2.3',
-			6 => '_level - 2.4',
-			4 => '_level - 2.2',
-			1 => 'root - 1'
+			1 => 'root - 1 - 1',
+			2 => 'root - 2 - 1',
+			3 => '_level - 2.1 - 1',
+			5 => '_level - 2.3 - 1',
+			6 => '_level - 2.4 - 1',
+			4 => '_level - 2.2 - 1',
 		];
 		$this->assertData($expected, $result);
+	}
 
+/**
+ * testMoveDropChangeRootSuccess method
+ *
+ * @return void
+ */
+	public function testMoveDropChangeRootSuccess() {
 		$dropData = [
 			0 => [
 				[
@@ -181,12 +230,45 @@ class MoveBehaviorTest extends AppCakeTestCase {
 
 		$result = $this->_targetObject->generateTreeList(null, '{n}.TreeDataTest.id', '{n}.TreeDataTest.name');
 		$expected = [
-			2 => 'root - 2',
-			3 => '_level - 2.1',
-			6 => '_level - 2.4',
-			4 => '_level - 2.2',
-			5 => 'level - 2.3',
-			1 => 'root - 1'
+			1 => 'root - 1 - 1',
+			5 => 'level - 2.3 - 1',
+			2 => 'root - 2 - 1',
+			3 => '_level - 2.1 - 1',
+			4 => '_level - 2.2 - 1',
+			6 => '_level - 2.4 - 1',
+		];
+		$this->assertData($expected, $result);
+
+		$result = $this->_targetObject->verify();
+		$this->assertTrue($result);
+	}
+
+/**
+ * testMoveDropChangeScopeSuccess method
+ *
+ * @return void
+ */
+	public function testMoveDropChangeScopeSuccess() {
+		$scope = ['TreeDataTest.type' => 2];
+		$this->_targetObject->Behaviors->load('Tree', compact('scope'));
+		$dropData = [
+			0 => [
+				[
+					'id' => '9'
+				],
+				[
+					'id' => '8'
+				],
+			]
+		];
+		$result = $this->_targetObject->moveDrop(8, 7, 7, $dropData);
+		$this->assertTrue($result);
+
+		$result = $this->_targetObject->generateTreeList(null, '{n}.TreeDataTest.id', '{n}.TreeDataTest.name');
+		$expected = [
+			7 => 'root - 1 - 2',
+			9 => '_level - 2.2 - 2',
+			8 => '_level - 2.1 - 2',
 		];
 		$this->assertData($expected, $result);
 

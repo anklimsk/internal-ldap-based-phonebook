@@ -3,6 +3,8 @@
  *
  * @file    Main file for TourApplication
  * @version 0.3.0
+ * @copyright 2017-2018 Andrey Klimov.
+ * @license https://opensource.org/licenses/mit-license.php MIT License
  */
 
 (function (root, factory) {

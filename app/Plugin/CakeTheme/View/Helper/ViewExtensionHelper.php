@@ -5,7 +5,8 @@
  * Methods for create extended view element
  *
  * CakeTheme: Set theme for application.
- * @copyright Copyright 2016, Andrey Klimov.
+ * @copyright Copyright 2016-2018, Andrey Klimov.
+ * @license https://opensource.org/licenses/mit-license.php MIT License
  * @package plugin.View.Helper
  */
 
@@ -1634,10 +1635,11 @@ class ViewExtensionHelper extends CakeThemeAppHelper {
  * @param string $labelList Label of list.
  * @param string $controllerName Name of controller for viewing.
  * @param string $actionName Name of controller action for viewing.
+ * @param array|string $linkOptions HTML options for link element.
  * @param int $length Length of list item label string.
  * @return string Return list of last changed data.
  */
-	public function listLastInfo($lastInfo = null, $labelList = null, $controllerName = null, $actionName = null, $length = 0) {
+	public function listLastInfo($lastInfo = null, $labelList = null, $controllerName = null, $actionName = null, $linkOptions = [], $length = 0) {
 		if (!is_array($lastInfo)) {
 			$lastInfo = [];
 		}
@@ -1660,7 +1662,7 @@ class ViewExtensionHelper extends CakeThemeAppHelper {
 				$label = $this->truncateText(h($lastInfoItem['label']), $length);
 				if (!empty($controllerName) && !empty($lastInfoItem['id'])) {
 					$url = $this->addUserPrefixUrl(['controller' => $controllerName, 'action' => $actionName, $lastInfoItem['id']]);
-					$label = $this->popupModalLink($label, $url);
+					$label = $this->popupModalLink($label, $url, $linkOptions);
 				}
 				$lastInfoListData[] = $label .
 					' (' . $this->timeAgo($lastInfoItem['modified']) . ')';

@@ -1,7 +1,8 @@
 /**
  * @file Main file for layout Main
  * @version 0.1
- * @copyright 2017 Andrey Klimov.
+ * @copyright 2016-2018 Andrey Klimov.
+ * @license https://opensource.org/licenses/mit-license.php MIT License
  */
 
 /**

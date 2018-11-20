@@ -3,6 +3,8 @@
  *
  * @file    Main file for MainAppScripts
  * @version 0.20.7
+ * @copyright 2016-2018 Andrey Klimov.
+ * @license https://opensource.org/licenses/mit-license.php MIT License
  */
 
 (function (root, factory) {
@@ -251,8 +253,8 @@
 
             var objModalWindow = $form.parents('.main-app-scripts-modal');
             if (objModalWindow.length === 1) {
-                var currentUrl         = objModalWindow.data('modal-current-url');
-                var objForm            = $(responseText).find('form[action^="' + currentUrl + '"]');
+                var currentUrl         = $form.attr('action');
+                var objForm            = $(responseText).find('form[action="' + currentUrl + '"]');
                 var updateModalContent = $form.data('update-modal-content');
                 if (objForm.length > 0) {
                     var modalContent = _prepareModalContent(responseText, objModalWindow);
@@ -1189,7 +1191,7 @@
             var url          = $item.parents('[data-toggle="draggable"]').data('url');
             var targetId     = $item.data('id');
             var targetObj    = container.el;
-            var dataTree     = targetObj.sortable("serialize").get();
+            var dataTree     = targetObj.sortable('serialize').get();
             var parentId     = targetObj.parent(itemSelector).data('id');
             if (typeof parentId === 'undefined') {
                 parentId = null;
@@ -1585,7 +1587,6 @@
                 modalWindow.data('disable-use-stack', disableUseStack);
             }
 
-            modalWindow.data('modal-current-url', url);
             MainAppScripts.loadIndicatorOn(fadeBackground);
             $.ajax(
                 {
@@ -1683,7 +1684,7 @@
 
             _showModalWindow(url, title, size, method, disableUseStack);
 
-            return true;
+            return false;
         }
 
         /**
@@ -2695,6 +2696,7 @@
                         changeParent = changeParentDef;
                     }
 
+                    isTable = false;
                     if (targetItem.prop('tagName').toLowerCase() === 'table') {
                         isTable = true;
                     }

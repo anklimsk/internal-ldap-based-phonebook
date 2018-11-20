@@ -83,7 +83,9 @@ class TreeDataTest extends CakeTestModel {
  * @link http://book.cakephp.org/2.0/en/models/behaviors.html#using-behaviors
  */
 	public $actsAs = [
-		'Tree',
+		'Tree' => [
+			'scope' => ['TreeDataTest.type' => 1]
+		],
 		'CakeTheme.Move'
 	];
 

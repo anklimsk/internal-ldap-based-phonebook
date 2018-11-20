@@ -4,8 +4,9 @@
  *  moving and drag and drop items.
  *
  * CakeTheme: Set theme for application.
- * @copyright Copyright 2016, Andrey Klimov.
- * @package plugin.Controller.Component
+ * @copyright Copyright 2016-2018, Andrey Klimov.
+ * @license https://opensource.org/licenses/mit-license.php MIT License
+ * @package plugin.Model.Behavior
  */
 
 App::uses('ModelBehavior', 'Model');
@@ -102,6 +103,10 @@ class MoveBehavior extends ModelBehavior {
 		if (!empty($id)) {
 			$conditions[$model->alias . '.' . $parentField] = (int)$id;
 		}
+		if ($model->Behaviors->Tree->settings[$model->alias]['scope'] !== '1 = 1') {
+			$conditions[] = $model->Behaviors->Tree->settings[$model->alias]['scope'];
+		}
+
 		$fields = [
 			$model->alias . '.' . $model->primaryKey,
 		];

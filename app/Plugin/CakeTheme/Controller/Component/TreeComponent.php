@@ -4,7 +4,8 @@
  * Return data for tree view.
  *
  * CakeTheme: Set theme for application.
- * @copyright Copyright 2016, Andrey Klimov.
+ * @copyright Copyright 2016-2018, Andrey Klimov.
+ * @license https://opensource.org/licenses/mit-license.php MIT License
  * @package plugin.Controller.Component
  */
 App::uses('Component', 'Controller');

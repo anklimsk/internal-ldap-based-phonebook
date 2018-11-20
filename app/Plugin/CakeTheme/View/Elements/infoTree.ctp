@@ -4,7 +4,8 @@
  *  response of Tree view.
  *
  * CakeTheme: Set theme for application.
- * @copyright Copyright 2016, Andrey Klimov.
+ * @copyright Copyright 2016-2018, Andrey Klimov.
+ * @license https://opensource.org/licenses/mit-license.php MIT License
  * @link https://github.com/jonmiles/bootstrap-treeview
  * @package plugin.View.Elements
  */

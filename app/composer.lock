@@ -394,16 +394,16 @@
         },
         {
             "name": "anklimsk/cakephp2-theme",
-            "version": "v1.0.0",
+            "version": "v1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/anklimsk/cakephp-theme.git",
-                "reference": "198c8f878ae557a7ae98aeba72fba64a9321f035"
+                "reference": "ae34185e8f02200efccd4ceafb270a53b465ba1d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/anklimsk/cakephp-theme/zipball/198c8f878ae557a7ae98aeba72fba64a9321f035",
-                "reference": "198c8f878ae557a7ae98aeba72fba64a9321f035",
+                "url": "https://api.github.com/repos/anklimsk/cakephp-theme/zipball/ae34185e8f02200efccd4ceafb270a53b465ba1d",
+                "reference": "ae34185e8f02200efccd4ceafb270a53b465ba1d",
                 "shasum": ""
             },
             "require": {
@@ -431,7 +431,7 @@
             ],
             "description": "Full UI theme for CakePHP 2.x",
             "homepage": "https://github.com/anklimsk/cakephp-theme",
-            "time": "2018-10-04 11:55:48"
+            "time": "2018-11-19 11:35:56"
         },
         {
             "name": "cakephp/datasources",

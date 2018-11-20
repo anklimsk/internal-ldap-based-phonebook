@@ -4,7 +4,8 @@
  * Receive data of tour
  *
  * CakeTheme: Set theme for application.
- * @copyright Copyright 2017, Andrey Klimov.
+ * @copyright Copyright 2017-2018, Andrey Klimov.
+ * @license https://opensource.org/licenses/mit-license.php MIT License
  * @package plugin.Controller
  */
 

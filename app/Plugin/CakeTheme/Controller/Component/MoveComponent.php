@@ -4,7 +4,8 @@
  * Is used for processing moving and drag and drop items.
  *
  * CakeTheme: Set theme for application.
- * @copyright Copyright 2016, Andrey Klimov.
+ * @copyright Copyright 2016-2018, Andrey Klimov.
+ * @license https://opensource.org/licenses/mit-license.php MIT License
  * @package plugin.Controller.Component
  */
 
@@ -118,7 +119,6 @@ class MoveComponent extends Component {
  *  - `tree` Array of ID subtree for item.
  *
  * @throws BadRequestException if request is not AJAX, POST or JSON.
- * @throws InternalErrorException if Move behavior is not loaded in model.
  * @return void
  */
 	public function dropItem() {
@@ -126,10 +126,6 @@ class MoveComponent extends Component {
 		if (!$this->_controller->request->is('ajax') || !$this->_controller->request->is('post') ||
 			!$this->_controller->RequestHandler->prefers('json')) {
 			throw new BadRequestException();
-		}
-
-		if (!$this->_model->Behaviors->loaded('CakeTheme.Move')) {
-			throw new InternalErrorException(__d('view_extension', 'Move behavior is not loaded'));
 		}
 
 		$id = $this->_controller->request->data('target');
