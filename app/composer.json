@@ -14,7 +14,10 @@
         "anklimsk/cakephp2-theme": "^1.0.0"
     },
     "config": {
-        "vendor-dir": "Vendor/"
+        "vendor-dir": "Vendor/",
+        "preferred-install": {
+            "cakephp/datasources": "dist"
+        }
     },
     "minimum-stability": "dev",
     "prefer-stable": true
