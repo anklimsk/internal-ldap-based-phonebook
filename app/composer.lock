@@ -125,16 +125,16 @@
         },
         {
             "name": "anklimsk/cakephp-extended-test",
-            "version": "v1.0.1",
+            "version": "v1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/anklimsk/cakephp-extended-test.git",
-                "reference": "ba4ac17546045cf30171ed3cd7b609a189cf972c"
+                "reference": "21691a3be8a198419feb92fb6ed3b35a14dc24b1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/anklimsk/cakephp-extended-test/zipball/ba4ac17546045cf30171ed3cd7b609a189cf972c",
-                "reference": "ba4ac17546045cf30171ed3cd7b609a189cf972c",
+                "url": "https://api.github.com/repos/anklimsk/cakephp-extended-test/zipball/21691a3be8a198419feb92fb6ed3b35a14dc24b1",
+                "reference": "21691a3be8a198419feb92fb6ed3b35a14dc24b1",
                 "shasum": ""
             },
             "require": {
@@ -160,7 +160,7 @@
             ],
             "description": "Extended test tools for CakePHP 2.x",
             "homepage": "https://github.com/anklimsk/cakephp-extended-test",
-            "time": "2018-10-19 05:53:23"
+            "time": "2018-11-19 09:25:26"
         },
         {
             "name": "anklimsk/cakephp-ldap-sync",
