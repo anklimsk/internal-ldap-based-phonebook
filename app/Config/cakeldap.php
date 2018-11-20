@@ -4,8 +4,9 @@
  *
  * To modify these parameters, copy this file into your own CakePHP APP/Config directory.
  * CakeLdap: Authentication of users by member group of Active Directory.
- * @copyright Copyright 2017, Andrey Klimov.
- * @package plugin.Config
+ * @copyright Copyright 2017-2018, Andrey Klimov.
+ * @license https://opensource.org/licenses/mit-license.php MIT License
+ * @package app.Config
  */
 
 $config['CakeLdap'] = [

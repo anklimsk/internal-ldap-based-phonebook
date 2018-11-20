@@ -164,16 +164,16 @@
         },
         {
             "name": "anklimsk/cakephp-ldap-sync",
-            "version": "v1.0.0",
+            "version": "v1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/anklimsk/cakephp-ldap-sync.git",
-                "reference": "03ce5ca364c4a870d2cadd482d9c875c4ad46ae6"
+                "reference": "8c5be520b71922507fc56e72ed02d684137e18ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/anklimsk/cakephp-ldap-sync/zipball/03ce5ca364c4a870d2cadd482d9c875c4ad46ae6",
-                "reference": "03ce5ca364c4a870d2cadd482d9c875c4ad46ae6",
+                "url": "https://api.github.com/repos/anklimsk/cakephp-ldap-sync/zipball/8c5be520b71922507fc56e72ed02d684137e18ae",
+                "reference": "8c5be520b71922507fc56e72ed02d684137e18ae",
                 "shasum": ""
             },
             "require": {
@@ -202,7 +202,7 @@
             ],
             "description": "Synchronizing information and authenticating users by LDAP for CakePHP 2.x",
             "homepage": "https://github.com/anklimsk/cakephp-ldap-sync",
-            "time": "2018-10-04 12:27:43"
+            "time": "2018-11-19 10:32:26"
         },
         {
             "name": "anklimsk/cakephp-notify",

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: CakePHP Plugin CakeLdap\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2018-04-24 10:51+0300\n"
+"PO-Revision-Date: 2018-11-15 18:55+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 1.8.7\n"
+"X-Generator: Poedit 2.2\n"
 
 #: Console/Command/CronShell.php:43
 msgid "Sync information of employees with LDAP server"
@@ -116,7 +116,7 @@ msgstr "База данных не содержит информацию о де
 #: Controller/UsersController.php:106
 #: Test/Case/Controller/UsersControllerTest.php:159;181;203
 msgid "Invalid username or password, try again"
-msgstr "Неверное имя пользователя или пароль, попробуйте еще раз"
+msgstr "Неверное имя пользователя или пароль, попробуйте ещё раз"
 
 #: Controller/Component/EmployeeActionComponent.php:116
 msgid "Employees not found"
@@ -134,12 +134,12 @@ msgstr "Синхронизация информации сотрудников �
 
 #: Controller/Component/EmployeeActionComponent.php:209
 msgid "Synchronization information of employees put in queue unsuccessfully"
-msgstr "Синхронизация информации сотрудников поставлена в очередь неуспешно"
+msgstr "Синхронизация информации сотрудников поставлена в очередь безуспешно"
 
 #: Controller/Component/EmployeeActionComponent.php:214
 #: Test/Case/Controller/Component/EmployeeActionTest.php:1765
 msgid "Synchronization information of employees has been finished successfully"
-msgstr "Синхронизация информации сотрудников была завершена успешно"
+msgstr "Синхронизация информации сотрудников успешно завершена"
 
 #: Controller/Component/EmployeeActionComponent.php:216
 #: Test/Case/Controller/Component/EmployeeActionTest.php:1751
@@ -154,7 +154,7 @@ msgstr "Сортировка дерева сотрудников поставл�
 
 #: Controller/Component/EmployeeActionComponent.php:282
 msgid "Order tree of employees put in queue unsuccessfully"
-msgstr "Сортировка дерева сотрудников поставлена в очередь неуспешно"
+msgstr "Сортировка дерева сотрудников поставлена в очередь безуспешно"
 
 #: Controller/Component/EmployeeActionComponent.php:320
 #: Test/Case/Controller/Component/EmployeeActionTest.php:2338
@@ -163,7 +163,7 @@ msgstr "Восстановление дерева сотрудников пос�
 
 #: Controller/Component/EmployeeActionComponent.php:323
 msgid "Recovery tree of employees put in queue unsuccessfully"
-msgstr "Восстановление дерева сотрудников поставлено в очередь неуспешно"
+msgstr "Восстановление дерева сотрудников поставлено в очередь безуспешно"
 
 #: Model/DepartmentDb.php:223
 msgid "Error getting departments information from LDAP server"
