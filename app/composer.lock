@@ -87,16 +87,16 @@
         },
         {
             "name": "anklimsk/cakephp-console-installer",
-            "version": "v1.0.1",
+            "version": "v1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/anklimsk/cakephp-console-installer.git",
-                "reference": "b430c607b8e3dd8d51d556ce490d2133be0ac179"
+                "reference": "b52d8121cb0d57a2c04fee4ce1402a0248bce439"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/anklimsk/cakephp-console-installer/zipball/b430c607b8e3dd8d51d556ce490d2133be0ac179",
-                "reference": "b430c607b8e3dd8d51d556ce490d2133be0ac179",
+                "url": "https://api.github.com/repos/anklimsk/cakephp-console-installer/zipball/b52d8121cb0d57a2c04fee4ce1402a0248bce439",
+                "reference": "b52d8121cb0d57a2c04fee4ce1402a0248bce439",
                 "shasum": ""
             },
             "require": {
@@ -121,7 +121,7 @@
             ],
             "description": "Console installer for CakePHP 2.x",
             "homepage": "https://github.com/anklimsk/cakephp-console-installer",
-            "time": "2018-10-05 06:01:07"
+            "time": "2018-11-19 08:33:47"
         },
         {
             "name": "anklimsk/cakephp-extended-test",

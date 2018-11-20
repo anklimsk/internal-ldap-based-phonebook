@@ -4,8 +4,9 @@
  *
  * To modify these parameters, copy this file into your own CakePHP APP/Config directory.
  * CakeInstaller: Installer of CakePHP web application.
- * @copyright Copyright 2016, Andrey Klimov.
- * @package plugin.Config
+ * @copyright Copyright 2016-2018, Andrey Klimov.
+ * @license https://opensource.org/licenses/mit-license.php MIT License
+ * @package app.Config
  */
 
 $config['CakeInstaller'] = [
@@ -79,7 +80,7 @@ $config['CakeInstaller'] = [
         'settimezone',
         // Set base URL
         'setbaseurl',
-        // Configure database
+        // Configure database connections
         'configdb',
         // Check connect to database
         'connectdb',
@@ -129,9 +130,9 @@ $config['CakeInstaller'] = [
     'customConnections' => [
 /*
         // Name of connection (property of class DATABASE_CONFIG)
-        'connectionName' => array(
+        'connectionName' => [
             // Name of connection parameter
-            'paramName' => array(
+            'paramName' => [
                 // Label of parameter. If empty, use default label or parameter name
                 'label' => 'label of param',
                 // Value of parameter. If exists, skip next options
@@ -142,13 +143,13 @@ $config['CakeInstaller'] = [
                 'alowEmpty' => false,
                 // List of variants for console input parameter value
                 // Format I:
-                'options' => array('value 1', 'value 2'),
+                'options' => ['value 1', 'value 2'],
                 // Format II:
-                'options' => array('label of variant 1' => 'value of variant 1', 'y' => true),
+                'options' => ['label of variant 1' => 'value of variant 1', 'y' => true],
                 // PCRE pattern for validation console input parameter value
                 'validationPattern' => '/\w{2,}\@\w{2,}\.\w{2,}/',
-            )
-        ),
+            ]
+        ],
 */
         'ldap' => [
             'datasource' => [
@@ -174,7 +175,7 @@ $config['CakeInstaller'] = [
                 'value' => '',
             ],
             'basedn' => [
-                'label' => __d('cake_installer_label', 'The DN of the search base (DC=fabrikam,DC=com)'),
+                'label' => __d('cake_installer_label', 'The DN of the search base'),
                 'validationPattern' => '/^([a-z][a-z0-9-]*)=(?![ #])(((?![\\="+,;<>]).)|(\\[ \\#="+,;<>])|(\\[a-f0-9][a-f0-9]))*(,([a-z][a-z0-9-]*)=(?![ #])(((?![\\="+,;<>]).)|(\\[ \\#="+,;<>])|(\\[a-f0-9][a-f0-9]))*)*$/i',
             ],
             'type' => [
@@ -194,8 +195,8 @@ $config['CakeInstaller'] = [
             ],
         ],
     ],
-    // List of symlinks for creation in format:
-    // key - link; value - target.
+    // List of additional schemes for creation, as
+    // console command `cake schema create` options
     'schemaCreationList' => [
         'sessions',
         '-p Queue',

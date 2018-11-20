@@ -3,7 +3,8 @@
  * This file is the view file of the plugin. Used for show
  *  installation information.
  *
- * @copyright Copyright 2016, Andrey Klimov.
+ * @copyright Copyright 2016-2018, Andrey Klimov.
+ * @license https://opensource.org/licenses/mit-license.php MIT License
  * @package plugin.View.Users
  */
 ?>
@@ -57,10 +58,10 @@
 	</div>
 <?php
 	$actions = [
-		'<code><samp>./Console/cake CakeInstaller</samp></code> - ' . __d('cake_installer', 'to run the interactive installer'),
-		'<code><samp>./Console/cake CakeInstaller check</samp></code> - ' . __d('cake_installer', 'to check the readiness of the start installation'),
-		'<code><samp>./Console/cake CakeInstaller install</samp></code> - ' . __d('cake_installer', 'to start the installation process'),
-		'<code><samp>./Console/cake CakeInstaller --help</samp></code> - ' . __d('cake_installer', 'to get help'),
+		'<code><samp>sudo ./Console/cake CakeInstaller</samp></code> - ' . __d('cake_installer', 'to run the interactive installer'),
+		'<code><samp>sudo ./Console/cake CakeInstaller check</samp></code> - ' . __d('cake_installer', 'to check the readiness of the start installation'),
+		'<code><samp>sudo ./Console/cake CakeInstaller install</samp></code> - ' . __d('cake_installer', 'to start the installation process'),
+		'<code><samp>sudo ./Console/cake CakeInstaller --help</samp></code> - ' . __d('cake_installer', 'to get help'),
 	];
 
 	if (!$isAppInstalled) {

@@ -3,7 +3,8 @@
  * This file is the console shell file of the plugin.
  *
  * CakeInstaller: Installer of CakePHP web application.
- * @copyright Copyright 2016, Andrey Klimov.
+ * @copyright Copyright 2016-2018, Andrey Klimov.
+ * @license https://opensource.org/licenses/mit-license.php MIT License
  * @package plugin.Console.Command
  */
 
@@ -14,6 +15,7 @@ App::uses('Folder', 'Utility');
 App::uses('File', 'Utility');
 App::uses('String', 'Utility');
 App::uses('CakeText', 'Utility');
+App::uses('ClassRegistry', 'Utility');
 App::uses('CakeSchema', 'Model');
 App::uses('Language', 'CakeBasicFunctions.Utility');
 
@@ -91,6 +93,13 @@ class CakeInstallerShell extends AppShell {
 	public $useActionNotify = true;
 
 /**
+ * Object of model `InstallerCompleted`
+ *
+ * @var object
+ */
+	public $InstallerCompleted = null;
+
+/**
  * Initializes the Shell
  * acts as constructor for subclasses
  * allows configuration of tasks prior to shell execution
@@ -102,6 +111,11 @@ class CakeInstallerShell extends AppShell {
 		Configure::write('Cache.disable', true);
 		$this->_initUiLang();
 		parent::initialize();
+
+		$this->InstallerCompleted = ClassRegistry::init('InstallerCompleted', true);
+		if ($this->InstallerCompleted === false) {
+			$this->InstallerCompleted = ClassRegistry::init('CakeInstaller.InstallerCompleted');
+		}
 
 		$this->progress = $this->helper('Progress');
 		$this->state = $this->helper('CakeInstaller.State');
@@ -211,6 +225,7 @@ class CakeInstallerShell extends AppShell {
  * @return void
  */
 	public function main() {
+		$this->clear();
 		$installerCommands = $this->ConfigInstaller->getListInstallerCommands(false);
 		if (empty($installerCommands)) {
 			$this->out('<error>' . __d('cake_installer', 'Empty command list. See config file.') . '</error>');
@@ -232,7 +247,7 @@ class CakeInstallerShell extends AppShell {
 		$actionName = $this->inputFromList($this, $installerCommands, $inputMessage, $titleMessage, 'exit');
 		$this->clear();
 		$methodName = '_' . $actionName;
-		$this->$methodName();
+		call_user_func([$this, $methodName]);
 	}
 
 /**
@@ -440,27 +455,36 @@ class CakeInstallerShell extends AppShell {
  * @return void
  */
 	protected function _install() {
+		$this->waiting->animateMessage();
+
 		$installTasks = $this->ConfigInstaller->getListInstallerTasks();
+		$this->waiting->animateMessage();
 		if (empty($installTasks)) {
+			$this->waiting->hideMessage();
 			$this->out('<error>' . __d('cake_installer', 'Empty command list for action install. See config file.') . '</error>');
 
 			return;
 		}
 
 		$installerCommands = $this->ConfigInstaller->getListInstallerCommands();
+		$this->waiting->animateMessage();
 		if (empty($installerCommands)) {
+			$this->waiting->hideMessage();
 			$this->out('<error>' . __d('cake_installer', 'Empty command list. See config file.') . '</error>');
 
 			return;
 		}
 
 		$tasks = array_values(array_intersect($installerCommands, $installTasks));
+		$this->waiting->animateMessage();
 		if (empty($tasks)) {
+			$this->waiting->hideMessage();
 			$this->out('<error>' . __d('cake_installer', 'Invalid command list for action install. See config file.') . '</error>');
 
 			return;
 		}
 
+		$this->waiting->hideMessage();
 		$isAppInstalled = $this->InstallerCheck->isAppInstalled(null, false);
 		if ($isAppInstalled) {
 			if (!$this->_checkSure(__d('cake_installer', 'Application is installed. Reinstall?'))) {
@@ -483,12 +507,16 @@ class CakeInstallerShell extends AppShell {
 			$this->out(null, 0);
 			$this->progress->draw();
 			$this->hr(1);
+			$timeProcess = 0;
 			$taskName = '_' . $tasks[$step];
 			if (!is_callable([$this, $taskName])) {
 				$result = false;
 				break;
 			} else {
-				$stepResult = $this->$taskName(true);
+				$timeStart = microtime(true);
+				$stepResult = call_user_func([$this, $taskName], true);
+				$timeEnd = microtime(true);
+				$timeProcess = $timeEnd - $timeStart;
 				if (is_null($stepResult)) {
 					$this->out('<success>' . __d('cake_installer', 'To apply the changes, restart the installer.') . '</success>');
 					$this->InstallerCheck->setNeedRestart();
@@ -501,6 +529,9 @@ class CakeInstallerShell extends AppShell {
 			}
 
 			$this->progress->increment(1);
+			if ($timeProcess < 0.2) {
+				usleep(200000);
+			}
 		}
 		if ($result) {
 			$this->clear();
@@ -509,7 +540,8 @@ class CakeInstallerShell extends AppShell {
 			$this->out(null, 0);
 			$this->progress->draw();
 			$this->hr(1);
-			if (!$this->InstallerCheck->isAppInstalled(null, true)) {
+			if (!$this->InstallerCheck->isAppInstalled(null, true) ||
+				!$this->InstallerCompleted->intsallCompleted()) {
 				$result = false;
 			}
 		}
@@ -685,14 +717,18 @@ class CakeInstallerShell extends AppShell {
 					$linkExists = true;
 				} else {
 					if (is_dir($link)) {
-						rmdir($link);
+						//@codingStandardsIgnoreStart
+						@rmdir($link);
+						//@codingStandardsIgnoreEnd
 					} else {
 						unlink($link);
 					}
 				}
 			}
 
-			if ($linkExists || (!$badTarget && symlink($target, $link))) {
+			//@codingStandardsIgnoreStart
+			if ($linkExists || (!$badTarget && @symlink($target, $link))) {
+				//@codingStandardsIgnoreEnd
 				$state = '<success>' . __d('cake_installer', 'Ok') . '</success>';
 			} else {
 				$state = '<error>' . __d('cake_installer', 'Bad') . '</error>';
@@ -1312,20 +1348,23 @@ EOD;
  * Recursive change parameters of directory.
  *
  * @param string $path Path to target directory
- * @param string $func Function name, e.g.: `chown`  or `chmod`.
+ * @param string $funcName Function name, e.g.: `chown`, `chmod` or `chgrp`.
  * @param int $param Parameter for function, e.g.:
  *  user name of owner or mode for access.
  * @return bool Success
  */
-	protected function _changeDirParam($path = null, $func = null, $param = null) {
+	protected function _changeDirParam($path = null, $funcName = null, $param = null) {
 		if (empty($path) || !file_exists($path) ||
-			!in_array($func, ['chown', 'chmod', 'chgrp']) || empty($param)) {
+			!in_array($funcName, ['chown', 'chmod', 'chgrp']) || empty($param)) {
 			return false;
 		}
 
 		$result = true;
 		if (is_file($path) || is_dir($path)) {
-			if ($func($path, $param)) {
+			//@codingStandardsIgnoreStart
+			$resultCall = @call_user_func($funcName, $path, $param);
+			//@codingStandardsIgnoreEnd
+			if ($resultCall) {
 				if (is_file($path)) {
 					return true;
 				}
@@ -1340,7 +1379,7 @@ EOD;
 		$dirContent = $oFolder->read(true, false, true);
 		foreach ($dirContent as $targetPaths) {
 			foreach ($targetPaths as $targetPath) {
-				if (!$this->_changeDirParam($targetPath, $func, $param)) {
+				if (!$this->_changeDirParam($targetPath, $funcName, $param)) {
 					$result = false;
 				}
 			}
@@ -1448,7 +1487,9 @@ EOD;
 			$this->out('<success>' . __d('cake_installer', 'Group of \'%s\' changed to \'%s\' successfully.', $tempDir . DS . '*.*', $apacheUserGroup) . '</success>');
 		}
 
-		if (!chgrp($fileConfig, $apacheUserGroup)) {
+		//@codingStandardsIgnoreStart
+		if (!@chgrp($fileConfig, $apacheUserGroup)) {
+			//@codingStandardsIgnoreEnd
 			$this->out('<error>' . __d('cake_installer', 'Could not change group on \'%s\' to \'%s\'', $fileConfig, $apacheUserGroup) . '</error>');
 			$this->out('<debug>chgrp ' . $apacheUserGroup . ' ' . $fileConfig . '</debug>', 1, Shell::VERBOSE);
 			$result = false;
@@ -1456,7 +1497,9 @@ EOD;
 			$this->out('<success>' . __d('cake_installer', 'Group of \'%s\' changed to \'%s\' successfully.', $fileConfig, $apacheUserGroup) . '</success>');
 		}*/
 
-		if (!chown($fileConfig, $apacheUser)) {
+		//@codingStandardsIgnoreStart
+		if (!@chown($fileConfig, $apacheUser)) {
+			//@codingStandardsIgnoreEnd
 			$this->out('<error>' . __d('cake_installer', 'Could not change owner on \'%s\' to \'%s\'', $fileConfig, $apacheUser) . '</error>');
 			$this->out('<debug>chown ' . $apacheUser . ' ' . $fileConfig . '</debug>', 1, Shell::VERBOSE);
 			$result = false;
@@ -1583,9 +1626,9 @@ EOD;
 		} else {
 			$result = $contents;
 			if (!empty($configComment)) {
-				$result .= sprintf("\r\n/**\r\n * %s\r\n */", $configComment);
+				$result .= sprintf("\n/**\n * %s\n */", $configComment);
 			}
-			$result .= "\r\n\t" . $configStr . "\r\n";
+			$result .= "\n\t" . $configStr . "\n";
 		}
 
 		return $oFile->write($result);

@@ -3,7 +3,8 @@
  * This file is the application level ExtendControllerTestCase class.
  *
  * CakeExtendTest: Extended test tools for CakePHP.
- * @copyright Copyright 2016, Andrey Klimov.
+ * @copyright Copyright 2016-2018, Andrey Klimov.
+ * @license https://opensource.org/licenses/mit-license.php MIT License
  * @package app.Test
  */
 
@@ -63,6 +64,14 @@ class AppControllerTestCase extends ExtendControllerTestCase {
  * @return void
  */
 	public function setUp() {
+		$pathPlugin = CakePlugin::path('CakeInstaller');
+		$pathModel = $pathPlugin . 'Test' . DS . 'test_app' . DS . 'Model' . DS;
+		App::build(
+			[
+				'Model' => $pathModel,
+			],
+			App::RESET
+		);
 		parent::setUp();
 
 		$path = __DIR__ . DS;
