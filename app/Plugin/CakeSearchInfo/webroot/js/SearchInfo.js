@@ -3,6 +3,8 @@
  *
  * @file    Main file for WebNotifications
  * @version 0.9.0
+ * copyright 2016-2018 Andrey Klimov.
+ * @license https://opensource.org/licenses/mit-license.php MIT License
  */
 
 (function (root, factory) {

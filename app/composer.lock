@@ -245,16 +245,16 @@
         },
         {
             "name": "anklimsk/cakephp-search-info",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/anklimsk/cakephp-search-info.git",
-                "reference": "bbd565dee4bb22c9f9f3d6281ca313f4b6d312c6"
+                "reference": "31e4ebb35ee6d01b0b8979437ca53835742543e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/anklimsk/cakephp-search-info/zipball/bbd565dee4bb22c9f9f3d6281ca313f4b6d312c6",
-                "reference": "bbd565dee4bb22c9f9f3d6281ca313f4b6d312c6",
+                "url": "https://api.github.com/repos/anklimsk/cakephp-search-info/zipball/31e4ebb35ee6d01b0b8979437ca53835742543e9",
+                "reference": "31e4ebb35ee6d01b0b8979437ca53835742543e9",
                 "shasum": ""
             },
             "require": {
@@ -279,7 +279,7 @@
             ],
             "description": " Search for information in the project database for CakePHP 2.x",
             "homepage": "https://github.com/anklimsk/cakephp-search-info",
-            "time": "2018-10-04 12:37:12"
+            "time": "2018-11-19 10:44:38"
         },
         {
             "name": "anklimsk/cakephp-settings-app",
