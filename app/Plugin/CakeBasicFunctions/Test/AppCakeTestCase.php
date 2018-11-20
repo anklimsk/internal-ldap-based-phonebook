@@ -3,8 +3,9 @@
  * This file is the application level ExtendCakeTestCase class.
  *
  * CakeExtendTest: Extended test tools for CakePHP.
- * @copyright Copyright 2016, Andrey Klimov.
- * @package app.Test
+ * @copyright Copyright 2016-2018, Andrey Klimov.
+ * @license https://opensource.org/licenses/mit-license.php MIT License
+ * @package plugin.Test
  */
 
 App::uses('ExtendCakeTestCase', 'CakeExtendTest.Test');

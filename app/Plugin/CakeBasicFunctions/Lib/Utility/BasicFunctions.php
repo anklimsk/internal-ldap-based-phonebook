@@ -3,7 +3,8 @@
  * This file is global basic functions file of the application.
  *
  * CakeBasicFunctions: Basic global utilities for application.
- * @copyright Copyright 2016, Andrey Klimov.
+ * @copyright Copyright 2016-2018, Andrey Klimov.
+ * @license https://opensource.org/licenses/mit-license.php MIT License
  * @package plugin.Vendor
  */
 
@@ -74,8 +75,8 @@ if (!function_exists('constValToLcSingle')) {
 /**
  * Return constant name
  *
- * @param string $prefix Prefix of constan.
- * @param mixed $val Value of constan.
+ * @param string $prefix Prefix of constant.
+ * @param mixed $val Value of constant.
  * @param bool|string $keepUnderscore If false, don't keep underscore.
  *  If string, replace underscore to this.
  * @param bool|int $skipWords If false, don't skip words. If integer,

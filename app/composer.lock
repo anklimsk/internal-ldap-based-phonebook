@@ -9,16 +9,16 @@
     "packages": [
         {
             "name": "anklimsk/cakephp-basic-functions",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/anklimsk/cakephp-basic-functions.git",
-                "reference": "8737965fd51dd1a9e4b9487020bc92cffb029ea5"
+                "reference": "7554e8b0b420fd3155593af7bf76b7ccbdc8701e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/anklimsk/cakephp-basic-functions/zipball/8737965fd51dd1a9e4b9487020bc92cffb029ea5",
-                "reference": "8737965fd51dd1a9e4b9487020bc92cffb029ea5",
+                "url": "https://api.github.com/repos/anklimsk/cakephp-basic-functions/zipball/7554e8b0b420fd3155593af7bf76b7ccbdc8701e",
+                "reference": "7554e8b0b420fd3155593af7bf76b7ccbdc8701e",
                 "shasum": ""
             },
             "require": {
@@ -44,7 +44,7 @@
             ],
             "description": "Global basic utilities for the CakePHP 2.x application",
             "homepage": "https://github.com/anklimsk/cakephp-basic-functions",
-            "time": "2018-10-04 12:08:34"
+            "time": "2018-11-19 09:07:01"
         },
         {
             "name": "anklimsk/cakephp-config-plugin",
