@@ -128,29 +128,6 @@ $config['CakeInstaller'] = [
         //'test',
     ],
     'customConnections' => [
-/*
-        // Name of connection (property of class DATABASE_CONFIG)
-        'connectionName' => [
-            // Name of connection parameter
-            'paramName' => [
-                // Label of parameter. If empty, use default label or parameter name
-                'label' => 'label of param',
-                // Value of parameter. If exists, skip next options
-                'value' => 'value of param',
-                // Default value of parameter (empty console input in interactive mode)
-                'defaultValue' => 'default value of param',
-                // Allow empty value of parameter
-                'alowEmpty' => false,
-                // List of variants for console input parameter value
-                // Format I:
-                'options' => ['value 1', 'value 2'],
-                // Format II:
-                'options' => ['label of variant 1' => 'value of variant 1', 'y' => true],
-                // PCRE pattern for validation console input parameter value
-                'validationPattern' => '/\w{2,}\@\w{2,}\.\w{2,}/',
-            ]
-        ],
-*/
         'ldap' => [
             'datasource' => [
                 'value' => 'CakeLdap.LdapExtSource',
@@ -175,7 +152,7 @@ $config['CakeInstaller'] = [
                 'value' => '',
             ],
             'basedn' => [
-                'label' => __d('cake_installer_label', 'The DN of the search base'),
+                'label' => __d('cake_installer_label', 'The DN of the search base (DC=fabrikam,DC=com)'),
                 'validationPattern' => '/^([a-z][a-z0-9-]*)=(?![ #])(((?![\\="+,;<>]).)|(\\[ \\#="+,;<>])|(\\[a-f0-9][a-f0-9]))*(,([a-z][a-z0-9-]*)=(?![ #])(((?![\\="+,;<>]).)|(\\[ \\#="+,;<>])|(\\[a-f0-9][a-f0-9]))*)*$/i',
             ],
             'type' => [
