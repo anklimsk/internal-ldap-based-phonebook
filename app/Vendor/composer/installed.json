@@ -587,46 +587,6 @@
         "homepage": "https://github.com/anklimsk/cakephp-config-plugin"
     },
     {
-        "name": "anklimsk/cakephp-console-installer",
-        "version": "v1.0.4",
-        "version_normalized": "1.0.4.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/anklimsk/cakephp-console-installer.git",
-            "reference": "b52d8121cb0d57a2c04fee4ce1402a0248bce439"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/anklimsk/cakephp-console-installer/zipball/b52d8121cb0d57a2c04fee4ce1402a0248bce439",
-            "reference": "b52d8121cb0d57a2c04fee4ce1402a0248bce439",
-            "shasum": ""
-        },
-        "require": {
-            "anklimsk/cakephp-basic-functions": "^1.0.0",
-            "anklimsk/cakephp-config-plugin": "^1.0.0",
-            "anklimsk/cakephp-extended-test": "^1.0.0",
-            "composer/installers": "^1.5.0",
-            "php": ">=5.4"
-        },
-        "time": "2018-11-19 08:33:47",
-        "type": "cakephp-plugin",
-        "extra": {
-            "installer-name": "CakeInstaller"
-        },
-        "installation-source": "dist",
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Andrey Klimov"
-            }
-        ],
-        "description": "Console installer for CakePHP 2.x",
-        "homepage": "https://github.com/anklimsk/cakephp-console-installer"
-    },
-    {
         "name": "anklimsk/cakephp2-theme",
         "version": "v1.0.3",
         "version_normalized": "1.0.3.0",
@@ -910,5 +870,45 @@
         ],
         "description": "Generate PDF files with the CakePHP 2.x",
         "homepage": "https://github.com/anklimsk/cakephp-tcpdf"
+    },
+    {
+        "name": "anklimsk/cakephp-console-installer",
+        "version": "v1.0.4",
+        "version_normalized": "1.0.4.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/anklimsk/cakephp-console-installer.git",
+            "reference": "62963b3b6bd012bebc26eab4fe0408c87cf5ad84"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/anklimsk/cakephp-console-installer/zipball/62963b3b6bd012bebc26eab4fe0408c87cf5ad84",
+            "reference": "62963b3b6bd012bebc26eab4fe0408c87cf5ad84",
+            "shasum": ""
+        },
+        "require": {
+            "anklimsk/cakephp-basic-functions": "^1.0.0",
+            "anklimsk/cakephp-config-plugin": "^1.0.0",
+            "anklimsk/cakephp-extended-test": "^1.0.0",
+            "composer/installers": "^1.5.0",
+            "php": ">=5.4"
+        },
+        "time": "2018-11-20 15:13:07",
+        "type": "cakephp-plugin",
+        "extra": {
+            "installer-name": "CakeInstaller"
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Andrey Klimov"
+            }
+        ],
+        "description": "Console installer for CakePHP 2.x",
+        "homepage": "https://github.com/anklimsk/cakephp-console-installer"
     }
 ]

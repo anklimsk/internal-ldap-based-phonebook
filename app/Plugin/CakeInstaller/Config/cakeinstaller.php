@@ -169,7 +169,7 @@ $config['CakeInstaller'] = [
 				'value' => '',
 			],
 			'basedn' => [
-				'label' => __d('cake_installer_label', 'The DN of the search base'),
+				'label' => __d('cake_installer_label', 'The DN of the search base (DC=fabrikam,DC=com)'),
 				'validationPattern' => '/^([a-z][a-z0-9-]*)=(?![ #])(((?![\\="+,;<>]).)|(\\[ \\#="+,;<>])|(\\[a-f0-9][a-f0-9]))*(,([a-z][a-z0-9-]*)=(?![ #])(((?![\\="+,;<>]).)|(\\[ \\#="+,;<>])|(\\[a-f0-9][a-f0-9]))*)*$/i',
 			],
 			'type' => [
