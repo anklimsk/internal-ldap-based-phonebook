@@ -48,16 +48,16 @@
         },
         {
             "name": "anklimsk/cakephp-config-plugin",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/anklimsk/cakephp-config-plugin.git",
-                "reference": "35e16f2377aecefb2288849ada8d1097dfcdc231"
+                "reference": "9659709541950470908f15860327cdd9f1d4e662"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/anklimsk/cakephp-config-plugin/zipball/35e16f2377aecefb2288849ada8d1097dfcdc231",
-                "reference": "35e16f2377aecefb2288849ada8d1097dfcdc231",
+                "url": "https://api.github.com/repos/anklimsk/cakephp-config-plugin/zipball/9659709541950470908f15860327cdd9f1d4e662",
+                "reference": "9659709541950470908f15860327cdd9f1d4e662",
                 "shasum": ""
             },
             "require": {
@@ -83,7 +83,7 @@
             ],
             "description": "Initialize and get the plugin configuration for the CakePHP 2.x",
             "homepage": "https://github.com/anklimsk/cakephp-config-plugin",
-            "time": "2018-10-04 12:21:52"
+            "time": "2018-11-19 09:16:13"
         },
         {
             "name": "anklimsk/cakephp-console-installer",
