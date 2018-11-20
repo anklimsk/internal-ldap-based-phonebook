@@ -321,16 +321,16 @@
         },
         {
             "name": "anklimsk/cakephp-spreadsheet",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/anklimsk/cakephp-spreadsheet.git",
-                "reference": "2361d0356c6cf9596624c5c3ff52e45ce4ae887d"
+                "reference": "599a61c3083e7419dba42ae5b3448c73d2ddcf52"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/anklimsk/cakephp-spreadsheet/zipball/2361d0356c6cf9596624c5c3ff52e45ce4ae887d",
-                "reference": "2361d0356c6cf9596624c5c3ff52e45ce4ae887d",
+                "url": "https://api.github.com/repos/anklimsk/cakephp-spreadsheet/zipball/599a61c3083e7419dba42ae5b3448c73d2ddcf52",
+                "reference": "599a61c3083e7419dba42ae5b3448c73d2ddcf52",
                 "shasum": ""
             },
             "require": {
@@ -354,7 +354,7 @@
             ],
             "description": "Generate MS Excel files with the CakePHP 2.x",
             "homepage": "https://github.com/anklimsk/cakephp-spreadsheet",
-            "time": "2018-10-04 12:46:08"
+            "time": "2018-11-19 11:07:00"
         },
         {
             "name": "anklimsk/cakephp2-tcpdf",
