@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: InternalPhonebook\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2018-11-16 11:12+0300\n"
+"PO-Revision-Date: 2018-11-22 17:24+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -16,537 +16,537 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Poedit 2.2\n"
 
-#: Config/cakesettingsapp.php:27 Test/Case/Controller/AppControllerTest.php:360
+#: Config/cakesettingsapp.php:28 Test/Case/Controller/AppControllerTest.php:361
 msgid "secretary"
 msgstr "секретарь"
 
-#: Config/cakesettingsapp.php:32 Test/Case/Model/SettingTest.php:64
+#: Config/cakesettingsapp.php:33 Test/Case/Model/SettingTest.php:60
 msgid "human resources"
 msgstr "отдел кадров"
 
-#: Config/cakesettingsapp.php:37 Test/Case/Model/SettingTest.php:65
+#: Config/cakesettingsapp.php:38 Test/Case/Model/SettingTest.php:61
 msgid "administrator"
 msgstr "администратор"
 
-#: Console/Command/CronShell.php:44
+#: Console/Command/CronShell.php:43
 msgid "Checking new deferred save"
 msgstr "Checking new deferred save"
 
-#: Console/Command/CronShell.php:48
+#: Console/Command/CronShell.php:47
 msgid "Generate PDF or Excel files"
 msgstr "Создание файлов PDF или Excel"
 
-#: Console/Command/CronShell.php:63
+#: Console/Command/CronShell.php:61
 msgid "Cron task of the shell"
 msgstr "Задача Cron оболочки"
 
-#: Console/Command/CronShell.php:65
+#: Console/Command/CronShell.php:63
 msgid "This shell is used to execute task scheduled."
 msgstr "Эта оболочка используется для выполнения задач по расписанию."
 
-#: Console/Command/CronShell.php:66
+#: Console/Command/CronShell.php:64
 msgid "Available tasks: %s."
 msgstr "Доступные задачи: %s."
 
-#: Console/Command/CronShell.php:66
-#: Test/Case/Console/Command/CronShellTest.php:59
+#: Console/Command/CronShell.php:64
+#: Test/Case/Console/Command/CronShellTest.php:55
 msgid "and"
 msgstr "и"
 
-#: Console/Command/Task/DeferredTask.php:37
+#: Console/Command/Task/DeferredTask.php:36
 msgid "This task is used to checking new deferred saves scheduled."
 msgstr ""
 "Эта задача используется для проверки новых отложенных сохранений по "
 "расписанию."
 
-#: Console/Command/Task/DeferredTask.php:49
+#: Console/Command/Task/DeferredTask.php:47
 msgid "Checking new deferred saves in progress..."
 msgstr "Выполняется проверка новых отложенных сохранений..."
 
-#: Console/Command/Task/DeferredTask.php:52
-#: Test/Case/Console/Command/Task/DeferredTaskTest.php:75
+#: Console/Command/Task/DeferredTask.php:50
+#: Test/Case/Console/Command/Task/DeferredTaskTest.php:71
 msgid "Checking new deferred saves complete successfully."
 msgstr "Проверка новых отложенных сохранений успешно завершена."
 
-#: Console/Command/Task/DeferredTask.php:54
+#: Console/Command/Task/DeferredTask.php:52
 msgid "Checking new deferred saves complete unsuccessfully."
 msgstr "Проверка новых отложенных сохранений завершена неудачно."
 
-#: Console/Command/Task/GenerateTask.php:43
+#: Console/Command/Task/GenerateTask.php:42
 msgid "The view of generated files."
 msgstr "Вид создаваемых файлов."
 
-#: Console/Command/Task/GenerateTask.php:48
+#: Console/Command/Task/GenerateTask.php:47
 msgid "The type of generated files."
 msgstr "Тип создаваемых файлов."
 
-#: Console/Command/Task/GenerateTask.php:52
+#: Console/Command/Task/GenerateTask.php:51
 msgid "This task is used to generate PDF or Excel files scheduled."
 msgstr ""
 "Эта задача используется для создания файлов PDF или Excel  по расписанию."
 
-#: Console/Command/Task/GenerateTask.php:66
-#: Test/Case/Console/Command/Task/GenerateTaskTest.php:70
+#: Console/Command/Task/GenerateTask.php:64
+#: Test/Case/Console/Command/Task/GenerateTaskTest.php:66
 msgid "Empty parameters. Run this task with parameter '-h' or '--help'"
 msgstr "Пустые параметры. Запустите эту задачу с параметром '-h' или '--help'"
 
-#: Console/Command/Task/GenerateTask.php:75
-#: Test/Case/Console/Command/Task/GenerateTaskTest.php:90;110
+#: Console/Command/Task/GenerateTask.php:73
+#: Test/Case/Console/Command/Task/GenerateTaskTest.php:85;104
 msgid "Invalid parameters. Run this task with parameter '-h' or '--help'"
 msgstr ""
 "Недопустимые параметры. Запустите эту задачу с параметром '-h' или '--help'"
 
-#: Console/Command/Task/GenerateTask.php:82
+#: Console/Command/Task/GenerateTask.php:80
 msgid "Generate %s files (%s) in progress..."
 msgstr "Выполняется создание %s файлов (%s)..."
 
-#: Console/Command/Task/GenerateTask.php:84
-#: Test/Case/Console/Command/Task/GenerateTaskTest.php:130
+#: Console/Command/Task/GenerateTask.php:82
+#: Test/Case/Console/Command/Task/GenerateTaskTest.php:123
 msgid "Generate %s files set in queue successfully."
 msgstr "Создание %s файлов успешно поставлено в очередь."
 
-#: Console/Command/Task/GenerateTask.php:86
+#: Console/Command/Task/GenerateTask.php:84
 msgid "Generate %s set in queue unsuccessfully."
 msgstr "Создание %s файлов поставлено в очередь неудачно."
 
-#: Console/Command/Task/QueueDeferredSaveTask.php:80
+#: Console/Command/Task/QueueDeferredSaveTask.php:78
 msgid "CakePHP Queue task for processing deferred saves."
 msgstr "Задача очереди CakePHP для обработки отложенных сохранений."
 
-#: Console/Command/Task/QueueDeferredSaveTask.php:99
-#: Test/Case/Console/Command/Task/QueueDeferredSaveTaskTest.php:117;268
+#: Console/Command/Task/QueueDeferredSaveTask.php:97
+#: Test/Case/Console/Command/Task/QueueDeferredSaveTaskTest.php:113;262
 msgid "Found processing internal deferred saves task in queue: %d. Skipped."
 msgstr ""
 "Найдено задач обработки внутренних отложенных сохранений в очереди: %d. "
 "Пропущено."
 
-#: Console/Command/Task/QueueGenerateTask.php:80
+#: Console/Command/Task/QueueGenerateTask.php:78
 msgid "CakePHP Queue task for generating files."
 msgstr "Задача очереди CakePHP для создания файлов."
 
-#: Console/Command/Task/QueueGenerateTask.php:98
-#: Test/Case/Console/Command/Task/QueueGenerateTaskTest.php:110
+#: Console/Command/Task/QueueGenerateTask.php:96
+#: Test/Case/Console/Command/Task/QueueGenerateTaskTest.php:106
 msgid "Found generating task in queue: %d. Skipped."
 msgstr "Найдено задач создания в очереди: %d. Пропущено."
 
-#: Console/Command/Task/QueueOrderDepartmentTask.php:81
+#: Console/Command/Task/QueueOrderDepartmentTask.php:79
 msgid "CakePHP Queue task for ordering tree."
 msgstr "Задача очереди CakePHP для упорядочения дерева."
 
-#: Console/Command/Task/QueueOrderDepartmentTask.php:84
-#: Console/Command/Task/QueueRecoveryDepartmentTask.php:84
-#: Test/Case/Console/Command/Task/QueueOrderDepartmentTaskTest.php:131
-#: Test/Case/Console/Command/Task/QueueRecoveryDepartmentTaskTest.php:134
+#: Console/Command/Task/QueueOrderDepartmentTask.php:82
+#: Console/Command/Task/QueueRecoveryDepartmentTask.php:82
+#: Test/Case/Console/Command/Task/QueueOrderDepartmentTaskTest.php:126
+#: Test/Case/Console/Command/Task/QueueRecoveryDepartmentTaskTest.php:129
 msgid "Found order task in queue: %d. Skipped."
 msgstr "Найдено задач в очереди: %d. Пропущено."
 
-#: Console/Command/Task/QueueOrderDepartmentTask.php:91;92
-#: Test/Case/Console/Command/Task/QueueOrderDepartmentTaskTest.php:99
+#: Console/Command/Task/QueueOrderDepartmentTask.php:89;90
+#: Test/Case/Console/Command/Task/QueueOrderDepartmentTaskTest.php:95
 msgid "Tree of departments is broken. Perform a restore."
 msgstr "Дерево из отделов разрушено. Выполните восстановление."
 
-#: Console/Command/Task/QueueOrderDepartmentTask.php:100
+#: Console/Command/Task/QueueOrderDepartmentTask.php:98
 msgid "Error on reorder tree of departments."
 msgstr "Ошибка при пересортировке дерева отделов."
 
-#: Console/Command/Task/QueueRecoveryDepartmentTask.php:81
+#: Console/Command/Task/QueueRecoveryDepartmentTask.php:79
 msgid "CakePHP Queue task for recovering tree."
 msgstr "Задача очереди CakePHP для восстановления дерева."
 
-#: Console/Command/Task/QueueRecoveryDepartmentTask.php:92
-#: Test/Case/Console/Command/Task/QueueRecoveryDepartmentTaskTest.php:174
+#: Console/Command/Task/QueueRecoveryDepartmentTask.php:90
+#: Test/Case/Console/Command/Task/QueueRecoveryDepartmentTaskTest.php:168
 msgid "The recovery tree of departments is not required"
 msgstr "Не требуется восстановление дерева отделов"
 
-#: Console/Command/Task/QueueRecoveryDepartmentTask.php:100
+#: Console/Command/Task/QueueRecoveryDepartmentTask.php:98
 msgid "Error on recovery tree of departments."
 msgstr "Ошибка при восстановлении дерева отделов."
 
-#: Console/Command/Task/QueueRenameDepartmentTask.php:79
+#: Console/Command/Task/QueueRenameDepartmentTask.php:77
 msgid "CakePHP Queue task for renaming department."
 msgstr "Задача очереди CakePHP для переименования отдела."
 
-#: Console/Command/Task/QueueRenameDepartmentTask.php:95
-#: Test/Case/Console/Command/Task/QueueRenameDepartmentTaskTest.php:101
+#: Console/Command/Task/QueueRenameDepartmentTask.php:93
+#: Test/Case/Console/Command/Task/QueueRenameDepartmentTaskTest.php:97
 msgid "Error on renaming department from \"%s\" to \"%s\""
 msgstr "Ошибка при переименовании отдела из \"%s\" в \"%s\""
 
-#: Controller/DeferredController.php:101 Controller/LogsController.php:91
-#: Test/Case/Controller/DeferredControllerTest.php:212
-#: Test/Case/Controller/LogsControllerTest.php:226
+#: Controller/DeferredController.php:100 Controller/LogsController.php:90
+#: Test/Case/Controller/DeferredControllerTest.php:209
+#: Test/Case/Controller/LogsControllerTest.php:223
 msgid "Delete data group"
 msgstr "Удаление группы данных"
 
-#: Controller/DeferredController.php:102
-#: Test/Case/Controller/DeferredControllerTest.php:213
+#: Controller/DeferredController.php:101
+#: Test/Case/Controller/DeferredControllerTest.php:210
 msgid "Approve data group"
 msgstr "Утверждение группы данных"
 
-#: Controller/DeferredController.php:103
-#: Test/Case/Controller/DeferredControllerTest.php:214
+#: Controller/DeferredController.php:102
+#: Test/Case/Controller/DeferredControllerTest.php:211
 msgid "Reject data group"
 msgstr "Отклонение группы данных"
 
-#: Controller/DeferredController.php:113
-#: Test/Case/Controller/DeferredControllerTest.php:434;465;542
+#: Controller/DeferredController.php:112
+#: Test/Case/Controller/DeferredControllerTest.php:430;460;535
 msgid "Processing of selected tasks put in queue..."
 msgstr "Обработка выбранных задач помещена в очередь..."
 
-#: Controller/DeferredController.php:116 Controller/LogsController.php:100
-#: Test/Case/Controller/DeferredControllerTest.php:434;465;500
-#: Test/Case/Controller/LogsControllerTest.php:440;471;506
+#: Controller/DeferredController.php:115 Controller/LogsController.php:99
+#: Test/Case/Controller/DeferredControllerTest.php:430;460;494
+#: Test/Case/Controller/LogsControllerTest.php:436;466;500
 msgid "Selected tasks has been processed."
 msgstr "Выбранные задачи были обработаны."
 
-#: Controller/DeferredController.php:119 Controller/LogsController.php:102
-#: Test/Case/Controller/DeferredControllerTest.php:434;465
-#: Test/Case/Controller/LogsControllerTest.php:440;471
+#: Controller/DeferredController.php:118 Controller/LogsController.php:101
+#: Test/Case/Controller/DeferredControllerTest.php:430;460
+#: Test/Case/Controller/LogsControllerTest.php:436;466
 msgid "Selected tasks could not be processed. Please, try again."
 msgstr ""
 "Не удалось обработать выбранные задачи. Пожалуйста, попробуйте еще раз."
 
-#: Controller/DeferredController.php:130
+#: Controller/DeferredController.php:129
 msgid "Deferred saves not found"
 msgstr "Отложенные сохранения не найдены"
 
-#: Controller/DeferredController.php:135
-#: Test/Case/Controller/DeferredControllerTest.php:361
+#: Controller/DeferredController.php:134
+#: Test/Case/Controller/DeferredControllerTest.php:358
 msgid "Index of deferred saves"
 msgstr "Указатель отложенных сохранений"
 
-#: Controller/DeferredController.php:137
-#: Controller/DepartmentsController.php:153 Controller/LogsController.php:129
-#: Test/Case/Controller/DeferredControllerTest.php:379
-#: Test/Case/Controller/DepartmentsControllerTest.php:229
-#: Test/Case/Controller/LogsControllerTest.php:403
+#: Controller/DeferredController.php:136
+#: Controller/DepartmentsController.php:151 Controller/LogsController.php:128
+#: Test/Case/Controller/DeferredControllerTest.php:376
+#: Test/Case/Controller/DepartmentsControllerTest.php:226
+#: Test/Case/Controller/LogsControllerTest.php:400
 msgid "Index"
 msgstr "Указатель"
 
-#: Controller/DeferredController.php:175;265;385;435
-#: Test/Case/Controller/DeferredControllerTest.php:614;651;1008;1045;1747;1784;1954;1991;2161;2198
+#: Controller/DeferredController.php:171;259;376;423
+#: Test/Case/Controller/DeferredControllerTest.php:605;641;995;1031;1725;1761;1926;1962;2127;2163
 msgid "Invalid ID for deferred save"
 msgstr "Неверный идентификатор для отложенного сохранения"
 
-#: Controller/DeferredController.php:181
-#: Test/Case/Controller/DeferredControllerTest.php:851
+#: Controller/DeferredController.php:177
+#: Test/Case/Controller/DeferredControllerTest.php:840
 msgid "Information of deferred save"
 msgstr "Информация об отложенном сохранении"
 
-#: Controller/DeferredController.php:185
-#: Test/Case/Controller/DeferredControllerTest.php:855
+#: Controller/DeferredController.php:181
+#: Test/Case/Controller/DeferredControllerTest.php:844
 msgid "Edit deferred save"
 msgstr "Редактировать отложенное сохранение"
 
-#: Controller/DeferredController.php:187
-#: Test/Case/Controller/DeferredControllerTest.php:857
+#: Controller/DeferredController.php:183
+#: Test/Case/Controller/DeferredControllerTest.php:846
 msgid "Editing information of this deferred save"
 msgstr "Редактирование информации отложенного сохранения"
 
-#: Controller/DeferredController.php:191;194
-#: Test/Case/Controller/DeferredControllerTest.php:861;864
-#: View/Elements/tableDeferredSave.ctp:84;121
+#: Controller/DeferredController.php:187;190
+#: Test/Case/Controller/DeferredControllerTest.php:850;853
+#: View/Elements/tableDeferredSave.ctp:85;122
 msgid "Delete deferred save"
 msgstr "Удалить отложенное сохранение"
 
-#: Controller/DeferredController.php:195
-#: Test/Case/Controller/DeferredControllerTest.php:865
-#: View/Elements/tableDeferredSave.ctp:85;122
+#: Controller/DeferredController.php:191
+#: Test/Case/Controller/DeferredControllerTest.php:854
+#: View/Elements/tableDeferredSave.ctp:86;123
 msgid "Are you sure you wish to delete this deferred save?"
 msgstr "Вы уверены, что хотите удалить это отложенное сохранение?"
 
-#: Controller/DeferredController.php:200;203
-#: Test/Case/Controller/DeferredControllerTest.php:870;873
-#: View/Elements/tableDeferredSave.ctp:94
+#: Controller/DeferredController.php:196;199
+#: Test/Case/Controller/DeferredControllerTest.php:859;862
+#: View/Elements/tableDeferredSave.ctp:95
 msgid "Approve deferred save data"
 msgstr "Утвердить данные отложенного сохранения"
 
-#: Controller/DeferredController.php:204
-#: Test/Case/Controller/DeferredControllerTest.php:874
-#: View/Elements/tableDeferredSave.ctp:95
+#: Controller/DeferredController.php:200
+#: Test/Case/Controller/DeferredControllerTest.php:863
+#: View/Elements/tableDeferredSave.ctp:96
 msgid "Are you sure you wish to approve this deferred save?"
 msgstr "Вы уверены, что хотите утвердить это отложенное сохранение?"
 
-#: Controller/DeferredController.php:209;212
-#: Test/Case/Controller/DeferredControllerTest.php:879;882
-#: View/Elements/tableDeferredSave.ctp:104
+#: Controller/DeferredController.php:205;208
+#: Test/Case/Controller/DeferredControllerTest.php:868;871
+#: View/Elements/tableDeferredSave.ctp:105
 msgid "Reject deferred save data"
 msgstr "Отклонить данные отложенного сохранения"
 
-#: Controller/DeferredController.php:213
-#: Test/Case/Controller/DeferredControllerTest.php:883
-#: View/Elements/tableDeferredSave.ctp:105
+#: Controller/DeferredController.php:209
+#: Test/Case/Controller/DeferredControllerTest.php:872
+#: View/Elements/tableDeferredSave.ctp:106
 msgid "Are you sure you wish to reject this deferred save?"
 msgstr "Вы уверены, что хотите отклонить это отложенное сохранение?"
 
-#: Controller/DeferredController.php:218
-#: Controller/DepartmentsController.php:217
-#: Controller/EmployeesController.php:345 Controller/LogsController.php:184
-#: Test/Case/Controller/DeferredControllerTest.php:914
-#: Test/Case/Controller/DepartmentsControllerTest.php:423
-#: Test/Case/Controller/EmployeesControllerTest.php:1134;1376;1673
-#: Test/Case/Controller/LogsControllerTest.php:850
+#: Controller/DeferredController.php:214
+#: Controller/DepartmentsController.php:212
+#: Controller/EmployeesController.php:332 Controller/LogsController.php:181
+#: Test/Case/Controller/DeferredControllerTest.php:903
+#: Test/Case/Controller/DepartmentsControllerTest.php:416
+#: Test/Case/Controller/EmployeesControllerTest.php:1119;1360;1656
+#: Test/Case/Controller/LogsControllerTest.php:840
 msgid "Viewing"
 msgstr "Просмотр"
 
-#: Controller/DeferredController.php:268 View/Elements/infoDeferred.ctp:41
-#: View/Elements/tableDeferredSave.ctp:128
+#: Controller/DeferredController.php:262 View/Elements/infoDeferred.ctp:42
+#: View/Elements/tableDeferredSave.ctp:129
 msgid "Data of deferred save is broken"
 msgstr "Данные отложенного сохранения нарушены"
 
-#: Controller/DeferredController.php:293
-#: Test/Case/Controller/DeferredControllerTest.php:1555;1668
+#: Controller/DeferredController.php:287
+#: Test/Case/Controller/DeferredControllerTest.php:1536;1648
 msgid "The deferred save has been saved."
 msgstr "Отложенное сохранение было сохранено."
 
-#: Controller/DeferredController.php:297
-#: Test/Case/Controller/DeferredControllerTest.php:1314;1383;1448
+#: Controller/DeferredController.php:291
+#: Test/Case/Controller/DeferredControllerTest.php:1298;1366;1430
 msgid "The deferred save not be saved. Please, try again."
 msgstr "Отложенное сохранение не сохранено. Пожалуйста, попробуйте еще раз."
 
-#: Controller/DeferredController.php:324
-#: Test/Case/Controller/DeferredControllerTest.php:1226
+#: Controller/DeferredController.php:318
+#: Test/Case/Controller/DeferredControllerTest.php:1211
 msgid "Editing deferred save"
 msgstr "Редактирование отложенного сохранения"
 
-#: Controller/DeferredController.php:326
-#: Controller/DepartmentsController.php:358
-#: Controller/EmployeesController.php:495
-#: Test/Case/Controller/DeferredControllerTest.php:1254
-#: Test/Case/Controller/DepartmentsControllerTest.php:895
-#: Test/Case/Controller/EmployeesControllerTest.php:2193;2400;2614
+#: Controller/DeferredController.php:320
+#: Controller/DepartmentsController.php:349
+#: Controller/EmployeesController.php:478
+#: Test/Case/Controller/DeferredControllerTest.php:1239
+#: Test/Case/Controller/DepartmentsControllerTest.php:876
+#: Test/Case/Controller/EmployeesControllerTest.php:2172;2378;2591
 msgid "Editing"
 msgstr "Редактирование"
 
-#: Controller/DeferredController.php:391
-#: Test/Case/Controller/DeferredControllerTest.php:1844;1874
+#: Controller/DeferredController.php:382
+#: Test/Case/Controller/DeferredControllerTest.php:1819;1848
 msgid "The deferred save has been deleted."
 msgstr "Отложенное сохранение было удалено."
 
-#: Controller/DeferredController.php:393
+#: Controller/DeferredController.php:384
 msgid "The deferred save could not be deleted. Please, try again."
 msgstr ""
 "Не удалось удалить отложенное сохранение. Пожалуйста, попробуйте еще раз."
 
-#: Controller/DeferredController.php:443
-#: Test/Case/Controller/DeferredControllerTest.php:2258;2288
+#: Controller/DeferredController.php:431
+#: Test/Case/Controller/DeferredControllerTest.php:2221;2250
 msgid "rejected"
 msgstr "отклонено"
 
-#: Controller/DeferredController.php:445
-#: Test/Case/Controller/DeferredControllerTest.php:2051;2081
+#: Controller/DeferredController.php:433
+#: Test/Case/Controller/DeferredControllerTest.php:2020;2049
 msgid "approved"
 msgstr "утверждено"
 
-#: Controller/DeferredController.php:448
-#: Test/Case/Controller/DeferredControllerTest.php:2051;2081;2258;2288
+#: Controller/DeferredController.php:436
+#: Test/Case/Controller/DeferredControllerTest.php:2020;2049;2221;2250
 msgid "The deferred save has been %s."
 msgstr "Отложенное сохранение было %s."
 
-#: Controller/DeferredController.php:450
+#: Controller/DeferredController.php:438
 msgid "The deferred save could not be %s. Please, try again."
 msgstr ""
 "Отложенное сохранение не может быть %s. Пожалуйста, попробуйте ещё раз."
 
-#: Controller/DepartmentsController.php:118
+#: Controller/DepartmentsController.php:116
 msgid "Departments not found"
 msgstr "Отделы не найдены"
 
-#: Controller/DepartmentsController.php:120
-#: Test/Case/Controller/DepartmentsControllerTest.php:188
-#: View/Elements/barNav.ctp:146
+#: Controller/DepartmentsController.php:118
+#: Test/Case/Controller/DepartmentsControllerTest.php:185
+#: View/Elements/barNav.ctp:148
 msgid "Index of departments"
 msgstr "Указатель отделов"
 
-#: Controller/DepartmentsController.php:124;127
-#: Test/Case/Controller/DepartmentsControllerTest.php:192;195
+#: Controller/DepartmentsController.php:122;125
+#: Test/Case/Controller/DepartmentsControllerTest.php:189;192
 msgid "Add department"
 msgstr "Добавить отдел"
 
-#: Controller/DepartmentsController.php:133
-#: Test/Case/Controller/DepartmentsControllerTest.php:201
+#: Controller/DepartmentsController.php:131
+#: Test/Case/Controller/DepartmentsControllerTest.php:198
 msgid "Order list of departments"
 msgstr "Упорядочение списка отделов"
 
-#: Controller/DepartmentsController.php:136
-#: Test/Case/Controller/DepartmentsControllerTest.php:204
+#: Controller/DepartmentsController.php:134
+#: Test/Case/Controller/DepartmentsControllerTest.php:201
 msgid "Order list of departments by alphabet"
 msgstr "Упорядочение списка отделов по алфавиту"
 
-#: Controller/DepartmentsController.php:138
-#: Test/Case/Controller/DepartmentsControllerTest.php:206
+#: Controller/DepartmentsController.php:136
+#: Test/Case/Controller/DepartmentsControllerTest.php:203
 msgid "Are you sure you wish to re-order list of departments?"
 msgstr "Вы уверены, что хотите пересортировать список отделов?"
 
-#: Controller/DepartmentsController.php:144
-#: Test/Case/Controller/DepartmentsControllerTest.php:212
-#: View/Elements/barNav.ctp:138
+#: Controller/DepartmentsController.php:142
+#: Test/Case/Controller/DepartmentsControllerTest.php:209
+#: View/Elements/barNav.ctp:140
 msgid "Check state list"
 msgstr "Проверка состояния списка"
 
-#: Controller/DepartmentsController.php:147
-#: Test/Case/Controller/DepartmentsControllerTest.php:215
-#: View/Elements/barNav.ctp:140
+#: Controller/DepartmentsController.php:145
+#: Test/Case/Controller/DepartmentsControllerTest.php:212
+#: View/Elements/barNav.ctp:142
 msgid "Check state list of departments"
 msgstr "Проверка состояния списка отделов"
 
-#: Controller/DepartmentsController.php:192;322;399
-#: Test/Case/Controller/DepartmentsControllerTest.php:322;359;814;851;1261;1298
+#: Controller/DepartmentsController.php:187;313;387
+#: Test/Case/Controller/DepartmentsControllerTest.php:317;353;797;833;1234;1270
 msgid "Invalid ID for department"
 msgstr "Неверный идентификатор отдела"
 
-#: Controller/DepartmentsController.php:196
-#: Test/Case/Controller/DepartmentsControllerTest.php:396
+#: Controller/DepartmentsController.php:191
+#: Test/Case/Controller/DepartmentsControllerTest.php:389
 msgid "Information of department"
 msgstr "Информация отдела"
 
-#: Controller/DepartmentsController.php:200;356
-#: Test/Case/Controller/DepartmentsControllerTest.php:400;876
+#: Controller/DepartmentsController.php:195;347
+#: Test/Case/Controller/DepartmentsControllerTest.php:393;857
 msgid "Editing department"
 msgstr "Редактирование отдела"
 
-#: Controller/DepartmentsController.php:202
-#: Test/Case/Controller/DepartmentsControllerTest.php:402
+#: Controller/DepartmentsController.php:197
+#: Test/Case/Controller/DepartmentsControllerTest.php:395
 msgid "Editing information of this department"
 msgstr "Редактирование информации этого отдела"
 
-#: Controller/DepartmentsController.php:208;211
-#: View/Elements/tableDepartment.ctp:68
+#: Controller/DepartmentsController.php:203;206
+#: View/Elements/tableDepartment.ctp:69
 msgid "Delete department"
 msgstr "Удалить отдел"
 
-#: Controller/DepartmentsController.php:212
+#: Controller/DepartmentsController.php:207
 msgid "Are you sure you wish to delete this department?"
 msgstr "Вы уверены, что хотите удалить этот отдел?"
 
-#: Controller/DepartmentsController.php:262;340
-#: Test/Case/Controller/DepartmentsControllerTest.php:710;741;1055;1107
+#: Controller/DepartmentsController.php:255;331
+#: Test/Case/Controller/DepartmentsControllerTest.php:696;726;1033;1084
 msgid "Department has been saved."
 msgstr "Отдел был сохранён."
 
-#: Controller/DepartmentsController.php:266;344
-#: Test/Case/Controller/DepartmentsControllerTest.php:574;617;648;679;955;1006
+#: Controller/DepartmentsController.php:259;335
+#: Test/Case/Controller/DepartmentsControllerTest.php:564;606;636;666;935;985
 msgid "Department could not be saved. Please, try again."
 msgstr "Отдел не может быть сохранён. Пожалуйста, попробуйте еще раз."
 
-#: Controller/DepartmentsController.php:277
-#: Test/Case/Controller/DepartmentsControllerTest.php:505
+#: Controller/DepartmentsController.php:270
+#: Test/Case/Controller/DepartmentsControllerTest.php:496
 msgid "Adding department"
 msgstr "Добавление отдела"
 
-#: Controller/DepartmentsController.php:279
-#: Test/Case/Controller/DepartmentsControllerTest.php:515
+#: Controller/DepartmentsController.php:272
+#: Test/Case/Controller/DepartmentsControllerTest.php:506
 msgid "Adding"
 msgstr "Добавление"
 
-#: Controller/DepartmentsController.php:334
-#: Test/Case/Controller/DepartmentsControllerTest.php:1149;1188
+#: Controller/DepartmentsController.php:325
+#: Test/Case/Controller/DepartmentsControllerTest.php:1125;1163
 msgid "Renaming department from \"%s\" to \"%s\" put in queue..."
 msgstr "Переименование отдела из \"%s\" в \"%s\" помещено в очередь..."
 
-#: Controller/DepartmentsController.php:405
-#: Test/Case/Controller/DepartmentsControllerTest.php:1402;1424
+#: Controller/DepartmentsController.php:393
+#: Test/Case/Controller/DepartmentsControllerTest.php:1370;1391
 msgid "The department has been deleted."
 msgstr "Отдел был удалён."
 
-#: Controller/DepartmentsController.php:407
-#: Test/Case/Controller/DepartmentsControllerTest.php:1358;1380
+#: Controller/DepartmentsController.php:395
+#: Test/Case/Controller/DepartmentsControllerTest.php:1328;1349
 msgid "The department could not be deleted. Please, try again."
 msgstr "Отдел не может быть удалён. Пожалуйста, попробуйте ещё раз."
 
-#: Controller/DepartmentsController.php:513
-#: Test/Case/Controller/DepartmentsControllerTest.php:1862;1912
+#: Controller/DepartmentsController.php:496
+#: Test/Case/Controller/DepartmentsControllerTest.php:1819;1868
 msgid "Checking state list of departments"
 msgstr "Проверка состояния списка отделов"
 
-#: Controller/DepartmentsController.php:518;521
-#: Test/Case/Controller/DepartmentsControllerTest.php:1866;1869
+#: Controller/DepartmentsController.php:501;504
+#: Test/Case/Controller/DepartmentsControllerTest.php:1823;1826
 msgid "Recovery state of list"
 msgstr "Восстановление состояния списка"
 
-#: Controller/DepartmentsController.php:527
-#: Test/Case/Controller/DepartmentsControllerTest.php:1883;1923
+#: Controller/DepartmentsController.php:510
+#: Test/Case/Controller/DepartmentsControllerTest.php:1840;1879
 msgid "Checking the list"
 msgstr "Проверка списка"
 
-#: Controller/DepartmentsController.php:552
-#: Test/Case/Controller/DepartmentsControllerTest.php:1986
+#: Controller/DepartmentsController.php:533
+#: Test/Case/Controller/DepartmentsControllerTest.php:1940
 msgid "Recovering list of departments put in queue..."
 msgstr "Восстановление списка отделов помещено в очередь..."
 
-#: Controller/DepartmentsController.php:555
+#: Controller/DepartmentsController.php:536
 msgid "Recovering list of departments put in queue unsuccessfully"
 msgstr "Восстановление списка отделов поставлено в очередь неудачно"
 
-#: Controller/DepartmentsController.php:584
-#: Test/Case/Controller/DepartmentsControllerTest.php:2093
+#: Controller/DepartmentsController.php:563
+#: Test/Case/Controller/DepartmentsControllerTest.php:2044
 msgid "Ordering list of departments put in queue..."
 msgstr "Упорядочение списка отделов помещено в очередь..."
 
-#: Controller/DepartmentsController.php:587
+#: Controller/DepartmentsController.php:566
 msgid "Ordering list of departments put in queue unsuccessfully"
 msgstr "Упорядочение списка отделов помещено в очередь неудачно"
 
-#: Controller/EmployeesController.php:154
-#: Test/Case/Controller/EmployeesControllerTest.php:107
+#: Controller/EmployeesController.php:150
+#: Test/Case/Controller/EmployeesControllerTest.php:103
 msgid "Information retrieval"
 msgstr "Поиск информации"
 
-#: Controller/EmployeesController.php:234
-#: Test/Case/Controller/EmployeesControllerTest.php:295;553
-#: View/Elements/formExtendSettingsRight.ctp:28 View/Employees/search.ctp:30
+#: Controller/EmployeesController.php:226
+#: Test/Case/Controller/EmployeesControllerTest.php:290;547
+#: View/Elements/formExtendSettingsRight.ctp:29 View/Employees/search.ctp:31
 msgid "Search information"
 msgstr "Поиск информации"
 
-#: Controller/EmployeesController.php:307
-#: Test/Case/Controller/EmployeesControllerTest.php:1107;1343;1631
+#: Controller/EmployeesController.php:294
+#: Test/Case/Controller/EmployeesControllerTest.php:1092;1327;1614
 msgid "Information of employees"
 msgstr "Информация о сотрудниках"
 
-#: Controller/EmployeesController.php:314;331
-#: Test/Case/Controller/EmployeesControllerTest.php:1347;1635
+#: Controller/EmployeesController.php:301;318
+#: Test/Case/Controller/EmployeesControllerTest.php:1331;1618
 msgid "Edit information"
 msgstr "Редактировать информацию"
 
-#: Controller/EmployeesController.php:316;333
-#: Test/Case/Controller/EmployeesControllerTest.php:1349;1637
-#: View/Elements/tableSearchResults.ctp:78;99
-#: View/Elements/treeItemEmployeeFullDraggable.ctp:45
+#: Controller/EmployeesController.php:303;320
+#: Test/Case/Controller/EmployeesControllerTest.php:1333;1620
+#: View/Elements/tableSearchResults.ctp:79;100
+#: View/Elements/treeItemEmployeeFullDraggable.ctp:46
 msgid "Edit information of this employee"
 msgstr "Редактировать информацию этого сотрудника"
 
-#: Controller/EmployeesController.php:320
-#: Test/Case/Controller/EmployeesControllerTest.php:1641
+#: Controller/EmployeesController.php:307
+#: Test/Case/Controller/EmployeesControllerTest.php:1624
 msgid "Synchronize information"
 msgstr "Синхронизация информации"
 
-#: Controller/EmployeesController.php:323
-#: Test/Case/Controller/EmployeesControllerTest.php:1644
-#: View/Elements/tableSearchResults.ctp:88
-#: View/Elements/treeItemEmployeeFullDraggable.ctp:36
+#: Controller/EmployeesController.php:310
+#: Test/Case/Controller/EmployeesControllerTest.php:1627
+#: View/Elements/tableSearchResults.ctp:89
+#: View/Elements/treeItemEmployeeFullDraggable.ctp:37
 msgid "Synchronize information of this employee with LDAP server"
 msgstr "Синхронизация информации этого сотрудника с сервером LDAP"
 
-#: Controller/EmployeesController.php:339
-#: Test/Case/Controller/EmployeesControllerTest.php:1111;1353;1650
+#: Controller/EmployeesController.php:326
+#: Test/Case/Controller/EmployeesControllerTest.php:1096;1337;1633
 msgid "Tree of subordinate"
 msgstr "Дерево подчинённых"
 
-#: Controller/EmployeesController.php:341
-#: Test/Case/Controller/EmployeesControllerTest.php:1113;1355;1652
+#: Controller/EmployeesController.php:328
+#: Test/Case/Controller/EmployeesControllerTest.php:1098;1339;1635
 msgid "Edit tree of subordinate employee"
 msgstr "Редактировать дерево подчинённых сотрудника"
 
-#: Controller/EmployeesController.php:419;963;1039
-#: Test/Case/Controller/EmployeesControllerTest.php:1939;1978;5043;5080
+#: Controller/EmployeesController.php:402;921;993
+#: Test/Case/Controller/EmployeesControllerTest.php:1921;1959;4983;5019
 msgid "Invalid GUID for employee"
 msgstr "Неверный GUID для сотрудника"
 
-#: Controller/EmployeesController.php:427
+#: Controller/EmployeesController.php:410
 msgid "GUID of user is not equal GUID of employee"
 msgstr "GUID пользователя не равен GUID сотрудника"
 
-#: Controller/EmployeesController.php:451
-#: Test/Case/Controller/EmployeesControllerTest.php:2937
+#: Controller/EmployeesController.php:434
+#: Test/Case/Controller/EmployeesControllerTest.php:2909
 msgid ""
 "Deferred saving with an updated employee information was created.<br /"
 ">Information on LDAP server will be updated by queue.<br />Information in "
@@ -556,8 +556,8 @@ msgstr ""
 "<br />Информация на сервере LDAP будет обновлена по очереди.<br />Информация "
 "в телефонной книге будет обновлена %s после обработки."
 
-#: Controller/EmployeesController.php:459
-#: Test/Case/Controller/EmployeesControllerTest.php:2872
+#: Controller/EmployeesController.php:442
+#: Test/Case/Controller/EmployeesControllerTest.php:2845
 msgid ""
 "Deferred saving with an updated employee information was created.<br /"
 ">Information will be updated after approval by the administrator."
@@ -565,103 +565,103 @@ msgstr ""
 "Создано отложенное сохранение с обновленной информацией о сотруднике.<br /"
 ">Информация будет обновлена после утверждения администратором."
 
-#: Controller/EmployeesController.php:463
-#: Test/Case/Controller/EmployeesControllerTest.php:2676;2742;2808
+#: Controller/EmployeesController.php:446
+#: Test/Case/Controller/EmployeesControllerTest.php:2652;2717;2782
 msgid ""
 "Information about the employee could not be been saved. Please, try again."
 msgstr ""
 "Информация о сотруднике не может быть сохранена. Пожалуйста, попробуйте еще "
 "раз."
 
-#: Controller/EmployeesController.php:493
-#: Test/Case/Controller/EmployeesControllerTest.php:2174;2381;2595
+#: Controller/EmployeesController.php:476
+#: Test/Case/Controller/EmployeesControllerTest.php:2153;2359;2572
 msgid "Editing employee"
 msgstr "Редактирование сотрудника"
 
-#: Controller/EmployeesController.php:617
+#: Controller/EmployeesController.php:592
 msgid "Display photo of employee not allowed"
 msgstr "Отображение фотографии сотрудника не допускается"
 
-#: Controller/EmployeesController.php:625
+#: Controller/EmployeesController.php:600
 msgid "Employees not found"
 msgstr "Сотрудники не найдены"
 
-#: Controller/EmployeesController.php:629
-#: Test/Case/Controller/EmployeesControllerTest.php:3245;3474
-#: View/Elements/barNav.ctp:66;68
+#: Controller/EmployeesController.php:604
+#: Test/Case/Controller/EmployeesControllerTest.php:3213;3441
+#: View/Elements/barNav.ctp:68;70
 msgid "Gallery of employees"
 msgstr "Галерея сотрудников"
 
-#: Controller/EmployeesController.php:631
-#: Test/Case/Controller/EmployeesControllerTest.php:3255;3484
+#: Controller/EmployeesController.php:606
+#: Test/Case/Controller/EmployeesControllerTest.php:3223;3451
 msgid "Gallery"
 msgstr "Галерея"
 
-#: Controller/EmployeesController.php:703
-#: Test/Case/Controller/EmployeesControllerTest.php:3697;3889;4010;4132
+#: Controller/EmployeesController.php:673
+#: Test/Case/Controller/EmployeesControllerTest.php:3659;3850;3970;4091
 msgid "Tree view information of employees"
 msgstr "Древовидное представление информации о сотрудниках"
 
-#: Controller/EmployeesController.php:709
-#: Test/Case/Controller/EmployeesControllerTest.php:3640
-#: View/Elements/barNav.ctp:94
+#: Controller/EmployeesController.php:679
+#: Test/Case/Controller/EmployeesControllerTest.php:3603
+#: View/Elements/barNav.ctp:96
 msgid "Synchronizing information with LDAP server"
 msgstr "Синхронизация информации с сервером LDAP"
 
-#: Controller/EmployeesController.php:712
-#: Test/Case/Controller/EmployeesControllerTest.php:3643
-#: View/Elements/barNav.ctp:97
+#: Controller/EmployeesController.php:682
+#: Test/Case/Controller/EmployeesControllerTest.php:3606
+#: View/Elements/barNav.ctp:99
 msgid "Synchronize information of employees with LDAP server"
 msgstr "Синхронизировать информацию сотрудников с сервером LDAP"
 
-#: Controller/EmployeesController.php:718;721
-#: Test/Case/Controller/EmployeesControllerTest.php:3649;3652
-#: View/Elements/barNav.ctp:112
+#: Controller/EmployeesController.php:688;691
+#: Test/Case/Controller/EmployeesControllerTest.php:3612;3615
+#: View/Elements/barNav.ctp:114
 msgid "Check state tree of employees"
 msgstr "Проверка состояния дерева сотрудников"
 
-#: Controller/EmployeesController.php:733;735
-#: Test/Case/Controller/EmployeesControllerTest.php:3658;3660
+#: Controller/EmployeesController.php:703;705
+#: Test/Case/Controller/EmployeesControllerTest.php:3621;3623
 msgid "Editing tree of employees"
 msgstr "Редактирование дерева сотрудников"
 
-#: Controller/EmployeesController.php:742
-#: Test/Case/Controller/EmployeesControllerTest.php:3599;3664
+#: Controller/EmployeesController.php:712
+#: Test/Case/Controller/EmployeesControllerTest.php:3563;3627
 msgid "Order tree of employees"
 msgstr "Упорядочивание дерева сотрудников"
 
-#: Controller/EmployeesController.php:745
-#: Test/Case/Controller/EmployeesControllerTest.php:3602;3667
+#: Controller/EmployeesController.php:715
+#: Test/Case/Controller/EmployeesControllerTest.php:3566;3630
 msgid "Order tree of employees by alphabet"
 msgstr "Упорядочивание дерева сотрудников по алфавиту"
 
-#: Controller/EmployeesController.php:747
-#: Test/Case/Controller/EmployeesControllerTest.php:3604;3669
+#: Controller/EmployeesController.php:717
+#: Test/Case/Controller/EmployeesControllerTest.php:3568;3632
 msgid "Are you sure you wish to re-order tree of employees?"
 msgstr "Вы уверены, что хотите пересортировать дерево сотрудников?"
 
-#: Controller/EmployeesController.php:752
-#: Test/Case/Controller/EmployeesControllerTest.php:3707;3899;4021;4142
+#: Controller/EmployeesController.php:722
+#: Test/Case/Controller/EmployeesControllerTest.php:3669;3860;3981;4101
 msgid "Tree viewing"
 msgstr "Просмотр дерева"
 
-#: Controller/EmployeesController.php:885
-#: Test/Case/Controller/EmployeesControllerTest.php:4686;4747
+#: Controller/EmployeesController.php:848
+#: Test/Case/Controller/EmployeesControllerTest.php:4635;4695
 msgid "Checking state tree of employees"
 msgstr "Проверка состояния дерева сотрудников"
 
-#: Controller/EmployeesController.php:890;893
-#: Test/Case/Controller/EmployeesControllerTest.php:4690;4693
+#: Controller/EmployeesController.php:853;856
+#: Test/Case/Controller/EmployeesControllerTest.php:4639;4642
 msgid "Recovery state of tree"
 msgstr "Восстановление состояния дерева"
 
-#: Controller/EmployeesController.php:899
-#: Test/Case/Controller/EmployeesControllerTest.php:4707;4758
+#: Controller/EmployeesController.php:862
+#: Test/Case/Controller/EmployeesControllerTest.php:4656;4706
 msgid "Checking tree"
 msgstr "Проверка дерева"
 
-#: Controller/EmployeesController.php:975
-#: Test/Case/Controller/EmployeesControllerTest.php:5117;5196
+#: Controller/EmployeesController.php:933
+#: Test/Case/Controller/EmployeesControllerTest.php:5055;5132
 msgid ""
 "Deferred saving with an deleted employee photo was created.<br />Information "
 "on LDAP server will be updated by queue.<br />Information in phonebook will "
@@ -671,8 +671,8 @@ msgstr ""
 ">Информация на сервере LDAP будет обновлена по очереди.<br />Информация в "
 "телефонной книге будет обновлена %s после обработки."
 
-#: Controller/EmployeesController.php:981
-#: Test/Case/Controller/EmployeesControllerTest.php:5158
+#: Controller/EmployeesController.php:939
+#: Test/Case/Controller/EmployeesControllerTest.php:5095
 msgid ""
 "Deferred saving with an deleted employee photo was created.<br />Information "
 "will be updated after approval by the administrator."
@@ -680,17 +680,17 @@ msgstr ""
 "Создано отложенное сохранение с удаленной фотографией сотрудника.<br /"
 ">Информация будет обновлена после утверждения администратором."
 
-#: Controller/EmployeesController.php:983
+#: Controller/EmployeesController.php:941
 msgid "The photo of employee could not be deleted. Please, try again."
 msgstr ""
 "Фотография сотрудника не может быть удалена. Пожалуйста, попробуйте еще раз."
 
-#: Controller/EmployeesController.php:1032;1146
+#: Controller/EmployeesController.php:986;1094
 msgid "Invalid request"
 msgstr "Неверный запрос"
 
-#: Controller/EmployeesController.php:1072
-#: Test/Case/Controller/EmployeesControllerTest.php:5721
+#: Controller/EmployeesController.php:1026
+#: Test/Case/Controller/EmployeesControllerTest.php:5648
 msgid ""
 "Deferred saving with an updated employee photo was created.<br />Information "
 "on LDAP server will be updated by queue.<br />Information in phonebook will "
@@ -700,8 +700,8 @@ msgstr ""
 ">Информация на сервере LDAP будет обновлена по очереди.<br />Информация в "
 "телефонной книге будет обновлена %s после обработки."
 
-#: Controller/EmployeesController.php:1078
-#: Test/Case/Controller/EmployeesControllerTest.php:5561;5641
+#: Controller/EmployeesController.php:1032
+#: Test/Case/Controller/EmployeesControllerTest.php:5490;5569
 msgid ""
 "Deferred saving with an updated employee photo was created.<br />Information "
 "will be updated after approval by the administrator."
@@ -709,123 +709,123 @@ msgstr ""
 "Создано отложенное сохранение с обновленной фотографией сотрудника.<br /"
 ">Информация будет обновлена после утверждения администратором."
 
-#: Controller/EmployeesController.php:1080
+#: Controller/EmployeesController.php:1034
 msgid "Unable to update photo of employee."
 msgstr "Не удалось обновить фотографию сотрудника."
 
-#: Controller/EmployeesController.php:1212
-#: Test/Case/Controller/EmployeesControllerTest.php:6128
+#: Controller/EmployeesController.php:1155
+#: Test/Case/Controller/EmployeesControllerTest.php:6047
 msgid "Index of phone book files"
 msgstr "Указатель файлов телефонного справочника"
 
-#: Controller/EmployeesController.php:1217
-#: Test/Case/Controller/EmployeesControllerTest.php:6015
-#: View/Elements/barNav.ctp:75
+#: Controller/EmployeesController.php:1160
+#: Test/Case/Controller/EmployeesControllerTest.php:5935
+#: View/Elements/barNav.ctp:77
 msgid "Refresh all files"
 msgstr "Обновить все файлы"
 
-#: Controller/EmployeesController.php:1220
-#: Test/Case/Controller/EmployeesControllerTest.php:6018
-#: View/Elements/barNav.ctp:78
+#: Controller/EmployeesController.php:1163
+#: Test/Case/Controller/EmployeesControllerTest.php:5938
+#: View/Elements/barNav.ctp:80
 msgid "Refresh all exported files"
 msgstr "Обновить все экспортируемые файлы"
 
-#: Controller/EmployeesController.php:1226
-#: Test/Case/Controller/EmployeesControllerTest.php:6138
-#: View/Elements/barNav.ctp:85
+#: Controller/EmployeesController.php:1169
+#: Test/Case/Controller/EmployeesControllerTest.php:6057
+#: View/Elements/barNav.ctp:87
 msgid "Export phone book"
 msgstr "Экспорт телефонного справочника"
 
-#: Controller/EmployeesController.php:1295
+#: Controller/EmployeesController.php:1233
 msgid "Unknown type for generation %s."
 msgstr "Неизвестный тип для создания %s."
 
-#: Controller/EmployeesController.php:1309 Model/Employee.php:1546
+#: Controller/EmployeesController.php:1247 Model/Employee.php:1516
 msgid "Invalid export type"
 msgstr "Неверный тип экспорта"
 
-#: Controller/EmployeesController.php:1314
-#: Test/Case/Controller/EmployeesControllerTest.php:6236
+#: Controller/EmployeesController.php:1252
+#: Test/Case/Controller/EmployeesControllerTest.php:6153
 msgid "Generation file \"%s\" put in queue..."
 msgstr "Создание файла \"%s\" помещено в очередь..."
 
-#: Controller/EmployeesController.php:1316
+#: Controller/EmployeesController.php:1254
 msgid "Generation file \"%s\" put in queue unsucsessfully..."
 msgstr "Создание файла \"%s\" помещено в очередь неудачно..."
 
-#: Controller/EmployeesController.php:1402
-#: Test/Case/Controller/EmployeesControllerTest.php:6353
+#: Controller/EmployeesController.php:1335
+#: Test/Case/Controller/EmployeesControllerTest.php:6267
 msgid "Generation of exported files put in queue..."
 msgstr "Создание экспортируемых файлов помещено в очередь..."
 
-#: Controller/EmployeesController.php:1405
+#: Controller/EmployeesController.php:1338
 msgid "Generation export files put in queue unsucsessfully..."
 msgstr "Создание экспортируемых файлов помещено в очередь неудачно..."
 
-#: Controller/LogsController.php:109
+#: Controller/LogsController.php:108
 msgid "Logs not found"
 msgstr "Журналы не найдены"
 
-#: Controller/LogsController.php:114
-#: Test/Case/Controller/LogsControllerTest.php:373
+#: Controller/LogsController.php:113
+#: Test/Case/Controller/LogsControllerTest.php:370
 msgid "Index of logs"
 msgstr "Указатель журналов"
 
-#: Controller/LogsController.php:119;122
-#: Test/Case/Controller/LogsControllerTest.php:377;380
+#: Controller/LogsController.php:118;121
+#: Test/Case/Controller/LogsControllerTest.php:374;377
 msgid "Clear logs"
 msgstr "Очистить журналы"
 
-#: Controller/LogsController.php:124
-#: Test/Case/Controller/LogsControllerTest.php:382
+#: Controller/LogsController.php:123
+#: Test/Case/Controller/LogsControllerTest.php:379
 msgid "Are you sure you wish to clear logs?"
 msgstr "Вы уверены, что хотите очистить журналы?"
 
-#: Controller/LogsController.php:156;213;249
-#: Test/Case/Controller/LogsControllerTest.php:574;597;914;937;1056;1079
+#: Controller/LogsController.php:153;208;242
+#: Test/Case/Controller/LogsControllerTest.php:566;588;902;924;1039;1061
 msgid "Invalid ID for record of log"
 msgstr "Неверный идентификатор для записи журнала"
 
-#: Controller/LogsController.php:162
-#: Test/Case/Controller/LogsControllerTest.php:802
+#: Controller/LogsController.php:159
+#: Test/Case/Controller/LogsControllerTest.php:792
 msgid "Information of log record"
 msgstr "Информация о записи журнала"
 
-#: Controller/LogsController.php:166;169
-#: Test/Case/Controller/LogsControllerTest.php:806;809
-#: View/Elements/tableLog.ctp:72
+#: Controller/LogsController.php:163;166
+#: Test/Case/Controller/LogsControllerTest.php:796;799
+#: View/Elements/tableLog.ctp:73
 msgid "Restore data from log"
 msgstr "Восстановить данные из журнала"
 
-#: Controller/LogsController.php:170
-#: Test/Case/Controller/LogsControllerTest.php:810
-#: View/Elements/tableLog.ctp:73
+#: Controller/LogsController.php:167
+#: Test/Case/Controller/LogsControllerTest.php:800
+#: View/Elements/tableLog.ctp:74
 msgid "Are you sure you wish to restore this data from log?"
 msgstr "Вы уверены, что хотите восстановить эти данные из журнала?"
 
-#: Controller/LogsController.php:175;178
-#: Test/Case/Controller/LogsControllerTest.php:815;818
-#: View/Elements/tableLog.ctp:81
+#: Controller/LogsController.php:172;175
+#: Test/Case/Controller/LogsControllerTest.php:805;808
+#: View/Elements/tableLog.ctp:82
 msgid "Delete record of log"
 msgstr "Удалить запись журнала"
 
-#: Controller/LogsController.php:179
-#: Test/Case/Controller/LogsControllerTest.php:819
-#: View/Elements/tableLog.ctp:82
+#: Controller/LogsController.php:176
+#: Test/Case/Controller/LogsControllerTest.php:809
+#: View/Elements/tableLog.ctp:83
 msgid "Are you sure you wish to delete this record of log?"
 msgstr "Вы уверены, что хотите удалить эту запись из журнала?"
 
-#: Controller/LogsController.php:219
-#: Test/Case/Controller/LogsControllerTest.php:987
+#: Controller/LogsController.php:214
+#: Test/Case/Controller/LogsControllerTest.php:972
 msgid "The log record has been deleted."
 msgstr "Запись журнала была удалена."
 
-#: Controller/LogsController.php:221
+#: Controller/LogsController.php:216
 msgid "The log record could not be deleted. Please, try again."
 msgstr "Запись журнала не может быть удалена. Пожалуйста, попробуйте еще раз."
 
-#: Controller/LogsController.php:256
-#: Test/Case/Controller/LogsControllerTest.php:1129
+#: Controller/LogsController.php:249
+#: Test/Case/Controller/LogsControllerTest.php:1109
 msgid ""
 "Deferred saving with an restored employee information was created.<br /"
 ">Information on LDAP server will be updated by queue.<br />Information in "
@@ -835,314 +835,314 @@ msgstr ""
 "сотруднике.<br />Информация на сервере LDAP будет обновлена по очереди.<br /"
 ">Информация в телефонной книге будет обновлена %s после обработки."
 
-#: Controller/LogsController.php:262
+#: Controller/LogsController.php:255
 msgid "The data could not be restored from log record. Please, try again."
 msgstr ""
 "Данные не могут быть восстановлены из записи журнала. Пожалуйста, попробуйте "
 "еще раз."
 
-#: Controller/LogsController.php:290
-#: Test/Case/Controller/LogsControllerTest.php:1219
+#: Controller/LogsController.php:281
+#: Test/Case/Controller/LogsControllerTest.php:1196
 msgid "The logs has been cleared."
 msgstr "Журналы были очищены."
 
-#: Controller/LogsController.php:292
+#: Controller/LogsController.php:283
 msgid "The logs could not be cleared. Please, try again."
 msgstr "Журналы не могут быть очищены. Пожалуйста, попробуйте еще раз."
 
-#: Model/Deferred.php:460
+#: Model/Deferred.php:452
 msgid "Invalid data of deferred save for employee: \"%s\"."
 msgstr "Недопустимые данные отложенного сохранения для сотрудника: \"%s\"."
 
-#: Model/Deferred.php:479
+#: Model/Deferred.php:471
 msgid "Error on approving deferred save with employee DN: \"%s\"."
 msgstr "Ошибка при утверждении отложенного сохранения с DN сотрудника: \"%s\"."
 
-#: Model/Deferred.php:499
+#: Model/Deferred.php:491
 msgid "Error on deleting deferred saves after approving"
 msgstr "Ошибка при удалении отложенных сохранений после утверждения"
 
-#: Model/Deferred.php:501
+#: Model/Deferred.php:493
 msgid "Error on rejecting deferred saves"
 msgstr "Ошибка при отклонении отложенных сохранений"
 
-#: Model/Deferred.php:522 Test/Case/Model/DeferredTest.php:1080;1285
+#: Model/Deferred.php:514 Test/Case/Model/DeferredTest.php:1061;1265
 msgid "Changing information of phone book"
 msgstr "Изменение информации телефонного справочника"
 
-#: Model/Deferred.php:543
+#: Model/Deferred.php:535
 msgid "Error on putting sending e-mail for \"%s\" in queue..."
 msgstr ""
 "Ошибка при помещении отправки электронной почты для \"%s\" в очередь..."
 
-#: Model/Deferred.php:695 View/Emails/html/deferred_save_check.ctp:21
-#: View/Emails/text/deferred_save_check.ctp:19
+#: Model/Deferred.php:684 View/Emails/html/deferred_save_check.ctp:22
+#: View/Emails/text/deferred_save_check.ctp:20
 msgid "Found new deferred saves"
 msgstr "Найдены новые отложенные сохранения"
 
-#: Model/Deferred.php:734
-#: Test/Case/Controller/DeferredControllerTest.php:372;906;1246
-#: Test/Case/Model/DeferredTest.php:1493
-#: Test/Case/Model/Behavior/DeferredSaveBehaviorTest.php:774;803;833;872;911
-#: View/Elements/barNav.ctp:153 View/Elements/formExtendSettingsLeft.ctp:43
+#: Model/Deferred.php:723
+#: Test/Case/Controller/DeferredControllerTest.php:369;895;1231
+#: Test/Case/Model/DeferredTest.php:1470
+#: Test/Case/Model/Behavior/DeferredSaveBehaviorTest.php:746;774;803;841;879
+#: View/Elements/barNav.ctp:155 View/Elements/formExtendSettingsLeft.ctp:44
 msgid "Deferred saves"
 msgstr "Отложенные сохранения"
 
-#: Model/Department.php:288
-#: Test/Case/Controller/DepartmentsControllerTest.php:222;407;508;879;1876;1916
-#: Test/Case/Model/DepartmentTest.php:377 View/Elements/barNav.ctp:128
+#: Model/Department.php:281
+#: Test/Case/Controller/DepartmentsControllerTest.php:219;400;499;860;1833;1872
+#: Test/Case/Model/DepartmentTest.php:358 View/Elements/barNav.ctp:130
 msgid "Departments"
 msgstr "Отделы"
 
-#: Model/Employee.php:322;1624
-#: Test/Case/Controller/AppControllerTest.php:151;261
-#: Test/Case/Controller/DeferredControllerTest.php:364;889;1229
-#: Test/Case/Controller/EmployeesControllerTest.php:319;583;1118;1360;1657;2177;2384;2598;3248;3477;3700;3892;4014;4135;4700;4751;6131
-#: Test/Case/Controller/LogsControllerTest.php:388;825
-#: Test/Case/Model/EmployeeTest.php:252;288;2587
-#: Test/Case/Model/Behavior/DeferredSaveBehaviorTest.php:766;795;855;894
-#: View/Elements/barNav.ctp:54
+#: Model/Employee.php:313;1593
+#: Test/Case/Controller/AppControllerTest.php:156;264
+#: Test/Case/Controller/DeferredControllerTest.php:361;878;1214
+#: Test/Case/Controller/EmployeesControllerTest.php:314;577;1103;1344;1640;2156;2362;2575;3216;3444;3662;3853;3974;4094;4649;4699;6050
+#: Test/Case/Controller/LogsControllerTest.php:385;815
+#: Test/Case/Model/EmployeeTest.php:245;281;2547
+#: Test/Case/Model/Behavior/DeferredSaveBehaviorTest.php:738;766;824;862
+#: View/Elements/barNav.ctp:56
 msgid "Employees"
 msgstr "Сотрудники"
 
-#: Model/Employee.php:876
-#: Test/Case/Controller/EmployeesControllerTest.php:6051;6061;6091;6101;6235;6276
-#: Test/Case/Model/EmployeeTest.php:1575;2488;2498;2528;2538
+#: Model/Employee.php:855
+#: Test/Case/Controller/EmployeesControllerTest.php:5970;5980;6010;6020;6152;6192
+#: Test/Case/Model/EmployeeTest.php:1554;2450;2460;2490;2500
 msgid "by alphabet"
 msgstr "по алфавиту"
 
-#: Model/Employee.php:879
-#: Test/Case/Controller/EmployeesControllerTest.php:6071;6081;6111;6121;6200
-#: Test/Case/Model/EmployeeTest.php:1576;2508;2518;2548;2558
+#: Model/Employee.php:858
+#: Test/Case/Controller/EmployeesControllerTest.php:5990;6000;6030;6040;6118
+#: Test/Case/Model/EmployeeTest.php:1555;2470;2480;2510;2520
 msgid "by department"
 msgstr "по отделам"
 
-#: Model/Employee.php:885
-#: Test/Case/Controller/EmployeesControllerTest.php:6051;6061;6071;6081;6091;6101;6111;6121;6200;6235;6276
-#: Test/Case/Model/EmployeeTest.php:1574;1575;1576;2488;2498;2508;2518;2528;2538;2548;2558
+#: Model/Employee.php:864
+#: Test/Case/Controller/EmployeesControllerTest.php:5970;5980;5990;6000;6010;6020;6030;6040;6118;6152;6192
+#: Test/Case/Model/EmployeeTest.php:1553;1554;1555;2450;2460;2470;2480;2490;2500;2510;2520
 msgid "Directory"
 msgstr "Справочник"
 
-#: Model/Employee.php:891
-#: Test/Case/Controller/EmployeesControllerTest.php:6051;6071;6091;6111;6276
-#: Test/Case/Model/EmployeeTest.php:1576;2488;2508;2528;2548
+#: Model/Employee.php:870
+#: Test/Case/Controller/EmployeesControllerTest.php:5970;5990;6010;6030;6192
+#: Test/Case/Model/EmployeeTest.php:1555;2450;2470;2490;2510
 msgid "full"
 msgstr "полный"
 
-#: Model/Employee.php:906
-#: Test/Case/Controller/EmployeesControllerTest.php:3244;3473
-#: Test/Case/Model/EmployeeTest.php:1600
+#: Model/Employee.php:884
+#: Test/Case/Controller/EmployeesControllerTest.php:3212;3440
+#: Test/Case/Model/EmployeeTest.php:1577
 msgid "Non-staff personnel"
 msgstr "Внештатные сотрудники"
 
-#: Model/Employee.php:964 Test/Case/Model/EmployeeTest.php:1642;1686;1730;1774
-#: View/Employees/Pdf/export.ctp:36
+#: Model/Employee.php:940 Test/Case/Model/EmployeeTest.php:1616;1659;1702;1745
+#: View/Employees/Pdf/export.ctp:37
 msgid "Created %s"
 msgstr "Создан %s"
 
-#: Model/Employee.php:998 Test/Case/Model/EmployeeTest.php:1641;1685
+#: Model/Employee.php:974 Test/Case/Model/EmployeeTest.php:1615;1658
 msgid "Directory of staff by alphabet"
 msgstr "Справочник сотрудников по алфавиту"
 
-#: Model/Employee.php:1017 Test/Case/Model/EmployeeTest.php:1729;1773
+#: Model/Employee.php:993 Test/Case/Model/EmployeeTest.php:1701;1744
 msgid "Directory of staff by department"
 msgstr "Справочник сотрудников по отделам"
 
-#: Model/Employee.php:1508
+#: Model/Employee.php:1479
 msgid "Error on generating file \"%s\""
 msgstr "Ошибка при создании файла \"%s\""
 
-#: Model/EmployeeEdit.php:709
+#: Model/EmployeeEdit.php:691
 msgid "Invalid the GUID or Distinguished name of an LDAP entity"
 msgstr "Недопустимый идентификатор GUID или Отличительное имя объекта LDAP"
 
-#: Model/EmployeeEdit.php:801 Test/Case/Model/EmployeeEditTest.php:1381;1394
+#: Model/EmployeeEdit.php:781 Test/Case/Model/EmployeeEditTest.php:1347;1359
 msgid "Invalid file for update."
 msgstr "Неверный файл для обновления."
 
-#: Model/EmployeeEdit.php:808 Test/Case/Model/EmployeeEditTest.php:1412
+#: Model/EmployeeEdit.php:788 Test/Case/Model/EmployeeEditTest.php:1376
 msgid "File size is %s. Limit - %s."
 msgstr "Размер файла %s. Ограничение - %s."
 
-#: Model/EmployeeEdit.php:818 Test/Case/Model/EmployeeEditTest.php:1459
+#: Model/EmployeeEdit.php:798 Test/Case/Model/EmployeeEditTest.php:1420
 msgid "The uploaded photo is not a jpeg"
 msgstr "Загруженное фото не в формате JPEG"
 
-#: Model/EmployeeEdit.php:824
+#: Model/EmployeeEdit.php:804
 msgid "Error resizing file photo."
 msgstr "Ошибка при изменении размера файла фотографии."
 
-#: Model/EmployeeEdit.php:831
+#: Model/EmployeeEdit.php:811
 msgid "Error reading file photo."
 msgstr "Ошибка при чтении файла фотографии."
 
-#: Model/Log.php:290 Test/Case/Controller/LogsControllerTest.php:396;842
-#: Test/Case/Model/LogTest.php:406 View/Elements/barNav.ctp:104
+#: Model/Log.php:285 Test/Case/Controller/LogsControllerTest.php:393;832
+#: Test/Case/Model/LogTest.php:395 View/Elements/barNav.ctp:106
 msgid "Logs"
 msgstr "Журналы"
 
-#: View/Elements/barNav.ctp:56
+#: View/Elements/barNav.ctp:58
 msgid "Manage information about employees"
 msgstr "Управление информацией о сотрудниках"
 
-#: View/Elements/barNav.ctp:60
+#: View/Elements/barNav.ctp:62
 msgid "Tree of employees"
 msgstr "Дерево сотрудников"
 
-#: View/Elements/barNav.ctp:62
+#: View/Elements/barNav.ctp:64
 msgid "Tree view of employess"
 msgstr "Древовидное представление сотрудников"
 
-#: View/Elements/barNav.ctp:87
+#: View/Elements/barNav.ctp:89
 msgid "Saving a local copy of the phone book"
 msgstr "Сохранение локальной копии телефонного справочника"
 
-#: View/Elements/barNav.ctp:106
+#: View/Elements/barNav.ctp:108
 msgid "View logs of changing information"
 msgstr "Просмотр журналов изменения информации"
 
-#: View/Elements/barNav.ctp:110
+#: View/Elements/barNav.ctp:112
 msgid "Check state tree"
 msgstr "Проверка состояния дерева"
 
-#: View/Elements/barNav.ctp:119
+#: View/Elements/barNav.ctp:121
 msgid "Informations of employees"
 msgstr "Информация о сотрудниках"
 
-#: View/Elements/barNav.ctp:130
+#: View/Elements/barNav.ctp:132
 msgid "Manage information about departments"
 msgstr "Управление информацией об отделах"
 
-#: View/Elements/barNav.ctp:155
+#: View/Elements/barNav.ctp:157
 msgid "Manage deferred saves"
 msgstr "Управление отложенными сохранениями"
 
-#: View/Elements/barNav.ctp:164;166;177
+#: View/Elements/barNav.ctp:166;168;179
 msgid "Application settings"
 msgstr "Настройки приложения"
 
-#: View/Elements/barNav.ctp:170
+#: View/Elements/barNav.ctp:172
 msgid "Queue of tasks"
 msgstr "Очередь задч"
 
-#: View/Elements/barNav.ctp:172
+#: View/Elements/barNav.ctp:174
 msgid "Task queue list"
 msgstr "Список задач"
 
-#: View/Elements/barNav.ctp:186
+#: View/Elements/barNav.ctp:188
 msgid "Logout"
 msgstr "Выход"
 
-#: View/Elements/barNav.ctp:195
+#: View/Elements/barNav.ctp:197
 msgid "Contact administrator"
 msgstr "Связаться с администратором"
 
-#: View/Elements/formDepartmentBase.ctp:30 View/Elements/tableDepartment.ctp:29
-#: View/Elements/tableEmployeeGallery.ctp:30
+#: View/Elements/formDepartmentBase.ctp:31 View/Elements/tableDepartment.ctp:30
+#: View/Elements/tableEmployeeGallery.ctp:31
 msgid "Name of department"
 msgstr "Наименование отдела"
 
-#: View/Elements/formDepartmentBase.ctp:44 View/Elements/infoDepartment.ctp:21
+#: View/Elements/formDepartmentBase.ctp:45 View/Elements/infoDepartment.ctp:22
 msgid "Short name of department"
 msgstr "Краткое наименование отдела"
 
-#: View/Elements/formDepartmentBase.ctp:46
+#: View/Elements/formDepartmentBase.ctp:47
 msgid "Extended name of department"
 msgstr "Расширенное название отдела"
 
-#: View/Elements/formDepartmentBase.ctp:46
+#: View/Elements/formDepartmentBase.ctp:47
 msgid "Extended name of department (full)"
 msgstr "Расширенное название отдела (полное)"
 
-#: View/Elements/formDepartmentBase.ctp:51
+#: View/Elements/formDepartmentBase.ctp:52
 msgid "Save"
 msgstr "Сохранить"
 
-#: View/Elements/formEmployeeEdit.ctp:89
+#: View/Elements/formEmployeeEdit.ctp:90
 msgid "Department of employee"
 msgstr "Отдел сотрудника"
 
-#: View/Elements/formEmployeeEdit.ctp:91
+#: View/Elements/formEmployeeEdit.ctp:92
 msgid "Select department"
 msgstr "Выберите отдел"
 
-#: View/Elements/formEmployeeEdit.ctp:104
+#: View/Elements/formEmployeeEdit.ctp:105
 msgid "Manager of employee"
 msgstr "Руководитель сотрудника"
 
-#: View/Elements/formEmployeeEdit.ctp:107
+#: View/Elements/formEmployeeEdit.ctp:108
 msgid "Select manager"
 msgstr "Выберите руководителя"
 
-#: View/Elements/formEmployeeEditFull.ctp:82
+#: View/Elements/formEmployeeEditFull.ctp:83
 msgid "Employee information"
 msgstr "Информация о сотруднике"
 
-#: View/Elements/formEmployeeEditFull.ctp:84
+#: View/Elements/formEmployeeEditFull.ctp:85
 msgid "Employee photo"
 msgstr "Фото сотрудника"
 
-#: View/Elements/formEmployeePhotoUpload.ctp:56
+#: View/Elements/formEmployeePhotoUpload.ctp:57
 msgid "Current photo of employee on LDAP server"
 msgstr "Текущая  фотография сотрудника на сервере LDAP"
 
-#: View/Elements/formEmployeePhotoUpload.ctp:62
+#: View/Elements/formEmployeePhotoUpload.ctp:63
 msgid "Current photo"
 msgstr "Текущая фотография"
 
-#: View/Elements/formEmployeePhotoUpload.ctp:71
+#: View/Elements/formEmployeePhotoUpload.ctp:72
 msgid "Delete photo"
 msgstr "Удалить фото"
 
-#: View/Elements/formEmployeePhotoUpload.ctp:75
+#: View/Elements/formEmployeePhotoUpload.ctp:76
 msgid "Delete current photo"
 msgstr "Удалить текущую фотографию"
 
-#: View/Elements/formEmployeePhotoUpload.ctp:76
+#: View/Elements/formEmployeePhotoUpload.ctp:77
 msgid "Are you sure you wish to delete current photo?"
 msgstr "Вы уверены, что хотите удалить текущую фотографию?"
 
-#: View/Elements/formEmployeePhotoUpload.ctp:81
+#: View/Elements/formEmployeePhotoUpload.ctp:82
 msgid "Update photo"
 msgstr "Обновить фото"
 
-#: View/Elements/formExtendSettingsLeft.ctp:28
+#: View/Elements/formExtendSettingsLeft.ctp:29
 msgid "Photo"
 msgstr "Фото"
 
-#: View/Elements/formExtendSettingsLeft.ctp:29
+#: View/Elements/formExtendSettingsLeft.ctp:30
 msgid "Show default photo"
 msgstr "Отображать фото по умолчанию"
 
-#: View/Elements/formExtendSettingsLeft.ctp:30
+#: View/Elements/formExtendSettingsLeft.ctp:31
 msgid "Show default photo, if the photo is not specified"
 msgstr "Отображать фото по умолчанию, если фото не указано"
 
-#: View/Elements/formExtendSettingsLeft.ctp:34
+#: View/Elements/formExtendSettingsLeft.ctp:35
 msgid "Phone library"
 msgstr "Библиотека телефонов"
 
-#: View/Elements/formExtendSettingsLeft.ctp:35
+#: View/Elements/formExtendSettingsLeft.ctp:36
 msgid "Country"
 msgstr "Страна"
 
-#: View/Elements/formExtendSettingsLeft.ctp:36
+#: View/Elements/formExtendSettingsLeft.ctp:37
 msgid "Country code for parse telephone number"
 msgstr "Код страны для разбора номера телефона"
 
-#: View/Elements/formExtendSettingsLeft.ctp:38
+#: View/Elements/formExtendSettingsLeft.ctp:39
 msgid "Format of telephone number"
 msgstr "Формат номера телефона"
 
-#: View/Elements/formExtendSettingsLeft.ctp:39
+#: View/Elements/formExtendSettingsLeft.ctp:40
 msgid "Display format for telephone or mobile phone number"
 msgstr "Формат отображения номера телефона или мобильного телефона"
 
-#: View/Elements/formExtendSettingsLeft.ctp:44
+#: View/Elements/formExtendSettingsLeft.ctp:45
 msgid "Group of users for management deferred saves"
 msgstr "Группа пользователей для управления отложенными сохранениями"
 
-#: View/Elements/formExtendSettingsLeft.ctp:45
+#: View/Elements/formExtendSettingsLeft.ctp:46
 msgid ""
 "A group of users serving deferred saves: approving, rejecting, editing and "
 "deleting."
@@ -1150,44 +1150,44 @@ msgstr ""
 "Группа пользователей, обслуживающих отложенные сохранения: утверждает, "
 "отклоняет, редактирует и удаляет."
 
-#: View/Elements/formExtendSettingsRight.ctp:29
+#: View/Elements/formExtendSettingsRight.ctp:30
 msgid "Search in any part string"
 msgstr "Поиск в любой части строки"
 
-#: View/Elements/formExtendSettingsRight.ctp:30
+#: View/Elements/formExtendSettingsRight.ctp:31
 msgid "Default value for flag of search in any part string"
 msgstr "Значение по умолчанию для флага поиска в любой части строки"
 
-#: View/Elements/formExtendSettingsRight.ctp:34
+#: View/Elements/formExtendSettingsRight.ctp:35
 msgid "Editing information"
 msgstr "Редактирование информации"
 
-#: View/Elements/formExtendSettingsRight.ctp:35
+#: View/Elements/formExtendSettingsRight.ctp:36
 msgid "Use information from LDAP"
 msgstr "Использовать информацию из LDAP"
 
-#: View/Elements/formExtendSettingsRight.ctp:36
+#: View/Elements/formExtendSettingsRight.ctp:37
 msgid "Use information from LDAP server instead database on editing"
 msgstr ""
 "Использовать информацию из сервера LDAP вместо базы данных при редактировании"
 
-#: View/Elements/formExtendSettingsRight.ctp:38
+#: View/Elements/formExtendSettingsRight.ctp:39
 msgid "Limit number of rows for multiple value"
 msgstr "Ограничение количества строк для множественных значений"
 
-#: View/Elements/formExtendSettingsRight.ctp:39
+#: View/Elements/formExtendSettingsRight.ctp:40
 msgid "Limit number of rows for fields with multiple value"
 msgstr "Ограничение количества строк для полей с множественными значениями"
 
-#: View/Elements/formExtendSettingsRight.ctp:46
+#: View/Elements/formExtendSettingsRight.ctp:47
 msgid "Fields"
 msgstr "Поля"
 
-#: View/Elements/formExtendSettingsRight.ctp:47
+#: View/Elements/formExtendSettingsRight.ctp:48
 msgid "Extended fields"
 msgstr "Расширенные поля"
 
-#: View/Elements/formExtendSettingsRight.ctp:48
+#: View/Elements/formExtendSettingsRight.ctp:49
 msgid ""
 "Fields available for user with role: secretary, human resources or "
 "administrator"
@@ -1195,173 +1195,173 @@ msgstr ""
 "Поля, доступные для пользователя с ролью: секретарь, отдел кадров или "
 "администратор"
 
-#: View/Elements/formExtendSettingsRight.ctp:50
+#: View/Elements/formExtendSettingsRight.ctp:51
 msgid "Read only fields"
 msgstr "Поля только для чтения"
 
-#: View/Elements/formExtendSettingsRight.ctp:51
+#: View/Elements/formExtendSettingsRight.ctp:52
 msgid "Fields available only for read"
 msgstr "Поля доступные только для чтения"
 
-#: View/Elements/infoBirthday.ctp:20
+#: View/Elements/infoBirthday.ctp:21
 msgid "Today is the birthday of:"
 msgstr "Сегодня День рождения:"
 
-#: View/Elements/infoDeferred.ctp:29 View/Elements/infoLog.ctp:34
-#: View/Elements/tableDeferredSave.ctp:40
-#: View/Elements/tableEmployeeGallery.ctp:27 View/Elements/tableLog.ctp:43
+#: View/Elements/infoDeferred.ctp:30 View/Elements/infoLog.ctp:35
+#: View/Elements/tableDeferredSave.ctp:41
+#: View/Elements/tableEmployeeGallery.ctp:28 View/Elements/tableLog.ctp:44
 msgid "Name of employee"
 msgstr "Имя сотрудника"
 
-#: View/Elements/infoDeferred.ctp:31 View/Elements/infoLog.ctp:36
-#: View/Elements/tableDeferredSave.ctp:47 View/Elements/tableLog.ctp:50
+#: View/Elements/infoDeferred.ctp:32 View/Elements/infoLog.ctp:37
+#: View/Elements/tableDeferredSave.ctp:48 View/Elements/tableLog.ctp:51
 msgid "Created"
 msgstr "Создан"
 
-#: View/Elements/infoDeferred.ctp:33 View/Elements/tableDeferredSave.ctp:50
+#: View/Elements/infoDeferred.ctp:34 View/Elements/tableDeferredSave.ctp:51
 msgid "Modified"
 msgstr "Изменён"
 
-#: View/Elements/infoDepartment.ctp:23 View/Elements/tableDepartment.ctp:32
+#: View/Elements/infoDepartment.ctp:24 View/Elements/tableDepartment.ctp:33
 msgid "Extension name of department"
 msgstr "Расширения названия для отдела"
 
-#: View/Elements/infoDepartment.ctp:25 View/Elements/tableDepartment.ctp:35
+#: View/Elements/infoDepartment.ctp:26 View/Elements/tableDepartment.ctp:36
 msgid "Used"
 msgstr "Используется"
 
-#: View/Elements/infoLog.ctp:29 View/Elements/tableLog.ctp:40
+#: View/Elements/infoLog.ctp:30 View/Elements/tableLog.ctp:41
 msgid "Name of user"
 msgstr "Имя пользователя"
 
-#: View/Elements/infoLog.ctp:44 View/Elements/tableLog.ctp:95
+#: View/Elements/infoLog.ctp:45 View/Elements/tableLog.ctp:96
 msgid "Data of log record is broken"
 msgstr "Данные записи журнала нарушены"
 
-#: View/Elements/infoStatistics.ctp:20
+#: View/Elements/infoStatistics.ctp:21
 msgid "The number of employees"
 msgstr "Количество сотрудников"
 
-#: View/Elements/infoStatistics.ctp:25 View/Elements/tableExport.ctp:22
+#: View/Elements/infoStatistics.ctp:26 View/Elements/tableExport.ctp:23
 msgid "Last update"
 msgstr "Последнее обновление"
 
-#: View/Elements/tableDeferredSave.ctp:43
+#: View/Elements/tableDeferredSave.ctp:44
 msgid "Data of deferred save"
 msgstr "Данные отложенного сохранения"
 
-#: View/Elements/tableDeferredSave.ctp:74
+#: View/Elements/tableDeferredSave.ctp:75
 msgid "Edit information of this deferred save"
 msgstr "Редактировать информацию этого отложенного сохранения"
 
-#: View/Elements/tableDepartment.ctp:25
+#: View/Elements/tableDepartment.ctp:26
 msgid "Position of department"
 msgstr "Позиция отдела"
 
-#: View/Elements/tableDepartment.ctp:58
+#: View/Elements/tableDepartment.ctp:59
 msgid "Edit department"
 msgstr "Редактировать отдел"
 
-#: View/Elements/tableDepartment.ctp:70
+#: View/Elements/tableDepartment.ctp:71
 msgid "Are you sure you wish to delete department '%s'?"
 msgstr "Вы уверены, что хотите удалить отдел '%s'?"
 
-#: View/Elements/tableExport.ctp:21
+#: View/Elements/tableExport.ctp:22
 msgid "File"
 msgstr "Файл"
 
-#: View/Elements/tableExport.ctp:23 View/Elements/tableSearchResults.ctp:52
+#: View/Elements/tableExport.ctp:24 View/Elements/tableSearchResults.ctp:53
 msgid "Actions"
 msgstr "Действия"
 
-#: View/Elements/tableExport.ctp:51
+#: View/Elements/tableExport.ctp:52
 msgid "Put the generation of the file in the queue"
 msgstr "Поместить создание файла в очередь"
 
-#: View/Elements/tableExport.ctp:62
+#: View/Elements/tableExport.ctp:63
 msgid "Download file"
 msgstr "Скачать файл"
 
-#: View/Elements/tableLog.ctp:46
+#: View/Elements/tableLog.ctp:47
 msgid "Data of log"
 msgstr "Данные журнала"
 
-#: View/Elements/tableSearchResults.ctp:66
+#: View/Elements/tableSearchResults.ctp:67
 msgid "Tree of subordinate employees"
 msgstr "Дерево подчинённых сотрудников"
 
-#: View/Emails/html/deferred_save_approve.ctp:13
-#: View/Emails/html/deferred_save_reject.ctp:13
-#: View/Emails/text/deferred_save_approve.ctp:11
-#: View/Emails/text/deferred_save_reject.ctp:11
+#: View/Emails/html/deferred_save_approve.ctp:14
+#: View/Emails/html/deferred_save_reject.ctp:14
+#: View/Emails/text/deferred_save_approve.ctp:12
+#: View/Emails/text/deferred_save_reject.ctp:12
 msgid "Changing information"
 msgstr "Изменение информации"
 
-#: View/Emails/html/deferred_save_approve.ctp:14
-#: View/Emails/text/deferred_save_approve.ctp:13
+#: View/Emails/html/deferred_save_approve.ctp:15
+#: View/Emails/text/deferred_save_approve.ctp:14
 msgid "Changing your information is approved"
 msgstr "Изменение вашей информации утверждено"
 
-#: View/Emails/html/deferred_save_check.ctp:16
-#: View/Emails/text/deferred_save_check.ctp:14
+#: View/Emails/html/deferred_save_check.ctp:17
+#: View/Emails/text/deferred_save_check.ctp:15
 msgid "one"
 msgstr "один"
 
-#: View/Emails/html/deferred_save_check.ctp:16
-#: View/Emails/text/deferred_save_check.ctp:14
+#: View/Emails/html/deferred_save_check.ctp:17
+#: View/Emails/text/deferred_save_check.ctp:15
 msgctxt "deferred_save"
 msgid "one"
 msgstr "одно"
 
-#: View/Emails/html/deferred_save_check.ctp:22
-#: View/Emails/text/deferred_save_check.ctp:21
+#: View/Emails/html/deferred_save_check.ctp:23
+#: View/Emails/text/deferred_save_check.ctp:22
 msgid "Found %s %s"
 msgstr "Найдено %s %s"
 
-#: View/Emails/html/deferred_save_check.ctp:32
-#: View/Emails/text/deferred_save_check.ctp:28
+#: View/Emails/html/deferred_save_check.ctp:33
+#: View/Emails/text/deferred_save_check.ctp:29
 msgid "...And %s more %s"
 msgstr "...И еще %s %s"
 
-#: View/Emails/html/deferred_save_check.ctp:39
-#: View/Emails/text/deferred_save_check.ctp:35
+#: View/Emails/html/deferred_save_check.ctp:40
+#: View/Emails/text/deferred_save_check.ctp:36
 msgid "For management list of deferred saves, click '%s'"
 msgstr "Для управления отложенными сохранениями, нажмите \"%s\""
 
-#: View/Emails/html/deferred_save_check.ctp:41
+#: View/Emails/html/deferred_save_check.ctp:42
 msgid "here"
 msgstr "здесь"
 
-#: View/Emails/html/deferred_save_check.ctp:25
-#: View/Emails/text/deferred_save_check.ctp:21
+#: View/Emails/html/deferred_save_check.ctp:26
+#: View/Emails/text/deferred_save_check.ctp:22
 msgid "new deferred save"
 msgid_plural "new deferred saves"
 msgstr[0] "новое отложенное сохранение"
 msgstr[1] "новых отложенных сохранения"
 msgstr[2] "новых отложенных сохранений"
 
-#: View/Emails/html/deferred_save_check.ctp:35
-#: View/Emails/text/deferred_save_check.ctp:31
+#: View/Emails/html/deferred_save_check.ctp:36
+#: View/Emails/text/deferred_save_check.ctp:32
 msgid "record"
 msgid_plural "records"
 msgstr[0] "запись"
 msgstr[1] "записи"
 msgstr[2] "записей"
 
-#: View/Emails/html/deferred_save_reject.ctp:14
-#: View/Emails/text/deferred_save_reject.ctp:13
+#: View/Emails/html/deferred_save_reject.ctp:15
+#: View/Emails/text/deferred_save_reject.ctp:14
 msgid "Changing your information is rejected"
 msgstr "Изменение вашей информации отклонено"
 
-#: View/Employees/search.ctp:35
+#: View/Employees/search.ctp:36
 msgid "Results of search"
 msgstr "Результаты поиска"
 
-#: View/Employees/search.ctp:37
+#: View/Employees/search.ctp:38
 msgid "New search"
 msgstr "Новый поиск"
 
-#: View/Employees/Pdf/export.ctp:32
+#: View/Employees/Pdf/export.ctp:33
 msgid "Phonebook"
 msgstr "Телефонный справочник"
 

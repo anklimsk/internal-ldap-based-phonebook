@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: InternalPhonebook\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2018-04-20 10:07+0300\n"
+"PO-Revision-Date: 2018-11-22 17:24+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -14,56 +14,86 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 1.8.7\n"
+"X-Generator: Poedit 2.2\n"
 
-#: Config/cakeldap.php:99 Test/TestConfig.php:83
-#: Test/Case/Model/EmployeeEditTest.php:1888
+#: Config/cakeldap.php:100 Test/TestConfig.php:126
+#: Test/Case/Controller/DeferredControllerTest.php:1172
+#: Test/Case/Controller/EmployeesControllerTest.php:2118;2324;2534
+#: Test/Case/Model/EmployeeEditTest.php:1945
+#: Test/Case/Model/EmployeeTest.php:632;887
 msgid "Display name of employee"
 msgstr "Отображаемое имя сотрудника"
 
-#: Config/cakeldap.php:109 Test/TestConfig.php:93
-#: Test/Case/Model/EmployeeEditTest.php:1889
+#: Config/cakeldap.php:110 Test/TestConfig.php:136
+#: Test/Case/Controller/DeferredControllerTest.php:1173
+#: Test/Case/Controller/EmployeesControllerTest.php:2119;2325;2535
+#: Test/Case/Model/EmployeeEditTest.php:1946
+#: Test/Case/Model/EmployeeTest.php:642;897
 msgid "Initials name of employee"
 msgstr "Инициалы сотрудника"
 
-#: Config/cakeldap.php:127 Test/TestConfig.php:111
-#: Test/Case/Model/EmployeeEditTest.php:1890
+#: Config/cakeldap.php:130 Test/TestConfig.php:154
+#: Test/Case/Controller/DeferredControllerTest.php:1174
+#: Test/Case/Controller/EmployeesControllerTest.php:2120;2326;2536
+#: Test/Case/Model/EmployeeEditTest.php:1947
+#: Test/Case/Model/EmployeeTest.php:660;915
 msgid "Surname of employee"
 msgstr "Фамилия сотрудника"
 
-#: Config/cakeldap.php:145 Test/TestConfig.php:129
-#: Test/Case/Model/EmployeeEditTest.php:1891
+#: Config/cakeldap.php:150 Test/TestConfig.php:172
+#: Test/Case/Controller/DeferredControllerTest.php:1175
+#: Test/Case/Controller/EmployeesControllerTest.php:2121;2327;2537
+#: Test/Case/Model/EmployeeEditTest.php:1948
+#: Test/Case/Model/EmployeeTest.php:678;933
 msgid "Given name of employee"
 msgstr "Имя сотрудника"
 
-#: Config/cakeldap.php:163 Test/TestConfig.php:147
-#: Test/Case/Model/EmployeeEditTest.php:1892
+#: Config/cakeldap.php:170 Test/TestConfig.php:190
+#: Test/Case/Controller/DeferredControllerTest.php:1176
+#: Test/Case/Controller/EmployeesControllerTest.php:2122;2328;2538
+#: Test/Case/Model/EmployeeEditTest.php:1949
+#: Test/Case/Model/EmployeeTest.php:696;951
 msgid "Middle name of employee"
 msgstr "Отчество сотрудника"
 
-#: Config/cakeldap.php:181 Test/TestConfig.php:165
-#: Test/Case/Model/EmployeeEditTest.php:1893
+#: Config/cakeldap.php:190 Test/TestConfig.php:208
+#: Test/Case/Controller/DeferredControllerTest.php:1177
+#: Test/Case/Controller/EmployeesControllerTest.php:2123;2329;2539
+#: Test/Case/Model/EmployeeEditTest.php:1950
+#: Test/Case/Model/EmployeeTest.php:714;969
 msgid "Position of employee"
 msgstr "Должность сотрудника"
 
-#: Config/cakeldap.php:191 Test/TestConfig.php:175
-#: Test/Case/Model/EmployeeEditTest.php:1894
+#: Config/cakeldap.php:200 Test/TestConfig.php:218
+#: Test/Case/Controller/DeferredControllerTest.php:1178
+#: Test/Case/Controller/EmployeesControllerTest.php:2124;2330;2540
+#: Test/Case/Model/EmployeeEditTest.php:1951
+#: Test/Case/Model/EmployeeTest.php:979
 msgid "Subdivision of employee"
 msgstr "Подразделение сотрудника"
 
-#: Config/cakeldap.php:201 Test/TestConfig.php:185
-#: Test/Case/Model/EmployeeEditTest.php:1895
+#: Config/cakeldap.php:210 Test/TestConfig.php:228
+#: Test/Case/Controller/DeferredControllerTest.php:1179
+#: Test/Case/Controller/EmployeesControllerTest.php:2125;2331;2541
+#: Test/Case/Model/EmployeeEditTest.php:1952
+#: Test/Case/Model/EmployeeTest.php:724;989
 msgid "Department of employee"
 msgstr "Отдел сотрудника"
 
-#: Config/cakeldap.php:211 Test/TestConfig.php:195
-#: Test/Case/Model/EmployeeEditTest.php:1896
+#: Config/cakeldap.php:220 Test/TestConfig.php:238
+#: Test/Case/Controller/DeferredControllerTest.php:1180
+#: Test/Case/Controller/EmployeesControllerTest.php:2126;2332;2542
+#: Test/Case/Model/EmployeeEditTest.php:1953
+#: Test/Case/Model/EmployeeTest.php:734;999
 msgid ""
 "Interoffice telephone of employee. Format: %s, where X - number from 0 to 9"
 msgstr "Внутренний телефон сотрудника. Формат: %s, где X - число от 0 до 9"
 
-#: Config/cakeldap.php:221 Test/TestConfig.php:205
-#: Test/Case/Model/EmployeeEditTest.php:1897
+#: Config/cakeldap.php:230 Test/TestConfig.php:248
+#: Test/Case/Controller/DeferredControllerTest.php:1181
+#: Test/Case/Controller/EmployeesControllerTest.php:2127;2333;2543
+#: Test/Case/Model/EmployeeEditTest.php:1954
+#: Test/Case/Model/EmployeeTest.php:744;1009
 msgid ""
 "Local telephone of employee. Format: E.164, e.g. %s, where X - number from 0 "
 "to 9"
@@ -71,8 +101,11 @@ msgstr ""
 "Городской телефон сотрудника. Формат: E.164, например, %s, где X - число от "
 "0 до 9"
 
-#: Config/cakeldap.php:231 Test/TestConfig.php:215
-#: Test/Case/Model/EmployeeEditTest.php:1898
+#: Config/cakeldap.php:240 Test/TestConfig.php:258
+#: Test/Case/Controller/DeferredControllerTest.php:1182
+#: Test/Case/Controller/EmployeesControllerTest.php:2128;2334;2544
+#: Test/Case/Model/EmployeeEditTest.php:1955
+#: Test/Case/Model/EmployeeTest.php:754;1019
 msgid ""
 "Mobile telephone of employee. Format: E.164, e.g. %s, where X - number from "
 "0 to 9"
@@ -80,8 +113,11 @@ msgstr ""
 "Мобильный телефон сотрудника. Формат: E.164, например, %s, где X - число от "
 "0 до 9"
 
-#: Config/cakeldap.php:241 Test/TestConfig.php:225
-#: Test/Case/Model/EmployeeEditTest.php:1899
+#: Config/cakeldap.php:250 Test/TestConfig.php:268
+#: Test/Case/Controller/DeferredControllerTest.php:1183
+#: Test/Case/Controller/EmployeesControllerTest.php:2129;2335;2545
+#: Test/Case/Model/EmployeeEditTest.php:1956
+#: Test/Case/Model/EmployeeTest.php:1029
 msgid ""
 "Other mobile telephone of employee. Format: E.164, e.g. %s, where X - number "
 "from 0 to 9"
@@ -89,50 +125,77 @@ msgstr ""
 "Личный мобильный телефон сотрудника. Формат: E.164, например, %s, где X - "
 "число от 0 до 9"
 
-#: Config/cakeldap.php:254 Test/TestConfig.php:238
-#: Test/Case/Model/EmployeeEditTest.php:1900
+#: Config/cakeldap.php:263 Test/TestConfig.php:281
+#: Test/Case/Controller/DeferredControllerTest.php:1184
+#: Test/Case/Controller/EmployeesControllerTest.php:2130;2336;2546
+#: Test/Case/Model/EmployeeEditTest.php:1957
+#: Test/Case/Model/EmployeeTest.php:767;1042
 msgid ""
 "Office room of employee. Format: %s, where X - number from 0 to 9, L - letter"
 msgstr "Кабинет сотрудника. Формат: %s, где X - число от 0 до 9, L - буква"
 
-#: Config/cakeldap.php:272 Test/TestConfig.php:256
-#: Test/Case/Model/EmployeeEditTest.php:1901
+#: Config/cakeldap.php:281 Test/TestConfig.php:299
+#: Test/Case/Controller/DeferredControllerTest.php:1185
+#: Test/Case/Controller/EmployeesControllerTest.php:2131;2337;2547
+#: Test/Case/Model/EmployeeEditTest.php:1958
+#: Test/Case/Model/EmployeeTest.php:785;1060
 msgid "E-mail of employee"
 msgstr "E-mail сотрудника"
 
-#: Config/cakeldap.php:281 Test/TestConfig.php:265
-#: Test/Case/Model/EmployeeEditTest.php:1902
+#: Config/cakeldap.php:290 Test/TestConfig.php:308
+#: Test/Case/Controller/DeferredControllerTest.php:1186
+#: Test/Case/Controller/EmployeesControllerTest.php:2132;2338;2548
+#: Test/Case/Model/EmployeeEditTest.php:1959
+#: Test/Case/Model/EmployeeTest.php:1069
 msgid "Manager of employee"
 msgstr "Руководитель сотрудника"
 
-#: Config/cakeldap.php:290 Test/TestConfig.php:274
-#: Test/Case/Model/EmployeeEditTest.php:1903
+#: Config/cakeldap.php:299 Test/TestConfig.php:317
+#: Test/Case/Controller/DeferredControllerTest.php:1187
+#: Test/Case/Controller/EmployeesControllerTest.php:2133;2339;2549
+#: Test/Case/Model/EmployeeEditTest.php:1960
+#: Test/Case/Model/EmployeeTest.php:794;1078
 msgid "Photo of employee %dpx X %dpx in JPEG format"
 msgstr "Фото сотрудника %dpx X %dpx в формате JPEG"
 
-#: Config/cakeldap.php:299 Test/TestConfig.php:283
-#: Test/Case/Model/EmployeeEditTest.php:1904
+#: Config/cakeldap.php:308 Test/TestConfig.php:326
+#: Test/Case/Controller/DeferredControllerTest.php:1188
+#: Test/Case/Controller/EmployeesControllerTest.php:2134;2340;2550
+#: Test/Case/Model/EmployeeEditTest.php:1961
+#: Test/Case/Model/EmployeeTest.php:1087
 msgid "Computer of employee"
 msgstr "Компьютер сотрудника"
 
-#: Config/cakeldap.php:309 Test/TestConfig.php:293
-#: Test/Case/Model/EmployeeEditTest.php:1905
+#: Config/cakeldap.php:318 Test/TestConfig.php:336
+#: Test/Case/Controller/DeferredControllerTest.php:1189
+#: Test/Case/Controller/EmployeesControllerTest.php:2135;2341;2551
+#: Test/Case/Model/EmployeeEditTest.php:1962
+#: Test/Case/Model/EmployeeTest.php:1097
 msgid "Employee ID. Format: %s, where X - number from 0 to 9"
 msgstr "Табельный номер сотрудника. Формат: %s, где X - число от 0 до 9"
 
-#: Config/cakeldap.php:318 Test/TestConfig.php:302
-#: Test/Case/Model/EmployeeEditTest.php:1906
+#: Config/cakeldap.php:327 Test/TestConfig.php:345
+#: Test/Case/Controller/DeferredControllerTest.php:1190
+#: Test/Case/Controller/EmployeesControllerTest.php:2136;2342;2552
+#: Test/Case/Model/EmployeeEditTest.php:1963
+#: Test/Case/Model/EmployeeTest.php:803;1106
 msgid "Company name of employee"
 msgstr "Название организации сотрудника"
 
-#: Config/cakeldap.php:328 Test/TestConfig.php:312
-#: Test/Case/Model/EmployeeEditTest.php:1907
+#: Config/cakeldap.php:337 Test/TestConfig.php:355
+#: Test/Case/Controller/DeferredControllerTest.php:1191
+#: Test/Case/Controller/EmployeesControllerTest.php:2137;2343;2553
+#: Test/Case/Model/EmployeeEditTest.php:1964
+#: Test/Case/Model/EmployeeTest.php:1116
 msgid ""
 "Date of birthday. Format: %s, where YYYY - year, MM - month and DD - day"
 msgstr "Дата рождения. Формат: %s, где YYYY-год, MM-месяц и DD-день"
 
-#: Config/cakeldap.php:338 Test/TestConfig.php:322
-#: Test/Case/Model/EmployeeEditTest.php:1908
+#: Config/cakeldap.php:347 Test/TestConfig.php:365
+#: Test/Case/Controller/DeferredControllerTest.php:1192
+#: Test/Case/Controller/EmployeesControllerTest.php:2138;2344;2554
+#: Test/Case/Model/EmployeeEditTest.php:1965
+#: Test/Case/Model/EmployeeTest.php:813;1126
 msgid "SIP telephone. Format: %s, where X - number from 0 to 9"
 msgstr "SIP-телефон. Формат: %s, где X-номер от 0 до 9"
 
