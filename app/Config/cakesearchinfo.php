@@ -10,10 +10,10 @@
  */
 
 $config['CakeSearchInfo'] = [
-    'QuerySearchMinLength' => 2,
-    'AutocompleteLimit' => 10,
-    'TargetDeep' => 1,
-    'DefaultSearchAnyPart' => false,
-    'TargetModels' => [],
-    'IncludeFields' => [],
+	'QuerySearchMinLength' => 2,
+	'AutocompleteLimit' => 10,
+	'TargetDeep' => 1,
+	'DefaultSearchAnyPart' => false,
+	'TargetModels' => [],
+	'IncludeFields' => [],
 ];

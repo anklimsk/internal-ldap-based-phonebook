@@ -13,21 +13,19 @@
  *
  * @package app.Test.Case
  */
-class AllConsoleTestsTest extends CakeTestSuite
-{
+class AllConsoleTestsTest extends CakeTestSuite {
 
-    /**
-     * Create test suite.
-     *
-     * @return object An object of `CakeTestSuite`.
-     */
-    public static function suite()
-    {
-        $suite = new CakeTestSuite('All Console tests');
-        $path = dirname(__FILE__);
-        $suite->addTestDirectory($path . DS . 'Console' . DS . 'Command');
-        $suite->addTestDirectory($path . DS . 'Console' . DS . 'Command' . DS . 'Task');
+/**
+ * Create test suite.
+ *
+ * @return object An object of `CakeTestSuite`.
+ */
+	public static function suite() {
+		$suite = new CakeTestSuite('All Console tests');
+		$path = dirname(__FILE__);
+		$suite->addTestDirectory($path . DS . 'Console' . DS . 'Command');
+		$suite->addTestDirectory($path . DS . 'Console' . DS . 'Command' . DS . 'Task');
 
-        return $suite;
-    }
+		return $suite;
+	}
 }

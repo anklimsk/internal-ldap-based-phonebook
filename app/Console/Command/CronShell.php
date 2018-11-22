@@ -16,54 +16,51 @@ App::uses('CakeText', 'Utility');
  *
  * @package app.Console.Command
  */
-class CronShell extends AppShell
-{
+class CronShell extends AppShell {
 
-    /**
-     * Contains tasks to load and instantiate
-     *
-     * @var array
-     * @link http://book.cakephp.org/2.0/en/console-and-shells.html#Shell::$tasks
-     */
-    public $tasks = [
-        'Deferred',
-        'Generate'
-    ];
+/**
+ * Contains tasks to load and instantiate
+ *
+ * @var array
+ * @link http://book.cakephp.org/2.0/en/console-and-shells.html#Shell::$tasks
+ */
+	public $tasks = [
+		'Deferred',
+		'Generate'
+	];
 
-    /**
-     * Gets the option parser instance and configures it.
-     *
-     * @return ConsoleOptionParser
-     * @link http://book.cakephp.org/2.0/en/console-and-shells.html#Shell::getOptionParser
-     */
-    public function getOptionParser()
-    {
-        $parser = parent::getOptionParser();
+/**
+ * Gets the option parser instance and configures it.
+ *
+ * @return ConsoleOptionParser
+ * @link http://book.cakephp.org/2.0/en/console-and-shells.html#Shell::getOptionParser
+ */
+	public function getOptionParser() {
+		$parser = parent::getOptionParser();
 
-        $parser->addSubcommands([
-            SHELL_CRON_TASK_DEFFERED => [
-                    'help' => __('Checking new deferred save'),
-                    'parser' => $this->Deferred->getOptionParser()
-            ],
-            SHELL_CRON_TASK_GENERATE => [
-                    'help' => __('Generate PDF or Excel files'),
-                    'parser' => $this->Generate->getOptionParser()
-            ],
-        ]);
+		$parser->addSubcommands([
+			SHELL_CRON_TASK_DEFFERED => [
+					'help' => __('Checking new deferred save'),
+					'parser' => $this->Deferred->getOptionParser()
+			],
+			SHELL_CRON_TASK_GENERATE => [
+					'help' => __('Generate PDF or Excel files'),
+					'parser' => $this->Generate->getOptionParser()
+			],
+		]);
 
-        return $parser;
-    }
+		return $parser;
+	}
 
-    /**
-     * Main method for this task (call default).
-     *
-     * @return void
-     */
-    public function main()
-    {
-        $this->out(__('Cron task of the shell'));
-        $this->hr();
-        $this->out(__('This shell is used to execute task scheduled.'));
-        $this->out(__('Available tasks: %s.', CakeText::toList(constsVals('SHELL_CRON_TASK_'), __('and'))));
-    }
+/**
+ * Main method for this task (call default).
+ *
+ * @return void
+ */
+	public function main() {
+		$this->out(__('Cron task of the shell'));
+		$this->hr();
+		$this->out(__('This shell is used to execute task scheduled.'));
+		$this->out(__('Available tasks: %s.', CakeText::toList(constsVals('SHELL_CRON_TASK_'), __('and'))));
+	}
 }

@@ -13,26 +13,24 @@
  *
  * @package app.Test.Case
  */
-class AllAppTest extends CakeTestSuite
-{
+class AllAppTest extends CakeTestSuite {
 
-    /**
-     * Create test suite.
-     *
-     * @return object An object of `CakeTestSuite`.
-     */
-    public static function suite()
-    {
-        $suite = new CakeTestSuite('All App tests');
-        $path = dirname(__FILE__);
-        $suite->addTestFile($path . DS . 'AllConsoleTestsTest.php');
-        $suite->addTestFile($path . DS . 'AllControllerTestsTest.php');
-        $suite->addTestFile($path . DS . 'AllBehaviorTestsTest.php');
-        $suite->addTestFile($path . DS . 'AllModelTestsTest.php');
-        $suite->addTestFile($path . DS . 'AllHelperTestsTest.php');
-        $suite->addTestFile($path . DS . 'AllViewTestsTest.php');
-        $suite->addTestFile($path . DS . 'AllUtilityTestsTest.php');
+/**
+ * Create test suite.
+ *
+ * @return object An object of `CakeTestSuite`.
+ */
+	public static function suite() {
+		$suite = new CakeTestSuite('All App tests');
+		$path = dirname(__FILE__);
+		$suite->addTestFile($path . DS . 'AllConsoleTestsTest.php');
+		$suite->addTestFile($path . DS . 'AllControllerTestsTest.php');
+		$suite->addTestFile($path . DS . 'AllBehaviorTestsTest.php');
+		$suite->addTestFile($path . DS . 'AllModelTestsTest.php');
+		$suite->addTestFile($path . DS . 'AllHelperTestsTest.php');
+		$suite->addTestFile($path . DS . 'AllViewTestsTest.php');
+		$suite->addTestFile($path . DS . 'AllUtilityTestsTest.php');
 
-        return $suite;
-    }
+		return $suite;
+	}
 }

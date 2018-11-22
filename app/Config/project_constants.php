@@ -14,7 +14,7 @@
  *  Translate domain - `project`.
  */
 if (!defined('PROJECT_NAME')) {
-    define('PROJECT_NAME', 'Internal phone book');
+	define('PROJECT_NAME', 'Internal phone book');
 }
 
 /**
@@ -24,7 +24,7 @@ if (!defined('PROJECT_NAME')) {
  *  Default value `Project title`
  */
 if (!defined('PROJECT_PAGE_TITLE')) {
-    define('PROJECT_PAGE_TITLE', 'Internal phone book');
+	define('PROJECT_PAGE_TITLE', 'Internal phone book');
 }
 
 /**
@@ -33,7 +33,7 @@ if (!defined('PROJECT_PAGE_TITLE')) {
  * Used for set configure key. Default value `Project`
  */
 if (!defined('PROJECT_CONFIG_NAME')) {
-    define('PROJECT_CONFIG_NAME', 'Phonebook');
+	define('PROJECT_CONFIG_NAME', 'Phonebook');
 }
 
 /**
@@ -43,7 +43,7 @@ if (!defined('PROJECT_CONFIG_NAME')) {
  *  Default value `org_logo.png`
  */
 if (!defined('ORG_LOGO_IMAGE')) {
-    define('ORG_LOGO_IMAGE', 'org_logo.png');
+	define('ORG_LOGO_IMAGE', 'org_logo.png');
 }
 
 /**
@@ -53,7 +53,7 @@ if (!defined('ORG_LOGO_IMAGE')) {
  *  Default value `project-logo.png`
  */
 if (!defined('PROJECT_LOGO_IMAGE_SMALL')) {
-    define('PROJECT_LOGO_IMAGE_SMALL', 'project-logo.png');
+	define('PROJECT_LOGO_IMAGE_SMALL', 'project-logo.png');
 }
 
 /**
@@ -62,7 +62,7 @@ if (!defined('PROJECT_LOGO_IMAGE_SMALL')) {
  * Used for set global find limit, if needed. Default value `1000`
  */
 if (!defined('GLOBAL_QUERY_LIMIT')) {
-    define('GLOBAL_QUERY_LIMIT', 5000);
+	define('GLOBAL_QUERY_LIMIT', 5000);
 }
 
 /**
@@ -71,7 +71,7 @@ if (!defined('GLOBAL_QUERY_LIMIT')) {
  * Used for set multiple value field input rows limit. Default value `15`
  */
 if (!defined('MULTIPLE_VALUE_FIELD_ROWS_LIMIT')) {
-    define('MULTIPLE_VALUE_FIELD_ROWS_LIMIT', 15);
+	define('MULTIPLE_VALUE_FIELD_ROWS_LIMIT', 15);
 }
 
 /**
@@ -81,7 +81,7 @@ if (!defined('MULTIPLE_VALUE_FIELD_ROWS_LIMIT')) {
  *  Default value `20`
  */
 if (!defined('BIRTHDAY_LIST_LIMIT')) {
-    define('BIRTHDAY_LIST_LIMIT', 20);
+	define('BIRTHDAY_LIST_LIMIT', 20);
 }
 
 /**
@@ -91,7 +91,7 @@ if (!defined('BIRTHDAY_LIST_LIMIT')) {
  *  birthdays for notifications. Default value `5`
  */
 if (!defined('BIRTHDAY_LIST_SHOW_LINES_LIMIT')) {
-    define('BIRTHDAY_LIST_SHOW_LINES_LIMIT', 5);
+	define('BIRTHDAY_LIST_SHOW_LINES_LIMIT', 5);
 }
 
 /**
@@ -101,7 +101,7 @@ if (!defined('BIRTHDAY_LIST_SHOW_LINES_LIMIT')) {
  *  Default value `60`
  */
 if (!defined('DEFERRED_SAVE_GROUP_PROCESS_LIMIT')) {
-    define('DEFERRED_SAVE_GROUP_PROCESS_LIMIT', 60);
+	define('DEFERRED_SAVE_GROUP_PROCESS_LIMIT', 60);
 }
 
 /**
@@ -111,7 +111,7 @@ if (!defined('DEFERRED_SAVE_GROUP_PROCESS_LIMIT')) {
  *  Default value `10`
  */
 if (!defined('DEFERRED_SAVE_CHECK_NEW_EMAIL_LIST_LIMIT')) {
-    define('DEFERRED_SAVE_CHECK_NEW_EMAIL_LIST_LIMIT', 3);
+	define('DEFERRED_SAVE_CHECK_NEW_EMAIL_LIST_LIMIT', 3);
 }
 
 /**
@@ -120,7 +120,7 @@ if (!defined('DEFERRED_SAVE_CHECK_NEW_EMAIL_LIST_LIMIT')) {
  * Used for set limit data for export files. Default value `1000`
  */
 if (!defined('EXPORT_DATA_LIMIT')) {
-    define('EXPORT_DATA_LIMIT', 1000);
+	define('EXPORT_DATA_LIMIT', 1000);
 }
 
 /**
@@ -130,7 +130,7 @@ if (!defined('EXPORT_DATA_LIMIT')) {
  *  in exported files. Default value `10`
  */
 if (!defined('EXPORT_LABEL_ITEM_LENGTH_LIMIT')) {
-    define('EXPORT_LABEL_ITEM_LENGTH_LIMIT', 10);
+	define('EXPORT_LABEL_ITEM_LENGTH_LIMIT', 10);
 }
 
 /**
@@ -140,7 +140,7 @@ if (!defined('EXPORT_LABEL_ITEM_LENGTH_LIMIT')) {
  * Used for set user role. Default value `1`
  */
 if (!defined('USER_ROLE_USER')) {
-    define('USER_ROLE_USER', 1);
+	define('USER_ROLE_USER', 1);
 }
 
 /**
@@ -150,7 +150,7 @@ if (!defined('USER_ROLE_USER')) {
  * Used for set user role. Default value `2`
  */
 if (!defined('USER_ROLE_SECRETARY')) {
-    define('USER_ROLE_SECRETARY', 2);
+	define('USER_ROLE_SECRETARY', 2);
 }
 
 /**
@@ -160,7 +160,7 @@ if (!defined('USER_ROLE_SECRETARY')) {
  * Used for set user role. Default value `4`
  */
 if (!defined('USER_ROLE_HUMAN_RESOURCES')) {
-    define('USER_ROLE_HUMAN_RESOURCES', 4);
+	define('USER_ROLE_HUMAN_RESOURCES', 4);
 }
 
 /**
@@ -170,7 +170,7 @@ if (!defined('USER_ROLE_HUMAN_RESOURCES')) {
  * Used for set user role. Default value `8`
  */
 if (!defined('USER_ROLE_ADMIN')) {
-    define('USER_ROLE_ADMIN', 8);
+	define('USER_ROLE_ADMIN', 8);
 }
 
 /**
@@ -179,7 +179,7 @@ if (!defined('USER_ROLE_ADMIN')) {
  * Used for set generate type param. Default value `all`
  */
 if (!defined('GENERATE_FILE_DATA_TYPE_ALL')) {
-    define('GENERATE_FILE_DATA_TYPE_ALL', 'all');
+	define('GENERATE_FILE_DATA_TYPE_ALL', 'all');
 }
 
 /**
@@ -188,7 +188,7 @@ if (!defined('GENERATE_FILE_DATA_TYPE_ALL')) {
  * Used for set generate type param. Default value `alph`
  */
 if (!defined('GENERATE_FILE_DATA_TYPE_ALPH')) {
-    define('GENERATE_FILE_DATA_TYPE_ALPH', 'alph');
+	define('GENERATE_FILE_DATA_TYPE_ALPH', 'alph');
 }
 
 /**
@@ -197,7 +197,7 @@ if (!defined('GENERATE_FILE_DATA_TYPE_ALPH')) {
  * Used for set generate type param. Default value `depart`
  */
 if (!defined('GENERATE_FILE_DATA_TYPE_DEPART')) {
-    define('GENERATE_FILE_DATA_TYPE_DEPART', 'depart');
+	define('GENERATE_FILE_DATA_TYPE_DEPART', 'depart');
 }
 
 /**
@@ -206,7 +206,7 @@ if (!defined('GENERATE_FILE_DATA_TYPE_DEPART')) {
  * Used for set generate view param. Default value `all`
  */
 if (!defined('GENERATE_FILE_VIEW_TYPE_ALL')) {
-    define('GENERATE_FILE_VIEW_TYPE_ALL', 'all');
+	define('GENERATE_FILE_VIEW_TYPE_ALL', 'all');
 }
 
 /**
@@ -215,7 +215,7 @@ if (!defined('GENERATE_FILE_VIEW_TYPE_ALL')) {
  * Used for set generate view param. Default value `pdf`
  */
 if (!defined('GENERATE_FILE_VIEW_TYPE_PDF')) {
-    define('GENERATE_FILE_VIEW_TYPE_PDF', 'pdf');
+	define('GENERATE_FILE_VIEW_TYPE_PDF', 'pdf');
 }
 
 /**
@@ -224,7 +224,7 @@ if (!defined('GENERATE_FILE_VIEW_TYPE_PDF')) {
  * Used for set generate view param. Default value `excel`
  */
 if (!defined('GENERATE_FILE_VIEW_TYPE_EXCEL')) {
-    define('GENERATE_FILE_VIEW_TYPE_EXCEL', 'excel');
+	define('GENERATE_FILE_VIEW_TYPE_EXCEL', 'excel');
 }
 
 /**
@@ -234,7 +234,7 @@ if (!defined('GENERATE_FILE_VIEW_TYPE_EXCEL')) {
  *  Default value `statistics_info`
  */
 if (!defined('CACHE_KEY_STATISTICS_INFO')) {
-    define('CACHE_KEY_STATISTICS_INFO', 'statistics_info');
+	define('CACHE_KEY_STATISTICS_INFO', 'statistics_info');
 }
 
 /**
@@ -244,7 +244,7 @@ if (!defined('CACHE_KEY_STATISTICS_INFO')) {
  *  information. Default value `appcfg_info`
  */
 if (!defined('CACHE_KEY_EXT_CFG_INFO')) {
-    define('CACHE_KEY_EXT_CFG_INFO', 'extcfg_info');
+	define('CACHE_KEY_EXT_CFG_INFO', 'extcfg_info');
 }
 
 /**
@@ -254,7 +254,7 @@ if (!defined('CACHE_KEY_EXT_CFG_INFO')) {
  *  Default value `employees_local_info`
  */
 if (!defined('CACHE_KEY_EMPLOYEES_LOCAL_INFO')) {
-    define('CACHE_KEY_EMPLOYEES_LOCAL_INFO', 'employees_local_info');
+	define('CACHE_KEY_EMPLOYEES_LOCAL_INFO', 'employees_local_info');
 }
 
 /**
@@ -264,7 +264,7 @@ if (!defined('CACHE_KEY_EMPLOYEES_LOCAL_INFO')) {
  *  Default value `departments_local_info`
  */
 if (!defined('CACHE_KEY_DEPARTMENTS_LOCAL_INFO')) {
-    define('CACHE_KEY_DEPARTMENTS_LOCAL_INFO', 'departments_local_info');
+	define('CACHE_KEY_DEPARTMENTS_LOCAL_INFO', 'departments_local_info');
 }
 
 /**
@@ -273,7 +273,7 @@ if (!defined('CACHE_KEY_DEPARTMENTS_LOCAL_INFO')) {
  * Used for set time limit of rename department. Default value `30`
  */
 if (!defined('TASK_RENAME_DEPARTMENT_TIME_LIMIT')) {
-    define('TASK_RENAME_DEPARTMENT_TIME_LIMIT', 30);
+	define('TASK_RENAME_DEPARTMENT_TIME_LIMIT', 30);
 }
 
 /**
@@ -282,7 +282,7 @@ if (!defined('TASK_RENAME_DEPARTMENT_TIME_LIMIT')) {
  * Used for set time limit of generate export files. Default value `120`
  */
 if (!defined('TASK_EXPORT_GENERATE_TIME_LIMIT')) {
-    define('TASK_EXPORT_GENERATE_TIME_LIMIT', 240);
+	define('TASK_EXPORT_GENERATE_TIME_LIMIT', 240);
 }
 
 /**
@@ -291,7 +291,7 @@ if (!defined('TASK_EXPORT_GENERATE_TIME_LIMIT')) {
  * Used for set time limit of generate export files. Default value `120`
  */
 if (!defined('PDF_GENERATE_TIME_LIMIT')) {
-    define('PDF_GENERATE_TIME_LIMIT', 120);
+	define('PDF_GENERATE_TIME_LIMIT', 120);
 }
 
 /**
@@ -300,7 +300,7 @@ if (!defined('PDF_GENERATE_TIME_LIMIT')) {
  * Used for set time limit of generate export files. Default value `120`
  */
 if (!defined('EXCEL_GENERATE_TIME_LIMIT')) {
-    define('EXCEL_GENERATE_TIME_LIMIT', 120);
+	define('EXCEL_GENERATE_TIME_LIMIT', 120);
 }
 
 /**
@@ -309,7 +309,7 @@ if (!defined('EXCEL_GENERATE_TIME_LIMIT')) {
  * Used for set time limit of check state tree of departments. Default value `60`
  */
 if (!defined('CHECK_TREE_DEPARTMENT_EXTENSION_TIME_LIMIT')) {
-    define('CHECK_TREE_DEPARTMENT_EXTENSION_TIME_LIMIT', 60);
+	define('CHECK_TREE_DEPARTMENT_EXTENSION_TIME_LIMIT', 60);
 }
 
 /**
@@ -318,7 +318,7 @@ if (!defined('CHECK_TREE_DEPARTMENT_EXTENSION_TIME_LIMIT')) {
  * Used for set time limit of recover tree of departments. Default value `120`
  */
 if (!defined('RECOVER_TREE_DEPARTMENT_EXTENSION_TIME_LIMIT')) {
-    define('RECOVER_TREE_DEPARTMENT_EXTENSION_TIME_LIMIT', 120);
+	define('RECOVER_TREE_DEPARTMENT_EXTENSION_TIME_LIMIT', 120);
 }
 
 /**
@@ -327,7 +327,7 @@ if (!defined('RECOVER_TREE_DEPARTMENT_EXTENSION_TIME_LIMIT')) {
  * Used for set time limit of reorder tree of departments. Default value `120`
  */
 if (!defined('REORDER_TREE_DEPARTMENT_EXTENSION_TIME_LIMIT')) {
-    define('REORDER_TREE_DEPARTMENT_EXTENSION_TIME_LIMIT', 120);
+	define('REORDER_TREE_DEPARTMENT_EXTENSION_TIME_LIMIT', 120);
 }
 
 /**
@@ -336,7 +336,7 @@ if (!defined('REORDER_TREE_DEPARTMENT_EXTENSION_TIME_LIMIT')) {
  * Used for set time limit of processing group deferred saves. Default value `120`
  */
 if (!defined('DEFERRED_SAVE_GROUP_PROCESS_TIME_LIMIT')) {
-    define('DEFERRED_SAVE_GROUP_PROCESS_TIME_LIMIT', 120);
+	define('DEFERRED_SAVE_GROUP_PROCESS_TIME_LIMIT', 120);
 }
 
 /**
@@ -345,7 +345,7 @@ if (!defined('DEFERRED_SAVE_GROUP_PROCESS_TIME_LIMIT')) {
  * Used for scale cell in PDF files. Default value `180`
  */
 if (!defined('PDF_LINE_WIDTH')) {
-    define('PDF_LINE_WIDTH', 180);
+	define('PDF_LINE_WIDTH', 180);
 }
 
 /**
@@ -355,7 +355,7 @@ if (!defined('PDF_LINE_WIDTH')) {
  *  Default value `200` px
  */
 if (!defined('PHOTO_WIDTH')) {
-    define('PHOTO_WIDTH', 200);
+	define('PHOTO_WIDTH', 200);
 }
 
 /**
@@ -365,7 +365,7 @@ if (!defined('PHOTO_WIDTH')) {
  *  Default value `200` px
  */
 if (!defined('PHOTO_HEIGHT')) {
-    define('PHOTO_HEIGHT', 200);
+	define('PHOTO_HEIGHT', 200);
 }
 
 /**
@@ -374,7 +374,7 @@ if (!defined('PHOTO_HEIGHT')) {
  * Used for store imported files. Default value `/tmp/import`
  */
 if (!defined('UPLOAD_DIR')) {
-    define('UPLOAD_DIR', TMP . 'import' . DS);
+	define('UPLOAD_DIR', TMP . 'import' . DS);
 }
 
 /**
@@ -383,7 +383,7 @@ if (!defined('UPLOAD_DIR')) {
  * Used for checking imported files on server. Default value `/\.(jpe?g)$/i`
  */
 if (!defined('UPLOAD_FILE_TYPES_SERVER')) {
-    define('UPLOAD_FILE_TYPES_SERVER', '/\.(jpe?g)$/i');
+	define('UPLOAD_FILE_TYPES_SERVER', '/\.(jpe?g)$/i');
 }
 
 /**
@@ -392,7 +392,7 @@ if (!defined('UPLOAD_FILE_TYPES_SERVER')) {
  * Used for checking imported files on client. Default value `(\.|\/)(jpe?g)$`
  */
 if (!defined('UPLOAD_FILE_TYPES_CLIENT')) {
-    define('UPLOAD_FILE_TYPES_CLIENT', '(\.|\/)(jpe?g)$');
+	define('UPLOAD_FILE_TYPES_CLIENT', '(\.|\/)(jpe?g)$');
 }
 
 /**
@@ -401,7 +401,7 @@ if (!defined('UPLOAD_FILE_TYPES_CLIENT')) {
  * Used for set limit size for uploaded files, bytes. Default value `1Mb`
  */
 if (!defined('UPLOAD_FILE_SIZE_LIMIT')) {
-    define('UPLOAD_FILE_SIZE_LIMIT', 1024 * 1024);
+	define('UPLOAD_FILE_SIZE_LIMIT', 1024 * 1024);
 }
 
 /**
@@ -410,7 +410,7 @@ if (!defined('UPLOAD_FILE_SIZE_LIMIT')) {
  * Used for store exported files. Default value `/tmp/export`
  */
 if (!defined('EXPORT_DIR')) {
-    define('EXPORT_DIR', TMP . 'export' . DS);
+	define('EXPORT_DIR', TMP . 'export' . DS);
 }
 
 /**
@@ -419,7 +419,7 @@ if (!defined('EXPORT_DIR')) {
  * Used for deleting group of deferred saves. Default value `1`
  */
 if (!defined('GROUP_ACTION_DEFERRED_SAVE_DELETE')) {
-    define('GROUP_ACTION_DEFERRED_SAVE_DELETE', 1);
+	define('GROUP_ACTION_DEFERRED_SAVE_DELETE', 1);
 }
 
 /**
@@ -428,7 +428,7 @@ if (!defined('GROUP_ACTION_DEFERRED_SAVE_DELETE')) {
  * Used for approving group of deferred saves. Default value `2`
  */
 if (!defined('GROUP_ACTION_DEFERRED_SAVE_APPROVE')) {
-    define('GROUP_ACTION_DEFERRED_SAVE_APPROVE', 2);
+	define('GROUP_ACTION_DEFERRED_SAVE_APPROVE', 2);
 }
 
 /**
@@ -437,7 +437,7 @@ if (!defined('GROUP_ACTION_DEFERRED_SAVE_APPROVE')) {
  * Used for rejecting group of deferred saves. Default value `3`
  */
 if (!defined('GROUP_ACTION_DEFERRED_SAVE_REJECT')) {
-    define('GROUP_ACTION_DEFERRED_SAVE_REJECT', 3);
+	define('GROUP_ACTION_DEFERRED_SAVE_REJECT', 3);
 }
 
 /**
@@ -446,7 +446,7 @@ if (!defined('GROUP_ACTION_DEFERRED_SAVE_REJECT')) {
  * Used for approving group of internal deferred saves. Default value `4`
  */
 if (!defined('GROUP_ACTION_DEFERRED_SAVE_INTERNAL_APPROVE')) {
-    define('GROUP_ACTION_DEFERRED_SAVE_INTERNAL_APPROVE', 4);
+	define('GROUP_ACTION_DEFERRED_SAVE_INTERNAL_APPROVE', 4);
 }
 
 /**
@@ -455,7 +455,7 @@ if (!defined('GROUP_ACTION_DEFERRED_SAVE_INTERNAL_APPROVE')) {
  * Used for deleting group of logs. Default value `1`
  */
 if (!defined('GROUP_ACTION_LOG_DELETE')) {
-    define('GROUP_ACTION_LOG_DELETE', 1);
+	define('GROUP_ACTION_LOG_DELETE', 1);
 }
 
 /**
@@ -465,7 +465,7 @@ if (!defined('GROUP_ACTION_LOG_DELETE')) {
  *  Default value `1`
  */
 if (!defined('LAST_PROCESSED_DEFERRED_SAVE')) {
-    define('LAST_PROCESSED_DEFERRED_SAVE', 1);
+	define('LAST_PROCESSED_DEFERRED_SAVE', 1);
 }
 
 /**
@@ -475,7 +475,7 @@ if (!defined('LAST_PROCESSED_DEFERRED_SAVE')) {
  *  Default value `2`
  */
 if (!defined('LAST_PROCESSED_EMPLOYEE')) {
-    define('LAST_PROCESSED_EMPLOYEE', 2);
+	define('LAST_PROCESSED_EMPLOYEE', 2);
 }
 
 /**
@@ -484,7 +484,7 @@ if (!defined('LAST_PROCESSED_EMPLOYEE')) {
  * Used for set name of command. Default value `deferred`
  */
 if (!defined('SHELL_CRON_TASK_DEFFERED')) {
-    define('SHELL_CRON_TASK_DEFFERED', 'deferred');
+	define('SHELL_CRON_TASK_DEFFERED', 'deferred');
 }
 
 /**
@@ -493,7 +493,7 @@ if (!defined('SHELL_CRON_TASK_DEFFERED')) {
  * Used for set name of command. Default value `generate`
  */
 if (!defined('SHELL_CRON_TASK_GENERATE')) {
-    define('SHELL_CRON_TASK_GENERATE', 'generate');
+	define('SHELL_CRON_TASK_GENERATE', 'generate');
 }
 
 /**
@@ -503,5 +503,5 @@ if (!defined('SHELL_CRON_TASK_GENERATE')) {
  *  saves. Default value `30`
  */
 if (!defined('DEFERRED_SAVE_SYNC_DELAY')) {
-    define('DEFERRED_SAVE_SYNC_DELAY', 30);
+	define('DEFERRED_SAVE_SYNC_DELAY', 30);
 }

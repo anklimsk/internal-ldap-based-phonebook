@@ -10,44 +10,44 @@
  */
 
 if (!isset($isAddAction)) {
-    $isAddAction = false;
+	$isAddAction = false;
 }
 
 if (!isset($fieldInputMask)) {
-    $fieldInputMask = [];
+	$fieldInputMask = [];
 }
 
 $inputOptions = [];
 foreach ($fieldInputMask as $dataAttr => $mask) {
-    if (ctype_digit((string)$dataAttr)) {
-        continue;
-    }
+	if (ctype_digit((string)$dataAttr)) {
+		continue;
+	}
 
-    $inputOptions[$dataAttr] = $mask;
+	$inputOptions[$dataAttr] = $mask;
 }
-    echo $this->Form->create('Department', $this->ViewExtension->getFormOptions());
+	echo $this->Form->create('Department', $this->ViewExtension->getFormOptions());
 ?>
-    <fieldset>
-        <legend><?php echo __('Name of department'); ?></legend>
+	<fieldset>
+		<legend><?php echo __('Name of department'); ?></legend>
 <?php
 if (!$isAddAction) {
-    $hiddenFields = [
-        'Department.id',
-        'Department.block',
-        'DepartmentExtension.id',
-        'DepartmentExtension.department_id',
-        'DepartmentExtension.parent_id',
-        'DepartmentExtension.lft',
-        'DepartmentExtension.rght'
-    ];
-    echo $this->Form->hiddenFields($hiddenFields);
+	$hiddenFields = [
+		'Department.id',
+		'Department.block',
+		'DepartmentExtension.id',
+		'DepartmentExtension.department_id',
+		'DepartmentExtension.parent_id',
+		'DepartmentExtension.lft',
+		'DepartmentExtension.rght'
+	];
+	echo $this->Form->hiddenFields($hiddenFields);
 }
-    echo $this->Form->input('Department.value', ['label' => __('Short name of department') . ':', 'title' => __('Short name of department'),
-        'type' => 'text', 'data-toggle' => 'tooltip', 'autocomplete' => 'off', 'autofocus' => true] + $inputOptions);
-    echo $this->Form->input('DepartmentExtension.name', ['label' => __('Extended name of department') . ':', 'title' => __('Extended name of department (full)'),
-        'type' => 'text', 'data-toggle' => 'tooltip', 'autocomplete' => 'off'] + $inputOptions);
+	echo $this->Form->input('Department.value', ['label' => __('Short name of department') . ':', 'title' => __('Short name of department'),
+		'type' => 'text', 'data-toggle' => 'tooltip', 'autocomplete' => 'off', 'autofocus' => true] + $inputOptions);
+	echo $this->Form->input('DepartmentExtension.name', ['label' => __('Extended name of department') . ':', 'title' => __('Extended name of department (full)'),
+		'type' => 'text', 'data-toggle' => 'tooltip', 'autocomplete' => 'off'] + $inputOptions);
 ?>
-    </fieldset>
+	</fieldset>
 <?php
-    echo $this->Form->submit(__('Save'), ['class' => 'btn btn-success  btn-md', 'div' => 'form-group text-center']);
-    echo $this->Form->end();
+	echo $this->Form->submit(__('Save'), ['class' => 'btn btn-success  btn-md', 'div' => 'form-group text-center']);
+	echo $this->Form->end();

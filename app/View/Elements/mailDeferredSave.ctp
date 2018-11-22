@@ -10,24 +10,24 @@
  */
 
 if (!isset($deferredSave)) {
-    $deferredSave = [];
+	$deferredSave = [];
 }
 
 if (!isset($fieldsLabel)) {
-    $fieldsLabel = [];
+	$fieldsLabel = [];
 }
 
 if (!isset($fieldsConfig)) {
-    $fieldsConfig = [];
+	$fieldsConfig = [];
 }
 
 if (empty($deferredSave)) {
-    return;
+	return;
 }
-?>  
+?>
 <dl class="dl-horizontal">
 <?php
-    $deferredInfoText = $this->Deferred->getDeferredInfo($deferredSave, [], $fieldsLabel, $fieldsConfig);
-    echo $this->Text->stripLinks($deferredInfoText);
+	$deferredInfoText = $this->Deferred->getDeferredInfo($deferredSave, [], $fieldsLabel, $fieldsConfig);
+	echo $this->Text->stripLinks($deferredInfoText);
 ?>
 </dl>

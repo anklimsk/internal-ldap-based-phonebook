@@ -19,37 +19,34 @@ require_once App::pluginPath('CakeSettingsApp') . 'Test' . DS . 'Model' . DS . '
  * Application level CakeTestCase class
  *
  */
-class AppCakeTestCase extends ExtendCakeTestCase
-{
+class AppCakeTestCase extends ExtendCakeTestCase {
 
-    use AppTestTrait;
+	use AppTestTrait;
 
-    /**
-     * Setup the test case, backup the static object values so they can be restored.
-     * Specifically backs up the contents of Configure and paths in App if they have
-     * not already been backed up.
-     *
-     * Actions:
-     * - Write test configuration.
-     *
-     * @return void
-     */
-    public function setUp()
-    {
-        parent::setUp();
+/**
+ * Setup the test case, backup the static object values so they can be restored.
+ * Specifically backs up the contents of Configure and paths in App if they have
+ * not already been backed up.
+ *
+ * Actions:
+ * - Write test configuration.
+ *
+ * @return void
+ */
+	public function setUp() {
+		parent::setUp();
 
-        $path = __DIR__ . DS;
-        $this->applyTestConfig($path);
-        //Configure::write('Config.language', 'eng');
-    }
+		$path = __DIR__ . DS;
+		$this->applyTestConfig($path);
+		//Configure::write('Config.language', 'eng');
+	}
 
-    /**
-     * teardown any static object changes and restore them.
-     *
-     * @return void
-     */
-    public function tearDown()
-    {
-        parent::tearDown();
-    }
+/**
+ * teardown any static object changes and restore them.
+ *
+ * @return void
+ */
+	public function tearDown() {
+		parent::tearDown();
+	}
 }

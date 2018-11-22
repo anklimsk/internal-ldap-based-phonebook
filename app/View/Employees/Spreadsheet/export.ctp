@@ -10,12 +10,12 @@
  */
 
 if (isset($fileName)) {
-    $this->setFileName($fileName);
+	$this->setFileName($fileName);
 }
 $this->Spreadsheet->getDefaultStyle()->applyFromArray([
-    'font' => [
-        'name' => 'Arial Cyr',
-        'size' => 10,
-    ],
+	'font' => [
+		'name' => 'Arial Cyr',
+		'size' => 10,
+	],
 ]);
 echo $this->element('CakeSpreadsheet.exportExcelTable', compact('exportConfig', 'exportData'));

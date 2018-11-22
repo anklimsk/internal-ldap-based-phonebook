@@ -8,10 +8,11 @@
  * @license https://opensource.org/licenses/mit-license.php MIT License
  * @package app.View.Emails.html
  */
-?> 
+?>
 <div class="container">
 <?php
-    echo $this->Html->div('page-header', $this->Html->tag('h2', __('Changing information')));
-    echo $this->Html->div('alert alert-success text-center', __('Changing your information is approved'));
-    echo $this->element('mailDeferredSave', compact('deferredSave', 'fieldsLabel', 'fieldsConfig'));
-
+	echo $this->Html->div('page-header', $this->Html->tag('h2', __('Changing information')));
+	echo $this->Html->div('alert alert-success text-center', __('Changing your information is approved'));
+	echo $this->element('mailDeferredSave', compact('deferredSave', 'fieldsLabel', 'fieldsConfig'));
+?>
+</div>

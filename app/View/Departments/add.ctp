@@ -9,18 +9,18 @@
  * @package app.View.Departments
  */
 
-$this->assign('title', $pageHeader);
-$this->ViewExtension->addBreadCrumbs($breadCrumbs);
+	$this->assign('title', $pageHeader);
+	$this->ViewExtension->addBreadCrumbs($breadCrumbs);
 ?>
-    <div class="container">
+	<div class="container">
 <?php
-        echo $this->ViewExtension->headerPage($pageHeader);
-?>  
-        <div class="row">
-            <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
-<?php
-        echo $this->element('formDepartmentBase', compact('fieldInputMask', 'isAddAction'));
+		echo $this->ViewExtension->headerPage($pageHeader);
 ?>
-            </div>
-        </div>
-    </div>
+		<div class="row">
+			<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+<?php
+		echo $this->element('formDepartmentBase', compact('fieldInputMask', 'isAddAction'));
+?>
+			</div>
+		</div>
+	</div>

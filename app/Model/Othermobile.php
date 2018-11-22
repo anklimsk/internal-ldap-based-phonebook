@@ -17,21 +17,21 @@ App::uses('OthermobileDb', 'CakeLdap.Model');
  *
  * @package app.Model
  */
-class Othermobile extends OthermobileDb
-{
+class Othermobile extends OthermobileDb {
 
-    /**
-     * Name of the model.
-     *
-     * @var string
-     * @link http://book.cakephp.org/2.0/en/models/model-attributes.html#name
-     */
-    public $name = 'Othermobile';
+/**
+ * Name of the model.
+ *
+ * @var string
+ * @link http://book.cakephp.org/2.0/en/models/model-attributes.html#name
+ */
+	public $name = 'Othermobile';
 
-    /**
-     * Custom database table name, or null/false if no table association is desired.
-     *
-     * @var string
-     */
-    public $useTable = 'othermobiles';
+/**
+ * Custom database table name, or null/false if no table association is desired.
+ *
+ * @var string
+ */
+	public $useTable = 'othermobiles';
+
 }

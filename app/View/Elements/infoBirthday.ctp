@@ -10,32 +10,32 @@
  */
 
 if (!isset($birthdays)) {
-    $birthdays = [];
+	$birthdays = [];
 }
 
 if (empty($birthdays)) {
-    return;
+	return;
 }
-?>      
+?>
 <div class="alert alert-warning" role="alert">
-    <h4 class="text-center"><?php echo __('Today is the birthday of:'); ?></h4>
+	<h4 class="text-center"><?php echo __('Today is the birthday of:'); ?></h4>
 <?php
-    $listBirthdays = [];
+	$listBirthdays = [];
 foreach ($birthdays as $birthday) {
-    $employeeInfo = $this->EmployeeInfo->getFullName($birthday['Employee']);
-    if (isset($birthday['Department']['value']) && !empty($birthday['Department']['value'])) {
-        $employeeInfo .= ' (' . h($birthday['Department']['value']) . ')';
-    }
-    if (!empty($employeeInfo)) {
-        $listBirthdays[] = $this->Html->tag('span', $this->ViewExtension->iconTag('fas fa-birthday-cake'), ['class' => 'fa-li']) . '&nbsp;' .
-            $this->ViewExtension->popupModalLink(
-                $employeeInfo,
-                ['controller' => 'employees', 'action' => 'view', $birthday['Employee']['id']],
-                ['class' => 'popup-link alert-link']
-            );
-    }
+	$employeeInfo = $this->EmployeeInfo->getFullName($birthday['Employee']);
+	if (isset($birthday['Department']['value']) && !empty($birthday['Department']['value'])) {
+		$employeeInfo .= ' (' . h($birthday['Department']['value']) . ')';
+	}
+	if (!empty($employeeInfo)) {
+		$listBirthdays[] = $this->Html->tag('span', $this->ViewExtension->iconTag('fas fa-birthday-cake'), ['class' => 'fa-li']) . '&nbsp;' .
+			$this->ViewExtension->popupModalLink(
+				$employeeInfo,
+				['controller' => 'employees', 'action' => 'view', $birthday['Employee']['id']],
+				['class' => 'popup-link alert-link']
+			);
+	}
 }
 
-    echo $this->ViewExtension->collapsibleList($listBirthdays, BIRTHDAY_LIST_SHOW_LINES_LIMIT, 'fa-ul', 'ul');
+	echo $this->ViewExtension->collapsibleList($listBirthdays, BIRTHDAY_LIST_SHOW_LINES_LIMIT, 'fa-ul', 'ul');
 ?>
 </div>

@@ -10,39 +10,39 @@
  */
 
 if (!isset($varsExt) || !is_array($varsExt)) {
-    $varsExt = [];
+	$varsExt = [];
 }
 
 if (!isset($countryCodePhoneLib)) {
-    $countryCodePhoneLib = [];
+	$countryCodePhoneLib = [];
 }
 
 if (!isset($numberFormatList)) {
-    $numberFormatList = [];
+	$numberFormatList = [];
 }
 
 if (!empty($varsExt)) {
-    extract($varsExt);
+	extract($varsExt);
 }
 
-    echo $this->Form->inputs([
-        'legend' => __('Photo'),
-        'Setting.ShowDefaultPhoto' => ['label' => [__('Show default photo'),
-            __('Show default photo, if the photo is not specified'), ':'],
-            'type' => 'checkbox'],
-    ]);
-    echo $this->Form->inputs([
-        'legend' => __('Phone library'),
-        'Setting.CountryCode' => ['label' => [__('Country'),
-            __('Country code for parse telephone number'), ':'],
-            'type' => 'flag'],
-        'Setting.NumberFormat' => ['label' => [__('Format of telephone number'),
-            __('Display format for telephone or mobile phone number'), ':'],
-            'type' => 'select', 'options' => $numberFormatList]
-    ]);
-    echo $this->Form->inputs([
-        'legend' => __('Deferred saves'),
-        'Setting.ManagerGroupDeferredSave' => ['label' => [__('Group of users for management deferred saves'),
-            __('A group of users serving deferred saves: approving, rejecting, editing and deleting.'), ':'],
-            'type' => 'select', 'options' => $groupDeferredSaveList],
-    ]);
+	echo $this->Form->inputs([
+		'legend' => __('Photo'),
+		'Setting.ShowDefaultPhoto' => ['label' => [__('Show default photo'),
+			__('Show default photo, if the photo is not specified'), ':'],
+			'type' => 'checkbox'],
+	]);
+	echo $this->Form->inputs([
+		'legend' => __('Phone library'),
+		'Setting.CountryCode' => ['label' => [__('Country'),
+			__('Country code for parse telephone number'), ':'],
+			'type' => 'flag'],
+		'Setting.NumberFormat' => ['label' => [__('Format of telephone number'),
+			__('Display format for telephone or mobile phone number'), ':'],
+			'type' => 'select', 'options' => $numberFormatList]
+	]);
+	echo $this->Form->inputs([
+		'legend' => __('Deferred saves'),
+		'Setting.ManagerGroupDeferredSave' => ['label' => [__('Group of users for management deferred saves'),
+			__('A group of users serving deferred saves: approving, rejecting, editing and deleting.'), ':'],
+			'type' => 'select', 'options' => $groupDeferredSaveList],
+	]);

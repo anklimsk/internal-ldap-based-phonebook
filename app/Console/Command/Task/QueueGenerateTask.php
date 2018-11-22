@@ -16,93 +16,91 @@ App::uses('AppShell', 'Console/Command');
  *
  * @package app.Console.Command.Task
  */
-class QueueGenerateTask extends AppShell
-{
+class QueueGenerateTask extends AppShell {
 
-    /**
-     * Adding the QueueTask Model
-     *
-     * @var array
-     */
-    public $uses = [
-        'Queue.QueuedTask',
-        'CakeTheme.ExtendQueuedTask',
-        'Employee'
-    ];
+/**
+ * Adding the QueueTask Model
+ *
+ * @var array
+ */
+	public $uses = [
+		'Queue.QueuedTask',
+		'CakeTheme.ExtendQueuedTask',
+		'Employee'
+	];
 
-    /**
-     * ZendStudio Codecomplete Hint
-     *
-     * @var QueuedTask
-     */
-    public $QueuedTask;
+/**
+ * ZendStudio Codecomplete Hint
+ *
+ * @var QueuedTask
+ */
+	public $QueuedTask;
 
-    /**
-     * Timeout for run, after which the Task is reassigned to a new worker.
-     *
-     * @var int
-     */
-    public $timeout = TASK_EXPORT_GENERATE_TIME_LIMIT;
+/**
+ * Timeout for run, after which the Task is reassigned to a new worker.
+ *
+ * @var int
+ */
+	public $timeout = TASK_EXPORT_GENERATE_TIME_LIMIT;
 
-    /**
-     * Number of times a failed instance of this task should be restarted before giving up.
-     *
-     * @var int
-     */
-    public $retries = 1;
+/**
+ * Number of times a failed instance of this task should be restarted before giving up.
+ *
+ * @var int
+ */
+	public $retries = 1;
 
-    /**
-     * Stores any failure messages triggered during run()
-     *
-     * @var string
-     */
-    public $failureMessage = '';
+/**
+ * Stores any failure messages triggered during run()
+ *
+ * @var string
+ */
+	public $failureMessage = '';
 
-    /**
-     * Flag auto unserialize data. If true, unserialize data before run task.
-     *
-     * @var bool
-     */
-    public $autoUnserialize = true;
+/**
+ * Flag auto unserialize data. If true, unserialize data before run task.
+ *
+ * @var bool
+ */
+	public $autoUnserialize = true;
 
-    /**
-     * Main function.
-     * Used for generating export files.
-     *
-     * @param array $data The array passed to QueuedTask->createJob()
-     * @param int $id The id of the QueuedTask
-     * @return bool Success
-     * @throws RuntimeException when seconds are 0;
-     */
-    public function run($data, $id = null)
-    {
-        $this->hr();
-        $this->out(__('CakePHP Queue task for generating files.'));
-        if (empty($data) || !is_array($data)) {
-            $data = [];
-        }
-        $dataDefault = [
-            'view' => null,
-            'type' => null,
-        ];
-        $data += $dataDefault;
-        extract($data);
-        if (empty($view) || empty($type)) {
-            return false;
-        }
+/**
+ * Main function.
+ * Used for generating export files.
+ *
+ * @param array $data The array passed to QueuedTask->createJob()
+ * @param int $id The id of the QueuedTask
+ * @return bool Success
+ * @throws RuntimeException when seconds are 0;
+ */
+	public function run($data, $id = null) {
+		$this->hr();
+		$this->out(__('CakePHP Queue task for generating files.'));
+		if (empty($data) || !is_array($data)) {
+			$data = [];
+		}
+		$dataDefault = [
+			'view' => null,
+			'type' => null,
+		];
+		$data += $dataDefault;
+		extract($data);
+		if (empty($view) || empty($type)) {
+			return false;
+		}
 
-        if (($view === GENERATE_FILE_VIEW_TYPE_ALL) &&
-            ($type === GENERATE_FILE_DATA_TYPE_ALL)) {
-            $queueLength = $this->ExtendQueuedTask->getLengthQueue('Generate');
-            if ($queueLength > 0) {
-                $this->out(__('Found generating task in queue: %d. Skipped.', $queueLength));
+		if (($view === GENERATE_FILE_VIEW_TYPE_ALL) &&
+			($type === GENERATE_FILE_DATA_TYPE_ALL)) {
+			$queueLength = $this->ExtendQueuedTask->getLengthQueue('Generate');
+			if ($queueLength > 0) {
+				$this->out(__('Found generating task in queue: %d. Skipped.', $queueLength));
 
-                return true;
-            }
-        }
+				return true;
+			}
+		}
 
-        $this->Employee->generateExportTask($view, $type, $id);
+		$this->Employee->generateExportTask($view, $type, $id);
 
-        return true;
-    }
+		return true;
+	}
 }

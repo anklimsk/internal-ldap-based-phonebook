@@ -13,20 +13,18 @@
  *
  * @package app.Test.Case
  */
-class AllHelperTestsTest extends CakeTestSuite
-{
+class AllHelperTestsTest extends CakeTestSuite {
 
-    /**
-     * Create test suite.
-     *
-     * @return object An object of `CakeTestSuite`.
-     */
-    public static function suite()
-    {
-        $suite = new CakeTestSuite('All Helper tests');
-        $path = dirname(__FILE__);
-        $suite->addTestDirectory($path . DS . 'View' . DS . 'Helper');
+/**
+ * Create test suite.
+ *
+ * @return object An object of `CakeTestSuite`.
+ */
+	public static function suite() {
+		$suite = new CakeTestSuite('All Helper tests');
+		$path = dirname(__FILE__);
+		$suite->addTestDirectory($path . DS . 'View' . DS . 'Helper');
 
-        return $suite;
-    }
+		return $suite;
+	}
 }

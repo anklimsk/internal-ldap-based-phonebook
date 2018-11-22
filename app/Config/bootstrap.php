@@ -94,8 +94,8 @@ Cache::config('default', array('engine' => 'File'));
  * ));
  */
 Configure::write('Dispatcher.filters', [
-    'AssetDispatcher',
-    'CacheDispatcher'
+	'AssetDispatcher',
+	'CacheDispatcher'
 ]);
 
 /**
@@ -103,17 +103,17 @@ Configure::write('Dispatcher.filters', [
  */
 App::uses('CakeLog', 'Log');
 CakeLog::config('debug', [
-    'engine' => 'File',
-    'types' => ['notice', 'info', 'debug'],
-    'file' => 'debug',
+	'engine' => 'File',
+	'types' => ['notice', 'info', 'debug'],
+	'file' => 'debug',
 ]);
 CakeLog::config('error', [
-    'engine' => 'File',
-    'types' => ['warning', 'error', 'critical', 'alert', 'emergency'],
-    'file' => 'error',
+	'engine' => 'File',
+	'types' => ['warning', 'error', 'critical', 'alert', 'emergency'],
+	'file' => 'error',
 ]);
 CakeLog::config('dbg', [
-    'engine' => 'File'
+	'engine' => 'File'
 ]);
 
 /**
@@ -121,11 +121,11 @@ CakeLog::config('dbg', [
 *
 */
 Cache::config(CACHE_KEY_STATISTICS_INFO, [
-    'engine' => 'File',
-    'prefix' => 'phonebook_',
-    'duration' => '+1 week',
-    'probability' => 100,
-    'path' => CACHE . CACHE_KEY_STATISTICS_INFO . DS,
+	'engine' => 'File',
+	'prefix' => 'phonebook_',
+	'duration' => '+1 week',
+	'probability' => 100,
+	'path' => CACHE . CACHE_KEY_STATISTICS_INFO . DS,
 ]);
 
 /**
@@ -134,11 +134,11 @@ Cache::config(CACHE_KEY_STATISTICS_INFO, [
 *
 */
 Cache::config(CACHE_KEY_EXT_CFG_INFO, [
-    'engine' => 'File',
-    'prefix' => 'phonebook_',
-    'duration' => '+1 week',
-    'probability' => 100,
-    'path' => CACHE . CACHE_KEY_EXT_CFG_INFO . DS,
+	'engine' => 'File',
+	'prefix' => 'phonebook_',
+	'duration' => '+1 week',
+	'probability' => 100,
+	'path' => CACHE . CACHE_KEY_EXT_CFG_INFO . DS,
 ]);
 
 /**
@@ -146,11 +146,11 @@ Cache::config(CACHE_KEY_EXT_CFG_INFO, [
 *
 */
 Cache::config(CACHE_KEY_EMPLOYEES_LOCAL_INFO, [
-    'engine' => 'File',
-    'prefix' => 'phonebook_',
-    'duration' => '+1 week',
-    'probability' => 100,
-    'path' => CACHE . CACHE_KEY_EMPLOYEES_LOCAL_INFO . DS,
+	'engine' => 'File',
+	'prefix' => 'phonebook_',
+	'duration' => '+1 week',
+	'probability' => 100,
+	'path' => CACHE . CACHE_KEY_EMPLOYEES_LOCAL_INFO . DS,
 ]);
 
 /**
@@ -158,11 +158,11 @@ Cache::config(CACHE_KEY_EMPLOYEES_LOCAL_INFO, [
 *
 */
 Cache::config(CACHE_KEY_DEPARTMENTS_LOCAL_INFO, [
-    'engine' => 'File',
-    'prefix' => 'phonebook_',
-    'duration' => '+1 week',
-    'probability' => 100,
-    'path' => CACHE . CACHE_KEY_DEPARTMENTS_LOCAL_INFO . DS,
+	'engine' => 'File',
+	'prefix' => 'phonebook_',
+	'duration' => '+1 week',
+	'probability' => 100,
+	'path' => CACHE . CACHE_KEY_DEPARTMENTS_LOCAL_INFO . DS,
 ]);
 
 CakePlugin::load('CakeBasicFunctions', ['bootstrap' => true]);
@@ -184,16 +184,16 @@ CakePlugin::load('Shim');
 CakePlugin::load('Tools');
 
 Configure::write('Bs3.Form.styles', [
-    'horizontal' => [
-        'formDefaults' => [
-            'submitDiv' => 'col-sm-10 col-sm-offset-2'
-        ],
-        'inputDefaults' => [
-            'label' => [
-                'class' => 'col-sm-3 control-label'
-            ],
-            'wrap' => 'col-sm-9',
-        ]
-    ],
+	'horizontal' => [
+		'formDefaults' => [
+			'submitDiv' => 'col-sm-10 col-sm-offset-2'
+		],
+		'inputDefaults' => [
+			'label' => [
+				'class' => 'col-sm-3 control-label'
+			],
+			'wrap' => 'col-sm-9',
+		]
+	],
 ]);
 Configure::write('UrlCache.active', true);

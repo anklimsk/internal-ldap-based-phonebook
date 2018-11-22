@@ -8,11 +8,11 @@
  * @license https://opensource.org/licenses/mit-license.php MIT License
  * @package app.View.Departments.pop
  */
-?>  
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+?>
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 <?php
-    echo $this->element('infoDepartment', compact('department'));
-?>  
-        </div>
-    </div>
+	echo $this->element('infoDepartment', compact('department'));
+?>
+		</div>
+	</div>

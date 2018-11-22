@@ -12,15 +12,15 @@
 $this->assign('title', $pageHeader);
 $this->ViewExtension->addBreadCrumbs($breadCrumbs);
 ?>
-    <div class="container">
+	<div class="container">
 <?php
-        echo $this->ViewExtension->headerPage($pageHeader);
+		echo $this->ViewExtension->headerPage($pageHeader);
 ?>
-        <div class="row">
-            <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+		<div class="row">
+			<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
 <?php
-        echo $this->element('formDepartmentBase', compact('fieldInputMask'));
+		echo $this->element('formDepartmentBase', compact('fieldInputMask'));
 ?>
-            </div>
-        </div>
-    </div>
+			</div>
+		</div>
+	</div>
