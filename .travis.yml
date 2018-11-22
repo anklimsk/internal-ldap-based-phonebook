@@ -12,7 +12,10 @@ env:
   global:
     - DB=mysql
     - CAKEAPP=$(cd ./app; pwd)
-    - TESTARG="app AllApp --stderr --app $CAKEAPP"
+    - CAKEROOT=$(pwd)
+    - TESTARG="app AllApp --stderr"
+    - COVERAGEARG="$TESTARG --coverage-clover clover.xml"
+    - PHPCSARG=" --ignore='Config,Plugin,Test,Vendor'"
     - PHPUNIT=3.7.38
 
 matrix:
@@ -21,15 +24,17 @@ matrix:
     - php: 7.1
       env:
         - CODECOVERAGE=1
+    - php: 7.1
+      env:
+        - PHPCS=1
 
 before_script:
   - composer require "phpunit/phpunit=$PHPUNIT"
-  - echo "require_once 'vendor/autoload.php';" >> app/Config/bootstrap.php
+  - ln -s $CAKEROOT/vendor/phpunit/phpunit/PHPUnit $CAKEAPP/Vendor/PHPUnit
   - sh -c "if [ '$DB' = 'mysql' ]; then mysql -e 'CREATE DATABASE cakephp_test CHARACTER SET utf8 COLLATE utf8_general_ci;'; fi"
   - chmod -R 777 ./app/tmp
   - sh -c "if [ '$PHPCS' = '1' ]; then composer require 'cakephp/cakephp-codesniffer:1.*'; fi"
-  - sh -c "if [ '$PHPCS' = '1' ]; then vendors/bin/phpcs --config-set installed_paths vendors/cakephp/cakephp-codesniffer; fi"
-  - sh -c "if [ '$CODECOVERAGE' = '1' ]; then TESTARG=\"$TESTARG --coverage-clover clover.xml\"; fi"
+  - sh -c "if [ '$PHPCS' = '1' ]; then $CAKEROOT/vendor/bin/phpcs --config-set installed_paths $CAKEROOT/vendor/cakephp/cakephp-codesniffer; fi"
   - if [[ ${TRAVIS_PHP_VERSION:0:1} == "7" ]] ; then echo "yes" | pecl install apcu-5.1.3 || true; fi
   - if [[ ${TRAVIS_PHP_VERSION:0:1} == "5" ]] ; then echo "yes" | pecl install apcu-4.0.11 || true; fi
   - echo -e "extension = apcu.so\napc.enable_cli=1" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
@@ -63,8 +68,9 @@ before_script:
   - echo "Installed" > app/tmp/installer/installed.txt
 
 script:
-  - sh -c "if [ '$PHPCS' = '1' ]; then vendors/bin/phpcs -p --extensions=php --standard=CakePHP $CAKEAPP; fi"
-  - sh -c "if [ '$PHPCS' != '1' ]; then ./app/Console/cake test $TESTARG; fi"
+  - sh -c "if [ '$PHPCS' = '1' ]; then $CAKEROOT/vendor/bin/phpcs -p --extensions=php --standard=CakePHP $CAKEAPP$PHPCSARG; fi"
+  - sh -c "if [ '$PHPCS' != '1' ] && [ '$CODECOVERAGE' != '1' ]; then cd $CAKEAPP; ./Console/cake test $TESTARG; fi"
+  - sh -c "if [ '$CODECOVERAGE' = '1' ]; then cd $CAKEAPP; ./Console/cake test $COVERAGEARG; fi"
 
 after_success:
   - if [ "$CODECOVERAGE" == '1' ]; then wget -O codecov.sh https://codecov.io/bash; bash codecov.sh; fi
