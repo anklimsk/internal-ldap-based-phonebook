@@ -102,7 +102,7 @@ class EmployeesController extends AppController {
  * @param array $user The user to check the authorization of.
  * @return bool True if $user is authorized, otherwise false
  */
-	public function isAuthorized($user) {
+	public function isAuthorized($user = []) {
 		$action = $this->request->param('action');
 		if ($this->UserInfo->checkUserRole(USER_ROLE_USER, true, $user) &&
 			($action === 'index')) {
