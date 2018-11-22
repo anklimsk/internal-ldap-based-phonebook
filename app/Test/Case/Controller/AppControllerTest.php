@@ -2,7 +2,7 @@
 App::uses('AppControllerTestCase', 'Test');
 App::uses('AppController', 'Controller');
 App::uses('EmployeesController', 'Controller');
-App::uses('Language', 'CakeTheme.Utility');
+App::uses('Language', 'CakeBasicFunctions.Utility');
 
 /**
  * SomeController class
@@ -117,16 +117,16 @@ class AppControllerTest extends AppControllerTestCase {
 			'search_targetDeep' => 1,
 			'uiLcid2' => $language->getCurrentUiLang(true),
 			'uiLcid3' => $language->getCurrentUiLang(false),
+			'search_urlActionSearch' => [
+				'controller' => 'employees',
+				'action' => 'search',
+			],
 			'isExternalAuth' => false,
 			'emailContact' => 'test@localhost.local',
 			'emailSubject' => 'Phonebook',
 			'showSearchForm' => false,
 			'countDeferredSaves' => 4,
 			'useNavbarContainerFluid' => false,
-			'search_urlActionSearch' => [
-				'controller' => 'employees',
-				'action' => 'search',
-			],
 			'projectName' => __d('project', PROJECT_NAME),
 		];
 		$this->assertData($expected, $result);
@@ -220,13 +220,13 @@ class AppControllerTest extends AppControllerTestCase {
 			'search_targetDeep' => 1,
 			'uiLcid2' => $language->getCurrentUiLang(true),
 			'uiLcid3' => $language->getCurrentUiLang(false),
+			'search_urlActionSearch' => $searchUrlActionSearch,
 			'isExternalAuth' => false,
 			'emailContact' => 'test@localhost.local',
 			'emailSubject' => 'Phonebook',
 			'showSearchForm' => false,
 			'countDeferredSaves' => 4,
 			'useNavbarContainerFluid' => false,
-			'search_urlActionSearch' => $searchUrlActionSearch,
 			'projectName' => __d('project', PROJECT_NAME),
 		];
 		foreach ($userRoles as $userRole => $userPrefix) {
