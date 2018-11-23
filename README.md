@@ -8,7 +8,8 @@ Internal LDAP-based phonebook
 
 ## Installation
 
-1. Install using composer: `composer create-project anklimsk/internal-ldap-based-phonebook phonebook --stability beta`
+1. Install using composer: `composer create-project anklimsk/internal-ldap-based-phonebook /var/www/phonebook`,
+  where `/var/www/phonebook` - path to the document root directory.
 2. Navigate to the directory `app` application, and run the following command:
   `sudo ./Console/cake CakeInstaller` - To start interactive shell of installer.
 3. Go to the link `http://phonebook.fabrikam.com/settings` to change settings of application,
