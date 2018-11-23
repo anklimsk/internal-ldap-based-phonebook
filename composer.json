@@ -23,7 +23,7 @@
 			"@test"
 		],
 		"cs-check": "./vendors/bin/phpcs -p --extensions=php --standard=CakePHP ./app",
-		"test": "./app/Cake/Console/cake test app AllApp --stderr --app ./app",
+		"test": "./app/Console/cake test app AllApp --stderr",
 		"pre-update-cmd": [
 			"php -r \"copy('app/Config/cakeldap.php', 'app/Config/cakeldap.php.bkp');\"",
 			"php -r \"copy('app/Config/config.php', 'app/Config/config.php.bkp');\"",
