@@ -170,7 +170,7 @@ if ($this->UserInfo->checkUserRole(USER_ROLE_ADMIN)) {
 		$this->ViewExtension->menuActionLink(
 			'fas fa-tasks',
 			__('Queue of tasks'),
-			['controller' => 'settings', 'action' => 'queue', 'plugin' => 'cake_settings_app', 'prefix' => false],
+			['controller' => 'queues', 'action' => 'index', 'plugin' => 'cake_settings_app', 'prefix' => false],
 			['title' => __('Task queue list')]
 		)
 	];
