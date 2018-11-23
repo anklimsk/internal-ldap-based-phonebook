@@ -5,6 +5,12 @@
 
 Internal LDAP-based phonebook
 
+## Installation
+
+1. Install using composer: `composer create-project anklimsk/internal-ldap-based-phonebook phonebook`
+2. Navigate to the directory `app` application, and run the following command:
+`sudo ./Console/cake CakeInstaller` - To start interactive shell of installer.
+
 ## Project icon
 
 **Author:** *Andy Gongea*
