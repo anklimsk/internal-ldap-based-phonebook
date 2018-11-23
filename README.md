@@ -7,9 +7,15 @@ Internal LDAP-based phonebook
 
 ## Installation
 
-1. Install using composer: `composer create-project anklimsk/internal-ldap-based-phonebook phonebook`
+1. Install using composer: `composer create-project anklimsk/internal-ldap-based-phonebook phonebook --stability beta`
 2. Navigate to the directory `app` application, and run the following command:
-`sudo ./Console/cake CakeInstaller` - To start interactive shell of installer.
+  `sudo ./Console/cake CakeInstaller` - To start interactive shell of installer.
+3. Go to the link `http://phonebook.fabrikam.com/settings` to change settings of application,
+  where `http://phonebook.fabrikam.com` - base URL of installited Phonebook.
+4. Fill in the fields in the `Authentication` group settings and click the `Save` button.
+5. Login with user group member `Administrator` or `Human resources` and choose menu item
+  `Employees` -> `Synchronizing information with LDAP server`.
+  For synchronization subordinate employees repeat choose menu item.
 
 ## Project icon
 
