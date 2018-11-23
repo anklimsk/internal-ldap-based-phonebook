@@ -23,18 +23,8 @@
 			"@test"
 		],
 		"cs-check": "./vendors/bin/phpcs -p --extensions=php --standard=CakePHP ./app",
-		"test": "./app/Console/cake test app AllApp --stderr",
-		"pre-update-cmd": [
-			"php -r \"copy('app/Config/cakeldap.php', 'app/Config/cakeldap.php.bkp');\"",
-			"php -r \"copy('app/Config/config.php', 'app/Config/config.php.bkp');\"",
-			"php -r \"copy('app/Config/core.php', 'app/Config/core.php.bkp');\"",
-			"php -r \"copy('app/Config/database.php', 'app/Config/database.php.bkp');\""
-		],
-		"post-update-cmd": [
-			"php -r \"rename('app/Config/cakeldap.php.bkp', 'app/Config/cakeldap.php');\"",
-			"php -r \"rename('app/Config/config.php.bkp', 'app/Config/config.php');\"",
-			"php -r \"rename('app/Config/core.php.bkp', 'app/Config/core.php');\"",
-			"php -r \"rename('app/Config/database.php.bkp', 'app/Config/database.php');\""
-		]
-	}
+		"test": "./app/Console/cake test app AllApp --stderr"
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": true
 }
