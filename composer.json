@@ -32,7 +32,7 @@
 		],
 		"post-update-cmd": [
 			"php -r \"copy('app/Config/cakeldap.php.bkp', 'app/Config/cakeldap.php');\"",
-			"php -r \"copy('app/Config/config.php.bkp', 'app/config/config.php');\"",
+			"php -r \"copy('app/Config/config.php.bkp', 'app/Config/config.php');\"",
 			"php -r \"copy('app/Config/core.php.bkp', 'app/Config/core.php');\"",
 			"php -r \"copy('app/Config/database.php.bkp', 'app/Config/database.php');\""
 		]
