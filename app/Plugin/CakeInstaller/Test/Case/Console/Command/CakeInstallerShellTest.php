@@ -367,7 +367,7 @@ EOD;
 			CAKE_INSTALLER_SHELL_INSTALLER_TASK_SETSECURKEY,
 		]);
 		$this->_targetObject->expects($this->at(1))->method('in')->will($this->returnValue('y'));
-		$this->_targetObject->expects($this->at(29))->method('out')
+		$this->_targetObject->expects($this->at(30))->method('out')
 			->with($this->stringContains('<success>' . __d('cake_installer', 'The installation process is completed successfully.') . '</success>'));
 		$this->_targetObject->install();
 		$this->assertTrue(file_exists($this->_markerFileInstalled));

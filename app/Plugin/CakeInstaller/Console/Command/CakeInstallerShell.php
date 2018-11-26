@@ -540,9 +540,16 @@ class CakeInstallerShell extends AppShell {
 			$this->out(null, 0);
 			$this->progress->draw();
 			$this->hr(1);
-			if (!$this->InstallerCheck->isAppInstalled(null, true) ||
-				!$this->InstallerCompleted->intsallCompleted()) {
+			if (!$this->InstallerCheck->isAppInstalled(null, true)) {
 				$result = false;
+			}
+			if ($result) {
+				$this->out('<info>' . __d('cake_installer', 'Running post-install actions') . '</info>');
+				$this->waiting->animateMessage();
+				if (!$this->InstallerCompleted->intsallCompleted()) {
+					$result = false;
+				}
+				$this->waiting->hideMessage();
 			}
 		}
 		if ($result) {
