@@ -6,6 +6,45 @@
 
 Internal LDAP-based phonebook
 
+## This plugin provides next features:
+
+- Authenticating users by membership in the LDAP security group for next roles:
+  * `user` - read-only access without extended fields, allows to change
+    information about yourself;
+  * `secretary` - read-only access include extended fields, allows to change
+    information about yourself;
+  * `human resources` - full access include extended fields, allows to approve
+    changes to information from users;
+  * `administrator` - full access include extended fields, allows to approve
+    changes to information from users and manage phonebook.
+- Changing user information after approval;
+- Ability to change the list of extended fields and read-only fields;
+- Changing the display format of the phone number:
+  * `E164`;
+  * `INTERNATIONAL`;
+  * `NATIONAL`;
+  * `RFC3966`.
+- Export phonebook information in PDF and XLSX format alphabetically and by department.
+  For each user role. Without breaks in table headers at the end of the page for PDF.
+- Ability to change the logo of the organization on the title page PDF;
+- Ability to change order of the columns in the result table;
+- Ability to change label of fields, tooltip, input mask and validation rules and
+  flag of truncate long text in result table;
+- Ability to change the order of departments in the exported files PDF and XLSX;
+- Ability to use the full and abbreviated name of the department;
+- Notice of birthdays of employees;
+- View employees as a subordination tree or gallery;
+- Logging changes in employee information with the ability to recover;
+- Resize photo up to 200x200 px on upload;
+- Support for keyboard layout corrections for the Russian language;
+- Customizable list of fields for synchronization;
+- Synchronizing information from LDAP to database.
+
+## Requirements
+
+- Apache module `mod_rewrite`;
+- PHP 5.4.0 or greater.
+
 ## Installation
 
 1. Install phonebook using composer:
@@ -22,15 +61,15 @@ Internal LDAP-based phonebook
 6. Login with user group member `Administrator` or `Human resources` and choose menu item
   `Employees` -> `Synchronizing information with LDAP server`.
   For synchronization subordinate employees repeat choose menu item.
+7. To start a tour of the phonebook, select the menu item "?" on the home page.
+
+## Using
+
+[Using this plugin](docs/USING.md) 
 
 ## Project icon
 
-**Author:** *Andy Gongea*
-
-### Links
-
-- http://www.iconarchive.com/show/quartz-icons-by-graphicrating/Book-phones-icon.html
-- http://www.iconarchive.com/icons/graphicrating/quartz/readme.txt
+Author: [Andy Gongea](http://www.iconarchive.com/icons/graphicrating/quartz/readme.txt)
 
 ## License
 
