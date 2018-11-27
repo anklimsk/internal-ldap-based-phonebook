@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: InternalPhonebook\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2018-11-22 17:24+0300\n"
+"PO-Revision-Date: 2018-11-27 10:52+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -353,7 +353,7 @@ msgstr "Отделы не найдены"
 
 #: Controller/DepartmentsController.php:118
 #: Test/Case/Controller/DepartmentsControllerTest.php:185
-#: View/Elements/barNav.ctp:148
+#: View/Elements/barNav.ctp:130
 msgid "Index of departments"
 msgstr "Указатель отделов"
 
@@ -890,7 +890,7 @@ msgstr "Отложенные сохранения"
 
 #: Model/Department.php:281
 #: Test/Case/Controller/DepartmentsControllerTest.php:219;400;499;860;1833;1872
-#: Test/Case/Model/DepartmentTest.php:358 View/Elements/barNav.ctp:130
+#: Test/Case/Model/DepartmentTest.php:358
 msgid "Departments"
 msgstr "Отделы"
 
@@ -1012,6 +1012,10 @@ msgstr "Информация о сотрудниках"
 #: View/Elements/barNav.ctp:132
 msgid "Manage information about departments"
 msgstr "Управление информацией об отделах"
+
+#: View/Elements/barNav.ctp:148
+msgid "Informations of departments"
+msgstr "Информация об отделах"
 
 #: View/Elements/barNav.ctp:157
 msgid "Manage deferred saves"

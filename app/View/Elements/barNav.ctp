@@ -127,7 +127,7 @@ if ($this->UserInfo->checkUserRole([USER_ROLE_HUMAN_RESOURCES, USER_ROLE_ADMIN])
 	$menuItems = [
 		$this->ViewExtension->menuActionLink(
 			'fas fa-th-list',
-			__('Departments'),
+			__('Index of departments'),
 			['controller' => 'departments', 'action' => 'index', 'plugin' => null],
 			['title' => __('Manage information about departments')]
 		)
@@ -145,7 +145,7 @@ if ($this->UserInfo->checkUserRole([USER_ROLE_HUMAN_RESOURCES, USER_ROLE_ADMIN])
 
 	$iconList[] = [$this->ViewExtension->menuItemLink(
 		'fas fa-list fa-lg',
-		__('Index of departments'),
+		__('Informations of departments'),
 		null,
 		['class' => 'app-tour-main-menu-departments']
 	) => $menuItems];
