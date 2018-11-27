@@ -6,7 +6,7 @@
 
 Internal LDAP-based phonebook
 
-## This plugin provides next features:
+## This phonebook provides next features:
 
 - Authenticating users by membership in the LDAP security group for next roles:
   * `user` - read-only access without extended fields, allows to change
@@ -65,7 +65,7 @@ Internal LDAP-based phonebook
 
 ## Using
 
-[Using this plugin](docs/USING.md) 
+[Using this phonebook](docs/USING.md) 
 
 ## Project icon
 
