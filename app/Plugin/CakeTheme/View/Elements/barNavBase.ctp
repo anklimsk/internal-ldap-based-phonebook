@@ -59,7 +59,9 @@ if (!isset($search_urlActionSearch)) {
 	$search_urlActionSearch = null;
 }
 
+if (!empty($iconList)) {
 	array_unshift($iconList, $this->ViewExtension->menuItemLink('fas fa-home fa-lg', __d('view_extension', 'Home page'), '/'));
+}
 ?>
 	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
 		<div class="<?php echo ($showSearchForm && $useNavbarContainerFluid ? 'container-fluid' : 'container'); ?>">
