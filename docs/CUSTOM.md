@@ -38,7 +38,7 @@ Employees are filtered for synchronization with the phonebook according to the
 
 ## Changing the synchronization frequency with LDAP and updating exported files.
 
-Configure scripts to run schedule, run the command `crontab -u www-data -e` where
+Configure scripts to run schedule, run the command `sudo crontab -u www-data -e` where
   `www-data` - user name for web server.
   Example of cron jobs:
 
