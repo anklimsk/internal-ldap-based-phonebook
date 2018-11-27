@@ -3,5 +3,6 @@
 /app/Config/core.php
 /app/Config/config.php
 /app/Config/database.php
+/app/Plugin/CakeTheme/.gitignore
 /app/webroot/cake_installer
 /app/webroot/cake_theme
