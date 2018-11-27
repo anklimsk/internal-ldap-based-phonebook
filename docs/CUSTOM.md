@@ -1,7 +1,8 @@
 # Customization phonebook
 
-## Edit config file `app/Config/cakeldap.php`
+## Change settings of LDAP fields
 
+- Open configuration file `app/Config/cakeldap.php`
 - Comment or delete unused LDAP fields;
 - Customize using LDAP fields:
    * `label` - Full label of field (used e.g. in view);
