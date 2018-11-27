@@ -122,6 +122,169 @@
         ]
     },
     {
+        "name": "anklimsk/cakephp-extended-test",
+        "version": "v1.0.2",
+        "version_normalized": "1.0.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/anklimsk/cakephp-extended-test.git",
+            "reference": "21691a3be8a198419feb92fb6ed3b35a14dc24b1"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/anklimsk/cakephp-extended-test/zipball/21691a3be8a198419feb92fb6ed3b35a14dc24b1",
+            "reference": "21691a3be8a198419feb92fb6ed3b35a14dc24b1",
+            "shasum": ""
+        },
+        "require": {
+            "anklimsk/cakephp-basic-functions": "^1.0.0",
+            "composer/installers": "^1.5.0",
+            "php": ">=5.4"
+        },
+        "time": "2018-11-19 09:25:26",
+        "type": "cakephp-plugin",
+        "extra": {
+            "installer-name": "CakeExtendTest",
+            "branch-alias": {
+                "dev-master": "1.0.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Andrey Klimov"
+            }
+        ],
+        "description": "Extended test tools for CakePHP 2.x",
+        "homepage": "https://github.com/anklimsk/cakephp-extended-test"
+    },
+    {
+        "name": "anklimsk/cakephp-basic-functions",
+        "version": "v1.0.1",
+        "version_normalized": "1.0.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/anklimsk/cakephp-basic-functions.git",
+            "reference": "7554e8b0b420fd3155593af7bf76b7ccbdc8701e"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/anklimsk/cakephp-basic-functions/zipball/7554e8b0b420fd3155593af7bf76b7ccbdc8701e",
+            "reference": "7554e8b0b420fd3155593af7bf76b7ccbdc8701e",
+            "shasum": ""
+        },
+        "require": {
+            "anklimsk/cakephp-extended-test": "^1.0.0",
+            "composer/installers": "^1.5.0",
+            "php": ">=5.4"
+        },
+        "time": "2018-11-19 09:07:01",
+        "type": "cakephp-plugin",
+        "extra": {
+            "installer-name": "CakeBasicFunctions",
+            "branch-alias": {
+                "dev-master": "1.0.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Andrey Klimov"
+            }
+        ],
+        "description": "Global basic utilities for the CakePHP 2.x application",
+        "homepage": "https://github.com/anklimsk/cakephp-basic-functions"
+    },
+    {
+        "name": "anklimsk/cakephp-config-plugin",
+        "version": "v1.0.1",
+        "version_normalized": "1.0.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/anklimsk/cakephp-config-plugin.git",
+            "reference": "9659709541950470908f15860327cdd9f1d4e662"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/anklimsk/cakephp-config-plugin/zipball/9659709541950470908f15860327cdd9f1d4e662",
+            "reference": "9659709541950470908f15860327cdd9f1d4e662",
+            "shasum": ""
+        },
+        "require": {
+            "anklimsk/cakephp-extended-test": "^1.0.0",
+            "composer/installers": "^1.5.0",
+            "php": ">=5.4"
+        },
+        "time": "2018-11-19 09:16:13",
+        "type": "cakephp-plugin",
+        "extra": {
+            "installer-name": "CakeConfigPlugin",
+            "branch-alias": {
+                "dev-master": "1.0.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Andrey Klimov"
+            }
+        ],
+        "description": "Initialize and get the plugin configuration for the CakePHP 2.x",
+        "homepage": "https://github.com/anklimsk/cakephp-config-plugin"
+    },
+    {
+        "name": "anklimsk/cakephp-console-installer",
+        "version": "v1.0.5",
+        "version_normalized": "1.0.5.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/anklimsk/cakephp-console-installer.git",
+            "reference": "76136550e856ff4f8fd3634b77633f86510f63e9"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/anklimsk/cakephp-console-installer/zipball/76136550e856ff4f8fd3634b77633f86510f63e9",
+            "reference": "76136550e856ff4f8fd3634b77633f86510f63e9",
+            "shasum": ""
+        },
+        "require": {
+            "anklimsk/cakephp-basic-functions": "^1.0.0",
+            "anklimsk/cakephp-config-plugin": "^1.0.0",
+            "anklimsk/cakephp-extended-test": "^1.0.0",
+            "composer/installers": "^1.5.0",
+            "php": ">=5.4"
+        },
+        "time": "2018-11-26 13:07:04",
+        "type": "cakephp-plugin",
+        "extra": {
+            "installer-name": "CakeInstaller"
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Andrey Klimov"
+            }
+        ],
+        "description": "Console installer for CakePHP 2.x",
+        "homepage": "https://github.com/anklimsk/cakephp-console-installer"
+    },
+    {
         "name": "dereuromark/cakephp-shim",
         "version": "0.6.2",
         "version_normalized": "0.6.2.0",
@@ -303,7 +466,7 @@
             },
             "installer-name": "Datasources"
         },
-        "installation-source": "source",
+        "installation-source": "dist",
         "notification-url": "https://packagist.org/downloads/",
         "license": [
             "MIT"
@@ -328,52 +491,6 @@
             "sqlite",
             "sqlserver",
             "sybase"
-        ]
-    },
-    {
-        "name": "packagelist/yuicompressor-bin",
-        "version": "v2.4.8",
-        "version_normalized": "2.4.8.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/packagelist/yuicompressor-bin.git",
-            "reference": "4dcd53c7833222b841cdc6470e8d89222ddff760"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/packagelist/yuicompressor-bin/zipball/4dcd53c7833222b841cdc6470e8d89222ddff760",
-            "reference": "4dcd53c7833222b841cdc6470e8d89222ddff760",
-            "shasum": ""
-        },
-        "time": "2018-01-20 09:18:43",
-        "bin": [
-            "bin/yuicompressor.jar"
-        ],
-        "type": "library",
-        "installation-source": "dist",
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "BSD-3-Clause"
-        ],
-        "authors": [
-            {
-                "name": "Yahoo! Inc.",
-                "homepage": "http://yuilibrary.com"
-            },
-            {
-                "name": "Krusty Kode",
-                "email": "kaiwa@20minutemail.com",
-                "role": "maintainer"
-            }
-        ],
-        "description": "YUI Compressor packaged for composer. JavaScript and CSS minification.",
-        "homepage": "http://yui.github.io/yuicompressor",
-        "keywords": [
-            "compressor",
-            "css",
-            "javascript",
-            "minification",
-            "yui"
         ]
     },
     {
@@ -464,73 +581,33 @@
         ]
     },
     {
-        "name": "anklimsk/cakephp-extended-test",
-        "version": "v1.0.2",
-        "version_normalized": "1.0.2.0",
+        "name": "anklimsk/cakephp2-theme",
+        "version": "v1.0.4",
+        "version_normalized": "1.0.4.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/anklimsk/cakephp-extended-test.git",
-            "reference": "21691a3be8a198419feb92fb6ed3b35a14dc24b1"
+            "url": "https://github.com/anklimsk/cakephp-theme.git",
+            "reference": "f09b17ff4e5812ff04c8db6731202f8cad89bb2e"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/anklimsk/cakephp-extended-test/zipball/21691a3be8a198419feb92fb6ed3b35a14dc24b1",
-            "reference": "21691a3be8a198419feb92fb6ed3b35a14dc24b1",
+            "url": "https://api.github.com/repos/anklimsk/cakephp-theme/zipball/f09b17ff4e5812ff04c8db6731202f8cad89bb2e",
+            "reference": "f09b17ff4e5812ff04c8db6731202f8cad89bb2e",
             "shasum": ""
         },
         "require": {
             "anklimsk/cakephp-basic-functions": "^1.0.0",
-            "composer/installers": "^1.5.0",
-            "php": ">=5.4"
-        },
-        "time": "2018-11-19 09:25:26",
-        "type": "cakephp-plugin",
-        "extra": {
-            "installer-name": "CakeExtendTest",
-            "branch-alias": {
-                "dev-master": "1.0.x-dev"
-            }
-        },
-        "installation-source": "dist",
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Andrey Klimov"
-            }
-        ],
-        "description": "Extended test tools for CakePHP 2.x",
-        "homepage": "https://github.com/anklimsk/cakephp-extended-test"
-    },
-    {
-        "name": "anklimsk/cakephp-basic-functions",
-        "version": "v1.0.1",
-        "version_normalized": "1.0.1.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/anklimsk/cakephp-basic-functions.git",
-            "reference": "7554e8b0b420fd3155593af7bf76b7ccbdc8701e"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/anklimsk/cakephp-basic-functions/zipball/7554e8b0b420fd3155593af7bf76b7ccbdc8701e",
-            "reference": "7554e8b0b420fd3155593af7bf76b7ccbdc8701e",
-            "shasum": ""
-        },
-        "require": {
+            "anklimsk/cakephp-config-plugin": "^1.0.0",
             "anklimsk/cakephp-extended-test": "^1.0.0",
+            "codaxis/cakephp-bootstrap3-helpers": "^1.2",
             "composer/installers": "^1.5.0",
+            "markstory/asset_compress": "^0.25",
             "php": ">=5.4"
         },
-        "time": "2018-11-19 09:07:01",
+        "time": "2018-11-27 09:02:44",
         "type": "cakephp-plugin",
         "extra": {
-            "installer-name": "CakeBasicFunctions",
-            "branch-alias": {
-                "dev-master": "1.0.x-dev"
-            }
+            "installer-name": "CakeTheme"
         },
         "installation-source": "dist",
         "notification-url": "https://packagist.org/downloads/",
@@ -542,49 +619,8 @@
                 "name": "Andrey Klimov"
             }
         ],
-        "description": "Global basic utilities for the CakePHP 2.x application",
-        "homepage": "https://github.com/anklimsk/cakephp-basic-functions"
-    },
-    {
-        "name": "anklimsk/cakephp-config-plugin",
-        "version": "v1.0.1",
-        "version_normalized": "1.0.1.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/anklimsk/cakephp-config-plugin.git",
-            "reference": "9659709541950470908f15860327cdd9f1d4e662"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/anklimsk/cakephp-config-plugin/zipball/9659709541950470908f15860327cdd9f1d4e662",
-            "reference": "9659709541950470908f15860327cdd9f1d4e662",
-            "shasum": ""
-        },
-        "require": {
-            "anklimsk/cakephp-extended-test": "^1.0.0",
-            "composer/installers": "^1.5.0",
-            "php": ">=5.4"
-        },
-        "time": "2018-11-19 09:16:13",
-        "type": "cakephp-plugin",
-        "extra": {
-            "installer-name": "CakeConfigPlugin",
-            "branch-alias": {
-                "dev-master": "1.0.x-dev"
-            }
-        },
-        "installation-source": "dist",
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Andrey Klimov"
-            }
-        ],
-        "description": "Initialize and get the plugin configuration for the CakePHP 2.x",
-        "homepage": "https://github.com/anklimsk/cakephp-config-plugin"
+        "description": "Full UI theme for CakePHP 2.x",
+        "homepage": "https://github.com/anklimsk/cakephp-theme"
     },
     {
         "name": "anklimsk/cakephp-ldap-sync",
@@ -827,88 +863,5 @@
         ],
         "description": "Generate PDF files with the CakePHP 2.x",
         "homepage": "https://github.com/anklimsk/cakephp-tcpdf"
-    },
-    {
-        "name": "anklimsk/cakephp-console-installer",
-        "version": "v1.0.5",
-        "version_normalized": "1.0.5.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/anklimsk/cakephp-console-installer.git",
-            "reference": "76136550e856ff4f8fd3634b77633f86510f63e9"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/anklimsk/cakephp-console-installer/zipball/76136550e856ff4f8fd3634b77633f86510f63e9",
-            "reference": "76136550e856ff4f8fd3634b77633f86510f63e9",
-            "shasum": ""
-        },
-        "require": {
-            "anklimsk/cakephp-basic-functions": "^1.0.0",
-            "anklimsk/cakephp-config-plugin": "^1.0.0",
-            "anklimsk/cakephp-extended-test": "^1.0.0",
-            "composer/installers": "^1.5.0",
-            "php": ">=5.4"
-        },
-        "time": "2018-11-26 13:07:04",
-        "type": "cakephp-plugin",
-        "extra": {
-            "installer-name": "CakeInstaller"
-        },
-        "installation-source": "dist",
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Andrey Klimov"
-            }
-        ],
-        "description": "Console installer for CakePHP 2.x",
-        "homepage": "https://github.com/anklimsk/cakephp-console-installer"
-    },
-    {
-        "name": "anklimsk/cakephp2-theme",
-        "version": "v1.0.4",
-        "version_normalized": "1.0.4.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/anklimsk/cakephp-theme.git",
-            "reference": "4917455f6bb5dd5021dca9118c86647609b1ffa3"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/anklimsk/cakephp-theme/zipball/4917455f6bb5dd5021dca9118c86647609b1ffa3",
-            "reference": "4917455f6bb5dd5021dca9118c86647609b1ffa3",
-            "shasum": ""
-        },
-        "require": {
-            "anklimsk/cakephp-basic-functions": "^1.0.0",
-            "anklimsk/cakephp-config-plugin": "^1.0.0",
-            "anklimsk/cakephp-extended-test": "^1.0.0",
-            "codaxis/cakephp-bootstrap3-helpers": "^1.2",
-            "composer/installers": "^1.5.0",
-            "markstory/asset_compress": "^0.25",
-            "packagelist/yuicompressor-bin": "^v2.4.8",
-            "php": ">=5.4"
-        },
-        "time": "2018-11-27 05:56:26",
-        "type": "cakephp-plugin",
-        "extra": {
-            "installer-name": "CakeTheme"
-        },
-        "installation-source": "dist",
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Andrey Klimov"
-            }
-        ],
-        "description": "Full UI theme for CakePHP 2.x",
-        "homepage": "https://github.com/anklimsk/cakephp-theme"
     }
 ]

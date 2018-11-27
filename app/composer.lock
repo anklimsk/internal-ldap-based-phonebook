@@ -398,12 +398,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/anklimsk/cakephp-theme.git",
-                "reference": "4917455f6bb5dd5021dca9118c86647609b1ffa3"
+                "reference": "f09b17ff4e5812ff04c8db6731202f8cad89bb2e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/anklimsk/cakephp-theme/zipball/4917455f6bb5dd5021dca9118c86647609b1ffa3",
-                "reference": "4917455f6bb5dd5021dca9118c86647609b1ffa3",
+                "url": "https://api.github.com/repos/anklimsk/cakephp-theme/zipball/f09b17ff4e5812ff04c8db6731202f8cad89bb2e",
+                "reference": "f09b17ff4e5812ff04c8db6731202f8cad89bb2e",
                 "shasum": ""
             },
             "require": {
@@ -413,7 +413,6 @@
                 "codaxis/cakephp-bootstrap3-helpers": "^1.2",
                 "composer/installers": "^1.5.0",
                 "markstory/asset_compress": "^0.25",
-                "packagelist/yuicompressor-bin": "^v2.4.8",
                 "php": ">=5.4"
             },
             "type": "cakephp-plugin",
@@ -431,7 +430,7 @@
             ],
             "description": "Full UI theme for CakePHP 2.x",
             "homepage": "https://github.com/anklimsk/cakephp-theme",
-            "time": "2018-11-27 05:56:26"
+            "time": "2018-11-27 09:02:44"
         },
         {
             "name": "cakephp/datasources",
@@ -836,50 +835,6 @@
                 "sass"
             ],
             "time": "2017-12-03 02:22:00"
-        },
-        {
-            "name": "packagelist/yuicompressor-bin",
-            "version": "v2.4.8",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/packagelist/yuicompressor-bin.git",
-                "reference": "4dcd53c7833222b841cdc6470e8d89222ddff760"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/packagelist/yuicompressor-bin/zipball/4dcd53c7833222b841cdc6470e8d89222ddff760",
-                "reference": "4dcd53c7833222b841cdc6470e8d89222ddff760",
-                "shasum": ""
-            },
-            "bin": [
-                "bin/yuicompressor.jar"
-            ],
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Yahoo! Inc.",
-                    "homepage": "http://yuilibrary.com"
-                },
-                {
-                    "name": "Krusty Kode",
-                    "email": "kaiwa@20minutemail.com",
-                    "role": "maintainer"
-                }
-            ],
-            "description": "YUI Compressor packaged for composer. JavaScript and CSS minification.",
-            "homepage": "http://yui.github.io/yuicompressor",
-            "keywords": [
-                "compressor",
-                "css",
-                "javascript",
-                "minification",
-                "yui"
-            ],
-            "time": "2018-01-20 09:18:43"
         }
     ],
     "packages-dev": [],
