@@ -50,6 +50,7 @@ Configure scripts to run schedule, run the command `sudo crontab -u www-data -e`
    # In this example, at 7:00 on Monday, the script for the PDF and Excel
    # files builder will be launched.
    0 7 * * mon cd /var/www/paht_to_app/app/ && Console/cake generate all all -q
+   #
    # In this example, every 15 minutes, the script to check for new deferred saves
    # will be launched.
    */15 * * * * cd /var/www/paht_to_app/app/ && Console/cake cron deferred -q
