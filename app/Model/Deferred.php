@@ -431,7 +431,7 @@ class Deferred extends AppModel {
 		$maxStep = count($dataToProcess);
 		$errorMessages = [];
 		$result = true;
-		$successCount = 0;
+		$successApproveCount = 0;
 		$mailInfo = [];
 		$dataToDelete = [];
 		$objDataModel = $this->getObjectDataModel();
@@ -456,7 +456,7 @@ class Deferred extends AppModel {
 			if ($approve) {
 				$objDataModel->clear();
 				if ($objDataModel->save($data['changed'], false)) {
-					$successCount++;
+					$successApproveCount++;
 					if (!empty($id)) {
 						$dataToDelete[] = $id;
 					}
@@ -483,9 +483,7 @@ class Deferred extends AppModel {
 			$maxStep++;
 		}
 		if (!empty($dataToDelete)) {
-			if ($this->deleteAll([$this->alias . '.id' => $dataToDelete], false, true)) {
-				$successCount++;
-			} else {
+			if (!$this->deleteAll([$this->alias . '.id' => $dataToDelete], false, true)) {
 				$result = false;
 				if ($approve) {
 					$errorMessages[] = __('Error on deleting deferred saves after approving');
@@ -494,7 +492,7 @@ class Deferred extends AppModel {
 				}
 			}
 		}
-		if ($successCount > 0) {
+		if ($approve && ($successApproveCount > 0)) {
 			$notbefore = date('Y-m-d H:i:s', strtotime('+' . DEFERRED_SAVE_SYNC_DELAY . ' second'));
 			$modelExtendQueuedTask->createJob('SyncEmployee', null, $notbefore, 'sync');
 		}
