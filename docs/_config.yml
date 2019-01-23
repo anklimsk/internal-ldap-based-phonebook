@@ -1,0 +1,5 @@
+title: Internal LDAP-based phonebook
+description: Internal phone book based on content of Active Directory
+logo: /img/logo.png
+theme: jekyll-theme-minimal
+show_downloads: true
