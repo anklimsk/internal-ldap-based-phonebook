@@ -65,7 +65,7 @@ Internal LDAP-based phonebook
 
 ## Using
 
-[Using this phonebook](docs/USING.md)
+[Using this phonebook](docs/using.md)
 
 ## Project icon
 
