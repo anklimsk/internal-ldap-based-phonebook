@@ -1,7 +1,7 @@
 # Internal LDAP-based phonebook
 [![Build Status](https://travis-ci.com/anklimsk/internal-ldap-based-phonebook.svg?branch=master)](https://travis-ci.com/anklimsk/internal-ldap-based-phonebook)
 [![codecov](https://codecov.io/gh/anklimsk/internal-ldap-based-phonebook/branch/master/graph/badge.svg)](https://codecov.io/gh/anklimsk/internal-ldap-based-phonebook)
-[![Latest Unstable Version](https://poser.pugx.org/anklimsk/internal-ldap-based-phonebook/v/unstable)](https://packagist.org/packages/anklimsk/internal-ldap-based-phonebook)
+[![Latest Stable Version](https://poser.pugx.org/anklimsk/internal-ldap-based-phonebook/v/stable)](https://packagist.org/packages/anklimsk/internal-ldap-based-phonebook)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Internal LDAP-based phonebook
@@ -48,7 +48,7 @@ Internal LDAP-based phonebook
 ## Installation
 
 1. Install phonebook using composer:
-  `composer create-project anklimsk/internal-ldap-based-phonebook /path/to/phonebook --stability beta`.
+  `composer create-project anklimsk/internal-ldap-based-phonebook /path/to/phonebook`.
 2. Copy applicaton files from `/path/to/phonebook`
   to VirtualHost document root directory, e.g.: `/var/www/phonebook`.
 3. Navigate to the directory `app` application (`/var/www/phonebook/app`),
