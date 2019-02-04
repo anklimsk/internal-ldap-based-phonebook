@@ -57,13 +57,19 @@ $config['CakeInstaller'] = [
 			// Critical need
 			true
 		],
+		[
+			// Extension name
+			'openssl',
+			// Critical need
+			true
+		],
 /*
-		array(
+		[
 			// Extension name
 			'runkit',
 			// Critical need
 			false
-		),
+		],
 */
 	],
 	// Commands for installer

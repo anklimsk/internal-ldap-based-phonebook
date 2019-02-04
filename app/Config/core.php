@@ -405,3 +405,8 @@ Cache::config('_cake_model_', array(
  * A random numeric string (digits only) used to encrypt/decrypt strings.
  */
 	Configure::write('Security.key', '9b8964f94512f5b843c67e8c89479e4f2cfac2b182c72dc0691cc384c438f9cd');
+
+/**
+ * Set Security.useOpenSsl to use OpenSSL instead of the deprecated mcrpyt extension.
+ */
+	Configure::write('Security.useOpenSsl', true);
