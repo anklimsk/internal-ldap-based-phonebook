@@ -1442,11 +1442,70 @@ class EmployeeTest extends AppCakeTestCase {
 	}
 
 /**
- * testGetListBirthday method
+ * testGetListBirthdayIncludeBlock method
  *
  * @return void
  */
-	public function testGetListBirthday() {
+	public function testGetListBirthdayIncludeBlock() {
+		$timestamp = mktime(1, 0, 0, 2, 18);
+		$date = date('Y-m-d', $timestamp);
+		$this->_targetObject->id = 3;
+		$result = $this->_targetObject->saveField(CAKE_LDAP_LDAP_ATTRIBUTE_BIRTHDAY, $date);
+		$expected = [
+			'Employee' => [
+				'id' => 3,
+				CAKE_LDAP_LDAP_ATTRIBUTE_BIRTHDAY => $date,
+			]
+		];
+		$this->assertData($expected, $result);
+
+		$this->_targetObject->id = 4;
+		$result = $this->_targetObject->saveField(CAKE_LDAP_LDAP_ATTRIBUTE_BIRTHDAY, $date);
+		$expected = [
+			'Employee' => [
+				'id' => 4,
+				CAKE_LDAP_LDAP_ATTRIBUTE_BIRTHDAY => $date,
+			]
+		];
+		$this->assertData($expected, $result);
+
+		$result = $this->_targetObject->saveField('block', true);
+		$expected = [
+			'Employee' => [
+				'id' => 4,
+				'block' => true,
+			]
+		];
+		$this->assertData($expected, $result);
+
+		$result = $this->_targetObject->getListBirthday($timestamp);
+		$expected = [
+			[
+				'Employee' => [
+					'id' => '3',
+					CAKE_LDAP_LDAP_ATTRIBUTE_DISPLAY_NAME => 'Суханова Л.Б.',
+					CAKE_LDAP_LDAP_ATTRIBUTE_SURNAME => 'Суханова',
+					CAKE_LDAP_LDAP_ATTRIBUTE_GIVEN_NAME => 'Лариса',
+					CAKE_LDAP_LDAP_ATTRIBUTE_MIDDLE_NAME => 'Борисовна',
+					CAKE_LDAP_LDAP_ATTRIBUTE_NAME => 'Суханова Л.Б.',
+					CAKE_LDAP_LDAP_ATTRIBUTE_INITIALS => 'Л.Б.',
+				],
+				'Department' => [
+					'value' => 'ОС',
+					'id' => '2',
+					'block' => false
+				]
+			]
+		];
+		$this->assertData($expected, $result);
+	}
+
+/**
+ * testGetListBirthdaySuccess method
+ *
+ * @return void
+ */
+	public function testGetListBirthdaySuccess() {
 		$timestamp = mktime(1, 0, 0, 1, 28);
 		$date = date('Y-m-d', $timestamp);
 		$this->_targetObject->id = 3;

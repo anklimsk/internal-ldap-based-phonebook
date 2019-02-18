@@ -4,7 +4,7 @@
  *  management employees.
  *
  * InternalPhonebook: Internal phone book based on content of Active Directory.
- * @copyright Copyright 2017-2018, Andrey Klimov.
+ * @copyright Copyright 2017-2019, Andrey Klimov.
  * @license https://opensource.org/licenses/mit-license.php MIT License
  * @package app.Model
  */
@@ -810,7 +810,8 @@ class Employee extends EmployeeDb {
 			'Department.value'
 		];
 		$conditions = [
-			$this->alias . '.' . CAKE_LDAP_LDAP_ATTRIBUTE_BIRTHDAY . ' like' => '____-' . date('m-d', (int)$timestamp)
+			$this->alias . '.' . CAKE_LDAP_LDAP_ATTRIBUTE_BIRTHDAY . ' like' => '____-' . date('m-d', (int)$timestamp),
+			$this->alias . '.block' => false
 		];
 		$order = [$this->alias . '.' . CAKE_LDAP_LDAP_ATTRIBUTE_SURNAME => 'asc'];
 		$contain = ['Department'];
