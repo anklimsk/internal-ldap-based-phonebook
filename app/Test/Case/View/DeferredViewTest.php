@@ -22,6 +22,7 @@ class DeferredViewTest extends AppControllerTestCase {
 	public $fixtures = [
 		'core.cake_session',
 		'app.deferred',
+		'app.department_extension',
 		'app.log',
 		'plugin.cake_ldap.department',
 		'plugin.cake_ldap.employee',
@@ -33,39 +34,64 @@ class DeferredViewTest extends AppControllerTestCase {
 
 /**
  * testIndex method
- *  User role: human resources, admin
+ *  User role: human resources
  *
  * @return void
  */
-	public function testIndexForHrAndAdmin() {
-		$userRoles = [
-			USER_ROLE_USER | USER_ROLE_HUMAN_RESOURCES => 'hr',
-			USER_ROLE_USER | USER_ROLE_ADMIN => 'admin',
-		];
+	public function testIndexForHr() {
 		$opt = [
 			'method' => 'GET',
 			'return' => 'contents',
 		];
 		$expected = 4;
-		foreach ($userRoles as $userRole => $userPrefix) {
-			$userInfo = [
-				'role' => $userRole,
-				'prefix' => $userPrefix,
-			];
-			$this->applyUserInfo($userInfo);
-			$this->generateMockedController();
-			$url = [
-				'controller' => 'deferred',
-				'action' => 'index',
-			];
-			if (!empty($userPrefix)) {
-				$url['prefix'] = $userPrefix;
-				$url[$userPrefix] = true;
-			}
-			$view = $this->testAction($url, $opt);
-			$numTableRows = $this->getNumberItemsByCssSelector($view, 'div#content div.container table > tbody > tr');
-			$this->assertData($expected, $numTableRows);
-		}
+		$userRole = USER_ROLE_USER | USER_ROLE_HUMAN_RESOURCES;
+		$userPrefix = 'hr';
+		$userInfo = [
+			'role' => $userRole,
+			'prefix' => $userPrefix,
+		];
+		$this->applyUserInfo($userInfo);
+		$this->generateMockedController();
+		$url = [
+			'controller' => 'deferred',
+			'action' => 'index',
+			'prefix' => $userPrefix,
+			$userPrefix => true
+		];
+		$view = $this->testAction($url, $opt);
+		$numTableRows = $this->getNumberItemsByCssSelector($view, 'div#content div.container table > tbody > tr');
+		$this->assertData($expected, $numTableRows);
+	}
+
+/**
+ * testIndex method
+ *  User role: admin
+ *
+ * @return void
+ */
+	public function testIndexForAdmin() {
+		$opt = [
+			'method' => 'GET',
+			'return' => 'contents',
+		];
+		$expected = 5;
+		$userRole = USER_ROLE_USER | USER_ROLE_ADMIN;
+		$userPrefix = 'admin';
+		$userInfo = [
+			'role' => $userRole,
+			'prefix' => $userPrefix,
+		];
+		$this->applyUserInfo($userInfo);
+		$this->generateMockedController();
+		$url = [
+			'controller' => 'deferred',
+			'action' => 'index',
+			'prefix' => $userPrefix,
+			$userPrefix => true
+		];
+		$view = $this->testAction($url, $opt);
+		$numTableRows = $this->getNumberItemsByCssSelector($view, 'div#content div.container table > tbody > tr');
+		$this->assertData($expected, $numTableRows);
 	}
 
 /**

@@ -4,7 +4,7 @@
  *  management the deferred saves.
  *
  * InternalPhonebook: Internal phone book based on content of Active Directory.
- * @copyright Copyright 2017-2018, Andrey Klimov.
+ * @copyright Copyright 2017-2019, Andrey Klimov.
  * @license https://opensource.org/licenses/mit-license.php MIT License
  * @package app.Controller
  */
@@ -77,6 +77,7 @@ class DeferredController extends AppController {
 		'fields' => [
 			'Deferred.id',
 			'Deferred.employee_id',
+			'Deferred.internal',
 			'Deferred.data',
 			'Deferred.created',
 			'Deferred.modified',
@@ -123,7 +124,9 @@ class DeferredController extends AppController {
 		if (empty($conditions)) {
 			$conditions = [];
 		}
-		$conditions['Deferred.internal'] = false;
+		if ($this->UserInfo->checkUserRole(USER_ROLE_HUMAN_RESOURCES, false)) {
+			$conditions['Deferred.internal'] = false;
+		}
 		$deferredSaves = $this->Paginator->paginate('Deferred', $conditions);
 		if (empty($deferredSaves)) {
 			$this->Flash->information(__('Deferred saves not found'));

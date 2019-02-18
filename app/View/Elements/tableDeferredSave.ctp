@@ -4,7 +4,7 @@
  *  table of deferred saves
  *
  * InternalPhonebook: Internal phone book based on content of Active Directory.
- * @copyright Copyright 2017-2018, Andrey Klimov.
+ * @copyright Copyright 2017-2019, Andrey Klimov.
  * @license https://opensource.org/licenses/mit-license.php MIT License
  * @package app.View.Elements
  */
@@ -65,7 +65,12 @@ if (!isset($fieldsConfig)) {
 <?php
 foreach ($deferredSaves as $deferredSave) {
 	$tableRow = [];
+	$attrRow = [];
 	$actions = '';
+
+	if ($deferredSave['Deferred']['internal']) {
+		$attrRow['class'] = 'warning';
+	}
 	if (is_array($deferredSave['Deferred']['data'])) {
 		$actions .= $this->ViewExtension->buttonLink(
 			'fas fa-pencil-alt',
@@ -141,7 +146,7 @@ foreach ($deferredSaves as $deferredSave) {
 	$tableRow[] = $this->Time->i18nFormat($deferredSave['Deferred']['modified'], '%x %X');
 	$tableRow[] = [$this->ViewExtension->showEmpty($actions), ['class' => 'action text-center']];
 
-	echo $this->Html->tableCells([$tableRow]);
+	echo $this->Html->tableCells([$tableRow], $attrRow, $attrRow);
 }
 ?>
 			</tbody>
