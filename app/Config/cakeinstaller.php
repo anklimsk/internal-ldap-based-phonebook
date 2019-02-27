@@ -202,7 +202,7 @@ $config['CakeInstaller'] = [
 	'cronJobs' => [
 		'cd ' . APP . ' && Console/cake Queue.Queue runworker -q' => '*/10 * * * *',
 		'cd ' . APP . ' && Console/cake CakeLdap.cron sync -q' => '10 7 * * *',
-		'cd ' . APP . ' && Console/cake generate all all -q' => '0 7 * * mon',
+		'cd ' . APP . ' && Console/cake cron generate all all -q' => '0 7 * * mon',
 		'cd ' . APP . ' && Console/cake cron deferred -q' => '*/15 * * * *',
 	],
 	// List of languages for installer UI in format: ISO639-2

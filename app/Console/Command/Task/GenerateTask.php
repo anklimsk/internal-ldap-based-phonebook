@@ -3,7 +3,7 @@
  * This file is the console shell task file of the application.
  *
  * InternalPhonebook: Internal phone book based on content of Active Directory.
- * @copyright Copyright 2017-2018, Andrey Klimov.
+ * @copyright Copyright 2017-2019, Andrey Klimov.
  * @license https://opensource.org/licenses/mit-license.php MIT License
  * @package app.Console.Command.Task
  */
@@ -24,7 +24,6 @@ class GenerateTask extends AppShell {
  * @link http://book.cakephp.org/2.0/en/console-and-shells.html#Shell::$uses
  */
 	public $uses = [
-		'Queue.QueuedTask',
 		'Employee'
 	];
 
@@ -78,7 +77,7 @@ class GenerateTask extends AppShell {
 		$viewName = mb_ucfirst(constValToLcSingle('GENERATE_FILE_VIEW_TYPE_', $view, ' '));
 		$typeName = mb_ucfirst(constValToLcSingle('GENERATE_FILE_DATA_TYPE_', $type, ' '));
 		$this->out(__('Generate %s files (%s) in progress...', $viewName, $typeName), 1, Shell::NORMAL);
-		if ($this->QueuedTask->createJob('Generate', [$view, $type], null, 'export')) {
+		if ($this->Employee->putExportTask($view, $type)) {
 			$this->out(__('Generate %s files set in queue successfully.', $viewName), 1, Shell::NORMAL);
 		} else {
 			$this->out('<error>' . __('Generate %s set in queue unsuccessfully.', $viewName) . '</error>');

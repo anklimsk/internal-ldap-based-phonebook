@@ -20,6 +20,9 @@ class GenerateTaskTest extends AppCakeTestCase {
  * @var array
  */
 	public $fixtures = [
+		'plugin.cake_ldap.employee',
+		'plugin.cake_ldap.employee_ldap',
+		'plugin.cake_ldap.department',
 		'plugin.queue.queued_task',
 	];
 
