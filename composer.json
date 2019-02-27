@@ -2,7 +2,7 @@
 	"name": "anklimsk/internal-ldap-based-phonebook",
 	"description": "Internal LDAP-based phonebook",
 	"type": "project",
-	"keywords": ["LDAP", "phonebook", "phone book", "telephone directory"],
+	"keywords": ["LDAP", "phonebook"],
 	"homepage": "https://anklimsk.github.io/internal-ldap-based-phonebook",
 	"license": "MIT",
 	"require": {
