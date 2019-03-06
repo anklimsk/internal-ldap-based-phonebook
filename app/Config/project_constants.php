@@ -3,7 +3,7 @@
  * This file is constants definition file of the application.
  *
  * InternalPhonebook: Internal phone book based on content of Active Directory.
- * @copyright Copyright 2017, Andrey Klimov.
+ * @copyright Copyright 2017-2019, Andrey Klimov.
  * @package app.Config
  */
 
@@ -24,7 +24,7 @@ if (!defined('PROJECT_NAME')) {
  *  Default value `Project title`
  */
 if (!defined('PROJECT_PAGE_TITLE')) {
-	define('PROJECT_PAGE_TITLE', 'Internal phone book');
+	define('PROJECT_PAGE_TITLE', PROJECT_NAME);
 }
 
 /**
