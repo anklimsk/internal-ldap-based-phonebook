@@ -4,13 +4,14 @@
  *  full list of employees.
  *
  * InternalPhonebook: Internal phone book based on content of Active Directory.
- * @copyright Copyright 2017-2018, Andrey Klimov.
+ * @copyright Copyright 2017-2019, Andrey Klimov.
  * @license https://opensource.org/licenses/mit-license.php MIT License
  * @package app.View.Employees
  */
 
 	$this->assign('title', $pageTitle);
 
+	echo $this->AssetCompress->css('CakeTheme.vertical-alignment', ['block' => 'css']);
 	echo $this->AssetCompress->css('CakeTheme.tree', ['block' => 'css']);
 	echo $this->AssetCompress->script('CakeTheme.tree', ['block' => 'script']);
 	echo $this->AssetCompress->css('CakeTheme.fileupload', ['block' => 'css']);
