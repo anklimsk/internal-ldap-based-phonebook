@@ -190,6 +190,8 @@ class AppController extends Controller {
 		}
 		$showSearchForm = false;
 		$projectName = __d('project', PROJECT_NAME);
+		$projectVersion = PROJECT_VERSION;
+		$projectAuthor = PROJECT_AUTHOR;
 
 		$this->set(compact(
 			'isExternalAuth',
@@ -199,7 +201,9 @@ class AppController extends Controller {
 			'countDeferredSaves',
 			'useNavbarContainerFluid',
 			'showSearchForm',
-			'projectName'
+			'projectName',
+			'projectVersion',
+			'projectAuthor'
 		));
 		$this->set('search_urlActionSearch', $searchUrlActionSearch);
 		parent::beforeFilter();

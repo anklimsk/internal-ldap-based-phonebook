@@ -82,6 +82,8 @@ class AppControllerTestCase extends ExtendControllerTestCase {
 			'useNavbarContainerFluid',
 			'search_urlActionSearch',
 			'projectName',
+			'projectVersion',
+			'projectAuthor',
 			'pageTitlePrefix',
 			'pageTitlePostfix',
 		];

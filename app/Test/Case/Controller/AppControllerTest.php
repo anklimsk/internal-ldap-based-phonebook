@@ -128,6 +128,8 @@ class AppControllerTest extends AppControllerTestCase {
 			'countDeferredSaves' => 4,
 			'useNavbarContainerFluid' => false,
 			'projectName' => __d('project', PROJECT_NAME),
+			'projectVersion' => PROJECT_VERSION,
+			'projectAuthor' => PROJECT_AUTHOR
 		];
 		$this->assertData($expected, $result);
 	}
@@ -228,6 +230,8 @@ class AppControllerTest extends AppControllerTestCase {
 			'countDeferredSaves' => 4,
 			'useNavbarContainerFluid' => false,
 			'projectName' => __d('project', PROJECT_NAME),
+			'projectVersion' => PROJECT_VERSION,
+			'projectAuthor' => PROJECT_AUTHOR
 		];
 		foreach ($userRoles as $userRole => $userPrefix) {
 			$userInfo = [
