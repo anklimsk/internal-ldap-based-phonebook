@@ -38,7 +38,7 @@ if (!isset($fieldsConfig)) {
 			'not-use-input' => true
 		],
 		'User.' . CAKE_LDAP_LDAP_ATTRIBUTE_NAME => [
-			'label' => __('Name of user'),
+			'label' => __('Name of administrator'),
 			'class-header' => 'fit',
 			'style' => 'min-width: 180px'
 		],

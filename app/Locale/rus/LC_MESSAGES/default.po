@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: InternalPhonebook\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2018-11-27 10:52+0300\n"
+"PO-Revision-Date: 2019-03-15 15:28+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -16,7 +16,7 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Poedit 2.2\n"
 
-#: Config/cakesettingsapp.php:28 Test/Case/Controller/AppControllerTest.php:361
+#: Config/cakesettingsapp.php:28 Test/Case/Controller/AppControllerTest.php:365
 msgid "secretary"
 msgstr "секретарь"
 
@@ -72,40 +72,40 @@ msgstr "Проверка новых отложенных сохранений у
 msgid "Checking new deferred saves complete unsuccessfully."
 msgstr "Проверка новых отложенных сохранений завершена неудачно."
 
-#: Console/Command/Task/GenerateTask.php:42
+#: Console/Command/Task/GenerateTask.php:41
 msgid "The view of generated files."
 msgstr "Вид создаваемых файлов."
 
-#: Console/Command/Task/GenerateTask.php:47
+#: Console/Command/Task/GenerateTask.php:46
 msgid "The type of generated files."
 msgstr "Тип создаваемых файлов."
 
-#: Console/Command/Task/GenerateTask.php:51
+#: Console/Command/Task/GenerateTask.php:50
 msgid "This task is used to generate PDF or Excel files scheduled."
 msgstr ""
 "Эта задача используется для создания файлов PDF или Excel  по расписанию."
 
-#: Console/Command/Task/GenerateTask.php:64
-#: Test/Case/Console/Command/Task/GenerateTaskTest.php:66
+#: Console/Command/Task/GenerateTask.php:63
+#: Test/Case/Console/Command/Task/GenerateTaskTest.php:69
 msgid "Empty parameters. Run this task with parameter '-h' or '--help'"
 msgstr "Пустые параметры. Запустите эту задачу с параметром '-h' или '--help'"
 
-#: Console/Command/Task/GenerateTask.php:73
-#: Test/Case/Console/Command/Task/GenerateTaskTest.php:85;104
+#: Console/Command/Task/GenerateTask.php:72
+#: Test/Case/Console/Command/Task/GenerateTaskTest.php:88;107
 msgid "Invalid parameters. Run this task with parameter '-h' or '--help'"
 msgstr ""
 "Недопустимые параметры. Запустите эту задачу с параметром '-h' или '--help'"
 
-#: Console/Command/Task/GenerateTask.php:80
+#: Console/Command/Task/GenerateTask.php:79
 msgid "Generate %s files (%s) in progress..."
 msgstr "Выполняется создание %s файлов (%s)..."
 
-#: Console/Command/Task/GenerateTask.php:82
-#: Test/Case/Console/Command/Task/GenerateTaskTest.php:123
+#: Console/Command/Task/GenerateTask.php:81
+#: Test/Case/Console/Command/Task/GenerateTaskTest.php:126
 msgid "Generate %s files set in queue successfully."
 msgstr "Создание %s файлов успешно поставлено в очередь."
 
-#: Console/Command/Task/GenerateTask.php:84
+#: Console/Command/Task/GenerateTask.php:83
 msgid "Generate %s set in queue unsuccessfully."
 msgstr "Создание %s файлов поставлено в очередь неудачно."
 
@@ -171,178 +171,178 @@ msgstr "Задача очереди CakePHP для переименования 
 msgid "Error on renaming department from \"%s\" to \"%s\""
 msgstr "Ошибка при переименовании отдела из \"%s\" в \"%s\""
 
-#: Controller/DeferredController.php:100 Controller/LogsController.php:90
-#: Test/Case/Controller/DeferredControllerTest.php:209
+#: Controller/DeferredController.php:106 Controller/LogsController.php:102
+#: Test/Case/Controller/DeferredControllerTest.php:209;566
 #: Test/Case/Controller/LogsControllerTest.php:223
 msgid "Delete data group"
 msgstr "Удаление группы данных"
 
-#: Controller/DeferredController.php:101
-#: Test/Case/Controller/DeferredControllerTest.php:210
+#: Controller/DeferredController.php:107
+#: Test/Case/Controller/DeferredControllerTest.php:210;567
 msgid "Approve data group"
 msgstr "Утверждение группы данных"
 
-#: Controller/DeferredController.php:102
-#: Test/Case/Controller/DeferredControllerTest.php:211
+#: Controller/DeferredController.php:108
+#: Test/Case/Controller/DeferredControllerTest.php:211;568
 msgid "Reject data group"
 msgstr "Отклонение группы данных"
 
-#: Controller/DeferredController.php:112
-#: Test/Case/Controller/DeferredControllerTest.php:430;460;535
+#: Controller/DeferredController.php:118
+#: Test/Case/Controller/DeferredControllerTest.php:785;815;890
 msgid "Processing of selected tasks put in queue..."
 msgstr "Обработка выбранных задач помещена в очередь..."
 
-#: Controller/DeferredController.php:115 Controller/LogsController.php:99
-#: Test/Case/Controller/DeferredControllerTest.php:430;460;494
+#: Controller/DeferredController.php:121 Controller/LogsController.php:111
+#: Test/Case/Controller/DeferredControllerTest.php:785;815;849
 #: Test/Case/Controller/LogsControllerTest.php:436;466;500
 msgid "Selected tasks has been processed."
 msgstr "Выбранные задачи были обработаны."
 
-#: Controller/DeferredController.php:118 Controller/LogsController.php:101
-#: Test/Case/Controller/DeferredControllerTest.php:430;460
+#: Controller/DeferredController.php:124 Controller/LogsController.php:113
+#: Test/Case/Controller/DeferredControllerTest.php:785;815
 #: Test/Case/Controller/LogsControllerTest.php:436;466
 msgid "Selected tasks could not be processed. Please, try again."
 msgstr ""
 "Не удалось обработать выбранные задачи. Пожалуйста, попробуйте еще раз."
 
-#: Controller/DeferredController.php:129
+#: Controller/DeferredController.php:137
 msgid "Deferred saves not found"
 msgstr "Отложенные сохранения не найдены"
 
-#: Controller/DeferredController.php:134
-#: Test/Case/Controller/DeferredControllerTest.php:358
+#: Controller/DeferredController.php:142
+#: Test/Case/Controller/DeferredControllerTest.php:358;715
 msgid "Index of deferred saves"
 msgstr "Указатель отложенных сохранений"
 
-#: Controller/DeferredController.php:136
-#: Controller/DepartmentsController.php:151 Controller/LogsController.php:128
-#: Test/Case/Controller/DeferredControllerTest.php:376
+#: Controller/DeferredController.php:144
+#: Controller/DepartmentsController.php:151 Controller/LogsController.php:140
+#: Test/Case/Controller/DeferredControllerTest.php:376;733
 #: Test/Case/Controller/DepartmentsControllerTest.php:226
 #: Test/Case/Controller/LogsControllerTest.php:400
 msgid "Index"
 msgstr "Указатель"
 
-#: Controller/DeferredController.php:171;259;376;423
-#: Test/Case/Controller/DeferredControllerTest.php:605;641;995;1031;1725;1761;1926;1962;2127;2163
+#: Controller/DeferredController.php:179;267;384;431
+#: Test/Case/Controller/DeferredControllerTest.php:960;996;1350;1386;2080;2116;2281;2317;2482;2518
 msgid "Invalid ID for deferred save"
 msgstr "Неверный идентификатор для отложенного сохранения"
 
-#: Controller/DeferredController.php:177
-#: Test/Case/Controller/DeferredControllerTest.php:840
+#: Controller/DeferredController.php:185
+#: Test/Case/Controller/DeferredControllerTest.php:1195
 msgid "Information of deferred save"
 msgstr "Информация об отложенном сохранении"
 
-#: Controller/DeferredController.php:181
-#: Test/Case/Controller/DeferredControllerTest.php:844
+#: Controller/DeferredController.php:189
+#: Test/Case/Controller/DeferredControllerTest.php:1199
 msgid "Edit deferred save"
 msgstr "Редактировать отложенное сохранение"
 
-#: Controller/DeferredController.php:183
-#: Test/Case/Controller/DeferredControllerTest.php:846
+#: Controller/DeferredController.php:191
+#: Test/Case/Controller/DeferredControllerTest.php:1201
 msgid "Editing information of this deferred save"
 msgstr "Редактирование информации отложенного сохранения"
 
-#: Controller/DeferredController.php:187;190
-#: Test/Case/Controller/DeferredControllerTest.php:850;853
-#: View/Elements/tableDeferredSave.ctp:85;122
+#: Controller/DeferredController.php:195;198
+#: Test/Case/Controller/DeferredControllerTest.php:1205;1208
+#: View/Elements/tableDeferredSave.ctp:143
 msgid "Delete deferred save"
 msgstr "Удалить отложенное сохранение"
 
-#: Controller/DeferredController.php:191
-#: Test/Case/Controller/DeferredControllerTest.php:854
-#: View/Elements/tableDeferredSave.ctp:86;123
+#: Controller/DeferredController.php:199
+#: Test/Case/Controller/DeferredControllerTest.php:1209
+#: View/Elements/tableDeferredSave.ctp:144
 msgid "Are you sure you wish to delete this deferred save?"
 msgstr "Вы уверены, что хотите удалить это отложенное сохранение?"
 
-#: Controller/DeferredController.php:196;199
-#: Test/Case/Controller/DeferredControllerTest.php:859;862
-#: View/Elements/tableDeferredSave.ctp:95
+#: Controller/DeferredController.php:204;207
+#: Test/Case/Controller/DeferredControllerTest.php:1214;1217
+#: View/Elements/tableDeferredSave.ctp:122
 msgid "Approve deferred save data"
 msgstr "Утвердить данные отложенного сохранения"
 
-#: Controller/DeferredController.php:200
-#: Test/Case/Controller/DeferredControllerTest.php:863
-#: View/Elements/tableDeferredSave.ctp:96
+#: Controller/DeferredController.php:208
+#: Test/Case/Controller/DeferredControllerTest.php:1218
+#: View/Elements/tableDeferredSave.ctp:123
 msgid "Are you sure you wish to approve this deferred save?"
 msgstr "Вы уверены, что хотите утвердить это отложенное сохранение?"
 
-#: Controller/DeferredController.php:205;208
-#: Test/Case/Controller/DeferredControllerTest.php:868;871
-#: View/Elements/tableDeferredSave.ctp:105
+#: Controller/DeferredController.php:213;216
+#: Test/Case/Controller/DeferredControllerTest.php:1223;1226
+#: View/Elements/tableDeferredSave.ctp:132
 msgid "Reject deferred save data"
 msgstr "Отклонить данные отложенного сохранения"
 
-#: Controller/DeferredController.php:209
-#: Test/Case/Controller/DeferredControllerTest.php:872
-#: View/Elements/tableDeferredSave.ctp:106
+#: Controller/DeferredController.php:217
+#: Test/Case/Controller/DeferredControllerTest.php:1227
+#: View/Elements/tableDeferredSave.ctp:133
 msgid "Are you sure you wish to reject this deferred save?"
 msgstr "Вы уверены, что хотите отклонить это отложенное сохранение?"
 
-#: Controller/DeferredController.php:214
+#: Controller/DeferredController.php:222
 #: Controller/DepartmentsController.php:212
-#: Controller/EmployeesController.php:332 Controller/LogsController.php:181
-#: Test/Case/Controller/DeferredControllerTest.php:903
+#: Controller/EmployeesController.php:332 Controller/LogsController.php:193
+#: Test/Case/Controller/DeferredControllerTest.php:1258
 #: Test/Case/Controller/DepartmentsControllerTest.php:416
 #: Test/Case/Controller/EmployeesControllerTest.php:1119;1360;1656
 #: Test/Case/Controller/LogsControllerTest.php:840
 msgid "Viewing"
 msgstr "Просмотр"
 
-#: Controller/DeferredController.php:262 View/Elements/infoDeferred.ctp:42
-#: View/Elements/tableDeferredSave.ctp:129
+#: Controller/DeferredController.php:270 View/Elements/infoDeferred.ctp:42
+#: View/Elements/tableDeferredSave.ctp:78
 msgid "Data of deferred save is broken"
 msgstr "Данные отложенного сохранения нарушены"
 
-#: Controller/DeferredController.php:287
-#: Test/Case/Controller/DeferredControllerTest.php:1536;1648
+#: Controller/DeferredController.php:295
+#: Test/Case/Controller/DeferredControllerTest.php:1891;2003
 msgid "The deferred save has been saved."
 msgstr "Отложенное сохранение было сохранено."
 
-#: Controller/DeferredController.php:291
-#: Test/Case/Controller/DeferredControllerTest.php:1298;1366;1430
+#: Controller/DeferredController.php:299
+#: Test/Case/Controller/DeferredControllerTest.php:1653;1721;1785
 msgid "The deferred save not be saved. Please, try again."
 msgstr "Отложенное сохранение не сохранено. Пожалуйста, попробуйте еще раз."
 
-#: Controller/DeferredController.php:318
-#: Test/Case/Controller/DeferredControllerTest.php:1211
+#: Controller/DeferredController.php:326
+#: Test/Case/Controller/DeferredControllerTest.php:1566
 msgid "Editing deferred save"
 msgstr "Редактирование отложенного сохранения"
 
-#: Controller/DeferredController.php:320
+#: Controller/DeferredController.php:328
 #: Controller/DepartmentsController.php:349
 #: Controller/EmployeesController.php:478
-#: Test/Case/Controller/DeferredControllerTest.php:1239
+#: Test/Case/Controller/DeferredControllerTest.php:1594
 #: Test/Case/Controller/DepartmentsControllerTest.php:876
 #: Test/Case/Controller/EmployeesControllerTest.php:2172;2378;2591
 msgid "Editing"
 msgstr "Редактирование"
 
-#: Controller/DeferredController.php:382
-#: Test/Case/Controller/DeferredControllerTest.php:1819;1848
+#: Controller/DeferredController.php:390
+#: Test/Case/Controller/DeferredControllerTest.php:2174;2203
 msgid "The deferred save has been deleted."
 msgstr "Отложенное сохранение было удалено."
 
-#: Controller/DeferredController.php:384
+#: Controller/DeferredController.php:392
 msgid "The deferred save could not be deleted. Please, try again."
 msgstr ""
 "Не удалось удалить отложенное сохранение. Пожалуйста, попробуйте еще раз."
 
-#: Controller/DeferredController.php:431
-#: Test/Case/Controller/DeferredControllerTest.php:2221;2250
+#: Controller/DeferredController.php:439
+#: Test/Case/Controller/DeferredControllerTest.php:2576;2605
 msgid "rejected"
 msgstr "отклонено"
 
-#: Controller/DeferredController.php:433
-#: Test/Case/Controller/DeferredControllerTest.php:2020;2049
+#: Controller/DeferredController.php:441
+#: Test/Case/Controller/DeferredControllerTest.php:2375;2404
 msgid "approved"
 msgstr "утверждено"
 
-#: Controller/DeferredController.php:436
-#: Test/Case/Controller/DeferredControllerTest.php:2020;2049;2221;2250
+#: Controller/DeferredController.php:444
+#: Test/Case/Controller/DeferredControllerTest.php:2375;2404;2576;2605
 msgid "The deferred save has been %s."
 msgstr "Отложенное сохранение было %s."
 
-#: Controller/DeferredController.php:438
+#: Controller/DeferredController.php:446
 msgid "The deferred save could not be %s. Please, try again."
 msgstr ""
 "Отложенное сохранение не может быть %s. Пожалуйста, попробуйте ещё раз."
@@ -410,7 +410,7 @@ msgid "Editing information of this department"
 msgstr "Редактирование информации этого отдела"
 
 #: Controller/DepartmentsController.php:203;206
-#: View/Elements/tableDepartment.ctp:69
+#: View/Elements/tableDepartment.ctp:73
 msgid "Delete department"
 msgstr "Удалить отдел"
 
@@ -740,7 +740,7 @@ msgstr "Экспорт телефонного справочника"
 msgid "Unknown type for generation %s."
 msgstr "Неизвестный тип для создания %s."
 
-#: Controller/EmployeesController.php:1247 Model/Employee.php:1516
+#: Controller/EmployeesController.php:1247 Model/Employee.php:1517
 msgid "Invalid export type"
 msgstr "Неверный тип экспорта"
 
@@ -762,69 +762,69 @@ msgstr "Создание экспортируемых файлов помеще�
 msgid "Generation export files put in queue unsucsessfully..."
 msgstr "Создание экспортируемых файлов помещено в очередь неудачно..."
 
-#: Controller/LogsController.php:108
+#: Controller/LogsController.php:120
 msgid "Logs not found"
 msgstr "Журналы не найдены"
 
-#: Controller/LogsController.php:113
+#: Controller/LogsController.php:125
 #: Test/Case/Controller/LogsControllerTest.php:370
 msgid "Index of logs"
 msgstr "Указатель журналов"
 
-#: Controller/LogsController.php:118;121
+#: Controller/LogsController.php:130;133
 #: Test/Case/Controller/LogsControllerTest.php:374;377
 msgid "Clear logs"
 msgstr "Очистить журналы"
 
-#: Controller/LogsController.php:123
+#: Controller/LogsController.php:135
 #: Test/Case/Controller/LogsControllerTest.php:379
 msgid "Are you sure you wish to clear logs?"
 msgstr "Вы уверены, что хотите очистить журналы?"
 
-#: Controller/LogsController.php:153;208;242
+#: Controller/LogsController.php:165;220;254
 #: Test/Case/Controller/LogsControllerTest.php:566;588;902;924;1039;1061
 msgid "Invalid ID for record of log"
 msgstr "Неверный идентификатор для записи журнала"
 
-#: Controller/LogsController.php:159
+#: Controller/LogsController.php:171
 #: Test/Case/Controller/LogsControllerTest.php:792
 msgid "Information of log record"
 msgstr "Информация о записи журнала"
 
-#: Controller/LogsController.php:163;166
+#: Controller/LogsController.php:175;178
 #: Test/Case/Controller/LogsControllerTest.php:796;799
-#: View/Elements/tableLog.ctp:73
+#: View/Elements/tableLog.ctp:85
 msgid "Restore data from log"
 msgstr "Восстановить данные из журнала"
 
-#: Controller/LogsController.php:167
+#: Controller/LogsController.php:179
 #: Test/Case/Controller/LogsControllerTest.php:800
-#: View/Elements/tableLog.ctp:74
+#: View/Elements/tableLog.ctp:86
 msgid "Are you sure you wish to restore this data from log?"
 msgstr "Вы уверены, что хотите восстановить эти данные из журнала?"
 
-#: Controller/LogsController.php:172;175
+#: Controller/LogsController.php:184;187
 #: Test/Case/Controller/LogsControllerTest.php:805;808
-#: View/Elements/tableLog.ctp:82
+#: View/Elements/tableLog.ctp:94
 msgid "Delete record of log"
 msgstr "Удалить запись журнала"
 
-#: Controller/LogsController.php:176
+#: Controller/LogsController.php:188
 #: Test/Case/Controller/LogsControllerTest.php:809
-#: View/Elements/tableLog.ctp:83
+#: View/Elements/tableLog.ctp:95
 msgid "Are you sure you wish to delete this record of log?"
 msgstr "Вы уверены, что хотите удалить эту запись из журнала?"
 
-#: Controller/LogsController.php:214
+#: Controller/LogsController.php:226
 #: Test/Case/Controller/LogsControllerTest.php:972
 msgid "The log record has been deleted."
 msgstr "Запись журнала была удалена."
 
-#: Controller/LogsController.php:216
+#: Controller/LogsController.php:228
 msgid "The log record could not be deleted. Please, try again."
 msgstr "Запись журнала не может быть удалена. Пожалуйста, попробуйте еще раз."
 
-#: Controller/LogsController.php:249
+#: Controller/LogsController.php:261
 #: Test/Case/Controller/LogsControllerTest.php:1109
 msgid ""
 "Deferred saving with an restored employee information was created.<br /"
@@ -835,18 +835,18 @@ msgstr ""
 "сотруднике.<br />Информация на сервере LDAP будет обновлена по очереди.<br /"
 ">Информация в телефонной книге будет обновлена %s после обработки."
 
-#: Controller/LogsController.php:255
+#: Controller/LogsController.php:267
 msgid "The data could not be restored from log record. Please, try again."
 msgstr ""
 "Данные не могут быть восстановлены из записи журнала. Пожалуйста, попробуйте "
 "еще раз."
 
-#: Controller/LogsController.php:281
+#: Controller/LogsController.php:293
 #: Test/Case/Controller/LogsControllerTest.php:1196
 msgid "The logs has been cleared."
 msgstr "Журналы были очищены."
 
-#: Controller/LogsController.php:283
+#: Controller/LogsController.php:295
 msgid "The logs could not be cleared. Please, try again."
 msgstr "Журналы не могут быть очищены. Пожалуйста, попробуйте еще раз."
 
@@ -858,30 +858,30 @@ msgstr "Недопустимые данные отложенного сохра�
 msgid "Error on approving deferred save with employee DN: \"%s\"."
 msgstr "Ошибка при утверждении отложенного сохранения с DN сотрудника: \"%s\"."
 
-#: Model/Deferred.php:491
+#: Model/Deferred.php:489
 msgid "Error on deleting deferred saves after approving"
 msgstr "Ошибка при удалении отложенных сохранений после утверждения"
 
-#: Model/Deferred.php:493
+#: Model/Deferred.php:491
 msgid "Error on rejecting deferred saves"
 msgstr "Ошибка при отклонении отложенных сохранений"
 
-#: Model/Deferred.php:514 Test/Case/Model/DeferredTest.php:1061;1265
+#: Model/Deferred.php:512 Test/Case/Model/DeferredTest.php:1061;1265
 msgid "Changing information of phone book"
 msgstr "Изменение информации телефонного справочника"
 
-#: Model/Deferred.php:535
+#: Model/Deferred.php:533
 msgid "Error on putting sending e-mail for \"%s\" in queue..."
 msgstr ""
 "Ошибка при помещении отправки электронной почты для \"%s\" в очередь..."
 
-#: Model/Deferred.php:684 View/Emails/html/deferred_save_check.ctp:22
+#: Model/Deferred.php:682 View/Emails/html/deferred_save_check.ctp:22
 #: View/Emails/text/deferred_save_check.ctp:20
 msgid "Found new deferred saves"
 msgstr "Найдены новые отложенные сохранения"
 
-#: Model/Deferred.php:723
-#: Test/Case/Controller/DeferredControllerTest.php:369;895;1231
+#: Model/Deferred.php:721
+#: Test/Case/Controller/DeferredControllerTest.php:369;726;1250;1586
 #: Test/Case/Model/DeferredTest.php:1470
 #: Test/Case/Model/Behavior/DeferredSaveBehaviorTest.php:746;774;803;841;879
 #: View/Elements/barNav.ctp:155 View/Elements/formExtendSettingsLeft.ctp:44
@@ -894,61 +894,61 @@ msgstr "Отложенные сохранения"
 msgid "Departments"
 msgstr "Отделы"
 
-#: Model/Employee.php:313;1593
-#: Test/Case/Controller/AppControllerTest.php:156;264
-#: Test/Case/Controller/DeferredControllerTest.php:361;878;1214
+#: Model/Employee.php:313;1594
+#: Test/Case/Controller/AppControllerTest.php:158;268
+#: Test/Case/Controller/DeferredControllerTest.php:361;718;1233;1569
 #: Test/Case/Controller/EmployeesControllerTest.php:314;577;1103;1344;1640;2156;2362;2575;3216;3444;3662;3853;3974;4094;4649;4699;6050
 #: Test/Case/Controller/LogsControllerTest.php:385;815
-#: Test/Case/Model/EmployeeTest.php:245;281;2547
+#: Test/Case/Model/EmployeeTest.php:245;281;2606
 #: Test/Case/Model/Behavior/DeferredSaveBehaviorTest.php:738;766;824;862
 #: View/Elements/barNav.ctp:56
 msgid "Employees"
 msgstr "Сотрудники"
 
-#: Model/Employee.php:855
+#: Model/Employee.php:856
 #: Test/Case/Controller/EmployeesControllerTest.php:5970;5980;6010;6020;6152;6192
-#: Test/Case/Model/EmployeeTest.php:1554;2450;2460;2490;2500
+#: Test/Case/Model/EmployeeTest.php:1613;2509;2519;2549;2559
 msgid "by alphabet"
 msgstr "по алфавиту"
 
-#: Model/Employee.php:858
+#: Model/Employee.php:859
 #: Test/Case/Controller/EmployeesControllerTest.php:5990;6000;6030;6040;6118
-#: Test/Case/Model/EmployeeTest.php:1555;2470;2480;2510;2520
+#: Test/Case/Model/EmployeeTest.php:1614;2529;2539;2569;2579
 msgid "by department"
 msgstr "по отделам"
 
-#: Model/Employee.php:864
+#: Model/Employee.php:865
 #: Test/Case/Controller/EmployeesControllerTest.php:5970;5980;5990;6000;6010;6020;6030;6040;6118;6152;6192
-#: Test/Case/Model/EmployeeTest.php:1553;1554;1555;2450;2460;2470;2480;2490;2500;2510;2520
+#: Test/Case/Model/EmployeeTest.php:1612;1613;1614;2509;2519;2529;2539;2549;2559;2569;2579
 msgid "Directory"
 msgstr "Справочник"
 
-#: Model/Employee.php:870
+#: Model/Employee.php:871
 #: Test/Case/Controller/EmployeesControllerTest.php:5970;5990;6010;6030;6192
-#: Test/Case/Model/EmployeeTest.php:1555;2450;2470;2490;2510
+#: Test/Case/Model/EmployeeTest.php:1614;2509;2529;2549;2569
 msgid "full"
 msgstr "полный"
 
-#: Model/Employee.php:884
+#: Model/Employee.php:885
 #: Test/Case/Controller/EmployeesControllerTest.php:3212;3440
-#: Test/Case/Model/EmployeeTest.php:1577
+#: Test/Case/Model/EmployeeTest.php:1636
 msgid "Non-staff personnel"
 msgstr "Внештатные сотрудники"
 
-#: Model/Employee.php:940 Test/Case/Model/EmployeeTest.php:1616;1659;1702;1745
+#: Model/Employee.php:941 Test/Case/Model/EmployeeTest.php:1675;1718;1761;1804
 #: View/Employees/Pdf/export.ctp:37
 msgid "Created %s"
 msgstr "Создан %s"
 
-#: Model/Employee.php:974 Test/Case/Model/EmployeeTest.php:1615;1658
+#: Model/Employee.php:975 Test/Case/Model/EmployeeTest.php:1674;1717
 msgid "Directory of staff by alphabet"
 msgstr "Справочник сотрудников по алфавиту"
 
-#: Model/Employee.php:993 Test/Case/Model/EmployeeTest.php:1701;1744
+#: Model/Employee.php:994 Test/Case/Model/EmployeeTest.php:1760;1803
 msgid "Directory of staff by department"
 msgstr "Справочник сотрудников по отделам"
 
-#: Model/Employee.php:1479
+#: Model/Employee.php:1480
 msgid "Error on generating file \"%s\""
 msgstr "Ошибка при создании файла \"%s\""
 
@@ -1041,8 +1041,8 @@ msgstr "Выход"
 msgid "Contact administrator"
 msgstr "Связаться с администратором"
 
-#: View/Elements/formDepartmentBase.ctp:31 View/Elements/tableDepartment.ctp:30
-#: View/Elements/tableEmployeeGallery.ctp:31
+#: View/Elements/formDepartmentBase.ctp:31 View/Elements/tableDepartment.ctp:31
+#: View/Elements/tableEmployeeGallery.ctp:33
 msgid "Name of department"
 msgstr "Наименование отдела"
 
@@ -1213,32 +1213,32 @@ msgstr "Сегодня День рождения:"
 
 #: View/Elements/infoDeferred.ctp:30 View/Elements/infoLog.ctp:35
 #: View/Elements/tableDeferredSave.ctp:41
-#: View/Elements/tableEmployeeGallery.ctp:28 View/Elements/tableLog.ctp:44
+#: View/Elements/tableEmployeeGallery.ctp:28 View/Elements/tableLog.ctp:46
 msgid "Name of employee"
 msgstr "Имя сотрудника"
 
 #: View/Elements/infoDeferred.ctp:32 View/Elements/infoLog.ctp:37
-#: View/Elements/tableDeferredSave.ctp:48 View/Elements/tableLog.ctp:51
+#: View/Elements/tableDeferredSave.ctp:50 View/Elements/tableLog.ctp:55
 msgid "Created"
 msgstr "Создан"
 
-#: View/Elements/infoDeferred.ctp:34 View/Elements/tableDeferredSave.ctp:51
+#: View/Elements/infoDeferred.ctp:34 View/Elements/tableDeferredSave.ctp:55
 msgid "Modified"
 msgstr "Изменён"
 
-#: View/Elements/infoDepartment.ctp:24 View/Elements/tableDepartment.ctp:33
+#: View/Elements/infoDepartment.ctp:24 View/Elements/tableDepartment.ctp:35
 msgid "Extension name of department"
 msgstr "Расширения названия для отдела"
 
-#: View/Elements/infoDepartment.ctp:26 View/Elements/tableDepartment.ctp:36
+#: View/Elements/infoDepartment.ctp:26 View/Elements/tableDepartment.ctp:39
 msgid "Used"
 msgstr "Используется"
 
 #: View/Elements/infoLog.ctp:30 View/Elements/tableLog.ctp:41
-msgid "Name of user"
-msgstr "Имя пользователя"
+msgid "Name of administrator"
+msgstr "Имя администратора"
 
-#: View/Elements/infoLog.ctp:45 View/Elements/tableLog.ctp:96
+#: View/Elements/infoLog.ctp:45 View/Elements/tableLog.ctp:76
 msgid "Data of log record is broken"
 msgstr "Данные записи журнала нарушены"
 
@@ -1250,11 +1250,11 @@ msgstr "Количество сотрудников"
 msgid "Last update"
 msgstr "Последнее обновление"
 
-#: View/Elements/tableDeferredSave.ctp:44
+#: View/Elements/tableDeferredSave.ctp:46
 msgid "Data of deferred save"
 msgstr "Данные отложенного сохранения"
 
-#: View/Elements/tableDeferredSave.ctp:75
+#: View/Elements/tableDeferredSave.ctp:112
 msgid "Edit information of this deferred save"
 msgstr "Редактировать информацию этого отложенного сохранения"
 
@@ -1262,11 +1262,11 @@ msgstr "Редактировать информацию этого отложе�
 msgid "Position of department"
 msgstr "Позиция отдела"
 
-#: View/Elements/tableDepartment.ctp:59
+#: View/Elements/tableDepartment.ctp:63
 msgid "Edit department"
 msgstr "Редактировать отдел"
 
-#: View/Elements/tableDepartment.ctp:71
+#: View/Elements/tableDepartment.ctp:75
 msgid "Are you sure you wish to delete department '%s'?"
 msgstr "Вы уверены, что хотите удалить отдел '%s'?"
 
@@ -1286,7 +1286,7 @@ msgstr "Поместить создание файла в очередь"
 msgid "Download file"
 msgstr "Скачать файл"
 
-#: View/Elements/tableLog.ctp:47
+#: View/Elements/tableLog.ctp:51
 msgid "Data of log"
 msgstr "Данные журнала"
 
@@ -1376,6 +1376,9 @@ msgstr "Ошибка %s: Страница не найдена"
 #: View/Errors/error500.ctp:18
 msgid "Error %s: Internal Server Error"
 msgstr "Ошибка %s: Внутренняя ошибка сервера"
+
+#~ msgid "Name of user"
+#~ msgstr "Имя пользователя"
 
 #~ msgid "Detail information"
 #~ msgstr "Подробная информация"

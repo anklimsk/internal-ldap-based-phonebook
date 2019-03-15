@@ -4,7 +4,7 @@
  *  information about log
  *
  * InternalPhonebook: Internal phone book based on content of Active Directory.
- * @copyright Copyright 2017-2018, Andrey Klimov.
+ * @copyright Copyright 2017-2019, Andrey Klimov.
  * @license https://opensource.org/licenses/mit-license.php MIT License
  * @package app.View.Elements
  */
@@ -27,7 +27,7 @@ if (empty($log)) {
 ?>
 <dl class="dl-horizontal">
 <?php
-	echo $this->Html->tag('dt', __('Name of user') . ':');
+	echo $this->Html->tag('dt', __('Name of administrator') . ':');
 	echo $this->Html->tag('dd', $this->ViewExtension->showEmpty(
 		$log['User']['id'],
 		$this->element('CakeLdap.infoEmployeeShort', ['employee' => ['Employee' => $log['User']]])
