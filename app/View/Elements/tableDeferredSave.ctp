@@ -39,6 +39,8 @@ if (!isset($fieldsConfig)) {
 		],
 		'Employee.' . CAKE_LDAP_LDAP_ATTRIBUTE_NAME => [
 			'label' => __('Name of employee'),
+			'class-header' => 'fit',
+			'style' => 'min-width: 180px'
 		],
 		'Deferred.data' => [
 			'label' => __('Data of deferred save'),
@@ -46,9 +48,13 @@ if (!isset($fieldsConfig)) {
 		],
 		'Deferred.created' => [
 			'label' => __('Created'),
+			'class-header' => 'fit',
+			'style' => 'min-width: 150px'
 		],
 		'Deferred.modified' => [
 			'label' => __('Modified'),
+			'class-header' => 'fit',
+			'style' => 'min-width: 150px'
 		],
 	];
 	echo $this->Filter->createFilterForm($formInputs, null, true);
@@ -67,11 +73,37 @@ foreach ($deferredSaves as $deferredSave) {
 	$tableRow = [];
 	$attrRow = [];
 	$actions = '';
+	$deferredData = $this->Html->tag('span', $this->Html->tag(
+		'strong',
+		__('Data of deferred save is broken'),
+		['class' => 'text-danger']
+	));
 
 	if ($deferredSave['Deferred']['internal']) {
 		$attrRow['class'] = 'warning';
 	}
+
 	if (is_array($deferredSave['Deferred']['data'])) {
+		$deferredData = $this->Html->div(
+			null,
+			$this->Html->div(
+				'pull-right',
+				$this->ViewExtension->popupModalLink(
+					'[+]',
+					['controller' => 'deferred', 'action' => 'view', $deferredSave['Deferred']['id']]
+				)
+			) .
+			$this->Html->div(
+				'pull-left',
+				$this->Deferred->getDeferredInfo(
+					$deferredSave['Deferred']['data']['changed']['EmployeeEdit'],
+					[],
+					$fieldsLabel,
+					$fieldsConfig
+				)
+			)
+		);
+
 		$actions .= $this->ViewExtension->buttonLink(
 			'fas fa-pencil-alt',
 			'btn-warning',
@@ -80,16 +112,6 @@ foreach ($deferredSaves as $deferredSave) {
 				'title' => __('Edit information of this deferred save'),
 				'action-type' => 'modal',
 				'class' => 'app-tour-btn-edit'
-			]
-		) .
-		$this->ViewExtension->buttonLink(
-			'fas fa-trash-alt',
-			'btn-danger',
-			['controller' => 'deferred', 'action' => 'delete', $deferredSave['Deferred']['id']],
-			[
-				'title' => __('Delete deferred save'), 'action-type' => 'confirm-post',
-				'data-confirm-msg' => __('Are you sure you wish to delete this deferred save?'),
-				'class' => 'app-tour-btn-delete'
 			]
 		) .
 		$this->ViewExtension->buttonLink(
@@ -112,39 +134,36 @@ foreach ($deferredSaves as $deferredSave) {
 				'class' => 'app-tour-btn-reject'
 			]
 		);
-		$deferredData = $this->Deferred->getDeferredInfo(
-			$deferredSave['Deferred']['data']['changed']['EmployeeEdit'],
-			[],
-			$fieldsLabel,
-			$fieldsConfig
-		);
-	} else {
-		$actions .= $this->ViewExtension->buttonLink(
-			'fas fa-trash-alt',
-			'btn-danger',
-			['controller' => 'deferred', 'action' => 'delete', $deferredSave['Deferred']['id']],
-			[
-				'title' => __('Delete deferred save'), 'action-type' => 'confirm-post',
-				'data-confirm-msg' => __('Are you sure you wish to delete this deferred save?'),
-				'class' => 'app-tour-btn-delete'
-			]
-		);
-		$deferredData = $this->Html->tag('span', $this->Html->tag(
-			'strong',
-			__('Data of deferred save is broken'),
-			['class' => 'text-danger']
-		));
 	}
-	$tableRow[] = [$this->Filter->createFilterRowCheckbox('Deferred.id', $deferredSave['Deferred']['id']),
-		['class' => 'action text-center']];
+	$actions .= $this->ViewExtension->buttonLink(
+		'fas fa-trash-alt',
+		'btn-danger',
+		['controller' => 'deferred', 'action' => 'delete', $deferredSave['Deferred']['id']],
+		[
+			'title' => __('Delete deferred save'), 'action-type' => 'confirm-post',
+			'data-confirm-msg' => __('Are you sure you wish to delete this deferred save?'),
+			'class' => 'app-tour-btn-delete'
+		]
+	);
+
+	$tableRow[] = [
+		$this->Filter->createFilterRowCheckbox('Deferred.id', $deferredSave['Deferred']['id']),
+		['class' => 'action text-center']]
+	;
 	$tableRow[] = $this->element('CakeLdap.infoEmployeeShort', ['employee' => $deferredSave]);
 	$tableRow[] = $deferredData;
-	$tableRow[] = $this->ViewExtension->popupModalLink(
-		$this->Time->i18nFormat($deferredSave['Deferred']['created'], '%x %X'),
-		['controller' => 'deferred', 'action' => 'view', $deferredSave['Deferred']['id']]
-	);
-	$tableRow[] = $this->Time->i18nFormat($deferredSave['Deferred']['modified'], '%x %X');
-	$tableRow[] = [$this->ViewExtension->showEmpty($actions), ['class' => 'action text-center']];
+	$tableRow[] = [
+		$this->ViewExtension->timeAgo($deferredSave['Deferred']['created']),
+		['class' => 'text-nowrap text-center']
+	];
+	$tableRow[] = [
+		$this->ViewExtension->timeAgo($deferredSave['Deferred']['modified']),
+		['class' => 'text-nowrap text-center']
+	];
+	$tableRow[] = [
+		$this->ViewExtension->showEmpty($actions),
+		['class' => 'action text-center']
+	];
 
 	echo $this->Html->tableCells([$tableRow], $attrRow, $attrRow);
 }

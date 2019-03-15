@@ -4,7 +4,7 @@
  *  table of departments
  *
  * InternalPhonebook: Internal phone book based on content of Active Directory.
- * @copyright Copyright 2017-2018, Andrey Klimov.
+ * @copyright Copyright 2017-2019, Andrey Klimov.
  * @license https://opensource.org/licenses/mit-license.php MIT License
  * @package app.View.Elements
  */
@@ -25,25 +25,29 @@ if (!isset($departments)) {
 		'DepartmentExtension.lft' => [
 			'label' => __('Position of department'),
 			'not-use-input' => true,
+			'class-header' => 'fit',
 		],
 		'Department.value' => [
 			'label' => __('Name of department'),
+			'style' => 'min-width: 180px'
 		],
 		'DepartmentExtension.name' => [
 			'label' => __('Extension name of department'),
+			'style' => 'min-width: 250px'
 		],
 		'Department.block' => [
 			'label' => __('Used'),
 			'options' => [
 				1 => $this->ViewExtension->yesNo(false),
 				0 => $this->ViewExtension->yesNo(true)
-			]
+			],
+			'class-header' => 'fit',
 		],
 	];
 	echo $this->Filter->createFilterForm($formInputs);
 ?>
 			</thead>
-			<tbody> 
+			<tbody>
 <?php
 foreach ($departments as $department) {
 	$tableRow = [];

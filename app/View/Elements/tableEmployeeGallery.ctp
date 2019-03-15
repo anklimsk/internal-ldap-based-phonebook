@@ -4,7 +4,7 @@
  *  table of employees gallery
  *
  * InternalPhonebook: Internal phone book based on content of Active Directory.
- * @copyright Copyright 2017-2018, Andrey Klimov.
+ * @copyright Copyright 2017-2019, Andrey Klimov.
  * @license https://opensource.org/licenses/mit-license.php MIT License
  * @package app.View.Elements
  */
@@ -26,9 +26,11 @@ if (!isset($emptyDepartmentName)) {
 	$formInputs = [
 		'Employee.' . CAKE_LDAP_LDAP_ATTRIBUTE_NAME => [
 			'label' => __('Name of employee'),
+			'class-header' => 'fit',
+			'style' => 'min-width: 180px'
 		],
 		'DepartmentExtension.name' => [
-			'label' => __('Name of department'),
+			'label' => __('Name of department')
 		],
 	];
 	echo $this->Filter->createFilterForm($formInputs);

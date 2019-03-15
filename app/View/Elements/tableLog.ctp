@@ -4,7 +4,7 @@
  *  table of logs
  *
  * InternalPhonebook: Internal phone book based on content of Active Directory.
- * @copyright Copyright 2017-2018, Andrey Klimov.
+ * @copyright Copyright 2017-2019, Andrey Klimov.
  * @license https://opensource.org/licenses/mit-license.php MIT License
  * @package app.View.Elements
  */
@@ -39,9 +39,13 @@ if (!isset($fieldsConfig)) {
 		],
 		'User.' . CAKE_LDAP_LDAP_ATTRIBUTE_NAME => [
 			'label' => __('Name of user'),
+			'class-header' => 'fit',
+			'style' => 'min-width: 180px'
 		],
 		'Employee.' . CAKE_LDAP_LDAP_ATTRIBUTE_NAME => [
 			'label' => __('Name of employee'),
+			'class-header' => 'fit',
+			'style' => 'min-width: 180px'
 		],
 		'Log.data' => [
 			'label' => __('Data of log'),
@@ -49,6 +53,8 @@ if (!isset($fieldsConfig)) {
 		],
 		'Log.created' => [
 			'label' => __('Created'),
+			'class-header' => 'fit',
+			'style' => 'min-width: 150px'
 		],
 	];
 	echo $this->Filter->createFilterForm($formInputs, null, true);
@@ -65,6 +71,12 @@ if (!isset($fieldsConfig)) {
 <?php
 foreach ($logs as $log) {
 	$tableRow = [];
+	$logData = $this->Html->tag('span', $this->Html->tag(
+		'strong',
+		__('Data of log record is broken'),
+		['class' => 'text-danger']
+	));
+
 	$actions = $this->ViewExtension->buttonLink(
 		'fas fa-undo-alt',
 		'btn-warning',
@@ -74,28 +86,36 @@ foreach ($logs as $log) {
 				'data-confirm-msg' => __('Are you sure you wish to restore this data from log?')
 			]
 	) .
-		$this->ViewExtension->buttonLink(
-			'fas fa-trash-alt',
-			'btn-danger',
-			['controller' => 'logs', 'action' => 'delete', $log['Log']['id']],
-			[
-				'title' => __('Delete record of log'), 'action-type' => 'confirm-post',
-				'data-confirm-msg' => __('Are you sure you wish to delete this record of log?')
-			]
-		);
+	$this->ViewExtension->buttonLink(
+		'fas fa-trash-alt',
+		'btn-danger',
+		['controller' => 'logs', 'action' => 'delete', $log['Log']['id']],
+		[
+			'title' => __('Delete record of log'), 'action-type' => 'confirm-post',
+			'data-confirm-msg' => __('Are you sure you wish to delete this record of log?')
+		]
+	);
+
 	if (is_array($log['Log']['data'])) {
-		$logData = $this->Deferred->getDeferredInfo(
-			$log['Log']['data']['changed']['EmployeeEdit'],
-			[],
-			$fieldsLabel,
-			$fieldsConfig
+		$logData = $this->Html->div(
+			null,
+			$this->Html->div(
+				'pull-right',
+				$this->ViewExtension->popupModalLink(
+					'[+]',
+					['controller' => 'logs', 'action' => 'view', $log['Log']['id']]
+				)
+			) .
+			$this->Html->div(
+				'pull-left',
+				$this->Deferred->getDeferredInfo(
+					$log['Log']['data']['changed']['EmployeeEdit'],
+					[],
+					$fieldsLabel,
+					$fieldsConfig
+				)
+			)
 		);
-	} else {
-		$logData = $this->Html->tag('span', $this->Html->tag(
-			'strong',
-			__('Data of log record is broken'),
-			['class' => 'text-danger']
-		));
 	}
 
 	$tableRow[] = [$this->Filter->createFilterRowCheckbox('Log.id', $log['Log']['id']),
@@ -106,10 +126,10 @@ foreach ($logs as $log) {
 	);
 	$tableRow[] = $this->element('CakeLdap.infoEmployeeShort', ['employee' => $log]);
 	$tableRow[] = $logData;
-	$tableRow[] = $this->ViewExtension->popupModalLink(
-		$this->Time->i18nFormat($log['Log']['created'], '%x %X'),
-		['controller' => 'logs', 'action' => 'view', $log['Log']['id']]
-	);
+	$tableRow[] = [
+		$this->ViewExtension->timeAgo($log['Log']['created']),
+		['class' => 'text-nowrap text-center']
+	];
 	$tableRow[] = [$this->ViewExtension->showEmpty($actions), ['class' => 'action text-center']];
 
 	echo $this->Html->tableCells([$tableRow]);
