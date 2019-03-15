@@ -86,7 +86,12 @@ class DeferredController extends AppController {
 			'Deferred.modified' => 'asc'
 		],
 		'contain' => [
-			'Employee'
+			'Employee' => [
+				'fields' => [
+					'Employee.id',
+					'Employee.' . CAKE_LDAP_LDAP_ATTRIBUTE_NAME
+				],
+			]
 		]
 	];
 

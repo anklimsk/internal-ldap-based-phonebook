@@ -74,8 +74,20 @@ class LogsController extends AppController {
 			'Log.created' => 'desc'
 		],
 		'contain' => [
-			'Employee',
-			'User',
+			'Employee' => [
+				'fields' => [
+					'Employee.id',
+					'Employee.block',
+					'Employee.' . CAKE_LDAP_LDAP_ATTRIBUTE_NAME,
+				]
+			],
+			'User' => [
+				'fields' => [
+					'User.id',
+					'User.block',
+					'User.' . CAKE_LDAP_LDAP_ATTRIBUTE_NAME,
+				]
+			],
 		]
 	];
 

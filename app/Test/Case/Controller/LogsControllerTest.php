@@ -102,13 +102,11 @@ class LogsControllerTest extends AppControllerTestCase {
 						'id' => '8',
 						'block' => false,
 						'name' => 'Голубев Е.В.',
-						'title' => 'Водитель',
 					],
 					'User' => [
 						'id' => '7',
 						'block' => false,
 						'name' => 'Хвощинский В.В.',
-						'title' => 'Начальник отдела',
 					],
 				],
 				[
@@ -137,13 +135,11 @@ class LogsControllerTest extends AppControllerTestCase {
 						'id' => '4',
 						'block' => false,
 						'name' => 'Дементьева А.С.',
-						'title' => 'Инженер',
 					],
 					'User' => [
 						'id' => '6',
 						'block' => false,
 						'name' => 'Козловская Е.М.',
-						'title' => 'Заведующий сектором',
 					],
 				],
 				[
@@ -174,13 +170,11 @@ class LogsControllerTest extends AppControllerTestCase {
 						'id' => '3',
 						'block' => false,
 						'name' => 'Суханова Л.Б.',
-						'title' => 'Зам. начальника отдела - главный специалист',
 					],
 					'User' => [
 						'id' => '6',
 						'block' => false,
 						'name' => 'Козловская Е.М.',
-						'title' => 'Заведующий сектором',
 					],
 				],
 				[
@@ -209,13 +203,11 @@ class LogsControllerTest extends AppControllerTestCase {
 						'id' => '1',
 						'block' => false,
 						'name' => 'Миронов В.М.',
-						'title' => 'Ведущий геолог',
 					],
 					'User' => [
 						'id' => '6',
 						'block' => false,
 						'name' => 'Козловская Е.М.',
-						'title' => 'Заведующий сектором',
 					],
 				],
 			],

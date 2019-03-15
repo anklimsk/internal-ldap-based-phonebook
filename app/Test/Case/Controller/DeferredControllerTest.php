@@ -110,9 +110,6 @@ class DeferredControllerTest extends AppControllerTestCase {
 					'Employee' => [
 						'id' => '3',
 						CAKE_LDAP_LDAP_ATTRIBUTE_NAME => 'Суханова Л.Б.',
-						CAKE_LDAP_LDAP_ATTRIBUTE_TITLE => 'Зам. начальника отдела - главный специалист',
-						CAKE_LDAP_LDAP_ATTRIBUTE_MAIL => 'l.suhanova@fabrikam.com',
-						CAKE_LDAP_LDAP_ATTRIBUTE_OBJECT_GUID => 'dd518c55-35ce-4a5c-85c5-b5fb762220bf',
 					],
 				],
 				[
@@ -148,9 +145,6 @@ class DeferredControllerTest extends AppControllerTestCase {
 					'Employee' => [
 						'id' => '4',
 						CAKE_LDAP_LDAP_ATTRIBUTE_NAME => 'Дементьева А.С.',
-						CAKE_LDAP_LDAP_ATTRIBUTE_TITLE => 'Инженер',
-						CAKE_LDAP_LDAP_ATTRIBUTE_MAIL => 'a.dementeva@fabrikam.com',
-						CAKE_LDAP_LDAP_ATTRIBUTE_OBJECT_GUID => 'd4bd663f-37da-4737-bfd8-e6442e723722',
 					],
 				],
 				[
@@ -165,9 +159,6 @@ class DeferredControllerTest extends AppControllerTestCase {
 					'Employee' => [
 						'id' => '6',
 						CAKE_LDAP_LDAP_ATTRIBUTE_NAME => 'Козловская Е.М.',
-						CAKE_LDAP_LDAP_ATTRIBUTE_TITLE => 'Заведующий сектором',
-						CAKE_LDAP_LDAP_ATTRIBUTE_MAIL => 'e.kozlovskaya@fabrikam.com',
-						CAKE_LDAP_LDAP_ATTRIBUTE_OBJECT_GUID => '81817f32-44a7-4b4a-8eff-b837ba387077',
 					],
 				],
 				[
@@ -199,9 +190,6 @@ class DeferredControllerTest extends AppControllerTestCase {
 					'Employee' => [
 						'id' => '2',
 						CAKE_LDAP_LDAP_ATTRIBUTE_NAME => 'Егоров Т.Г.',
-						CAKE_LDAP_LDAP_ATTRIBUTE_TITLE => 'Ведущий инженер',
-						CAKE_LDAP_LDAP_ATTRIBUTE_MAIL => 't.egorov@fabrikam.com',
-						CAKE_LDAP_LDAP_ATTRIBUTE_OBJECT_GUID => '0010b7b8-d69a-4365-81ca-5f975584fe5c',
 					],
 				],
 			],
@@ -434,9 +422,6 @@ class DeferredControllerTest extends AppControllerTestCase {
 					'Employee' => [
 						'id' => '1',
 						CAKE_LDAP_LDAP_ATTRIBUTE_NAME => 'Миронов В.М.',
-						CAKE_LDAP_LDAP_ATTRIBUTE_TITLE => 'Ведущий геолог',
-						CAKE_LDAP_LDAP_ATTRIBUTE_MAIL => 'v.mironov@fabrikam.com',
-						CAKE_LDAP_LDAP_ATTRIBUTE_OBJECT_GUID => '1dde2cdc-5264-4286-9273-4a88b230237c',
 					],
 				],
 				[
@@ -467,9 +452,6 @@ class DeferredControllerTest extends AppControllerTestCase {
 					'Employee' => [
 						'id' => '3',
 						CAKE_LDAP_LDAP_ATTRIBUTE_NAME => 'Суханова Л.Б.',
-						CAKE_LDAP_LDAP_ATTRIBUTE_TITLE => 'Зам. начальника отдела - главный специалист',
-						CAKE_LDAP_LDAP_ATTRIBUTE_MAIL => 'l.suhanova@fabrikam.com',
-						CAKE_LDAP_LDAP_ATTRIBUTE_OBJECT_GUID => 'dd518c55-35ce-4a5c-85c5-b5fb762220bf',
 					],
 				],
 				[
@@ -505,9 +487,6 @@ class DeferredControllerTest extends AppControllerTestCase {
 					'Employee' => [
 						'id' => '4',
 						CAKE_LDAP_LDAP_ATTRIBUTE_NAME => 'Дементьева А.С.',
-						CAKE_LDAP_LDAP_ATTRIBUTE_TITLE => 'Инженер',
-						CAKE_LDAP_LDAP_ATTRIBUTE_MAIL => 'a.dementeva@fabrikam.com',
-						CAKE_LDAP_LDAP_ATTRIBUTE_OBJECT_GUID => 'd4bd663f-37da-4737-bfd8-e6442e723722',
 					],
 				],
 				[
@@ -522,9 +501,6 @@ class DeferredControllerTest extends AppControllerTestCase {
 					'Employee' => [
 						'id' => '6',
 						CAKE_LDAP_LDAP_ATTRIBUTE_NAME => 'Козловская Е.М.',
-						CAKE_LDAP_LDAP_ATTRIBUTE_TITLE => 'Заведующий сектором',
-						CAKE_LDAP_LDAP_ATTRIBUTE_MAIL => 'e.kozlovskaya@fabrikam.com',
-						CAKE_LDAP_LDAP_ATTRIBUTE_OBJECT_GUID => '81817f32-44a7-4b4a-8eff-b837ba387077',
 					],
 				],
 				[
@@ -556,9 +532,6 @@ class DeferredControllerTest extends AppControllerTestCase {
 					'Employee' => [
 						'id' => '2',
 						CAKE_LDAP_LDAP_ATTRIBUTE_NAME => 'Егоров Т.Г.',
-						CAKE_LDAP_LDAP_ATTRIBUTE_TITLE => 'Ведущий инженер',
-						CAKE_LDAP_LDAP_ATTRIBUTE_MAIL => 't.egorov@fabrikam.com',
-						CAKE_LDAP_LDAP_ATTRIBUTE_OBJECT_GUID => '0010b7b8-d69a-4365-81ca-5f975584fe5c',
 					],
 				],
 			],
