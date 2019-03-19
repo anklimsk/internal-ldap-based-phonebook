@@ -4,7 +4,7 @@
  *  table of exported files
  *
  * InternalPhonebook: Internal phone book based on content of Active Directory.
- * @copyright Copyright 2017-2018, Andrey Klimov.
+ * @copyright Copyright 2017-2019, Andrey Klimov.
  * @license https://opensource.org/licenses/mit-license.php MIT License
  * @package app.View.Elements
  */
@@ -47,7 +47,13 @@ foreach ($exportInfo as $exportInfoItem) {
 		$actions .= $this->ViewExtension->buttonLink(
 			'fas fa-sync-alt',
 			'btn-primary',
-			['controller' => 'employees', 'action' => 'generate', $exportInfoItem['viewType'], $exportInfoItem['generateType']],
+			[
+				'controller' => 'employees',
+				'action' => 'generate',
+				$exportInfoItem['viewType'],
+				$exportInfoItem['generateType'],
+				true
+			],
 			[
 				'title' => __('Put the generation of the file in the queue'),
 				'data-toggle' => 'request-only',

@@ -5933,7 +5933,13 @@ class EmployeesControllerTest extends AppControllerTestCase {
 				[
 					'fas fa-sync-alt',
 					__('Refresh all files'),
-					['controller' => 'employees', 'action' => 'generate'],
+					[
+						'controller' => 'employees',
+						'action' => 'generate',
+						GENERATE_FILE_VIEW_TYPE_ALL,
+						GENERATE_FILE_DATA_TYPE_ALL,
+						true
+					],
 					[
 						'title' => __('Refresh all exported files'),
 						'data-toggle' => 'request-only',

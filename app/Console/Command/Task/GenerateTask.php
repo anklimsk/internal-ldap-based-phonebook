@@ -77,7 +77,7 @@ class GenerateTask extends AppShell {
 		$viewName = mb_ucfirst(constValToLcSingle('GENERATE_FILE_VIEW_TYPE_', $view, ' '));
 		$typeName = mb_ucfirst(constValToLcSingle('GENERATE_FILE_DATA_TYPE_', $type, ' '));
 		$this->out(__('Generate %s files (%s) in progress...', $viewName, $typeName), 1, Shell::NORMAL);
-		if ($this->Employee->putExportTask($view, $type)) {
+		if ($this->Employee->putExportTask($view, $type, false)) {
 			$this->out(__('Generate %s files set in queue successfully.', $viewName), 1, Shell::NORMAL);
 		} else {
 			$this->out('<error>' . __('Generate %s set in queue unsuccessfully.', $viewName) . '</error>');

@@ -1423,9 +1423,10 @@ class Employee extends EmployeeDb {
  * @param string $view Type of export view: PDF, Excel or All
  * @param string $type Export type
  * @param int $idTask The ID of the QueuedTask
+ * @param bool $forceUpdate Flag of forced update files
  * @return bool Success
  */
-	public function generateExportTask($view = null, $type = null, $idTask = null) {
+	public function generateExportTask($view = null, $type = null, $idTask = null, $forceUpdate = false) {
 		$view = mb_strtolower($view);
 		$type = mb_strtolower($type);
 		$viewTypes = [];
@@ -1459,6 +1460,13 @@ class Employee extends EmployeeDb {
 		$maxStep = count($viewTypes) * count($generateTypes) * count($extendView);
 		$errorMessages = [];
 		$errorMessage = '';
+		$lastUpdateTimestamp = time();
+		$modelLastProcessed = ClassRegistry::init('LastProcessed');
+		$lastUpdate = $modelLastProcessed->getLastUpdate(LAST_PROCESSED_EMPLOYEE);
+		if (!empty($lastUpdate)) {
+			$lastUpdateTimestamp = $lastUpdate;
+		}
+		$fileExportDir = $this->getPathExportDir();
 		$modelExtendQueuedTask = ClassRegistry::init('CakeTheme.ExtendQueuedTask');
 		$modelExtendQueuedTask->updateProgress($idTask, 0);
 		foreach ($viewTypes as $viewType) {
@@ -1473,20 +1481,34 @@ class Employee extends EmployeeDb {
 			}
 			foreach ($generateTypes as $generateType) {
 				foreach ($extendView as $extendViewState) {
-					$fileName = $this->expandTypeExportToFilename($generateType, $extendViewState, false);
-					$resItem = $this->_generateExport($viewType, $generateType, $extendViewState);
-					$modelExtendQueuedTask->updateTaskProgress($idTask, $step, $maxStep);
-					if (!$resItem) {
-						$errorMessages[] = __('Error on generating file "%s"', $fileName . $fileExt);
+					$resItem = false;
+					$fileNameHash = $this->expandTypeExportToFilename($generateType, $extendViewState, true);
+					$fileNameString = $this->expandTypeExportToFilename($generateType, $extendViewState, false);
+					$filePath = $fileExportDir . $fileNameHash . $fileExt;
+					$downloadFileName = $fileNameString . $fileExt;
+					if (!$forceUpdate && file_exists($filePath)) {
+						$fileChangedTimestamp = filemtime($filePath);
+						if (($fileChangedTimestamp !== false) &&
+							($fileChangedTimestamp > $lastUpdateTimestamp)) {
+							$resItem = null;
+						}
 					}
-					if (!$resItem) {
+					if ($resItem !== null) {
+						$resItem = $this->_generateExport($viewType, $generateType, $extendViewState);
+					}
+					$modelExtendQueuedTask->updateTaskProgress($idTask, $step, $maxStep);
+					if ($resItem === null) {
+						$errorMessages[] = ' * ' . __('Update file "%s" is not required', $downloadFileName);
+					} elseif (!$resItem) {
+						$errorMessages[] = ' * ' . __('Error on generating file "%s"', $downloadFileName);
 						$result = false;
 					}
 				}
 			}
 		}
 		if (!empty($idTask) && !empty($errorMessages)) {
-			$modelExtendQueuedTask->updateTaskErrorMessage($idTask, implode("\n", $errorMessages));
+			$errorMessage = __('Result of creating files') . ":\n" . implode("\n", $errorMessages);
+			$modelExtendQueuedTask->updateTaskErrorMessage($idTask, $errorMessage);
 		}
 
 		return $result;
@@ -1497,11 +1519,12 @@ class Employee extends EmployeeDb {
  *
  * @param string $view Type of export view: PDF, Excel or All
  * @param string $type Export type
+ * @param bool $forceUpdate Flag of forced update files
  * @throws InternalErrorException if $type or $view is invalid
  * @return bool|array Return False on failure. Otherwise, return array of
  *  created Job containing id, data.
  */
-	public function putExportTask($view = null, $type = null) {
+	public function putExportTask($view = null, $type = null, $forceUpdate = false) {
 		if (empty($view)) {
 			$view = GENERATE_FILE_VIEW_TYPE_ALL;
 		} else {
@@ -1517,7 +1540,7 @@ class Employee extends EmployeeDb {
 			throw new InternalErrorException(__('Invalid export type'));
 		}
 
-		$taskParam = compact('view', 'type');
+		$taskParam = compact('view', 'type', 'forceUpdate');
 		$modelExtendQueuedTask = ClassRegistry::init('CakeTheme.ExtendQueuedTask');
 
 		return $modelExtendQueuedTask->createJob('Generate', $taskParam, null, 'export');

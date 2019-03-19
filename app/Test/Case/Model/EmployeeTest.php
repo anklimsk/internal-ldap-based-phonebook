@@ -2330,46 +2330,55 @@ class EmployeeTest extends AppCakeTestCase {
 				null, // $view
 				null, // $type
 				null, // $idTask
+				false // $forceUpdate
 			], // Params for step 1
 			[
 				'bad_view', // $view
 				GENERATE_FILE_DATA_TYPE_ALPH, // $type
 				null, // $idTask
+				false // $forceUpdate
 			], // Params for step 2
 			[
 				GENERATE_FILE_VIEW_TYPE_ALL, // $view
 				null, // $type
 				null, // $idTask
+				false // $forceUpdate
 			], // Params for step 3
 			[
 				GENERATE_FILE_VIEW_TYPE_ALL, // $view
 				'badType', // $type
 				null, // $idTask
+				false // $forceUpdate
 			], // Params for step 4
 			[
 				GENERATE_FILE_VIEW_TYPE_ALL, // $view
 				GENERATE_FILE_DATA_TYPE_ALL, // $type
 				null, // $idTask
+				false // $forceUpdate
 			], // Params for step 5
 			[
 				GENERATE_FILE_VIEW_TYPE_PDF, // $view
 				GENERATE_FILE_DATA_TYPE_ALPH, // $type
 				null, // $idTask
+				true // $forceUpdate
 			], // Params for step 6
 			[
 				GENERATE_FILE_VIEW_TYPE_PDF, // $view
 				GENERATE_FILE_DATA_TYPE_DEPART, // $type
 				null, // $idTask
+				false // $forceUpdate
 			], // Params for step 7
 			[
 				GENERATE_FILE_VIEW_TYPE_EXCEL, // $view
 				GENERATE_FILE_DATA_TYPE_ALPH, // $type
 				null, // $idTask
+				true // $forceUpdate
 			], // Params for step 8
 			[
 				GENERATE_FILE_VIEW_TYPE_EXCEL, // $view
 				GENERATE_FILE_DATA_TYPE_DEPART, // $type
 				null, // $idTask
+				false // $forceUpdate
 			], // Params for step 9
 		];
 		$expected = [
@@ -2393,7 +2402,7 @@ class EmployeeTest extends AppCakeTestCase {
  */
 	public function testPutExportTaskInvalidView() {
 		$this->setExpectedException('InternalErrorException');
-		$this->_targetObject->putExportTask('badView', GENERATE_FILE_DATA_TYPE_ALPH);
+		$this->_targetObject->putExportTask('badView', GENERATE_FILE_DATA_TYPE_ALPH, false);
 	}
 
 /**
@@ -2403,7 +2412,7 @@ class EmployeeTest extends AppCakeTestCase {
  */
 	public function testPutExportTaskInvalidType() {
 		$this->setExpectedException('InternalErrorException');
-		$this->_targetObject->putExportTask(GENERATE_FILE_VIEW_TYPE_PDF, 'bad_type');
+		$this->_targetObject->putExportTask(GENERATE_FILE_VIEW_TYPE_PDF, 'bad_type', false);
 	}
 
 /**
@@ -2412,7 +2421,7 @@ class EmployeeTest extends AppCakeTestCase {
  * @return void
  */
 	public function testPutExportTaskEmptyView() {
-		$result = $this->_targetObject->putExportTask(null, GENERATE_FILE_DATA_TYPE_ALPH);
+		$result = $this->_targetObject->putExportTask(null, GENERATE_FILE_DATA_TYPE_ALPH, false);
 		$this->assertTrue(is_array($result));
 		if (isset($result['ExtendQueuedTask']['created'])) {
 			unset($result['ExtendQueuedTask']['created']);
@@ -2424,6 +2433,7 @@ class EmployeeTest extends AppCakeTestCase {
 				'data' => serialize([
 						'view' => GENERATE_FILE_VIEW_TYPE_ALL,
 						'type' => GENERATE_FILE_DATA_TYPE_ALPH,
+						'forceUpdate' => false
 					]),
 				'group' => 'export',
 				'reference' => null,
@@ -2439,7 +2449,7 @@ class EmployeeTest extends AppCakeTestCase {
  * @return void
  */
 	public function testPutExportTaskEmptyType() {
-		$result = $this->_targetObject->putExportTask(GENERATE_FILE_VIEW_TYPE_PDF, null);
+		$result = $this->_targetObject->putExportTask(GENERATE_FILE_VIEW_TYPE_PDF, null, true);
 		$this->assertTrue(is_array($result));
 		if (isset($result['ExtendQueuedTask']['created'])) {
 			unset($result['ExtendQueuedTask']['created']);
@@ -2451,6 +2461,7 @@ class EmployeeTest extends AppCakeTestCase {
 				'data' => serialize([
 						'view' => GENERATE_FILE_VIEW_TYPE_PDF,
 						'type' => GENERATE_FILE_DATA_TYPE_ALL,
+						'forceUpdate' => true
 					]),
 				'group' => 'export',
 				'reference' => null,
@@ -2466,7 +2477,7 @@ class EmployeeTest extends AppCakeTestCase {
  * @return void
  */
 	public function testPutExportTaskValidParam() {
-		$result = $this->_targetObject->putExportTask(GENERATE_FILE_VIEW_TYPE_PDF, GENERATE_FILE_DATA_TYPE_ALPH);
+		$result = $this->_targetObject->putExportTask(GENERATE_FILE_VIEW_TYPE_PDF, GENERATE_FILE_DATA_TYPE_ALPH, true);
 		$this->assertTrue(is_array($result));
 		if (isset($result['ExtendQueuedTask']['created'])) {
 			unset($result['ExtendQueuedTask']['created']);
@@ -2478,6 +2489,7 @@ class EmployeeTest extends AppCakeTestCase {
 				'data' => serialize([
 						'view' => GENERATE_FILE_VIEW_TYPE_PDF,
 						'type' => GENERATE_FILE_DATA_TYPE_ALPH,
+						'forceUpdate' => true
 					]),
 				'group' => 'export',
 				'reference' => null,

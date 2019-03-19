@@ -4,7 +4,7 @@
  *  management information about the employees.
  *
  * InternalPhonebook: Internal phone book based on content of Active Directory.
- * @copyright Copyright 2017-2018, Andrey Klimov.
+ * @copyright Copyright 2017-2019, Andrey Klimov.
  * @license https://opensource.org/licenses/mit-license.php MIT License
  * @package app.Controller
  */
@@ -1158,7 +1158,13 @@ class EmployeesController extends AppController {
 			$headerMenuActions[] = [
 				'fas fa-sync-alt',
 				__('Refresh all files'),
-				['controller' => 'employees', 'action' => 'generate'],
+				[
+					'controller' => 'employees',
+					'action' => 'generate',
+					GENERATE_FILE_VIEW_TYPE_ALL,
+					GENERATE_FILE_DATA_TYPE_ALL,
+					true
+				],
 				[
 					'title' => __('Refresh all exported files'),
 					'data-toggle' => 'request-only',
@@ -1328,10 +1334,11 @@ class EmployeesController extends AppController {
  * @param string $type Type of export:
  *  - `alph` - by alphabet;
  *  - `depart` - by department.
+ * @param bool $forceUpdate Flag of forced update files
  * @return void
  */
-	protected function _generate($view = null, $type = null) {
-		if ($this->Employee->putExportTask($view, $type)) {
+	protected function _generate($view = null, $type = null, $forceUpdate = false) {
+		if ($this->Employee->putExportTask($view, $type, $forceUpdate)) {
 			$this->Flash->success(__('Generation of exported files put in queue...'));
 			$this->ViewExtension->setProgressSseTask('Generate');
 		} else {
@@ -1352,10 +1359,11 @@ class EmployeesController extends AppController {
  * @param string $type Type of export:
  *  - `alph` - by alphabet;
  *  - `depart` - by department.
+ * @param bool $forceUpdate Flag of forced update files
  * @return void
  */
-	public function hr_generate($view = null, $type = null) {
-		$this->_generate($view, $type);
+	public function hr_generate($view = null, $type = null, $forceUpdate = false) {
+		$this->_generate($view, $type, $forceUpdate);
 	}
 
 /**
@@ -1368,9 +1376,10 @@ class EmployeesController extends AppController {
  * @param string $type Type of export:
  *  - `alph` - by alphabet;
  *  - `depart` - by department.
+ * @param bool $forceUpdate Flag of forced update files
  * @return void
  */
-	public function admin_generate($view = null, $type = null) {
-		$this->_generate($view, $type);
+	public function admin_generate($view = null, $type = null, $forceUpdate = false) {
+		$this->_generate($view, $type, $forceUpdate);
 	}
 }
