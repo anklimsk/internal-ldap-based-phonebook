@@ -104,8 +104,9 @@ class EmployeesController extends AppController {
  */
 	public function isAuthorized($user = []) {
 		$action = $this->request->param('action');
+		$allowedActions = ['index', 'view'];
 		if ($this->UserInfo->checkUserRole(USER_ROLE_USER, true, $user) &&
-			($action === 'index')) {
+			in_array($action, $allowedActions)) {
 			return true;
 		}
 

@@ -1887,6 +1887,39 @@ class EmployeesControllerTest extends AppControllerTestCase {
 	}
 
 /**
+ * testViewValidDnWOrolePrefixForAllRoles method
+ *  User role: user, secretary, human resources, admin
+ *
+ * @return void
+ */
+	public function testViewValidDnWOrolePrefixForAllRoles() {
+		$userRoles = [
+			USER_ROLE_USER => '',
+			USER_ROLE_USER | USER_ROLE_SECRETARY => 'secret',
+			USER_ROLE_USER | USER_ROLE_HUMAN_RESOURCES => 'hr',
+			USER_ROLE_USER | USER_ROLE_ADMIN => 'admin',
+		];
+		$opt = [
+			'method' => 'GET'
+		];
+		foreach ($userRoles as $userRole => $userPrefix) {
+			$userInfo = [
+				'role' => $userRole,
+				'prefix' => $userPrefix,
+			];
+			$this->applyUserInfo($userInfo);
+			$this->_generateMockedController();
+			$url = [
+				'controller' => 'employees',
+				'action' => 'view',
+				'CN=Егоров Т.Г.,OU=14-01,OU=ОС,OU=Пользователи,DC=fabrikam,DC=com',
+			];
+			$result = $this->testAction($url, $opt);
+			$this->checkRedirect(false);
+		}
+	}
+
+/**
  * testEditEmptyGuid method
  *  User role: user, secretary, human resources, admin
  *
