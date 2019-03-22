@@ -247,5 +247,16 @@ class QueueGenerateTaskTest extends AppCakeTestCase {
 
 		$this->_runJob($view, $type, $forceUpdate, $timeout);
 		$this->_checkFiles($filesInfo, $type, $fileExt, $forceUpdate);
+		clearstatcache();
+		$time = time();
+		while (time() < $time + 1) {
+			usleep(100000);
+		}
+
+		CakeTestSuiteDispatcher::time(true);
+		$modelLastProcessed = ClassRegistry::init('LastProcessed');
+		$this->assertTrue($modelLastProcessed->setLastProcessed(LAST_PROCESSED_EMPLOYEE, 1));
+		$this->_runJob($view, $type, $forceUpdate, $timeout);
+		$this->_checkFiles($filesInfo, $type, $fileExt, true);
 	}
 }

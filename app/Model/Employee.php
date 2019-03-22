@@ -1464,7 +1464,7 @@ class Employee extends EmployeeDb {
 		$modelLastProcessed = ClassRegistry::init('LastProcessed');
 		$lastUpdate = $modelLastProcessed->getLastUpdate(LAST_PROCESSED_EMPLOYEE);
 		if (!empty($lastUpdate)) {
-			$lastUpdateTimestamp = $lastUpdate;
+			$lastUpdateTimestamp = strtotime($lastUpdate);
 		}
 		$fileExportDir = $this->getPathExportDir();
 		$modelExtendQueuedTask = ClassRegistry::init('CakeTheme.ExtendQueuedTask');
