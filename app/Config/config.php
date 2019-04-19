@@ -27,7 +27,6 @@ $config = array (
     'ExtendedFields' => 'a:4:{i:0;s:5:"pager";i:1;s:11:"wwwhomepage";i:2;s:11:"othermobile";i:3;s:10:"employeeid";}',
     'ReadOnlyFields' => 'a:1:{i:0;s:11:"displayname";}',
     'MultipleValueLimit' => 4,
-    'BirthdayNotifyPeriod' => 8,
   ),
   'CakeSearchInfo' => 
   array (

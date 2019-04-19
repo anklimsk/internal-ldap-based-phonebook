@@ -36,7 +36,6 @@ $config[PROJECT_CONFIG_NAME] = [
 	'ReadOnlyFields' => serialize([CAKE_LDAP_LDAP_ATTRIBUTE_DISPLAY_NAME]),
 	'UseLdapOnEdit' => false,
 	'MultipleValueLimit' => 4,
-	'BirthdayNotifyPeriod' => 8,
 ];
 $config['CakeSearchInfo'] = [
 	'AutocompleteLimit' => 30,
