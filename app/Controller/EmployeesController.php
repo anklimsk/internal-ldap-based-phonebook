@@ -236,7 +236,7 @@ class EmployeesController extends AppController {
 	}
 
 /**
- * Action `index`. Used to searching employee information.
+ * Action `search`. Used to searching employee information.
  *  User role - user.
  *
  * @return void
@@ -246,7 +246,7 @@ class EmployeesController extends AppController {
 	}
 
 /**
- * Action `index`. Used to searching employee information.
+ * Action `search`. Used to searching employee information.
  *  User role - secretary.
  *
  * @return void
@@ -256,7 +256,7 @@ class EmployeesController extends AppController {
 	}
 
 /**
- * Action `index`. Used to searching employee information.
+ * Action `search`. Used to searching employee information.
  *  User role - human resources.
  *
  * @return void
@@ -266,7 +266,7 @@ class EmployeesController extends AppController {
 	}
 
 /**
- * Action `index`. Used to searching employee information.
+ * Action `search`. Used to searching employee information.
  *  User role - administrator.
  *
  * @return void
