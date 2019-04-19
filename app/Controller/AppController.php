@@ -129,11 +129,7 @@ class AppController extends Controller {
 			}
 		}
 
-		$isExternalAuth = false;
-		if ((bool)Configure::read(PROJECT_CONFIG_NAME . '.ExternalAuth') == true) {
-			$isExternalAuth = $this->UserInfo->isExternalAuth();
-		}
-
+		$isExternalAuth = $this->_isExternalAuth();
 		$this->Auth->authenticate = [
 			'CakeLdap.Ldap' => [
 				'externalAuth' => $isExternalAuth,
@@ -234,5 +230,19 @@ class AppController extends Controller {
 
 		$this->set(compact('pageTitlePrefix', 'pageTitlePostfix'));
 		parent::beforeRender();
+	}
+
+/**
+ * Checking the request is use external authentication (e.g. Kerberos)
+ *
+ * @return bool True if external authentication is used. False otherwise.
+ */
+	protected function _isExternalAuth() {
+		$isExternalAuth = false;
+		if ($this->Setting->getConfig('ExternalAuth')) {
+			$isExternalAuth = $this->UserInfo->isExternalAuth();
+		}
+
+		return $isExternalAuth;
 	}
 }
