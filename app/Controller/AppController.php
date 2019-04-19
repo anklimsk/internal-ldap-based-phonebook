@@ -3,7 +3,7 @@
  * This file is the application level Controller
  *
  * InternalPhonebook: Internal phone book based on content of Active Directory.
- * @copyright Copyright 2017-2018, Andrey Klimov.
+ * @copyright Copyright 2017-2019, Andrey Klimov.
  * @license https://opensource.org/licenses/mit-license.php MIT License
  * @package app.Controller
  */
@@ -123,7 +123,7 @@ class AppController extends Controller {
 		$authGroupsList = $this->Setting->getAuthGroupsList();
 		$authPrefixes = $this->Setting->getAuthPrefixesList();
 		foreach ($authGroupsList as $userRole => $fieldName) {
-			$userGroup = Configure::read(PROJECT_CONFIG_NAME . '.' . $fieldName);
+			$userGroup = $this->Setting->getConfig($fieldName);
 			if (!empty($userGroup)) {
 				$authGroups[$userRole] = $userGroup;
 			}
