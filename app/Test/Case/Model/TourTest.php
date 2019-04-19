@@ -267,6 +267,166 @@ class TourTest extends AppCakeTestCase {
 	}
 
 /**
+ * testGetListStepsForAnonymousUser method
+ *
+ * @return void
+ */
+	public function testGetListStepsForAnonymousUser() {
+		$user = null;
+		$urlHome = '/';
+		$urlTreeEmployees = [
+			'controller' => 'employees',
+			'action' => 'tree',
+			'plugin' => null,
+		];
+		$urlTreeEmployees = Router::url($urlTreeEmployees);
+		$queryFilterData = [
+			'data' => [
+				'FilterData' => [
+					[
+						'Employee' => [
+							CAKE_LDAP_LDAP_ATTRIBUTE_NAME => $user
+						]
+					]
+				]
+			]
+		];
+		$urlGallery = [
+			'controller' => 'employees',
+			'action' => 'gallery',
+			'plugin' => null,
+			'?' => http_build_query($queryFilterData),
+		];
+		$urlGallery = Router::url($urlGallery);
+		$urlExport = [
+			'controller' => 'employees',
+			'action' => 'export',
+			'plugin' => null,
+		];
+		$urlExport = Router::url($urlExport);
+
+		$expected = [
+			[
+				'path' => $urlHome,
+				'placement' => 'bottom',
+				'element' => '#content #SearchQuery',
+				'title' => __d('tour', 'Start using'),
+				'content' => __d('tour', 'To search for information, enter your request in this field and click the button "%s".', '<span class="fas fa-search fa-lg"></span>'),
+			],
+			[
+				'path' => $urlHome,
+				'placement' => 'bottom',
+				'element' => '#header ul.nav > li > a.app-tour-main-menu-employees',
+				'title' => __d('tour', 'Elements of the main menu'),
+				'content' => __d('tour', 'Use this menu item for the following:<ul class="fa-ul"><li><span class="fa-li"><i class="fas fa-check"></i></span>Search for employee information</li><li><span class="fa-li"><i class="fas fa-check"></i></span>View employee submission tree</li><li><span class="fa-li"><i class="fas fa-check"></i></span>View employee gallery</li><li><span class="fa-li"><i class="fas fa-check"></i></span>Save a local copy of the directory.</li></ul>'),
+			],
+			[
+				'path' => $urlTreeEmployees,
+				'placement' => 'bottom',
+				'element' => '#content #pageHeaderMenu',
+				'title' => __d('tour', 'Operation menu'),
+				'content' => __d('tour', 'Use the operations menu for the following actions:<ul class="fa-ul"><li><span class="fa-li"><i class="fas fa-check"></i></span>Editing information;</li><li><span class="fa-li"><i class="fas fa-check"></i></span>Synchronize information;</li><li><span class="fa-li"><i class="fas fa-check"></i></span>Checking the status of the subordinate employee tree.</li></ul>'),
+			],
+			[
+				'path' => $urlGallery,
+				'placement' => 'bottom',
+				'element' => '#content tr.filter-header-row',
+				'title' => __d('tour', 'Table data filter'),
+				'content' => __d('tour', 'To select tabular data, use the filter.'),
+			],
+			[
+				'path' => $urlGallery,
+				'placement' => 'bottom',
+				'element' => '#content tr.filter-header-row code[data-toggle="filter-conditions"]',
+				'title' => __d('tour', 'Table data filter'),
+				'content' => __d('tour', 'Current filter condition.'),
+			],
+			[
+				'path' => $urlGallery,
+				'placement' => 'bottom',
+				'element' => '#content tr.filter-header-row button.show-filter-btn',
+				'title' => __d('tour', 'Table data filter controls'),
+				'content' => __d('tour', 'Use this button to display or hide the filter controls.'),
+				'onNext' => "if ($('#content tr.filter-controls-row:visible').length == 0) $('#content button.show-filter-btn').trigger('click');",
+			],
+			[
+				'path' => $urlGallery,
+				'placement' => 'bottom',
+				'element' => '#content tr.filter-controls-row input[name^="data[FilterData]"]:eq(0)',
+				'title' => __d('tour', 'Elements of formation of filter conditions'),
+				'content' => __d('tour', 'To create a filter condition, enter the required data in the input field of the corresponding column in the table.'),
+				'onPrev' => "if ($('#content tr.filter-controls-row:visible').length > 0) $('#content button.show-filter-btn').trigger('click');",
+			],
+			[
+				'path' => $urlGallery,
+				'placement' => 'bottom',
+				'element' => '#content tr.filter-controls-row button:has(:contains(=)):eq(0)',
+				'title' => __d('tour', 'Elements of formation of filter conditions'),
+				'content' => __d('tour', 'Use this button to select one of the following logical conditions:<ul class="fa-ul"><li><span class="fa-li"><i class="fas fa-check"></i></span><i>=</i> - is equal to;</li><li><span class="fa-li"><i class="fas fa-check"></i></span><i>&gt;</i> - more;</li><li><span class="fa-li"><i class="fas fa-check"></i></span><i>&ge;</i> - is greater than or equal to;</li><li><span class="fa-li"><i class="fas fa-check"></i></span>&lt;<i></i> - less;</li><li><span class="fa-li"><i class="fas fa-check"></i></span><i>&le;</i> - is less than or equal;</li><li><span class="fa-li"><i class="fas fa-check"></i></span>&ne;<i></i> - is not equal.</li></ul>'),
+			],
+			[
+				'path' => $urlGallery,
+				'placement' => 'bottom',
+				'element' => '#content tr.filter-controls-row th.filter-action',
+				'title' => __d('tour', 'Elements of formation of filter conditions'),
+				'content' => __d('tour', 'If you want to add or delete filter lines, use these buttons.'),
+			],
+			[
+				'path' => $urlGallery,
+				'placement' => 'bottom',
+				'element' => '#content tr.filter-header-row .filter-condition',
+				'title' => __d('tour', 'Elements of formation of filter conditions'),
+				'content' => __d('tour', 'Using this button, you can combine several filter lines with one of the following logical conditions:<ul class="fa-ul"><li><span class="fa-li"><i class="fas fa-check"></i></span><i>&amp;&amp;</i> - AND;</li><li><span class="fa-li"><i class="fas fa-check"></i></span><i>&nbsp;||&nbsp;</i> - OR;</li><li><span class="fa-li"><i class="fas fa-check"></i></span><i>&nbsp;!&nbsp;</i> - NOT.</li></ul>'),
+			],
+			[
+				'path' => $urlGallery,
+				'placement' => 'bottom',
+				'element' => '#content tr.filter-header-row button.filter-apply',
+				'title' => __d('tour', 'Table data filter controls'),
+				'content' => __d('tour', 'To apply the current filter, use this button.'),
+			],
+			[
+				'path' => $urlGallery,
+				'placement' => 'bottom',
+				'element' => '#content tr.filter-header-row button.filter-clear',
+				'title' => __d('tour', 'Table data filter controls'),
+				'content' => __d('tour', 'To clean the filter, use this button.'),
+			],
+			[
+				'path' => $urlGallery,
+				'placement' => 'bottom',
+				'element' => '#content tr.filter-header-row a[href$=".prt"]',
+				'title' => __d('tour', 'Table data filter controls'),
+				'content' => __d('tour', 'Use this button to print current tabular data.'),
+			],
+			[
+				'path' => $urlExport,
+				'placement' => 'bottom',
+				'element' => '#content #pageHeaderMenu',
+				'title' => __d('tour', 'Operation menu'),
+				'content' => __d('tour', 'Use the operations menu to update all the files in the directory.'),
+			],
+			[
+				'path' => $urlExport,
+				'placement' => 'bottom',
+				'element' => '#content table tbody td.action:eq(0) a.app-tour-btn-generate',
+				'title' => __d('tour', 'Updating the directory file'),
+				'content' => __d('tour', 'Use this button to update the directory file.'),
+			],
+			[
+				'path' => $urlExport,
+				'placement' => 'bottom',
+				'element' => '#content table tbody td.action:eq(0) a.app-tour-btn-download',
+				'title' => __d('tour', 'Saving a directory file'),
+				'content' => __d('tour', 'To save a local copy of the directory, use this button.'),
+			]
+		];
+
+		$result = $this->_targetObject->getListSteps(null);
+		$this->assertData($expected, $result);
+	}
+
+/**
  * testGetListStepsForUser method
  *
  * @return void

@@ -4,7 +4,7 @@
  *  creation configuration for application tour.
  *
  * InternalPhonebook: Internal phone book based on content of Active Directory.
- * @copyright Copyright 2017-2018, Andrey Klimov.
+ * @copyright Copyright 2017-2019, Andrey Klimov.
  * @license https://opensource.org/licenses/mit-license.php MIT License
  * @package app.Model
  */
@@ -41,13 +41,12 @@ class Tour extends AppModel {
 /**
  * Return configuration for tour of the application
  *
- * @param array $userInfo Information about current logged in user.
+ * @param array|null $userInfo Information about current logged in user.
  * @return array Return array configuration for tour.
  */
 	public function getListSteps($userInfo = null) {
-		$result = [];
-		if (empty($userInfo)) {
-			return $result;
+		if (!is_array($userInfo)) {
+			$userInfo = [];
 		}
 
 		$modelEmployee = ClassRegistry::init('Employee');
@@ -66,6 +65,7 @@ class Tour extends AppModel {
 		$guid = Hash::get($includedFields, CAKE_LDAP_LDAP_ATTRIBUTE_OBJECT_GUID);
 
 		$urlHome = '/';
+		$result = [];
 		if ($userInfoLib->checkUserRole([USER_ROLE_HUMAN_RESOURCES, USER_ROLE_ADMIN], true, $userInfo)) {
 			$result[] = [
 				'path' => $urlHome,
