@@ -4,7 +4,7 @@
  *  left form for edit settings of application
  *
  * InternalPhonebook: Internal phone book based on content of Active Directory.
- * @copyright Copyright 2017-2018, Andrey Klimov.
+ * @copyright Copyright 2017-2019, Andrey Klimov.
  * @license https://opensource.org/licenses/mit-license.php MIT License
  * @package app.View.Elements
  */
@@ -25,6 +25,12 @@ if (!empty($varsExt)) {
 	extract($varsExt);
 }
 
+	echo $this->Form->inputs([
+		'legend' => __('Authentication'),
+		'Setting.AllowAnonymAccess' => ['label' => [__('Allow anonymous access'),
+			__('Allow anonymous access to the phone book'), ':'],
+			'type' => 'checkbox'],
+	]);
 	echo $this->Form->inputs([
 		'legend' => __('Photo'),
 		'Setting.ShowDefaultPhoto' => ['label' => [__('Show default photo'),

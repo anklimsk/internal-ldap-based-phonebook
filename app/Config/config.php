@@ -13,6 +13,7 @@ $config = array (
     'AutocompleteLimit' => 30,
     'DefaultSearchAnyPart' => true,
     'ExternalAuth' => false,
+    'AllowAnonymAccess' => false,
     'EmailSmtphost' => 'localhost',
     'EmailSmtpport' => 25,
     'EmailSmtpuser' => '',

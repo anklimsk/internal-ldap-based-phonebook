@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: InternalPhonebook\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2019-03-19 11:21+0300\n"
+"PO-Revision-Date: 2019-04-17 16:01+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -280,7 +280,7 @@ msgstr "Вы уверены, что хотите отклонить это от�
 
 #: Controller/DeferredController.php:222
 #: Controller/DepartmentsController.php:212
-#: Controller/EmployeesController.php:332 Controller/LogsController.php:193
+#: Controller/EmployeesController.php:333 Controller/LogsController.php:193
 #: Test/Case/Controller/DeferredControllerTest.php:1231
 #: Test/Case/Controller/DepartmentsControllerTest.php:416
 #: Test/Case/Controller/EmployeesControllerTest.php:1119;1360;1656
@@ -310,10 +310,10 @@ msgstr "Редактирование отложенного сохранения
 
 #: Controller/DeferredController.php:328
 #: Controller/DepartmentsController.php:349
-#: Controller/EmployeesController.php:478
+#: Controller/EmployeesController.php:479
 #: Test/Case/Controller/DeferredControllerTest.php:1567
 #: Test/Case/Controller/DepartmentsControllerTest.php:876
-#: Test/Case/Controller/EmployeesControllerTest.php:2172;2378;2591
+#: Test/Case/Controller/EmployeesControllerTest.php:2205;2411;2624
 msgid "Editing"
 msgstr "Редактирование"
 
@@ -486,67 +486,67 @@ msgstr "Упорядочение списка отделов помещено в
 msgid "Ordering list of departments put in queue unsuccessfully"
 msgstr "Упорядочение списка отделов помещено в очередь неудачно"
 
-#: Controller/EmployeesController.php:150
+#: Controller/EmployeesController.php:151
 #: Test/Case/Controller/EmployeesControllerTest.php:103
 msgid "Information retrieval"
 msgstr "Поиск информации"
 
-#: Controller/EmployeesController.php:226
+#: Controller/EmployeesController.php:227
 #: Test/Case/Controller/EmployeesControllerTest.php:290;547
 #: View/Elements/formExtendSettingsRight.ctp:29 View/Employees/search.ctp:31
 msgid "Search information"
 msgstr "Поиск информации"
 
-#: Controller/EmployeesController.php:294
+#: Controller/EmployeesController.php:295
 #: Test/Case/Controller/EmployeesControllerTest.php:1092;1327;1614
 msgid "Information of employees"
 msgstr "Информация о сотрудниках"
 
-#: Controller/EmployeesController.php:301;318
+#: Controller/EmployeesController.php:302;319
 #: Test/Case/Controller/EmployeesControllerTest.php:1331;1618
 msgid "Edit information"
 msgstr "Редактировать информацию"
 
-#: Controller/EmployeesController.php:303;320
+#: Controller/EmployeesController.php:304;321
 #: Test/Case/Controller/EmployeesControllerTest.php:1333;1620
 #: View/Elements/tableSearchResults.ctp:79;100
 #: View/Elements/treeItemEmployeeFullDraggable.ctp:46
 msgid "Edit information of this employee"
 msgstr "Редактировать информацию этого сотрудника"
 
-#: Controller/EmployeesController.php:307
+#: Controller/EmployeesController.php:308
 #: Test/Case/Controller/EmployeesControllerTest.php:1624
 msgid "Synchronize information"
 msgstr "Синхронизация информации"
 
-#: Controller/EmployeesController.php:310
+#: Controller/EmployeesController.php:311
 #: Test/Case/Controller/EmployeesControllerTest.php:1627
 #: View/Elements/tableSearchResults.ctp:89
 #: View/Elements/treeItemEmployeeFullDraggable.ctp:37
 msgid "Synchronize information of this employee with LDAP server"
 msgstr "Синхронизация информации этого сотрудника с сервером LDAP"
 
-#: Controller/EmployeesController.php:326
+#: Controller/EmployeesController.php:327
 #: Test/Case/Controller/EmployeesControllerTest.php:1096;1337;1633
 msgid "Tree of subordinate"
 msgstr "Дерево подчинённых"
 
-#: Controller/EmployeesController.php:328
+#: Controller/EmployeesController.php:329
 #: Test/Case/Controller/EmployeesControllerTest.php:1098;1339;1635
 msgid "Edit tree of subordinate employee"
 msgstr "Редактировать дерево подчинённых сотрудника"
 
-#: Controller/EmployeesController.php:402;921;993
-#: Test/Case/Controller/EmployeesControllerTest.php:1921;1959;4983;5019
+#: Controller/EmployeesController.php:403;922;994
+#: Test/Case/Controller/EmployeesControllerTest.php:1954;1992;5016;5052
 msgid "Invalid GUID for employee"
 msgstr "Неверный GUID для сотрудника"
 
-#: Controller/EmployeesController.php:410
+#: Controller/EmployeesController.php:411
 msgid "GUID of user is not equal GUID of employee"
 msgstr "GUID пользователя не равен GUID сотрудника"
 
-#: Controller/EmployeesController.php:434
-#: Test/Case/Controller/EmployeesControllerTest.php:2909
+#: Controller/EmployeesController.php:435
+#: Test/Case/Controller/EmployeesControllerTest.php:2942
 msgid ""
 "Deferred saving with an updated employee information was created.<br /"
 ">Information on LDAP server will be updated by queue.<br />Information in "
@@ -556,8 +556,8 @@ msgstr ""
 "<br />Информация на сервере LDAP будет обновлена по очереди.<br />Информация "
 "в телефонной книге будет обновлена %s после обработки."
 
-#: Controller/EmployeesController.php:442
-#: Test/Case/Controller/EmployeesControllerTest.php:2845
+#: Controller/EmployeesController.php:443
+#: Test/Case/Controller/EmployeesControllerTest.php:2878
 msgid ""
 "Deferred saving with an updated employee information was created.<br /"
 ">Information will be updated after approval by the administrator."
@@ -565,103 +565,103 @@ msgstr ""
 "Создано отложенное сохранение с обновленной информацией о сотруднике.<br /"
 ">Информация будет обновлена после утверждения администратором."
 
-#: Controller/EmployeesController.php:446
-#: Test/Case/Controller/EmployeesControllerTest.php:2652;2717;2782
+#: Controller/EmployeesController.php:447
+#: Test/Case/Controller/EmployeesControllerTest.php:2685;2750;2815
 msgid ""
 "Information about the employee could not be been saved. Please, try again."
 msgstr ""
 "Информация о сотруднике не может быть сохранена. Пожалуйста, попробуйте еще "
 "раз."
 
-#: Controller/EmployeesController.php:476
-#: Test/Case/Controller/EmployeesControllerTest.php:2153;2359;2572
+#: Controller/EmployeesController.php:477
+#: Test/Case/Controller/EmployeesControllerTest.php:2186;2392;2605
 msgid "Editing employee"
 msgstr "Редактирование сотрудника"
 
-#: Controller/EmployeesController.php:592
+#: Controller/EmployeesController.php:593
 msgid "Display photo of employee not allowed"
 msgstr "Отображение фотографии сотрудника не допускается"
 
-#: Controller/EmployeesController.php:600
+#: Controller/EmployeesController.php:601
 msgid "Employees not found"
 msgstr "Сотрудники не найдены"
 
-#: Controller/EmployeesController.php:604
-#: Test/Case/Controller/EmployeesControllerTest.php:3213;3441
+#: Controller/EmployeesController.php:605
+#: Test/Case/Controller/EmployeesControllerTest.php:3246;3474
 #: View/Elements/barNav.ctp:68;70
 msgid "Gallery of employees"
 msgstr "Галерея сотрудников"
 
-#: Controller/EmployeesController.php:606
-#: Test/Case/Controller/EmployeesControllerTest.php:3223;3451
+#: Controller/EmployeesController.php:607
+#: Test/Case/Controller/EmployeesControllerTest.php:3256;3484
 msgid "Gallery"
 msgstr "Галерея"
 
-#: Controller/EmployeesController.php:673
-#: Test/Case/Controller/EmployeesControllerTest.php:3659;3850;3970;4091
+#: Controller/EmployeesController.php:674
+#: Test/Case/Controller/EmployeesControllerTest.php:3692;3883;4003;4124
 msgid "Tree view information of employees"
 msgstr "Древовидное представление информации о сотрудниках"
 
-#: Controller/EmployeesController.php:679
-#: Test/Case/Controller/EmployeesControllerTest.php:3603
+#: Controller/EmployeesController.php:680
+#: Test/Case/Controller/EmployeesControllerTest.php:3636
 #: View/Elements/barNav.ctp:96
 msgid "Synchronizing information with LDAP server"
 msgstr "Синхронизация информации с сервером LDAP"
 
-#: Controller/EmployeesController.php:682
-#: Test/Case/Controller/EmployeesControllerTest.php:3606
+#: Controller/EmployeesController.php:683
+#: Test/Case/Controller/EmployeesControllerTest.php:3639
 #: View/Elements/barNav.ctp:99
 msgid "Synchronize information of employees with LDAP server"
 msgstr "Синхронизировать информацию сотрудников с сервером LDAP"
 
-#: Controller/EmployeesController.php:688;691
-#: Test/Case/Controller/EmployeesControllerTest.php:3612;3615
+#: Controller/EmployeesController.php:689;692
+#: Test/Case/Controller/EmployeesControllerTest.php:3645;3648
 #: View/Elements/barNav.ctp:114
 msgid "Check state tree of employees"
 msgstr "Проверка состояния дерева сотрудников"
 
-#: Controller/EmployeesController.php:703;705
-#: Test/Case/Controller/EmployeesControllerTest.php:3621;3623
+#: Controller/EmployeesController.php:704;706
+#: Test/Case/Controller/EmployeesControllerTest.php:3654;3656
 msgid "Editing tree of employees"
 msgstr "Редактирование дерева сотрудников"
 
-#: Controller/EmployeesController.php:712
-#: Test/Case/Controller/EmployeesControllerTest.php:3563;3627
+#: Controller/EmployeesController.php:713
+#: Test/Case/Controller/EmployeesControllerTest.php:3596;3660
 msgid "Order tree of employees"
 msgstr "Упорядочивание дерева сотрудников"
 
-#: Controller/EmployeesController.php:715
-#: Test/Case/Controller/EmployeesControllerTest.php:3566;3630
+#: Controller/EmployeesController.php:716
+#: Test/Case/Controller/EmployeesControllerTest.php:3599;3663
 msgid "Order tree of employees by alphabet"
 msgstr "Упорядочивание дерева сотрудников по алфавиту"
 
-#: Controller/EmployeesController.php:717
-#: Test/Case/Controller/EmployeesControllerTest.php:3568;3632
+#: Controller/EmployeesController.php:718
+#: Test/Case/Controller/EmployeesControllerTest.php:3601;3665
 msgid "Are you sure you wish to re-order tree of employees?"
 msgstr "Вы уверены, что хотите пересортировать дерево сотрудников?"
 
-#: Controller/EmployeesController.php:722
-#: Test/Case/Controller/EmployeesControllerTest.php:3669;3860;3981;4101
+#: Controller/EmployeesController.php:723
+#: Test/Case/Controller/EmployeesControllerTest.php:3702;3893;4014;4134
 msgid "Tree viewing"
 msgstr "Просмотр дерева"
 
-#: Controller/EmployeesController.php:848
-#: Test/Case/Controller/EmployeesControllerTest.php:4635;4695
+#: Controller/EmployeesController.php:849
+#: Test/Case/Controller/EmployeesControllerTest.php:4668;4728
 msgid "Checking state tree of employees"
 msgstr "Проверка состояния дерева сотрудников"
 
-#: Controller/EmployeesController.php:853;856
-#: Test/Case/Controller/EmployeesControllerTest.php:4639;4642
+#: Controller/EmployeesController.php:854;857
+#: Test/Case/Controller/EmployeesControllerTest.php:4672;4675
 msgid "Recovery state of tree"
 msgstr "Восстановление состояния дерева"
 
-#: Controller/EmployeesController.php:862
-#: Test/Case/Controller/EmployeesControllerTest.php:4656;4706
+#: Controller/EmployeesController.php:863
+#: Test/Case/Controller/EmployeesControllerTest.php:4689;4739
 msgid "Checking tree"
 msgstr "Проверка дерева"
 
-#: Controller/EmployeesController.php:933
-#: Test/Case/Controller/EmployeesControllerTest.php:5055;5132
+#: Controller/EmployeesController.php:934
+#: Test/Case/Controller/EmployeesControllerTest.php:5088;5165
 msgid ""
 "Deferred saving with an deleted employee photo was created.<br />Information "
 "on LDAP server will be updated by queue.<br />Information in phonebook will "
@@ -671,8 +671,8 @@ msgstr ""
 ">Информация на сервере LDAP будет обновлена по очереди.<br />Информация в "
 "телефонной книге будет обновлена %s после обработки."
 
-#: Controller/EmployeesController.php:939
-#: Test/Case/Controller/EmployeesControllerTest.php:5095
+#: Controller/EmployeesController.php:940
+#: Test/Case/Controller/EmployeesControllerTest.php:5128
 msgid ""
 "Deferred saving with an deleted employee photo was created.<br />Information "
 "will be updated after approval by the administrator."
@@ -680,17 +680,17 @@ msgstr ""
 "Создано отложенное сохранение с удаленной фотографией сотрудника.<br /"
 ">Информация будет обновлена после утверждения администратором."
 
-#: Controller/EmployeesController.php:941
+#: Controller/EmployeesController.php:942
 msgid "The photo of employee could not be deleted. Please, try again."
 msgstr ""
 "Фотография сотрудника не может быть удалена. Пожалуйста, попробуйте еще раз."
 
-#: Controller/EmployeesController.php:986;1094
+#: Controller/EmployeesController.php:987;1095
 msgid "Invalid request"
 msgstr "Неверный запрос"
 
-#: Controller/EmployeesController.php:1026
-#: Test/Case/Controller/EmployeesControllerTest.php:5648
+#: Controller/EmployeesController.php:1027
+#: Test/Case/Controller/EmployeesControllerTest.php:5681
 msgid ""
 "Deferred saving with an updated employee photo was created.<br />Information "
 "on LDAP server will be updated by queue.<br />Information in phonebook will "
@@ -700,8 +700,8 @@ msgstr ""
 ">Информация на сервере LDAP будет обновлена по очереди.<br />Информация в "
 "телефонной книге будет обновлена %s после обработки."
 
-#: Controller/EmployeesController.php:1032
-#: Test/Case/Controller/EmployeesControllerTest.php:5490;5569
+#: Controller/EmployeesController.php:1033
+#: Test/Case/Controller/EmployeesControllerTest.php:5523;5602
 msgid ""
 "Deferred saving with an updated employee photo was created.<br />Information "
 "will be updated after approval by the administrator."
@@ -709,56 +709,56 @@ msgstr ""
 "Создано отложенное сохранение с обновленной фотографией сотрудника.<br /"
 ">Информация будет обновлена после утверждения администратором."
 
-#: Controller/EmployeesController.php:1034
+#: Controller/EmployeesController.php:1035
 msgid "Unable to update photo of employee."
 msgstr "Не удалось обновить фотографию сотрудника."
 
-#: Controller/EmployeesController.php:1155
-#: Test/Case/Controller/EmployeesControllerTest.php:6053
+#: Controller/EmployeesController.php:1156
+#: Test/Case/Controller/EmployeesControllerTest.php:6086
 msgid "Index of phone book files"
 msgstr "Указатель файлов телефонного справочника"
 
-#: Controller/EmployeesController.php:1160
-#: Test/Case/Controller/EmployeesControllerTest.php:5935
+#: Controller/EmployeesController.php:1161
+#: Test/Case/Controller/EmployeesControllerTest.php:5968
 #: View/Elements/barNav.ctp:77
 msgid "Refresh all files"
 msgstr "Обновить все файлы"
 
-#: Controller/EmployeesController.php:1169
-#: Test/Case/Controller/EmployeesControllerTest.php:5944
+#: Controller/EmployeesController.php:1170
+#: Test/Case/Controller/EmployeesControllerTest.php:5977
 #: View/Elements/barNav.ctp:80
 msgid "Refresh all exported files"
 msgstr "Обновить все экспортируемые файлы"
 
-#: Controller/EmployeesController.php:1175
-#: Test/Case/Controller/EmployeesControllerTest.php:6063
+#: Controller/EmployeesController.php:1176
+#: Test/Case/Controller/EmployeesControllerTest.php:6096
 #: View/Elements/barNav.ctp:87
 msgid "Export phone book"
 msgstr "Экспорт телефонного справочника"
 
-#: Controller/EmployeesController.php:1239
+#: Controller/EmployeesController.php:1240
 msgid "Unknown type for generation %s."
 msgstr "Неизвестный тип для создания %s."
 
-#: Controller/EmployeesController.php:1253 Model/Employee.php:1540
+#: Controller/EmployeesController.php:1254 Model/Employee.php:1540
 msgid "Invalid export type"
 msgstr "Неверный тип экспорта"
 
-#: Controller/EmployeesController.php:1258
-#: Test/Case/Controller/EmployeesControllerTest.php:6159
+#: Controller/EmployeesController.php:1259
+#: Test/Case/Controller/EmployeesControllerTest.php:6192
 msgid "Generation file \"%s\" put in queue..."
 msgstr "Создание файла \"%s\" помещено в очередь..."
 
-#: Controller/EmployeesController.php:1260
+#: Controller/EmployeesController.php:1261
 msgid "Generation file \"%s\" put in queue unsucsessfully..."
 msgstr "Создание файла \"%s\" помещено в очередь неудачно..."
 
-#: Controller/EmployeesController.php:1342
-#: Test/Case/Controller/EmployeesControllerTest.php:6273
+#: Controller/EmployeesController.php:1343
+#: Test/Case/Controller/EmployeesControllerTest.php:6306
 msgid "Generation of exported files put in queue..."
 msgstr "Создание экспортируемых файлов помещено в очередь..."
 
-#: Controller/EmployeesController.php:1345
+#: Controller/EmployeesController.php:1346
 msgid "Generation export files put in queue unsucsessfully..."
 msgstr "Создание экспортируемых файлов помещено в очередь неудачно..."
 
@@ -884,7 +884,7 @@ msgstr "Найдены новые отложенные сохранения"
 #: Test/Case/Controller/DeferredControllerTest.php:357;699;1223;1559
 #: Test/Case/Model/DeferredTest.php:1470
 #: Test/Case/Model/Behavior/DeferredSaveBehaviorTest.php:746;774;803;841;879
-#: View/Elements/barNav.ctp:155 View/Elements/formExtendSettingsLeft.ctp:44
+#: View/Elements/barNav.ctp:155 View/Elements/formExtendSettingsLeft.ctp:50
 msgid "Deferred saves"
 msgstr "Отложенные сохранения"
 
@@ -897,7 +897,7 @@ msgstr "Отделы"
 #: Model/Employee.php:313;1617
 #: Test/Case/Controller/AppControllerTest.php:158;268
 #: Test/Case/Controller/DeferredControllerTest.php:349;691;1206;1542
-#: Test/Case/Controller/EmployeesControllerTest.php:314;577;1103;1344;1640;2156;2362;2575;3216;3444;3662;3853;3974;4094;4649;4699;6056
+#: Test/Case/Controller/EmployeesControllerTest.php:314;577;1103;1344;1640;2189;2395;2608;3249;3477;3695;3886;4007;4127;4682;4732;6089
 #: Test/Case/Controller/LogsControllerTest.php:377;807
 #: Test/Case/Model/EmployeeTest.php:245;281;2618
 #: Test/Case/Model/Behavior/DeferredSaveBehaviorTest.php:738;766;824;862
@@ -906,31 +906,31 @@ msgid "Employees"
 msgstr "Сотрудники"
 
 #: Model/Employee.php:856
-#: Test/Case/Controller/EmployeesControllerTest.php:5976;5986;6016;6026;6158;6198
+#: Test/Case/Controller/EmployeesControllerTest.php:6009;6019;6049;6059;6191;6231
 #: Test/Case/Model/EmployeeTest.php:1613;2521;2531;2561;2571
 msgid "by alphabet"
 msgstr "по алфавиту"
 
 #: Model/Employee.php:859
-#: Test/Case/Controller/EmployeesControllerTest.php:5996;6006;6036;6046;6124
+#: Test/Case/Controller/EmployeesControllerTest.php:6029;6039;6069;6079;6157
 #: Test/Case/Model/EmployeeTest.php:1614;2541;2551;2581;2591
 msgid "by department"
 msgstr "по отделам"
 
 #: Model/Employee.php:865
-#: Test/Case/Controller/EmployeesControllerTest.php:5976;5986;5996;6006;6016;6026;6036;6046;6124;6158;6198
+#: Test/Case/Controller/EmployeesControllerTest.php:6009;6019;6029;6039;6049;6059;6069;6079;6157;6191;6231
 #: Test/Case/Model/EmployeeTest.php:1612;1613;1614;2521;2531;2541;2551;2561;2571;2581;2591
 msgid "Directory"
 msgstr "Справочник"
 
 #: Model/Employee.php:871
-#: Test/Case/Controller/EmployeesControllerTest.php:5976;5996;6016;6036;6198
+#: Test/Case/Controller/EmployeesControllerTest.php:6009;6029;6049;6069;6231
 #: Test/Case/Model/EmployeeTest.php:1614;2521;2541;2561;2581
 msgid "full"
 msgstr "полный"
 
 #: Model/Employee.php:885
-#: Test/Case/Controller/EmployeesControllerTest.php:3212;3440
+#: Test/Case/Controller/EmployeesControllerTest.php:3245;3473
 #: Test/Case/Model/EmployeeTest.php:1636
 msgid "Non-staff personnel"
 msgstr "Внештатные сотрудники"
@@ -1042,11 +1042,15 @@ msgstr "Очередь задч"
 msgid "Task queue list"
 msgstr "Список задач"
 
-#: View/Elements/barNav.ctp:188
+#: View/Elements/barNav.ctp:189
 msgid "Logout"
-msgstr "Выход"
+msgstr "Выйти"
 
-#: View/Elements/barNav.ctp:197
+#: View/Elements/barNav.ctp:195
+msgid "Login"
+msgstr "Войти"
+
+#: View/Elements/barNav.ctp:205
 msgid "Contact administrator"
 msgstr "Связаться с администратором"
 
@@ -1120,42 +1124,54 @@ msgid "Update photo"
 msgstr "Обновить фото"
 
 #: View/Elements/formExtendSettingsLeft.ctp:29
+msgid "Authentication"
+msgstr "Аутентификация"
+
+#: View/Elements/formExtendSettingsLeft.ctp:30
+msgid "Allow anonymous access"
+msgstr "Разрешить анонимный доступ"
+
+#: View/Elements/formExtendSettingsLeft.ctp:31
+msgid "Allow anonymous access to the phone book"
+msgstr "Разрешить анонимный доступ к телефонному справочнику"
+
+#: View/Elements/formExtendSettingsLeft.ctp:35
 msgid "Photo"
 msgstr "Фото"
 
-#: View/Elements/formExtendSettingsLeft.ctp:30
+#: View/Elements/formExtendSettingsLeft.ctp:36
 msgid "Show default photo"
 msgstr "Отображать фото по умолчанию"
 
-#: View/Elements/formExtendSettingsLeft.ctp:31
+#: View/Elements/formExtendSettingsLeft.ctp:37
 msgid "Show default photo, if the photo is not specified"
 msgstr "Отображать фото по умолчанию, если фото не указано"
 
-#: View/Elements/formExtendSettingsLeft.ctp:35
+#: View/Elements/formExtendSettingsLeft.ctp:41
 msgid "Phone library"
 msgstr "Библиотека телефонов"
 
-#: View/Elements/formExtendSettingsLeft.ctp:36
+#: View/Elements/formExtendSettingsLeft.ctp:42
 msgid "Country"
 msgstr "Страна"
 
-#: View/Elements/formExtendSettingsLeft.ctp:37
+#: View/Elements/formExtendSettingsLeft.ctp:43
 msgid "Country code for parse telephone number"
 msgstr "Код страны для разбора номера телефона"
 
-#: View/Elements/formExtendSettingsLeft.ctp:39
+#: View/Elements/formExtendSettingsLeft.ctp:45
 msgid "Format of telephone number"
 msgstr "Формат номера телефона"
 
-#: View/Elements/formExtendSettingsLeft.ctp:40
+#: View/Elements/formExtendSettingsLeft.ctp:46
 msgid "Display format for telephone or mobile phone number"
 msgstr "Формат отображения номера телефона или мобильного телефона"
 
-#: View/Elements/formExtendSettingsLeft.ctp:45
+#: View/Elements/formExtendSettingsLeft.ctp:51
 msgid "Group of users for management deferred saves"
 msgstr "Группа пользователей для управления отложенными сохранениями"
 
-#: View/Elements/formExtendSettingsLeft.ctp:46
+#: View/Elements/formExtendSettingsLeft.ctp:52
 msgid ""
 "A group of users serving deferred saves: approving, rejecting, editing and "
 "deleting."
@@ -1287,11 +1303,11 @@ msgstr "Файл"
 msgid "Actions"
 msgstr "Действия"
 
-#: View/Elements/tableExport.ctp:52
+#: View/Elements/tableExport.ctp:58
 msgid "Put the generation of the file in the queue"
 msgstr "Поместить создание файла в очередь"
 
-#: View/Elements/tableExport.ctp:63
+#: View/Elements/tableExport.ctp:69
 msgid "Download file"
 msgstr "Скачать файл"
 

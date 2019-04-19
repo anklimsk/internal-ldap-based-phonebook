@@ -4,7 +4,7 @@
  *  navigation bar.
  *
  * CakeTheme: Set theme for application.
- * @copyright Copyright 2016-2018, Andrey Klimov.
+ * @copyright Copyright 2016-2019, Andrey Klimov.
  * @license https://opensource.org/licenses/mit-license.php MIT License
  * @package plugin.View.Elements
  */
@@ -183,11 +183,19 @@ if ($this->UserInfo->checkUserRole(USER_ROLE_ADMIN)) {
 }
 
 if (!$isExternalAuth) {
-	$iconList[] = $this->ViewExtension->menuItemLink(
-		'fas fa-sign-out-alt fa-lg',
-		__('Logout'),
-		['controller' => 'users', 'action' => 'logout', 'plugin' => 'cake_ldap', 'prefix' => false]
-	);
+	if ((bool)$this->UserInfo->getUserField('role')) {
+		$iconList[] = $this->ViewExtension->menuItemLink(
+			'fas fa-sign-out-alt fa-lg',
+			__('Logout'),
+			['controller' => 'users', 'action' => 'logout', 'plugin' => 'cake_ldap', 'prefix' => false]
+		);
+	} else {
+		$iconList[] = $this->ViewExtension->menuItemLink(
+			'fas fa-sign-in-alt fa-lg',
+			__('Login'),
+			['controller' => 'users', 'action' => 'login', 'plugin' => 'cake_ldap', 'prefix' => false]
+		);
+	}
 }
 
 if ($this->request->here() === '/') {

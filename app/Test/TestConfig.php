@@ -19,6 +19,7 @@ $config[PROJECT_CONFIG_NAME] = [
 	'Company' => 'ТестОрг',
 	'AutocompleteLimit' => 30,
 	'ExternalAuth' => false,
+	'AllowAnonymAccess' => false,
 	'SecretaryGroupMember' => 'CN=Web.Secretary,OU=Web,OU=Soft,OU=Группы,DC=fabrikam,DC=com',
 	'HumanResourcesGroupMember' => 'CN=Web.HumanResources,OU=Web,OU=Soft,OU=Группы,DC=fabrikam,DC=com',
 	'AdminGroupMember' => 'CN=Web.Admin,OU=Web,OU=Soft,OU=Группы,DC=fabrikam,DC=com',

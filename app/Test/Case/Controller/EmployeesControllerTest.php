@@ -6365,6 +6365,60 @@ class EmployeesControllerTest extends AppControllerTestCase {
 	}
 
 /**
+ * testAllowAnonymousAccess method
+ *  User role: anonymous
+ *
+ * @return void
+ */
+	public function testAllowAnonymousAccess() {
+		$result = Configure::write(PROJECT_CONFIG_NAME . '.AllowAnonymAccess', true);
+		$this->assertTrue($result);
+
+		$opt = [
+			'method' => 'GET',
+		];
+		$listActions = [
+			'/employees/index' => false,
+			'/employees/search' => false,
+			'/employees/view/2' => false,
+			'/employees/tree' => false,
+			'/employees/gallery' => false,
+			'/employees/export' => false,
+			'/employees/download/' .
+				GENERATE_FILE_DATA_TYPE_ALPH . '.pdf' => '/employees/export',
+		];
+		foreach ($listActions as $url => $redirectUrl) {
+			$this->_generateMockedController();
+			$this->testAction($url, $opt);
+			$this->checkRedirect($redirectUrl);
+		}
+	}
+
+/**
+ * testDenyAnonymousAccess method
+ *  User role: anonymous
+ *
+ * @return void
+ */
+	public function testDenyAnonymousAccess() {
+		$this->setExpectedException('MethodNotAllowedException');
+		$result = Configure::write(PROJECT_CONFIG_NAME . '.AllowAnonymAccess', true);
+		$this->assertTrue($result);
+
+		$opt = [
+			'method' => 'GET',
+		];
+		$listActions = [
+			'/employees/edit/8c149661-7215-47de-b40e-35320a1ea508',
+		];
+		foreach ($listActions as $url) {
+			$this->_generateMockedController();
+			$this->testAction($url, $opt);
+			$this->checkRedirect(true);
+		}
+	}
+
+/**
  * Return path to upload temp directory.
  *
  * @return string Return path to upload temp directory

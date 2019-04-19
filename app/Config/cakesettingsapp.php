@@ -55,6 +55,7 @@ $config['CakeSettingsApp'] = [
 		'ReadOnlyFields' => ['type' => 'string', 'default' => ''],
 		'UseLdapOnEdit' => ['type' => 'boolean', 'default' => false],
 		'MultipleValueLimit' => ['type' => 'integer', 'default' => 0],
+		'AllowAnonymAccess' => ['type' => 'boolean', 'default' => false],
 	],
 	// List of fields with multiple value
 	'serialize' => [

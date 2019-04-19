@@ -131,6 +131,20 @@ class EmployeesController extends AppController {
 			'managers', 'secret_managers', 'hr_managers', 'admin_managers'
 		];
 
+		$isExternalAuth = $this->_isExternalAuth();
+		if (!$isExternalAuth && $this->Setting->getConfig('AllowAnonymAccess')) {
+			$allowActions = [
+				'index',
+				'search',
+				'view',
+				'tree',
+				'gallery',
+				'export',
+				'download'
+			];
+			$this->Auth->allow($allowActions);
+		}
+
 		parent::beforeFilter();
 	}
 
