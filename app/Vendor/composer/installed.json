@@ -329,17 +329,17 @@
     },
     {
         "name": "anklimsk/cakephp-spreadsheet",
-        "version": "v1.0.1",
-        "version_normalized": "1.0.1.0",
+        "version": "v1.0.3",
+        "version_normalized": "1.0.3.0",
         "source": {
             "type": "git",
             "url": "https://github.com/anklimsk/cakephp-spreadsheet.git",
-            "reference": "599a61c3083e7419dba42ae5b3448c73d2ddcf52"
+            "reference": "505f436ade2bf6269d9577994e4811377b6ea535"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/anklimsk/cakephp-spreadsheet/zipball/599a61c3083e7419dba42ae5b3448c73d2ddcf52",
-            "reference": "599a61c3083e7419dba42ae5b3448c73d2ddcf52",
+            "url": "https://api.github.com/repos/anklimsk/cakephp-spreadsheet/zipball/505f436ade2bf6269d9577994e4811377b6ea535",
+            "reference": "505f436ade2bf6269d9577994e4811377b6ea535",
             "shasum": ""
         },
         "require": {
@@ -348,7 +348,7 @@
             "composer/installers": "^1.5.0",
             "php": ">=5.4"
         },
-        "time": "2018-11-19T11:07:00+00:00",
+        "time": "2020-04-02T17:00:26+00:00",
         "type": "cakephp-plugin",
         "extra": {
             "installer-name": "CakeSpreadsheet"
