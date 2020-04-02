@@ -158,7 +158,6 @@ class EmployeesController extends AppController {
 		$this->disableCache();
 
 		$showBreadcrumb = false;
-		$search_targetFields = null;
 		$this->loadModel('LastProcessed');
 		$lastUpdate = $this->LastProcessed->getLastUpdate(LAST_PROCESSED_EMPLOYEE);
 		$countEmployees = $this->Employee->getNumberOf();
@@ -166,12 +165,12 @@ class EmployeesController extends AppController {
 		$pageTitle = __('Information retrieval');
 		$this->set(compact(
 			'showBreadcrumb',
-			'search_targetFields',
 			'lastUpdate',
 			'countEmployees',
 			'birthdays',
 			'pageTitle'
 		));
+		$this->set('search_targetFields', null);
 	}
 
 /**
