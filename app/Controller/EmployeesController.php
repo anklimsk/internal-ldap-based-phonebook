@@ -4,7 +4,7 @@
  *  management information about the employees.
  *
  * InternalPhonebook: Internal phone book based on content of Active Directory.
- * @copyright Copyright 2017-2019, Andrey Klimov.
+ * @copyright Copyright 2017-2020, Andrey Klimov.
  * @license https://opensource.org/licenses/mit-license.php MIT License
  * @package app.Controller
  */
@@ -158,6 +158,7 @@ class EmployeesController extends AppController {
 		$this->disableCache();
 
 		$showBreadcrumb = false;
+		$search_targetFields = null;
 		$this->loadModel('LastProcessed');
 		$lastUpdate = $this->LastProcessed->getLastUpdate(LAST_PROCESSED_EMPLOYEE);
 		$countEmployees = $this->Employee->getNumberOf();
@@ -171,7 +172,6 @@ class EmployeesController extends AppController {
 			'birthdays',
 			'pageTitle'
 		));
-		$this->set('search_targetFields', null);
 	}
 
 /**
