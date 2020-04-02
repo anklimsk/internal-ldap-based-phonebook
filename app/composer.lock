@@ -357,16 +357,16 @@
         },
         {
             "name": "anklimsk/cakephp2-tcpdf",
-            "version": "v1.0.1",
+            "version": "v1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/anklimsk/cakephp-tcpdf.git",
-                "reference": "ede97867f307fe71204c0f121d0c1c686b1eff7a"
+                "reference": "125b9fdfb37e4d27af661979f646c572f1fafdc8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/anklimsk/cakephp-tcpdf/zipball/ede97867f307fe71204c0f121d0c1c686b1eff7a",
-                "reference": "ede97867f307fe71204c0f121d0c1c686b1eff7a",
+                "url": "https://api.github.com/repos/anklimsk/cakephp-tcpdf/zipball/125b9fdfb37e4d27af661979f646c572f1fafdc8",
+                "reference": "125b9fdfb37e4d27af661979f646c572f1fafdc8",
                 "shasum": ""
             },
             "require": {
@@ -389,7 +389,7 @@
             ],
             "description": "Generate PDF files with the CakePHP 2.x",
             "homepage": "https://github.com/anklimsk/cakephp-tcpdf",
-            "time": "2018-11-19T11:16:13+00:00"
+            "time": "2020-04-02T17:44:18+00:00"
         },
         {
             "name": "anklimsk/cakephp2-theme",
