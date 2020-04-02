@@ -4,7 +4,7 @@
  *  saving information about employees.
  *
  * InternalPhonebook: Internal phone book based on content of Active Directory.
- * @copyright Copyright 2017-2019, Andrey Klimov.
+ * @copyright Copyright 2017-2020, Andrey Klimov.
  * @license https://opensource.org/licenses/mit-license.php MIT License
  * @package app.Model
  */
@@ -565,13 +565,13 @@ class EmployeeEdit extends EmployeeLdap {
 					break;
 				case CAKE_LDAP_LDAP_ATTRIBUTE_INITIALS:
 					if (!empty($value)) {
-						continue;
+						continue 2;
 					}
 
 					$givenName = Hash::get($data, $this->alias . '.' . CAKE_LDAP_LDAP_ATTRIBUTE_GIVEN_NAME);
 					$middleName = Hash::get($data, $this->alias . '.' . CAKE_LDAP_LDAP_ATTRIBUTE_MIDDLE_NAME);
 					if (empty($value) && (empty($givenName) || empty($middleName))) {
-						continue;
+						continue 2;
 					}
 
 					$initials = mb_substr($givenName, 0, 1) . '.' . mb_substr($middleName, 0, 1) . '.';
@@ -579,7 +579,7 @@ class EmployeeEdit extends EmployeeLdap {
 					break;
 				case CAKE_LDAP_LDAP_ATTRIBUTE_DISPLAY_NAME:
 					if (!empty($value)) {
-						continue;
+						continue 2;
 					}
 
 					$name = Hash::get($data, $this->alias . '.' . CAKE_LDAP_LDAP_ATTRIBUTE_NAME);
@@ -594,7 +594,7 @@ class EmployeeEdit extends EmployeeLdap {
 				case CAKE_LDAP_LDAP_ATTRIBUTE_DEPARTMENT:
 				case CAKE_LDAP_LDAP_ATTRIBUTE_DIVISION:
 					if (empty($value) || ($value !== mb_strtolower($value))) {
-						continue;
+						continue 2;
 					}
 
 					if (count(preg_split('/[^\p{L}\p{N}\']+/u', $value)) == 1) {
@@ -605,7 +605,7 @@ class EmployeeEdit extends EmployeeLdap {
 					break;
 				case CAKE_LDAP_LDAP_ATTRIBUTE_TITLE:
 					if (empty($value) || ($value !== mb_strtolower($value))) {
-						continue;
+						continue 2;
 					}
 
 					$value = mb_ucfirst(mb_strtolower($value));
