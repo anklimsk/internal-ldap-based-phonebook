@@ -514,7 +514,7 @@ class Employee extends EmployeeDb {
 
 		array_walk(
 			$result,
-			function (&$v ,$k, $a) {
+			function (&$v, $k, $a) {
 				$v = "$a.$v";
 			},
 			$modelName
