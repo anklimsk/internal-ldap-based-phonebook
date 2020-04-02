@@ -512,7 +512,13 @@ class Employee extends EmployeeDb {
 			return $result;
 		}
 
-		array_walk($result, function (&$v,$k,$a) { $v = "$a.$v"; }, $modelName);
+		array_walk(
+			$result,
+			function (&$v ,$k, $a) {
+				$v = "$a.$v";
+			},
+			$modelName
+		);
 
 		return $result;
 	}
@@ -713,7 +719,13 @@ class Employee extends EmployeeDb {
 		}
 
 		$userRoleFields = array_values(array_diff($fields, $excludeFields));
-		array_walk($userRoleFields, function (&$v,$k,$a) { $v = "$a.$v"; }, $this->alias);
+		array_walk(
+			$userRoleFields,
+			function (&$v, $k, $a) {
+				$v = "$a.$v";
+			},
+			$this->alias
+		);
 		$result['fields'] = $userRoleFields;
 		$result['fields'][] = $this->alias . '.id';
 		if (in_array('department_id', $excludeFields)) {

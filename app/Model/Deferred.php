@@ -334,7 +334,13 @@ class Deferred extends AppModel {
 		if (!empty($result['ChangedFields'])) {
 			$result['ChangedFields'] = array_values(array_diff($result['ChangedFields'], [CAKE_LDAP_LDAP_DISTINGUISHED_NAME]));
 		}
-		array_walk($result['ChangedFields'], function (&$v,$k,$a) { $v = "$a.$v"; }, $objDataModel->alias);
+		array_walk(
+			$result['ChangedFields'],
+			function (&$v, $k, $a) {
+				$v = "$a.$v";
+			},
+			$objDataModel->alias
+		);
 		if (!empty($employeeInfoLdap)) {
 			$result[$this->alias]['data']['changed'][$objDataModel->alias] += $employeeInfoLdap[$objDataModel->alias];
 		}
