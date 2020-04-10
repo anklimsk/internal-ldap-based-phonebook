@@ -67,7 +67,10 @@ before_script:
       'password' => '',
       'database' => 'cakephp_test',
       'prefix' => '',
-      'encoding' => 'utf8'
+      'encoding' => 'utf8',
+      'settings' => [
+        'sql_mode' => 'NO_ENGINE_SUBSTITUTION'
+      ]
     ];
     }" > app/Config/database.php
   - if [ -f "./app/Console/cake" ]; then ./app/Console/cake CakeInstaller setsecurkey --yes --app $CAKEAPP; fi
