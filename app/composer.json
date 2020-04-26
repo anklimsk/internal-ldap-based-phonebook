@@ -1,6 +1,6 @@
 {
     "name": "cakephp/cakephp",
-    "version": "2.10.9",
+    "version": "2.10.20",
     "require": {
         "anklimsk/cakephp-basic-functions": "^1.0.0",
         "anklimsk/cakephp-console-installer": "^1.0.0",
