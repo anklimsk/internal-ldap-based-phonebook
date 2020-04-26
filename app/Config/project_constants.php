@@ -34,7 +34,7 @@ if (!defined('PROJECT_PAGE_TITLE')) {
  *  Default value ``
  */
 if (!defined('PROJECT_AUTHOR')) {
-	define('PROJECT_AUTHOR', '&copy; 2017-2019, <a href="https://anklimsk.github.io/internal-ldap-based-phonebook">Andrey Klimov</a>.');
+	define('PROJECT_AUTHOR', '&copy; 2017-2020, <a href="https://anklimsk.github.io/internal-ldap-based-phonebook">Andrey Klimov</a>.');
 }
 
 /**
@@ -44,7 +44,7 @@ if (!defined('PROJECT_AUTHOR')) {
  *  Default value ``
  */
 if (!defined('PROJECT_VERSION')) {
-	define('PROJECT_VERSION', '1.0.9');
+	define('PROJECT_VERSION', '1.0.10');
 }
 
 /**
