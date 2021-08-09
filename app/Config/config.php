@@ -2,7 +2,6 @@
 $config = array (
   'Config' => 
   array (
-    'language' => 'eng',
     'adminEmail' => 'admin@localhost',
   ),
   'Phonebook' => 
