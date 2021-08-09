@@ -1,0 +1,33 @@
+<?php
+
+class DATABASE_CONFIG
+{
+
+    public ${DOLLAR}ldap    = [
+        'datasource' => 'CakeLdap.LdapExtSource',
+        'persistent' => '$PHONEBOOK_LDAP_PERSISTENT',
+        'host'       => '$PHONEBOOK_LDAP_HOST',
+        'port'       => $PHONEBOOK_LDAP_PORT,
+        'login'      => '$PHONEBOOK_LDAP_LOGIN',
+        'password'   => '$PHONEBOOK_LDAP_PASSWORD',
+        'database'   => '',
+        'basedn'     => '$PHONEBOOK_LDAP_BASEDN',
+        'type'       => '$PHONEBOOK_LDAP_TYPE',
+        'tls'        => '$PHONEBOOK_LDAP_TLS',
+        'version'    => '$PHONEBOOK_LDAP_VERSION',
+    ];
+
+    public ${DOLLAR}default = [
+        'datasource' => 'Database/$PHONEBOOK_DB_TYPE',
+        'persistent' => '$PHONEBOOK_DB_PERSISTENT',
+        'host'       => '$PHONEBOOK_DB_HOST',
+        'port'       => $PHONEBOOK_DB_PORT,
+        'login'      => '$PHONEBOOK_DB_LOGIN',
+        'password'   => '$PHONEBOOK_DB_PASSWORD',
+        'database'   => '$PHONEBOOK_DB_DATABASE',
+        'schema'     => '$PHONEBOOK_DB_SCHEMA',
+        'prefix'     => '$PHONEBOOK_DB_TABLE_PREFIX',
+        'encoding'   => '$PHONEBOOK_DB_ENCODING',
+    ];
+
+}

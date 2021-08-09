@@ -1,0 +1,42 @@
+# Remove command from installer task
+--- a/app/Config/cakeinstaller.php
++++ b/app/Config/cakeinstaller.php
+@@ -102,27 +102,27 @@
+ 	// Tasks for action - install
+ 	'installTasks' => [
+ 		// Set Installer UI language
+-		'setuilang',
++		//'setuilang',
+ 		// Checking PHP environment
+-		'check',
++		//'check',
+ 		// Set file system permissions on the temporary directory
+-		'setdirpermiss',
++		//'setdirpermiss',
+ 		// Set security key
+-		'setsecurkey',
++		//'setsecurkey',
+ 		// Set timezone
+-		'settimezone',
++		//'settimezone',
+ 		// Set base URL
+-		'setbaseurl',
++		//'setbaseurl',
+ 		// Configure database connections
+-		'configdb',
++		//'configdb',
+ 		// Check connect to database
+-		'connectdb',
++		//'connectdb',
+ 		// Create database and initialize data
+-		'createdb',
++		//'createdb',
+ 		// Create symlinks to files
+-		'createsymlinks',
++		//'createsymlinks',
+ 		// Create cron jobs
+-		'createcronjobs',
++		//'createcronjobs',
+ 	],
+ 	// List of database connection for configure
+ 	'configDBconn' => [
